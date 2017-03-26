@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Jenkins memo | mersy note</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Welcome to Jenkins CI! | Jenkins CIhttp://jenkins-ci.org/
+VMware のCentOSにインストール以下の記事を参考に設定
+
+Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insiderhttp://www.buildinsider.net/enterprise/jenkins/01">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins memo">
+<meta property="og:url" content="http://mersy.github.io/jenkins/index.html">
+<meta property="og:site_name" content="mersy note">
+<meta property="og:description" content="Welcome to Jenkins CI! | Jenkins CIhttp://jenkins-ci.org/
+VMware のCentOSにインストール以下の記事を参考に設定
+
+Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insiderhttp://www.buildinsider.net/enterprise/jenkins/01">
+<meta property="og:updated_time" content="2014-05-05T06:43:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jenkins memo">
+<meta name="twitter:description" content="Welcome to Jenkins CI! | Jenkins CIhttp://jenkins-ci.org/
+VMware のCentOSにインストール以下の記事を参考に設定
+
+Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insiderhttp://www.buildinsider.net/enterprise/jenkins/01">
+  
+    <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mersy note</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jenkins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/jenkins/" class="article-date">
+  <time datetime="2014-05-05T06:28:43.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Jenkins/">Jenkins</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Jenkins memo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to Jenkins CI! | Jenkins CI<br><a href="http://jenkins-ci.org/" target="_blank" rel="external">http://jenkins-ci.org/</a></p>
+<h2 id="VMware-のCentOSにインストール"><a href="#VMware-のCentOSにインストール" class="headerlink" title="VMware のCentOSにインストール"></a>VMware のCentOSにインストール</h2><p>以下の記事を参考に設定</p>
+<blockquote>
+<p>Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insider<br><a href="http://www.buildinsider.net/enterprise/jenkins/01" target="_blank" rel="external">http://www.buildinsider.net/enterprise/jenkins/01</a></p>
+</blockquote>
+<h3 id="repositoryの追加とインストール"><a href="#repositoryの追加とインストール" class="headerlink" title="repositoryの追加とインストール"></a>repositoryの追加とインストール</h3><p>repositoryを追加してインストールしてみる</p>
+<pre><code>$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+$ sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+$ sudo yum install jenkins
+</code></pre><h3 id="Jenkinsを起動する"><a href="#Jenkinsを起動する" class="headerlink" title="Jenkinsを起動する"></a>Jenkinsを起動する</h3><p>起動してみる</p>
+<pre><code>$ sudo service jenkins start
+</code></pre><p>エラーがでたので、javaをインストール</p>
+<pre><code>$ yum install java-1.6.0-openjdk
+
+$ java -version
+java version &quot;1.6.0_30&quot;
+</code></pre><p>再度起動してみる</p>
+<pre><code>$ sudo service jenkins start
+Starting Jenkins                                           [  OK  ]
+</code></pre><p><a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> にアクセスする</p>
+<p>8080があいてないみたいなので修正</p>
+<pre><code>$ sudo vi /etc/sysconfig/iptables
+</code></pre><p>以下をCOMMITの上に追加。</p>
+<pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+</code></pre><p>再起動</p>
+<pre><code>$ sudo service iptables restart
+
+$ sudo service jenkins start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Installing Jenkins on RedHat distributions - Jenkins - Jenkins Wiki<br><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions" target="_blank" rel="external">https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions</a></li>
+<li>CentOS に Jenkinsをインストール・ポートとURLの変更・ユーザ設定・プラグイン追加まで | 田舎に住みたいエンジニアの日記　　<br><a href="http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/" target="_blank" rel="external">http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/jenkins/" data-id="cj0q4dcvl000q33t63lhkgbla" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/vmware/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          VMWare memo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/homebrew/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">Homebrewメモ</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorieën</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo/">Hexo memo</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/dashboard_medium/">Mediumの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/dashdocset/">Dash memo</a>
+          </li>
+        
+          <li>
+            <a href="/node/">Node.js memo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 mersy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

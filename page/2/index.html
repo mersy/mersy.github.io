@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>mersy note</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="mersy note">
+<meta property="og:url" content="http://mersy.github.io/page/2/index.html">
+<meta property="og:site_name" content="mersy note">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mersy note">
+  
+    <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mersy note</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-mtmemo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/mtmemo/" class="article-date">
+  <time datetime="2014-05-08T10:07:27.000Z" itemprop="datePublished">2014-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/mtmemo/">MTのメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="タグの情報を調べる"><a href="#タグの情報を調べる" class="headerlink" title="タグの情報を調べる"></a>タグの情報を調べる</h2><p>movabletype/lib/MT/Template/ContextHandlers.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm</a></p>
+<h2 id="コールバック"><a href="#コールバック" class="headerlink" title="コールバック"></a>コールバック</h2><h3 id="ユーザー関係"><a href="#ユーザー関係" class="headerlink" title="ユーザー関係"></a>ユーザー関係</h3><ul>
+<li>cms_edit.author</li>
+<li>cms_view_permission_filter.author</li>
+<li>cms_save_permission_filter.author</li>
+<li>cms_delete_permission_filter.author</li>
+<li>cms_save_filter.author</li>
+<li>cms_pre_save.author</li>
+<li>cms_post_save.author</li>
+<li>cms_post_delete.author</li>
+</ul>
+<h3 id="ブログ関係"><a href="#ブログ関係" class="headerlink" title="ブログ関係"></a>ブログ関係</h3><ul>
+<li>cms_edit.blog</li>
+<li>cms_view_permission_filter.blog</li>
+<li>cms_save_permission_filter.blog</li>
+<li>cms_delete_permission_filter.blog</li>
+<li>cms_pre_save.blog</li>
+<li>cms_post_save.blog</li>
+<li>cms_save_filter.blog</li>
+<li>cms_post_delete.blog</li>
+</ul>
+<h3 id="フォルダ関係"><a href="#フォルダ関係" class="headerlink" title="フォルダ関係"></a>フォルダ関係</h3><ul>
+<li>cms_edit.folder</li>
+<li>cms_view_permission_filter.folder</li>
+<li>cms_save_permission_filter.folder</li>
+<li>cms_delete_permission_filter.folder</li>
+<li>cms_pre_save.folder</li>
+<li>cms_post_save.folder</li>
+<li>cms_save_filter.folder</li>
+<li>cms_post_delete.folder</li>
+</ul>
+<h3 id="カテゴリ関係"><a href="#カテゴリ関係" class="headerlink" title="カテゴリ関係"></a>カテゴリ関係</h3><ul>
+<li>cms_edit.category</li>
+<li>cms_view_permission_filter.category</li>
+<li>cms_save_permission_filter.category</li>
+<li>cms_delete_permission_filter.category</li>
+<li>cms_pre_save.category</li>
+<li>cms_post_save.category</li>
+<li>cms_save_filter.category</li>
+<li>cms_post_delete.category</li>
+</ul>
+<h3 id="コメント関係"><a href="#コメント関係" class="headerlink" title="コメント関係"></a>コメント関係</h3><ul>
+<li>cms_edit.comment</li>
+<li>cms_view_permission_filter.comment</li>
+<li>cms_save_permission_filter.comment</li>
+<li>cms_delete_permission_filter.comment</li>
+<li>cms_pre_save.comment</li>
+<li>cms_post_save.comment</li>
+<li>cms_post_delete.comment</li>
+</ul>
+<h3 id="コメント投稿者関係"><a href="#コメント投稿者関係" class="headerlink" title="コメント投稿者関係"></a>コメント投稿者関係</h3><ul>
+<li>cms_edit.commenter</li>
+<li>cms_view_permission_filter.commenter</li>
+<li>cms_delete_permission_filter.commenter</li>
+</ul>
+<h3 id="ブログ記事関係"><a href="#ブログ記事関係" class="headerlink" title="ブログ記事関係"></a>ブログ記事関係</h3><ul>
+<li>cms_edit.entry</li>
+<li>cms_view_permission_filter.entry</li>
+<li>cms_delete_permission_filter.entry</li>
+<li>cms_pre_save.entry</li>
+<li>cms_post_save.entry</li>
+<li>cms_post_delete.entry</li>
+</ul>
+<h3 id="ウェブページ関係"><a href="#ウェブページ関係" class="headerlink" title="ウェブページ関係"></a>ウェブページ関係</h3><ul>
+<li>cms_edit.page</li>
+<li>cms_view_permission_filter.page</li>
+<li>cms_delete_permission_filter.page</li>
+<li>cms_pre_save.page</li>
+<li>cms_post_save.page</li>
+<li>cms_post_delete.page</li>
+</ul>
+<h3 id="トラックバック関係"><a href="#トラックバック関係" class="headerlink" title="トラックバック関係"></a>トラックバック関係</h3><ul>
+<li>cms_edit.ping</li>
+<li>cms_view_permission_filter.ping</li>
+<li>cms_save_permission_filter.ping</li>
+<li>cms_delete_permission_filter.ping</li>
+<li>cms_pre_save.ping</li>
+<li>cms_post_save.ping</li>
+<li>cms_post_delete.ping</li>
+</ul>
+<h2 id="mt-staticを独立させる"><a href="#mt-staticを独立させる" class="headerlink" title="mt-staticを独立させる"></a>mt-staticを独立させる</h2><p>mt-staticディレクトリを新しく作成する</p>
+<pre><code>/var/www/html/mt/plugins/mt-static/
+</code></pre><p>.htaccessを作成して、mt-staticにおく</p>
+<pre><code>&lt;IfModule mod_rewite.c&gt;
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
+&lt;/IfModule&gt;
+</code></pre><p>まだ理解不足。よくわかってない。</p>
+<p>mt-config</p>
+<pre><code>StaticWebPath /mt/plugins/mt-static/
+</code></pre><blockquote>
+<p>MovableTypeプラグインのコードを書く準備を40秒で済ませる - blog.aklaswad.com<br><a href="http://blog.aklaswad.com/2007/000191.html" target="_blank" rel="external">http://blog.aklaswad.com/2007/000191.html</a><br>Amazon.co.jp： Movable Type 5 プロフェッショナルガイド: 荒木勇次郎: 本<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim</a></p>
+</blockquote>
+<h1 id="MultiBlog"><a href="#MultiBlog" class="headerlink" title="MultiBlog"></a>MultiBlog</h1><p>MultiBlog経由の再構築はおもいところがあるので、RebuildTriggerとかで対応する様にする。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/mtmemo/" data-id="cj0q4dpqd000y33t6yobsl46s" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/vagrant/" class="article-date">
+  <time datetime="2014-05-08T09:21:03.000Z" itemprop="datePublished">2014-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/vagrant/">Vagrant memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Vagrant に限らず。。。環境構築関係メモ。</p>
+<ul>
+<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
+<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
+<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
+</ul>
+<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
+<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
+</code></pre><p>そのうえで改めてboxを作り直す。</p>
+<pre><code>$ vagrant package
+$ vagrant box add &lt;NewBoxName&gt; package.box
+$ vagrant box list
+$ rm -rf package.box
+</code></pre><p>その上で</p>
+<pre><code>$ vagrant init &lt;NewBoxName&gt;
+</code></pre><p>でVagrantfileを編集しておく。</p>
+<blockquote>
+<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
+</blockquote>
+<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Ruby</li>
+<li>Python</li>
+<li>phpMyAdmin</li>
+</ul>
+<blockquote>
+<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
+</blockquote>
+<p>これに、いくつか入れておいた。</p>
+<ul>
+<li>wget</li>
+<li>make</li>
+<li>gcc</li>
+<li>Perlのmodule</li>
+<li>ImageMagick</li>
+</ul>
+<p>とりあえずここまで。</p>
+<p>後入れようとおもってるもの。</p>
+<ul>
+<li>cpanm</li>
+<li>Nginx</li>
+<li>Starman</li>
+</ul>
+<p>一緒にしておくか、box分けるか。</p>
+<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
+<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
+</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
+<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
+</code></pre><p>コメントを外しておく</p>
+<pre><code># AddHandler cgi-script .cgi
+↓
+AddHandler cgi-script .cgi
+</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
+<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl
+&lt;/Directory&gt;
+</code></pre><p>みたいなかんじのを追加しておく</p>
+<pre><code>$ sudo service httpd stop
+$ sudo service httpd start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
+<pre><code>$ chkconfig mysqld on
+$ chkconfig --list mysqld
+$ service mysqld start
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/vagrant/" data-id="cj0q4dalv000o33t6f9lgidy5" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vmware" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/vmware/" class="article-date">
+  <time datetime="2014-05-08T00:52:58.000Z" itemprop="datePublished">2014-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/VMWare/">VMWare</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/vmware/">VMWare memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ネットワークが繋がらない"><a href="#ネットワークが繋がらない" class="headerlink" title="ネットワークが繋がらない"></a>ネットワークが繋がらない</h2><p>ネットワークがつながらない時の参考リンク</p>
+<p>色々試してて、「device eth0 does not seem to be present, delaying initialization」というのがでたのでそこから調べる。</p>
+<ul>
+<li>VMwareで「Device eth0 does not seem to be present, delaying initialization」と表示された時の対処法　その２｜リナックスマスター.JP 公式ブログ<br><a href="http://www.linuxmaster.jp/linux_blog/2011/09/vmwaredevice-eth0-does-not-seem-to-be-present-delaying-initialization.html" target="_blank" rel="external">http://www.linuxmaster.jp/linux_blog/2011/09/vmwaredevice-eth0-does-not-seem-to-be-present-delaying-initialization.html</a></li>
+</ul>
+<p>一応↑のを試したら解決はした。</p>
+<ul>
+<li>VMwareFusionに移動した仮想マシンのネットワークが使えなくなったので復活させる [俺の備忘録]<br><a href="http://o.inchiki.jp/obbr/55" target="_blank" rel="external">http://o.inchiki.jp/obbr/55</a></li>
+<li>VMware FusionにインストールしたCentOSのネットワーク設定 | bl6.jp<br><a href="http://bl6.jp/dev/linux/vmware-fusion-centos-network-setting/" target="_blank" rel="external">http://bl6.jp/dev/linux/vmware-fusion-centos-network-setting/</a></li>
+<li>vmware で centos をコピーするとネットワーク(eth0)にアクセスできなくなる - Yahoo!ジオシティーズ<br><a href="http://geocities.yahoo.co.jp/gl/ds301b/view/20110928/1317221758" target="_blank" rel="external">http://geocities.yahoo.co.jp/gl/ds301b/view/20110928/1317221758</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/vmware/" data-id="cj0q4d7tc000m33t6gfm9a7nq" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jenkins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/jenkins/" class="article-date">
+  <time datetime="2014-05-05T06:28:43.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Jenkins/">Jenkins</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/jenkins/">Jenkins memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to Jenkins CI! | Jenkins CI<br><a href="http://jenkins-ci.org/" target="_blank" rel="external">http://jenkins-ci.org/</a></p>
+<h2 id="VMware-のCentOSにインストール"><a href="#VMware-のCentOSにインストール" class="headerlink" title="VMware のCentOSにインストール"></a>VMware のCentOSにインストール</h2><p>以下の記事を参考に設定</p>
+<blockquote>
+<p>Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insider<br><a href="http://www.buildinsider.net/enterprise/jenkins/01" target="_blank" rel="external">http://www.buildinsider.net/enterprise/jenkins/01</a></p>
+</blockquote>
+<h3 id="repositoryの追加とインストール"><a href="#repositoryの追加とインストール" class="headerlink" title="repositoryの追加とインストール"></a>repositoryの追加とインストール</h3><p>repositoryを追加してインストールしてみる</p>
+<pre><code>$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+$ sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+$ sudo yum install jenkins
+</code></pre><h3 id="Jenkinsを起動する"><a href="#Jenkinsを起動する" class="headerlink" title="Jenkinsを起動する"></a>Jenkinsを起動する</h3><p>起動してみる</p>
+<pre><code>$ sudo service jenkins start
+</code></pre><p>エラーがでたので、javaをインストール</p>
+<pre><code>$ yum install java-1.6.0-openjdk
+
+$ java -version
+java version &quot;1.6.0_30&quot;
+</code></pre><p>再度起動してみる</p>
+<pre><code>$ sudo service jenkins start
+Starting Jenkins                                           [  OK  ]
+</code></pre><p><a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> にアクセスする</p>
+<p>8080があいてないみたいなので修正</p>
+<pre><code>$ sudo vi /etc/sysconfig/iptables
+</code></pre><p>以下をCOMMITの上に追加。</p>
+<pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+</code></pre><p>再起動</p>
+<pre><code>$ sudo service iptables restart
+
+$ sudo service jenkins start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Installing Jenkins on RedHat distributions - Jenkins - Jenkins Wiki<br><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions" target="_blank" rel="external">https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions</a></li>
+<li>CentOS に Jenkinsをインストール・ポートとURLの変更・ユーザ設定・プラグイン追加まで | 田舎に住みたいエンジニアの日記　　<br><a href="http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/" target="_blank" rel="external">http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/jenkins/" data-id="cj0q4dcvl000q33t63lhkgbla" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-homebrew" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/homebrew/" class="article-date">
+  <time datetime="2014-05-05T02:01:37.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Homebrew/">Homebrew</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/homebrew/">Homebrewメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="homebrew-のアップデートでエラー"><a href="#homebrew-のアップデートでエラー" class="headerlink" title="homebrew のアップデートでエラー"></a>homebrew のアップデートでエラー</h2><p>アップデートしようとしたらエラーになった</p>
+<pre><code>$ brew update
+</code></pre><p>とりあえず、以下の記事を参考にして修正</p>
+<pre><code>$ cd $(brew --prefix)
+$ git fetch origin
+$ git reset —hard origin/master
+</code></pre><blockquote>
+<p>ヾ(oﾟωﾟo)ﾉﾞbrew updateでエラーでたった[Homebrew] - Qiita<br><a href="http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2" target="_blank" rel="external">http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2</a></p>
+</blockquote>
+<p>それでもconflictしてるかんじだったので、とりあえずREADME.mdをリネーム</p>
+<pre><code>$ cd $(brew --prefix)
+$ mv README.md README.md.org
+</code></pre><p>そこでupdateかけなおしたら問題なくなった。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/homebrew/" data-id="cj0q4dfwm000s33t6qofihjgp" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-casperjs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/casperjs/" class="article-date">
+  <time datetime="2014-05-05T01:53:31.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CasperJS/">CasperJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/casperjs/">CasperJSメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CasperJS</p>
+<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
+<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
+<pre><code>$ brew update
+$ brew install casperjs --devel
+$ casperjs --version
+1.1.0-beta3
+</code></pre><p>インストールできた</p>
+<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
+<blockquote>
+<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html">http://mersy.github.io/homebrew.html</a></p>
+</blockquote>
+<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
+<pre><code>// sample01.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net/&apos;,function(){
+  this.echo(this.getTitle());
+});
+
+casper.run();
+</code></pre><p>sample01.jsを作成</p>
+<pre><code>$ casperjs sample01.js
+bit part 合同会社
+</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
+<pre><code>// sample2.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;,function(){
+  this.capture(&apos;sample02.png&apos;);
+});
+
+casper.run();
+</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
+<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;);
+
+casper.viewport(1024, 768).then(function() {
+    this.capture(&apos;sample03.png&apos;);
+});
+
+casper.run();
+</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
+<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
+<blockquote>
+<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
+<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/casperjs/" data-id="cj0q4difb000u33t6sopugai8" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-publish" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/publish/" class="article-date">
+  <time datetime="2014-05-02T07:06:37.000Z" itemprop="datePublished">2014-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/publish/">VMWare上でMarkdownをePubなどに変換</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。<br>MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。</p>
+<h2 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h2><h3 id="VMWare-上の-CentOS-に-Pandocをインストールする"><a href="#VMWare-上の-CentOS-に-Pandocをインストールする" class="headerlink" title="VMWare 上の CentOS に Pandocをインストールする"></a>VMWare 上の CentOS に Pandocをインストールする</h3><p>MacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。</p>
+<blockquote>
+<p>Pandoc - Installing<br><a href="http://johnmacfarlane.net/pandoc/installing.html" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/installing.html</a></p>
+</blockquote>
+<p>よくわかってなかったけど、必要そうなモノ</p>
+<ul>
+<li>haskell-platform</li>
+<li>cabal</li>
+<li>ghc</li>
+</ul>
+<p>以下のサイトをみながら、色々試行錯誤してHaskell環境を整えた。</p>
+<ul>
+<li>CentOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+</ul>
+<p>./configure<br>して<br>make<br>make install<br>が走って良かった・・・・</p>
+<p>pandocをインストール</p>
+<pre><code>cabal update
+cabal install pandoc
+</code></pre><p>インストールされた後、pathが通ってなかったりはしてましたが。。。</p>
+<pre><code>PATH=$HOME/applications/haskell/ghc-7.6.3/bin:$PATH
+PATH=$HOME/applications/haskell/haskell-platform-2013.2.0.0/bin:$PATH
+PATH=$HOME/.cabal/bin:$PATH
+</code></pre><p>を.bash_profileに追加</p>
+<p>CentOS6.4へhaskell(ghc-7.6.3), haskell-platform-2013.2.0.0, pandocインストール | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/15052.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/15052.html</a></p>
+<p>で、インストール用のスクリプトが紹介されてるから、次はコレを使ってみてもいいのかもしれない。</p>
+<pre><code>pandoc -f markdown -t html sample.md -s -o sample.html
+</code></pre><p>で、mdからhtmlが作成されたのを確認。</p>
+<h3 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h3><ul>
+<li>Pandocでテキストデータ変換 | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12512.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12512.html</a></li>
+<li>entOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+</ul>
+<h2 id="GitBook"><a href="#GitBook" class="headerlink" title="GitBook"></a>GitBook</h2><p>GitBookを試してみる</p>
+<blockquote>
+<p>GitBook<br><a href="http://www.gitbook.io/" target="_blank" rel="external">http://www.gitbook.io/</a></p>
+</blockquote>
+<h3 id="CentOSにnode-jsをインストールする"><a href="#CentOSにnode-jsをインストールする" class="headerlink" title="CentOSにnode.jsをインストールする"></a>CentOSにnode.jsをインストールする</h3><p>以下のリンクを参考にして、nodeを入れる</p>
+<ul>
+<li>CentOS5.5 に node.js をインストールする - xykの日記<br><a href="http://d.hatena.ne.jp/xyk/20120131/1327998901" target="_blank" rel="external">http://d.hatena.ne.jp/xyk/20120131/1327998901</a></li>
+<li>creationix/nvm<br><a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></li>
+</ul>
+<p>メモ</p>
+<pre><code># yum -y install openssl-devel
+
+$ vi .bashrc
+</code></pre><p>以下を追記</p>
+<pre><code>. ~/.nvm/nvm.sh
+nvm use v0.10.28
+</code></pre><p>versionを確認</p>
+<pre><code>$ node -v
+$ npm -v
+</code></pre><h3 id="GitBookをインストール"><a href="#GitBookをインストール" class="headerlink" title="GitBookをインストール"></a>GitBookをインストール</h3><p>とりあえずローカル環境で動作を試す。</p>
+<pre><code>npm install gitbook -g
+</code></pre><ul>
+<li>GitbookIO/gitbook<br><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">https://github.com/GitbookIO/gitbook</a></li>
+<li>Node.js - gitbook試してみた - Qiita<br><a href="http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0" target="_blank" rel="external">http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0</a></li>
+</ul>
+<h2 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h2><p>Gruntでやる方法</p>
+<p>MarkdownからEPUB データを生成する「grunt-mdeb」を書いてみた – Mach3.laBlog<br><a href="http://blog.mach3.jp/2014/02/13/grunt-mdeb.html" target="_blank" rel="external">http://blog.mach3.jp/2014/02/13/grunt-mdeb.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/publish/" data-id="cj0q4dm8m000w33t6jt26rzf0" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mtmakdownoptions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/mtmakdownoptions/" class="article-date">
+  <time datetime="2014-05-02T02:06:33.000Z" itemprop="datePublished">2014-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/mtmakdownoptions/">MTMarkdownOptions</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
+<blockquote>
+<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
+</blockquote>
+<p>知らなかった！</p>
+<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
+# &lt;mt:EntryTitle&gt;
+---
+&lt;mt:EntryBody&gt;
+&lt;/MTMarkdownOptions&gt;
+</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
+<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
+<blockquote>
+<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
+</blockquote>
+<p>とりあえず、指定の仕方がよくわからん。</p>
+<p>filtersについてのコードはこの辺。</p>
+<blockquote>
+<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
+</blockquote>
+<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
+<blockquote>
+<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
+</blockquote>
+<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
+<hr>
+<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
+<p>使えそうなモジュールはこの辺？</p>
+<blockquote>
+<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
+</blockquote>
+<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/mtmakdownoptions/" data-id="cj0q4dtez001033t68b1il0fs" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-StaticPress" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/StaticPress/" class="article-date">
+  <time datetime="2014-04-28T05:07:31.000Z" itemprop="datePublished">2014-04-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/WordPress/">WordPress</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/StaticPress/">StaticPressのメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。</p>
+<blockquote>
+<p>StaticPress<br><a href="http://ja.staticpress.net/" target="_blank" rel="external">http://ja.staticpress.net/</a></p>
+</blockquote>
+<p>とりあえず、StaticPressを使うためには、Permalinkをそれに対応出来る様に .html 的な感じになるようにしておかないとNG。<br>考えたらあたりまえだけど、 hogehoge?p=xxx みたいなのだと、スタティックにできるわけないです。</p>
+<p>スマホの切り替えとかは不要になるから、関係なさそうなプラグインは削除した。</p>
+<p>テーマも拘ってないから、デフォルトのに変更した。</p>
+<h2 id="空ファイル"><a href="#空ファイル" class="headerlink" title="空ファイル"></a>空ファイル</h2><p>ファイルが生成されてるんだけど、空っぽというのがちらほらあるので色々調整してみた。</p>
+<p>テーマをデフォルト系のものにしても変化無し。<br>プラグインをほとんど無効にして作成し直したら解決。<br>多分、テーマではなくてプラグインだと思う。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/StaticPress/" data-id="cj0q4dvv6001233t6konrkx6d" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-s3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/s3/" class="article-date">
+  <time datetime="2014-04-24T06:30:39.000Z" itemprop="datePublished">2014-04-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/s3/">S3をつかってみたメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>某ブログサービスが連日落ちてて大変だったのでサービスを移すことにした。<br>そのために、エクスポートしてインポートさせようとおもったのだけど、画像ファイル類が容量オーバー。<br>データ類を落としてきて、それをS3へおくことに。</p>
+<h2 id="Bucketの作り方"><a href="#Bucketの作り方" class="headerlink" title="Bucketの作り方"></a>Bucketの作り方</h2><p>Bucketの作り方はこの辺を読んでおけば問題なさそう。</p>
+<blockquote>
+<p>Amazon Web Services ブログ: 月額10円〜 - Amazon S3でウェブサイトをホスティングする方法<br><a href="http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html" target="_blank" rel="external">http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html</a></p>
+</blockquote>
+<h3 id="Bucket-Policy参照"><a href="#Bucket-Policy参照" class="headerlink" title="Bucket Policy参照"></a>Bucket Policy参照</h3><pre><code>{
+  &quot;Version&quot;:&quot;2008-10-17&quot;,
+  &quot;Statement&quot;:[{
+       &quot;Sid&quot;:&quot;PublicReadForGetBucketObjects&quot;,
+     &quot;Effect&quot;:&quot;Allow&quot;,
+       &quot;Principal&quot;: {
+            &quot;AWS&quot;: &quot;*&quot;
+         },
+      &quot;Action&quot;:[&quot;s3:GetObject&quot;],
+      &quot;Resource&quot;:[&quot;arn:aws:s3:::&lt;$BucketName$&gt;/*&quot;
+      ]
+    }
+  ]
+}
+</code></pre><h2 id="リファラ制限"><a href="#リファラ制限" class="headerlink" title="リファラ制限"></a>リファラ制限</h2><p>諸事情でリファラ制限を掛けたかったので以下を参考にして設定。</p>
+<blockquote>
+<p>インフラ構築手順書 AWS S3をWEBホスティングとして利用【アクセス制限】<br><a href="http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" target="_blank" rel="external">http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC</a></p>
+</blockquote>
+<p>versionとかはそのままコピペする。勝手に変えたらダメ</p>
+<h2 id="naked-domain"><a href="#naked-domain" class="headerlink" title="naked domain"></a>naked domain</h2><p>Route53 でnaked domain でS3のbucketを設定するには、AレコードでAliasをYesにすると、bucketを選択できる。</p>
+<p>bucketはドメインと同じようにしておく必要がある。</p>
+<blockquote>
+<p>Amazon S3のルートドメインでのWebホスティング機能を試してみた - プログラマになりたい<br><a href="http://blog.takuros.net/entry/20130107/1357520635" target="_blank" rel="external">http://blog.takuros.net/entry/20130107/1357520635</a></p>
+</blockquote>
+<p>Route53の設定</p>
+<blockquote>
+<p>はじめてのRoute 53 - Dondari memo<br><a href="http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53" target="_blank" rel="external">http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53</a></p>
+</blockquote>
+<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><ul>
+<li>CSSが反映されたりされなかったり。Transmit経由で送ったらなんか読めなかった。そんな感じのエントリーを見た気がするのでいつか調べる</li>
+<li>日本語ファイル名。長すぎるとアウトみたいな様子</li>
+<li>転送が遅い。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/s3/" data-id="cj0q4e0ax001433t66renlpcu" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorieën</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo/">Hexo memo</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/dashboard_medium/">Mediumの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/dashdocset/">Dash memo</a>
+          </li>
+        
+          <li>
+            <a href="/node/">Node.js memo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 mersy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
