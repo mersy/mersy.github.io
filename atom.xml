@@ -17,8 +17,8 @@
   
   <entry>
     <title>craft cache memo</title>
-    <link href="http://mersy.github.io/craft-cache/"/>
-    <id>http://mersy.github.io/craft-cache/</id>
+    <link href="http://mersy.github.io/article/craft-cache.html"/>
+    <id>http://mersy.github.io/article/craft-cache.html</id>
     <published>2017-04-20T11:35:10.000Z</published>
     <updated>2017-04-20T12:02:14.000Z</updated>
     
@@ -73,10 +73,10 @@
   
   <entry>
     <title>Hexo memo</title>
-    <link href="http://mersy.github.io/hexo/"/>
-    <id>http://mersy.github.io/hexo/</id>
+    <link href="http://mersy.github.io/article/hexo.html"/>
+    <id>http://mersy.github.io/article/hexo.html</id>
     <published>2017-03-26T03:00:00.000Z</published>
-    <updated>2017-03-26T04:25:27.000Z</updated>
+    <updated>2017-03-26T04:25:12.000Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>mdファイルで書きたい</li>
@@ -131,8 +131,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://mersy.github.io/hello-world/"/>
-    <id>http://mersy.github.io/hello-world/</id>
+    <link href="http://mersy.github.io/article/hello-world.html"/>
+    <id>http://mersy.github.io/article/hello-world.html</id>
     <published>2017-03-26T02:55:12.000Z</published>
     <updated>2017-03-26T02:55:12.000Z</updated>
     
@@ -158,8 +158,8 @@
   
   <entry>
     <title>Mediumの投稿画面</title>
-    <link href="http://mersy.github.io/dashboard_medium/"/>
-    <id>http://mersy.github.io/dashboard_medium/</id>
+    <link href="http://mersy.github.io/article/dashboard_medium.html"/>
+    <id>http://mersy.github.io/article/dashboard_medium.html</id>
     <published>2016-12-10T05:30:00.000Z</published>
     <updated>2016-12-10T05:33:22.000Z</updated>
     
@@ -190,8 +190,8 @@
   
   <entry>
     <title>Dash memo</title>
-    <link href="http://mersy.github.io/dashdocset/"/>
-    <id>http://mersy.github.io/dashdocset/</id>
+    <link href="http://mersy.github.io/article/dashdocset.html"/>
+    <id>http://mersy.github.io/article/dashdocset.html</id>
     <published>2014-07-26T06:24:06.000Z</published>
     <updated>2014-07-26T07:14:04.000Z</updated>
     
@@ -223,8 +223,8 @@
   
   <entry>
     <title>Node.js memo</title>
-    <link href="http://mersy.github.io/node/"/>
-    <id>http://mersy.github.io/node/</id>
+    <link href="http://mersy.github.io/article/node.html"/>
+    <id>http://mersy.github.io/article/node.html</id>
     <published>2014-07-22T22:50:24.000Z</published>
     <updated>2014-07-22T22:51:30.000Z</updated>
     
@@ -250,8 +250,8 @@
   
   <entry>
     <title>Atom memo</title>
-    <link href="http://mersy.github.io/atom/"/>
-    <id>http://mersy.github.io/atom/</id>
+    <link href="http://mersy.github.io/article/atom.html"/>
+    <id>http://mersy.github.io/article/atom.html</id>
     <published>2014-07-11T07:15:32.000Z</published>
     <updated>2014-07-22T22:10:37.000Z</updated>
     
@@ -295,10 +295,10 @@
   
   <entry>
     <title>Chrome Appsをつくってみる</title>
-    <link href="http://mersy.github.io/chromeapp/"/>
-    <id>http://mersy.github.io/chromeapp/</id>
+    <link href="http://mersy.github.io/article/chromeapp.html"/>
+    <id>http://mersy.github.io/article/chromeapp.html</id>
     <published>2014-07-11T07:11:50.000Z</published>
-    <updated>2017-04-11T21:35:29.000Z</updated>
+    <updated>2014-07-11T08:46:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="アプリをデバッグ"><a href="#アプリをデバッグ" class="headerlink" title="アプリをデバッグ"></a>アプリをデバッグ</h2><p>アプリを右クリックでコンソールが開く</p>
 <h2 id="scroll-bar-の表示"><a href="#scroll-bar-の表示" class="headerlink" title="scroll bar の表示"></a>scroll bar の表示</h2><p>こんな感じで。</p>
@@ -326,8 +326,8 @@
   
   <entry>
     <title>Chrome Extensionをつくってみる</title>
-    <link href="http://mersy.github.io/chromeextension/"/>
-    <id>http://mersy.github.io/chromeextension/</id>
+    <link href="http://mersy.github.io/article/chromeextension.html"/>
+    <id>http://mersy.github.io/article/chromeextension.html</id>
     <published>2014-06-24T03:43:24.000Z</published>
     <updated>2014-06-24T03:44:12.000Z</updated>
     
@@ -352,8 +352,8 @@
   
   <entry>
     <title>middlemanを使ってみる</title>
-    <link href="http://mersy.github.io/middleman/"/>
-    <id>http://mersy.github.io/middleman/</id>
+    <link href="http://mersy.github.io/article/middleman.html"/>
+    <id>http://mersy.github.io/article/middleman.html</id>
     <published>2014-05-08T23:17:14.000Z</published>
     <updated>2014-06-09T23:55:09.000Z</updated>
     
@@ -406,8 +406,8 @@ layout: false
   
   <entry>
     <title>MTにメールで投稿する</title>
-    <link href="http://mersy.github.io/mtbymail/"/>
-    <id>http://mersy.github.io/mtbymail/</id>
+    <link href="http://mersy.github.io/article/mtbymail.html"/>
+    <id>http://mersy.github.io/article/mtbymail.html</id>
     <published>2014-05-08T21:21:56.000Z</published>
     <updated>2014-05-08T21:44:44.000Z</updated>
     
@@ -450,8 +450,8 @@ layout: false
   
   <entry>
     <title>MTのメモ</title>
-    <link href="http://mersy.github.io/mtmemo/"/>
-    <id>http://mersy.github.io/mtmemo/</id>
+    <link href="http://mersy.github.io/article/mtmemo.html"/>
+    <id>http://mersy.github.io/article/mtmemo.html</id>
     <published>2014-05-08T10:07:27.000Z</published>
     <updated>2014-08-13T04:42:17.000Z</updated>
     
@@ -566,8 +566,8 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
   
   <entry>
     <title>Vagrant memo</title>
-    <link href="http://mersy.github.io/vagrant/"/>
-    <id>http://mersy.github.io/vagrant/</id>
+    <link href="http://mersy.github.io/article/vagrant.html"/>
+    <id>http://mersy.github.io/article/vagrant.html</id>
     <published>2014-05-08T09:21:03.000Z</published>
     <updated>2014-05-09T02:02:17.000Z</updated>
     
@@ -657,8 +657,8 @@ $ service mysqld start
   
   <entry>
     <title>VMWare memo</title>
-    <link href="http://mersy.github.io/vmware/"/>
-    <id>http://mersy.github.io/vmware/</id>
+    <link href="http://mersy.github.io/article/vmware.html"/>
+    <id>http://mersy.github.io/article/vmware.html</id>
     <published>2014-05-08T00:52:58.000Z</published>
     <updated>2014-05-08T18:34:29.000Z</updated>
     
@@ -689,8 +689,8 @@ $ service mysqld start
   
   <entry>
     <title>Jenkins memo</title>
-    <link href="http://mersy.github.io/jenkins/"/>
-    <id>http://mersy.github.io/jenkins/</id>
+    <link href="http://mersy.github.io/article/jenkins.html"/>
+    <id>http://mersy.github.io/article/jenkins.html</id>
     <published>2014-05-05T06:28:43.000Z</published>
     <updated>2014-05-05T06:43:29.000Z</updated>
     
@@ -742,8 +742,8 @@ $ sudo service jenkins start
   
   <entry>
     <title>Homebrewメモ</title>
-    <link href="http://mersy.github.io/homebrew/"/>
-    <id>http://mersy.github.io/homebrew/</id>
+    <link href="http://mersy.github.io/article/homebrew.html"/>
+    <id>http://mersy.github.io/article/homebrew.html</id>
     <published>2014-05-05T02:01:37.000Z</published>
     <updated>2014-05-05T02:05:39.000Z</updated>
     
@@ -775,8 +775,8 @@ $ mv README.md README.md.org
   
   <entry>
     <title>CasperJSメモ</title>
-    <link href="http://mersy.github.io/casperjs/"/>
-    <id>http://mersy.github.io/casperjs/</id>
+    <link href="http://mersy.github.io/article/casperjs.html"/>
+    <id>http://mersy.github.io/article/casperjs.html</id>
     <published>2014-05-05T01:53:31.000Z</published>
     <updated>2014-05-05T03:02:56.000Z</updated>
     
@@ -849,8 +849,8 @@ casper.run();
   
   <entry>
     <title>VMWare上でMarkdownをePubなどに変換</title>
-    <link href="http://mersy.github.io/publish/"/>
-    <id>http://mersy.github.io/publish/</id>
+    <link href="http://mersy.github.io/article/publish.html"/>
+    <id>http://mersy.github.io/article/publish.html</id>
     <published>2014-05-02T07:06:37.000Z</published>
     <updated>2014-05-04T01:51:01.000Z</updated>
     
@@ -935,8 +935,8 @@ $ npm -v
   
   <entry>
     <title>MTMarkdownOptions</title>
-    <link href="http://mersy.github.io/mtmakdownoptions/"/>
-    <id>http://mersy.github.io/mtmakdownoptions/</id>
+    <link href="http://mersy.github.io/article/mtmakdownoptions.html"/>
+    <id>http://mersy.github.io/article/mtmakdownoptions.html</id>
     <published>2014-05-02T02:06:33.000Z</published>
     <updated>2014-05-02T07:55:38.000Z</updated>
     
@@ -989,8 +989,8 @@ $ npm -v
   
   <entry>
     <title>StaticPressのメモ</title>
-    <link href="http://mersy.github.io/StaticPress/"/>
-    <id>http://mersy.github.io/StaticPress/</id>
+    <link href="http://mersy.github.io/article/StaticPress.html"/>
+    <id>http://mersy.github.io/article/StaticPress.html</id>
     <published>2014-04-28T05:07:31.000Z</published>
     <updated>2014-04-29T06:39:59.000Z</updated>
     

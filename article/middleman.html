@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>middlemanを使ってみる | mersy note</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="middleman
+Middleman: 効率的な作業を可能にする Ruby 製の静的サイト生成ツールhttp://middlemanapp.com/jp/
+
+middleman のインストール$ gem install middleman
+インストールが終わったらbundleをインストール
+$ gem install bundler
+一度 Terminalを閉じて再起動
+middlemanを使う">
+<meta property="og:type" content="article">
+<meta property="og:title" content="middlemanを使ってみる">
+<meta property="og:url" content="http://mersy.github.io/article/middleman.html">
+<meta property="og:site_name" content="mersy note">
+<meta property="og:description" content="middleman
+Middleman: 効率的な作業を可能にする Ruby 製の静的サイト生成ツールhttp://middlemanapp.com/jp/
+
+middleman のインストール$ gem install middleman
+インストールが終わったらbundleをインストール
+$ gem install bundler
+一度 Terminalを閉じて再起動
+middlemanを使う">
+<meta property="og:updated_time" content="2014-06-09T23:55:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="middlemanを使ってみる">
+<meta name="twitter:description" content="middleman
+Middleman: 効率的な作業を可能にする Ruby 製の静的サイト生成ツールhttp://middlemanapp.com/jp/
+
+middleman のインストール$ gem install middleman
+インストールが終わったらbundleをインストール
+$ gem install bundler
+一度 Terminalを閉じて再起動
+middlemanを使う">
+  
+    <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRMD4G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mersy note</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-middleman" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/middleman.html" class="article-date">
+  <time datetime="2014-05-08T23:17:14.000Z" itemprop="datePublished">2014-05-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/middleman/">middleman</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      middlemanを使ってみる
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="middleman"><a href="#middleman" class="headerlink" title="middleman"></a>middleman</h2><blockquote>
+<p>Middleman: 効率的な作業を可能にする Ruby 製の静的サイト生成ツール<br><a href="http://middlemanapp.com/jp/" target="_blank" rel="external">http://middlemanapp.com/jp/</a></p>
+</blockquote>
+<h2 id="middleman-のインストール"><a href="#middleman-のインストール" class="headerlink" title="middleman のインストール"></a>middleman のインストール</h2><pre><code>$ gem install middleman
+</code></pre><p>インストールが終わったらbundleをインストール</p>
+<pre><code>$ gem install bundler
+</code></pre><p>一度 Terminalを閉じて再起動</p>
+<h2 id="middlemanを使う"><a href="#middlemanを使う" class="headerlink" title="middlemanを使う"></a>middlemanを使う</h2><p>プロジェクトのディレクトリへ移動。</p>
+<pre><code>$ bundle install
+</code></pre><p>必要なものがインストール。</p>
+<pre><code>$ middleman server
+</code></pre><p>で立ち上がる</p>
+<pre><code>$ middleman build
+</code></pre><p>でビルドされる</p>
+<h2 id="build-server-でエラーが出た場合"><a href="#build-server-でエラーが出た場合" class="headerlink" title="build / server でエラーが出た場合"></a>build / server でエラーが出た場合</h2><p>色々原因は考えられるが、</p>
+<blockquote>
+<p>middleman をアップデートしたらこれまでのプロジェクトでエラーになった場合の解決方法 - HAM MEDIA MEMO<br><a href="http://h2ham.net/middleman-update-server-error" target="_blank" rel="external">http://h2ham.net/middleman-update-server-error</a></p>
+</blockquote>
+<p>を参考に</p>
+<pre><code>$ bundle update
+</code></pre><p>しておく。</p>
+<h2 id="テンプレート"><a href="#テンプレート" class="headerlink" title="テンプレート"></a>テンプレート</h2><p>デフォルトのレイアウトは source/layouts の layout.erb 。</p>
+<p>カスタマイズするときは source/layouts フォルダにadmin.erbなどと作っておく。</p>
+<h3 id="layoutに特定のテンプレートを使う場合"><a href="#layoutに特定のテンプレートを使う場合" class="headerlink" title="layoutに特定のテンプレートを使う場合"></a>layoutに特定のテンプレートを使う場合</h3><pre><code>---
+layout: admin
+---
+</code></pre><h3 id="layoutを指定しない場合"><a href="#layoutを指定しない場合" class="headerlink" title="layoutを指定しない場合"></a>layoutを指定しない場合</h3><pre><code>---
+layout: false
+---
+</code></pre><h2 id="リンク"><a href="#リンク" class="headerlink" title="リンク"></a>リンク</h2><ul>
+<li>Middleman: Hand-crafted frontend development<br><a href="http://middlemanapp.com/" target="_blank" rel="external">http://middlemanapp.com/</a></li>
+<li>Bundler: The best way to manage a Ruby application’s gems<br><a href="http://bundler.io/" target="_blank" rel="external">http://bundler.io/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/middleman.html" data-id="cj67q6x04001bu2jxufcttqj2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/article/chromeextension.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Chrome Extensionをつくってみる
+        
+      </div>
+    </a>
+  
+  
+    <a href="/article/mtbymail.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MTにメールで投稿する</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Craft-CMS/" style="font-size: 10px;">Craft CMS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/article/craft-cache.html">craft cache memo</a>
+          </li>
+        
+          <li>
+            <a href="/article/hexo.html">Hexo memo</a>
+          </li>
+        
+          <li>
+            <a href="/article/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/article/dashboard_medium.html">Mediumの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/article/dashdocset.html">Dash memo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 mersy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vagrant memo | mersy note</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vagrant に限らず。。。環境構築関係メモ。
+
+Vagranthttp://www.vagrantup.com/
+Vagrant Cloudhttps://vagrantcloud.com/
+Discover Featured Vagrant Boxeshttps://vagrantcloud.com/discover/featured
+
+IPが割り振れないときVagrantでIPが割り振れな">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vagrant memo">
+<meta property="og:url" content="http://mersy.github.io/article/vagrant.html">
+<meta property="og:site_name" content="mersy note">
+<meta property="og:description" content="Vagrant に限らず。。。環境構築関係メモ。
+
+Vagranthttp://www.vagrantup.com/
+Vagrant Cloudhttps://vagrantcloud.com/
+Discover Featured Vagrant Boxeshttps://vagrantcloud.com/discover/featured
+
+IPが割り振れないときVagrantでIPが割り振れな">
+<meta property="og:updated_time" content="2014-05-09T02:02:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vagrant memo">
+<meta name="twitter:description" content="Vagrant に限らず。。。環境構築関係メモ。
+
+Vagranthttp://www.vagrantup.com/
+Vagrant Cloudhttps://vagrantcloud.com/
+Discover Featured Vagrant Boxeshttps://vagrantcloud.com/discover/featured
+
+IPが割り振れないときVagrantでIPが割り振れな">
+  
+    <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRMD4G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mersy note</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/vagrant.html" class="article-date">
+  <time datetime="2014-05-08T09:21:03.000Z" itemprop="datePublished">2014-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vagrant memo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Vagrant に限らず。。。環境構築関係メモ。</p>
+<ul>
+<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
+<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
+<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
+</ul>
+<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
+<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
+</code></pre><p>そのうえで改めてboxを作り直す。</p>
+<pre><code>$ vagrant package
+$ vagrant box add &lt;NewBoxName&gt; package.box
+$ vagrant box list
+$ rm -rf package.box
+</code></pre><p>その上で</p>
+<pre><code>$ vagrant init &lt;NewBoxName&gt;
+</code></pre><p>でVagrantfileを編集しておく。</p>
+<blockquote>
+<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
+</blockquote>
+<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Ruby</li>
+<li>Python</li>
+<li>phpMyAdmin</li>
+</ul>
+<blockquote>
+<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
+</blockquote>
+<p>これに、いくつか入れておいた。</p>
+<ul>
+<li>wget</li>
+<li>make</li>
+<li>gcc</li>
+<li>Perlのmodule</li>
+<li>ImageMagick</li>
+</ul>
+<p>とりあえずここまで。</p>
+<p>後入れようとおもってるもの。</p>
+<ul>
+<li>cpanm</li>
+<li>Nginx</li>
+<li>Starman</li>
+</ul>
+<p>一緒にしておくか、box分けるか。</p>
+<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
+<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
+</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
+<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
+</code></pre><p>コメントを外しておく</p>
+<pre><code># AddHandler cgi-script .cgi
+↓
+AddHandler cgi-script .cgi
+</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
+<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl
+&lt;/Directory&gt;
+</code></pre><p>みたいなかんじのを追加しておく</p>
+<pre><code>$ sudo service httpd stop
+$ sudo service httpd start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
+<pre><code>$ chkconfig mysqld on
+$ chkconfig --list mysqld
+$ service mysqld start
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/vagrant.html" data-id="cj67q6x170026u2jxjsg3r6l1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/article/mtmemo.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MTのメモ
+        
+      </div>
+    </a>
+  
+  
+    <a href="/article/vmware.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">VMWare memo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Craft-CMS/" style="font-size: 10px;">Craft CMS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/article/craft-cache.html">craft cache memo</a>
+          </li>
+        
+          <li>
+            <a href="/article/hexo.html">Hexo memo</a>
+          </li>
+        
+          <li>
+            <a href="/article/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/article/dashboard_medium.html">Mediumの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/article/dashdocset.html">Dash memo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 mersy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
