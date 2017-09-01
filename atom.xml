@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-04-20T12:02:14.000Z</updated>
+  <updated>2017-09-01T12:42:51.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Craft CMS のシステムEmailの設定</title>
+    <link href="http://mersy.github.io/article/craft-systememail.html"/>
+    <id>http://mersy.github.io/article/craft-systememail.html</id>
+    <published>2017-09-01T12:30:00.000Z</published>
+    <updated>2017-09-01T12:42:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>知ってしまえば簡単なことなのですが。</p>
+<p>パスワードリマインダなどのメールアドレスの設定はどこでするのだろう、、、と設定の全般ばかりをみていたのですが、メールの所に <code>システムのメールアドレス</code> があります。</p>
+<p><img src="../asset/craft-systemaddress.png" alt=""></p>
+<p>こちらにセットしましょう。</p>
+<p>デフォルトは初期ユーザーのシステム管理者のアドレスが入る？みたいです。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;知ってしまえば簡単なことなのですが。&lt;/p&gt;
+&lt;p&gt;パスワードリマインダなどのメールアドレスの設定はどこでするのだろう、、、と設定の全般ばかりをみていたのですが、メールの所に &lt;code&gt;システムのメールアドレス&lt;/code&gt; があります。&lt;/p&gt;
+&lt;p&gt;&lt;img src=
+    
+    </summary>
+    
+      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
+    
+    
+      <category term="Craft CMS" scheme="http://mersy.github.io/tags/Craft-CMS/"/>
+    
+  </entry>
   
   <entry>
     <title>craft cache memo</title>
@@ -983,37 +1012,6 @@ $ npm -v
     </summary>
     
       <category term="MovableType" scheme="http://mersy.github.io/categories/MovableType/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>StaticPressのメモ</title>
-    <link href="http://mersy.github.io/article/StaticPress.html"/>
-    <id>http://mersy.github.io/article/StaticPress.html</id>
-    <published>2014-04-28T05:07:31.000Z</published>
-    <updated>2014-04-29T06:39:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。</p>
-<blockquote>
-<p>StaticPress<br><a href="http://ja.staticpress.net/" target="_blank" rel="external">http://ja.staticpress.net/</a></p>
-</blockquote>
-<p>とりあえず、StaticPressを使うためには、Permalinkをそれに対応出来る様に .html 的な感じになるようにしておかないとNG。<br>考えたらあたりまえだけど、 hogehoge?p=xxx みたいなのだと、スタティックにできるわけないです。</p>
-<p>スマホの切り替えとかは不要になるから、関係なさそうなプラグインは削除した。</p>
-<p>テーマも拘ってないから、デフォルトのに変更した。</p>
-<h2 id="空ファイル"><a href="#空ファイル" class="headerlink" title="空ファイル"></a>空ファイル</h2><p>ファイルが生成されてるんだけど、空っぽというのがちらほらあるので色々調整してみた。</p>
-<p>テーマをデフォルト系のものにしても変化無し。<br>プラグインをほとんど無効にして作成し直したら解決。<br>多分、テーマではなくてプラグインだと思う。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;StaticPress&lt;br&gt;&lt;a href=&quot;http://ja.staticpress.net/&quot; target=&quot;_bla
-    
-    </summary>
-    
-      <category term="WordPress" scheme="http://mersy.github.io/categories/WordPress/"/>
     
     
   </entry>
