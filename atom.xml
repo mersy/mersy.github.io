@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-09-01T12:42:51.000Z</updated>
+  <updated>2017-09-22T23:22:19.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ブログかいてみる</title>
+    <link href="http://mersy.github.io/article/writeblog.html"/>
+    <id>http://mersy.github.io/article/writeblog.html</id>
+    <published>2017-09-22T23:22:19.000Z</published>
+    <updated>2017-09-22T23:22:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>とりあえず、ブログとしてサクッといけるかテスト。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;とりあえず、ブログとしてサクッといけるかテスト。&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Craft CMS のシステムEmailの設定</title>
@@ -958,60 +980,6 @@ $ npm -v
     </summary>
     
       <category term="Pandoc ePub" scheme="http://mersy.github.io/categories/Pandoc-ePub/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MTMarkdownOptions</title>
-    <link href="http://mersy.github.io/article/mtmakdownoptions.html"/>
-    <id>http://mersy.github.io/article/mtmakdownoptions.html</id>
-    <published>2014-05-02T02:06:33.000Z</published>
-    <updated>2014-05-02T07:55:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
-<blockquote>
-<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
-</blockquote>
-<p>知らなかった！</p>
-<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
-# &lt;mt:EntryTitle&gt;
----
-&lt;mt:EntryBody&gt;
-&lt;/MTMarkdownOptions&gt;
-</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
-<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
-<blockquote>
-<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
-</blockquote>
-<p>とりあえず、指定の仕方がよくわからん。</p>
-<p>filtersについてのコードはこの辺。</p>
-<blockquote>
-<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
-</blockquote>
-<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
-<blockquote>
-<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
-</blockquote>
-<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
-<hr>
-<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
-<p>使えそうなモジュールはこの辺？</p>
-<blockquote>
-<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
-</blockquote>
-<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MTMarkdownOptions | テンプレートタグリファレンス&lt;br&gt;&lt;a href=&quot;http://www.movable
-    
-    </summary>
-    
-      <category term="MovableType" scheme="http://mersy.github.io/categories/MovableType/"/>
     
     
   </entry>
