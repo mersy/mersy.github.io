@@ -127,7 +127,7 @@
     <link href="http://mersy.github.io/article/hexo.html"/>
     <id>http://mersy.github.io/article/hexo.html</id>
     <published>2017-03-26T03:00:00.000Z</published>
-    <updated>2017-03-26T04:25:12.000Z</updated>
+    <updated>2017-09-24T00:54:59.000Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>mdファイルで書きたい</li>
@@ -153,6 +153,14 @@
 <p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
 <p>でローカルで下書きが確認できる</p>
+<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
+<li>/scaffolds<ul>
+<li>draft.md : ドラフト投稿用のテンプレート</li>
+<li>post.md : 投稿用のテンプレート</li>
+<li>page.md : 固定ページ用のテンプレート</li>
+</ul>
+</li>
+</ul>
 <h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
 <li>カテゴリの設定</li>
 <li>検索（flexibeSearch）</li>
@@ -162,6 +170,7 @@
 <li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
 <li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
 <li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
+<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
 </ul>
 ]]></content>
     
