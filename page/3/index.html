@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,113 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-publish" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/publish.html" class="article-date">
+  <time datetime="2014-05-02T07:06:37.000Z" itemprop="datePublished">2014-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/publish.html">VMWare上でMarkdownをePubなどに変換</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。<br>MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。</p>
+<h2 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h2><h3 id="VMWare-上の-CentOS-に-Pandocをインストールする"><a href="#VMWare-上の-CentOS-に-Pandocをインストールする" class="headerlink" title="VMWare 上の CentOS に Pandocをインストールする"></a>VMWare 上の CentOS に Pandocをインストールする</h3><p>MacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。</p>
+<blockquote>
+<p>Pandoc - Installing<br><a href="http://johnmacfarlane.net/pandoc/installing.html" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/installing.html</a></p>
+</blockquote>
+<p>よくわかってなかったけど、必要そうなモノ</p>
+<ul>
+<li>haskell-platform</li>
+<li>cabal</li>
+<li>ghc</li>
+</ul>
+<p>以下のサイトをみながら、色々試行錯誤してHaskell環境を整えた。</p>
+<ul>
+<li>CentOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+</ul>
+<p>./configure<br>して<br>make<br>make install<br>が走って良かった・・・・</p>
+<p>pandocをインストール</p>
+<pre><code>cabal update
+cabal install pandoc
+</code></pre><p>インストールされた後、pathが通ってなかったりはしてましたが。。。</p>
+<pre><code>PATH=$HOME/applications/haskell/ghc-7.6.3/bin:$PATH
+PATH=$HOME/applications/haskell/haskell-platform-2013.2.0.0/bin:$PATH
+PATH=$HOME/.cabal/bin:$PATH
+</code></pre><p>を.bash_profileに追加</p>
+<p>CentOS6.4へhaskell(ghc-7.6.3), haskell-platform-2013.2.0.0, pandocインストール | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/15052.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/15052.html</a></p>
+<p>で、インストール用のスクリプトが紹介されてるから、次はコレを使ってみてもいいのかもしれない。</p>
+<pre><code>pandoc -f markdown -t html sample.md -s -o sample.html
+</code></pre><p>で、mdからhtmlが作成されたのを確認。</p>
+<h3 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h3><ul>
+<li>Pandocでテキストデータ変換 | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12512.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12512.html</a></li>
+<li>entOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+</ul>
+<h2 id="GitBook"><a href="#GitBook" class="headerlink" title="GitBook"></a>GitBook</h2><p>GitBookを試してみる</p>
+<blockquote>
+<p>GitBook<br><a href="http://www.gitbook.io/" target="_blank" rel="external">http://www.gitbook.io/</a></p>
+</blockquote>
+<h3 id="CentOSにnode-jsをインストールする"><a href="#CentOSにnode-jsをインストールする" class="headerlink" title="CentOSにnode.jsをインストールする"></a>CentOSにnode.jsをインストールする</h3><p>以下のリンクを参考にして、nodeを入れる</p>
+<ul>
+<li>CentOS5.5 に node.js をインストールする - xykの日記<br><a href="http://d.hatena.ne.jp/xyk/20120131/1327998901" target="_blank" rel="external">http://d.hatena.ne.jp/xyk/20120131/1327998901</a></li>
+<li>creationix/nvm<br><a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></li>
+</ul>
+<p>メモ</p>
+<pre><code># yum -y install openssl-devel
+
+$ vi .bashrc
+</code></pre><p>以下を追記</p>
+<pre><code>. ~/.nvm/nvm.sh
+nvm use v0.10.28
+</code></pre><p>versionを確認</p>
+<pre><code>$ node -v
+$ npm -v
+</code></pre><h3 id="GitBookをインストール"><a href="#GitBookをインストール" class="headerlink" title="GitBookをインストール"></a>GitBookをインストール</h3><p>とりあえずローカル環境で動作を試す。</p>
+<pre><code>npm install gitbook -g
+</code></pre><ul>
+<li>GitbookIO/gitbook<br><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">https://github.com/GitbookIO/gitbook</a></li>
+<li>Node.js - gitbook試してみた - Qiita<br><a href="http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0" target="_blank" rel="external">http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0</a></li>
+</ul>
+<h2 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h2><p>Gruntでやる方法</p>
+<p>MarkdownからEPUB データを生成する「grunt-mdeb」を書いてみた – Mach3.laBlog<br><a href="http://blog.mach3.jp/2014/02/13/grunt-mdeb.html" target="_blank" rel="external">http://blog.mach3.jp/2014/02/13/grunt-mdeb.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/publish.html" data-id="cj804f4v70024vjjxbpney75v" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-mtmakdownoptions" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -134,9 +241,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cj7y18g86001o8z0b3x18k8b0" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cj804f4uu001svjjxdsv2i3vo" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -185,9 +292,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cj7y18g6t000b8z0b69zutaml" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cj804f4tc000cvjjxll7w8jf7" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -265,9 +372,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/s3.html" data-id="cj7y18g8x00268z0beqmndz8l" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/s3.html" data-id="cj804f4vh002bvjjx3p444bzi" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -336,9 +443,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cj7y18g83001l8z0b56yo9xio" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cj804f4us001qvjjxq291gidx" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -400,9 +507,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cj7y18g8o001x8z0bwee5ueez" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cj804f4v50021vjjxk7mtxniy" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -474,9 +581,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cj7y18g8w00258z0boqit6hyw" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cj804f4vg0029vjjx6dgnha23" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -558,9 +665,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cj7y18g7l00128z0bqegs9dx1" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cj804f4tz0012vjjxddcxyvwq" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -708,9 +815,9 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chef.html" data-id="cj7y18g76000h8z0bdz7k991b" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/chef.html" data-id="cj804f4tk000ivjjx4t5zl14n" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -757,83 +864,9 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cj7y18g7w001g8z0bzh5nxnuq" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cj804f4uk001ivjjx6vwhyx7x" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/labelOnTask.html#disqus_thread" class="article-comment-link">Commentaires</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-flexibleSearchOnJekyll" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/flexibleSearchOnJekyll.html" class="article-date">
-  <time datetime="2013-10-17T23:00:00.000Z" itemprop="datePublished">2013-10-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/flexibleSearchOnJekyll.html">flexibleSearchをJekyll（Github Pages）で使う</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Github Pagesだと動的なことができないから、flexibleSearchをJekyllで使ってみる方法で検索部分を実装してみた</p>
-<blockquote>
-<p>tinybeans/jq-plugin-flexibleSearch<br><a href="https://github.com/tinybeans/jq-plugin-flexibleSearch" target="_blank" rel="external">https://github.com/tinybeans/jq-plugin-flexibleSearch</a></p>
-</blockquote>
-<p>flexibleSearchはJSONベースの検索システム。</p>
-<h2 id="JSONの生成"><a href="#JSONの生成" class="headerlink" title="JSONの生成"></a>JSONの生成</h2><p>JSONをどうやってだすんだろう？？というところでかなり時間がかかった。</p>
-<script src="//gist.github.com/7033839.js"></script>
-<p>こんなかんじで、一応エラーが出ないJSONを生成することが出来た。<br>flexibleSearchの次期バージョンからitemではなくitemsになってるので要注意。</p>
-<p>最新版はGithubのdevelopブランチに入っている。</p>
-<h2 id="flexibleSearch"><a href="#flexibleSearch" class="headerlink" title="flexibleSearch"></a>flexibleSearch</h2><p>js部分はこんな感じで。</p>
-<script src="//gist.github.com/7035259.js"></script>
-<p>最新版ではjQueryの他に mustache.jsも必須になってます。</p>
-<blockquote>
-<p>mustache<br><a href="http://mustache.github.io/" target="_blank" rel="external">http://mustache.github.io/</a></p>
-</blockquote>
-<p>JavaScriptのをおとしておきます。</p>
-<blockquote>
-<p>janl/mustache.js<br><a href="https://github.com/janl/mustache.js" target="_blank" rel="external">https://github.com/janl/mustache.js</a></p>
-</blockquote>
-<h3 id="検索結果ページ"><a href="#検索結果ページ" class="headerlink" title="検索結果ページ"></a>検索結果ページ</h3><p>検索結果のページは</p>
-<pre><code>&lt;div id=&quot;fs-result&quot;&gt;&lt;/div&gt;
-</code></pre><p>を埋め込むだけ。</p>
-<script src="//gist.github.com/7049726.js"></script>
-<p>結果表示部分はこんな感じでflexibleSearch.jsを書き換えておいた。</p>
-<script src="//gist.github.com/7049773.js"></script>
-<p>ここは近いうちにオプション側で指定出来るようになるとのこと。</p>
-<h3 id="検索フォーム"><a href="#検索フォーム" class="headerlink" title="検索フォーム"></a>検索フォーム</h3><p>検索フォーム部分も同様にflexibleSearch.jsを書き換え。</p>
-<script src="//gist.github.com/7049781.js"></script>
-<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブをflexibleSearchで作成した</p>
-<p>JSONにcategoriesとしてcategoryを出すように修正。</p>
-<script src="//gist.github.com/7056249.js"></script>
-<p>サイドバーのカテゴリリスト部分は以下の様な感じで修正。</p>
-<script src="//gist.github.com/7056240.js"></script>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cj7y18g7k000z8z0bag6kika2" class="article-share-link">Partager</a>
-      
-        <a href="http://mersy.github.io/article/flexibleSearchOnJekyll.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/labelOnTask.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -846,7 +879,7 @@ $ knife solo prepare test_vagrant5
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -854,7 +887,7 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -864,9 +897,9 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li></ul>
     </div>
   </div>
 
@@ -874,9 +907,9 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Craft-CMS/" style="font-size: 10px;">Craft CMS</a>
+      <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a>
     </div>
   </div>
 
@@ -893,9 +926,13 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a>
+          </li>
         
           <li>
             <a href="/article/writeblog.html">ブログかいてみる</a>
@@ -913,10 +950,6 @@ $ knife solo prepare test_vagrant5
             <a href="/article/hexo.html">Hexo memo</a>
           </li>
         
-          <li>
-            <a href="/article/hello-world.html">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -930,7 +963,7 @@ $ knife solo prepare test_vagrant5
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 mersy<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2013/10 | mersy note</title>
+  <title>mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="mersy note">
-<meta property="og:url" content="http://mersy.github.io/archives/2013/10/index.html">
+<meta property="og:url" content="http://mersy.github.io/page/5/index.html">
 <meta property="og:site_name" content="mersy note">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mersy note">
@@ -72,212 +72,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/labelOnTask.html" class="archive-article-date">
-  <time datetime="2013-10-22T19:00:00.000Z" itemprop="datePublished">Oct 23</time>
+    <article id="post-jekyllmemo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/jekyllmemo.html" class="article-date">
+  <time datetime="2013-10-10T05:30:00.000Z" itemprop="datePublished">2013-10-10</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Jekyll/">Jekyll</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/labelOnTask.html">Taskにつけるラベルの考え方</a>
+      <a class="article-title" href="/article/jekyllmemo.html">Jekyll memo</a>
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/flexibleSearchOnJekyll.html" class="archive-article-date">
-  <time datetime="2013-10-17T23:00:00.000Z" itemprop="datePublished">Oct 18</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/flexibleSearchOnJekyll.html">flexibleSearchをJekyll（Github Pages）で使う</a>
-    </h1>
-  
+        <h2 id="ドキュメント"><a href="#ドキュメント" class="headerlink" title="ドキュメント"></a>ドキュメント</h2><p><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="external">http://jekyllrb.com/docs/home/</a></p>
+<h2 id="たちあげ"><a href="#たちあげ" class="headerlink" title="たちあげ"></a>たちあげ</h2><pre><code>$ jekyll serve --watch
+</code></pre><h2 id="確認URL"><a href="#確認URL" class="headerlink" title="確認URL"></a>確認URL</h2><blockquote>
+<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+</blockquote>
+<h2 id="Permalink"><a href="#Permalink" class="headerlink" title="Permalink"></a>Permalink</h2><p>_config.yml に</p>
+<pre><code>permalink: /:title.html
+</code></pre><p>なかんじで記載</p>
+<p><a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="external">http://jekyllrb.com/docs/permalinks/</a></p>
+<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><p>_draft フォルダにいれる</p>
+<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブはflexibleSearchをつかって実装</p>
+<blockquote>
+<p><a href="/flexibleSearchOnJekyll.html">flexibleSearchをJekyllで使う</a></p>
+</blockquote>
+<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><p>以下のテンプレートをatom.xmlやfeed.xmlとかで追加する。</p>
+<script src="https://gist.github.com/mersy/6933219.js"></script>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/sitemapByjekyll.html" class="archive-article-date">
-  <time datetime="2013-10-16T19:00:00.000Z" itemprop="datePublished">Oct 17</time>
-</a>
+<p>_config.ymlに以下の項目がなければ入れておく。</p>
+<pre><code>name: mersy memo
+description: いろいろメモ
+url: http://mersy.github.io/
+</code></pre><p>head にrssへのリンクも入れておく</p>
+<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;{{ site.name }}&quot; href=&quot;/atom.xml&quot; /&gt;
+</code></pre><h2 id="デザイン"><a href="#デザイン" class="headerlink" title="デザイン"></a>デザイン</h2><p>Start Bootstrap - Free HTML Templates for Bootstrap 3<br><a href="http://startbootstrap.com/" target="_blank" rel="external">http://startbootstrap.com/</a></p>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>Gistも直接埋め込めるらしい</p>
+<script src="//gist.github.com/mersy/59bf604a8929a8f7acf6.js"></script>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/sitemapByjekyll.html">Jekyll でGoogle Sitemap</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/pullrequestbybranch.html" class="archive-article-date">
-  <time datetime="2013-10-15T08:00:00.000Z" itemprop="datePublished">Oct 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/jekyllmemo.html" data-id="cj804f4u5001dvjjxhxk2gwvu" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/pullrequestbybranch.html">リポジトリ共有式のPull Request をBitbucketで</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/dataapimemo.html" class="archive-article-date">
-  <time datetime="2013-10-13T23:30:00.000Z" itemprop="datePublished">Oct 14</time>
-</a>
+        <a href="http://mersy.github.io/article/jekyllmemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/dataapimemo.html">Data API memo</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/pullrequestMtml.html" class="archive-article-date">
-  <time datetime="2013-10-13T22:30:00.000Z" itemprop="datePublished">Oct 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/pullrequestMtml.html">Pull Request でMTMLのレビュー？</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/tocOnOmniMarkupPreviewer.html" class="archive-article-date">
-  <time datetime="2013-10-12T09:30:00.000Z" itemprop="datePublished">Oct 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/tocOnOmniMarkupPreviewer.html">OmniMarkupPreviewer で目次を表示する</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/boxen.html" class="archive-article-date">
-  <time datetime="2013-10-12T03:10:00.000Z" itemprop="datePublished">Oct 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/boxen.html">BOXEN memo</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/openTerminalonST2Sidebar.html" class="archive-article-date">
-  <time datetime="2013-10-12T03:00:00.000Z" itemprop="datePublished">Oct 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/openTerminalonST2Sidebar.html">Sublime Text のsidebarからTerminalを開く</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/mtmlVersionControl.html" class="archive-article-date">
-  <time datetime="2013-10-11T08:00:00.000Z" itemprop="datePublished">Oct 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/mtmlVersionControl.html">MTMLのバージョン管理</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2013/10/page/2/">2</a><a class="extend next" rel="next" href="/archives/2013/10/page/2/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
   </nav>
 </section>
         
