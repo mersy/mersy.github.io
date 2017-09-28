@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-09-28T19:52:05.000Z</updated>
+  <updated>2017-09-28T20:18:16.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://mersy.github.io/article/fastly.html"/>
     <id>http://mersy.github.io/article/fastly.html</id>
     <published>2017-09-28T19:28:15.000Z</published>
-    <updated>2017-09-28T19:52:05.000Z</updated>
+    <updated>2017-09-28T20:18:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
 <p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
@@ -31,10 +31,16 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<blockquote>
+<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
+</blockquote>
 <h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
 <p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
 <p>キャッシュヒットしてるとこの辺で返ってくる。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
+<blockquote>
+<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
+</blockquote>
 <p>そのほか Response headers</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
 <p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
