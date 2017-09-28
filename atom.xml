@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-09-25T11:59:49.000Z</updated>
+  <updated>2017-09-28T19:52:05.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fastly memo</title>
+    <link href="http://mersy.github.io/article/fastly.html"/>
+    <id>http://mersy.github.io/article/fastly.html</id>
+    <published>2017-09-28T19:28:15.000Z</published>
+    <updated>2017-09-28T19:52:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
+<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
+<p>VCL（Varnish Configuration Language）というのに記載する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">sub vcl_recv &#123;</div><div class="line"></div><div class="line">  /* unset state tracking header to avoid client sending it */</div><div class="line">  if (req.restarts == 0) &#123;</div><div class="line">    unset req.http.X-Authed;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (!req.http.X-Authed) &#123;</div><div class="line">    /* stash the original URL and Host for later */</div><div class="line">    set req.http.X-Orig-URL = req.url;</div><div class="line"></div><div class="line">    /* set the URL to what the auth backend expects */</div><div class="line">    set req.url = &quot;/authenticate&quot;;</div><div class="line"></div><div class="line">    /* Auth requests won&apos;t be cached, so pass */</div><div class="line">    return(pass);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (req.http.X-Authed == &quot;true&quot;) &#123;</div><div class="line">    /* were authed, so proceed with the request */</div><div class="line">    /* reset the URL */</div><div class="line">    set req.url = req.http.X-Orig-URL;</div><div class="line"></div><div class="line">  &#125; else &#123;</div><div class="line">    /* the auth backend refused the request, so 403 the client */</div><div class="line">    error 403;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
+<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
+<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
+<p>そのほか Response headers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
+<p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
+<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
+<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fastly&lt;br&gt;&lt;a href=&quot;https://www.fastly.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.fastly.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;キャッシュの設定がそれぞれ変更される都度version
+    
+    </summary>
+    
+    
+      <category term="cache" scheme="http://mersy.github.io/tags/cache/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac の Excel で挙動が重いときはフォントを変えてみる</title>
@@ -856,80 +899,6 @@ $ mv README.md README.md.org
     </summary>
     
       <category term="Homebrew" scheme="http://mersy.github.io/categories/Homebrew/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CasperJSメモ</title>
-    <link href="http://mersy.github.io/article/casperjs.html"/>
-    <id>http://mersy.github.io/article/casperjs.html</id>
-    <published>2014-05-05T01:53:31.000Z</published>
-    <updated>2014-05-05T03:02:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>CasperJS</p>
-<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
-<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
-<pre><code>$ brew update
-$ brew install casperjs --devel
-$ casperjs --version
-1.1.0-beta3
-</code></pre><p>インストールできた</p>
-<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
-<blockquote>
-<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html">http://mersy.github.io/homebrew.html</a></p>
-</blockquote>
-<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
-<pre><code>// sample01.js
-var casper = require(&apos;casper&apos;).create();
-
-casper.start(&apos;http://bit-part.net/&apos;,function(){
-  this.echo(this.getTitle());
-});
-
-casper.run();
-</code></pre><p>sample01.jsを作成</p>
-<pre><code>$ casperjs sample01.js
-bit part 合同会社
-</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
-<pre><code>// sample2.js
-var casper = require(&apos;casper&apos;).create();
-
-casper.start(&apos;http://bit-part.net&apos;,function(){
-  this.capture(&apos;sample02.png&apos;);
-});
-
-casper.run();
-</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
-<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
-var casper = require(&apos;casper&apos;).create();
-
-casper.start(&apos;http://bit-part.net&apos;);
-
-casper.viewport(1024, 768).then(function() {
-    this.capture(&apos;sample03.png&apos;);
-});
-
-casper.run();
-</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
-<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
-<blockquote>
-<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
-</blockquote>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
-<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CasperJS&lt;/p&gt;
-&lt;p&gt;CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS&lt;br&gt;&lt;a href=&quot;http://casperjs.org/&quot; target=
-    
-    </summary>
-    
-      <category term="CasperJS" scheme="http://mersy.github.io/categories/CasperJS/"/>
     
     
   </entry>
