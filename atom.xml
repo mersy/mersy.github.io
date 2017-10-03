@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-09-28T20:20:15.000Z</updated>
+  <updated>2017-10-03T13:05:45.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DeployHQ のユーザの種類メモ</title>
+    <link href="http://mersy.github.io/article/deployhq-user.html"/>
+    <id>http://mersy.github.io/article/deployhq-user.html</id>
+    <published>2017-10-03T12:57:13.000Z</published>
+    <updated>2017-10-03T13:05:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>DeployHQ のユーザの種類メモ</p>
+<blockquote>
+<p>Account administration - access to all aspects of the account including billing<br>User management - access to all projects and user management<br>All projects - access to all projects with the ability to make all changes including deleting a project<br>Specific projects - access to a certain project with restricted abilities, i.e. a user cannot delete a project</p>
+<p>Getting Started - DeployHQ<br><a href="https://www.deployhq.com/academy/manual/getting-started" target="_blank" rel="external">https://www.deployhq.com/academy/manual/getting-started</a></p>
+</blockquote>
+<ul>
+<li>Account administration - とりあえずアドミン</li>
+<li>User management - 全部のプロジェクトの操作とユーザー管理</li>
+<li>All projects - 全部のプロジェクトにアクセスできて、削除も可能</li>
+<li>Specific projects - 特定のプロジェクトのみ</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;DeployHQ のユーザの種類メモ&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Account administration - access to all aspects of the account including billing&lt;br&gt;User management
+    
+    </summary>
+    
+      <category term="memo" scheme="http://mersy.github.io/categories/memo/"/>
+    
+    
+      <category term="deploy" scheme="http://mersy.github.io/tags/deploy/"/>
+    
+  </entry>
   
   <entry>
     <title>Fastly memo</title>
@@ -872,39 +907,6 @@ $ sudo service jenkins start
     </summary>
     
       <category term="Jenkins" scheme="http://mersy.github.io/categories/Jenkins/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Homebrewメモ</title>
-    <link href="http://mersy.github.io/article/homebrew.html"/>
-    <id>http://mersy.github.io/article/homebrew.html</id>
-    <published>2014-05-05T02:01:37.000Z</published>
-    <updated>2014-05-05T02:05:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="homebrew-のアップデートでエラー"><a href="#homebrew-のアップデートでエラー" class="headerlink" title="homebrew のアップデートでエラー"></a>homebrew のアップデートでエラー</h2><p>アップデートしようとしたらエラーになった</p>
-<pre><code>$ brew update
-</code></pre><p>とりあえず、以下の記事を参考にして修正</p>
-<pre><code>$ cd $(brew --prefix)
-$ git fetch origin
-$ git reset —hard origin/master
-</code></pre><blockquote>
-<p>ヾ(oﾟωﾟo)ﾉﾞbrew updateでエラーでたった[Homebrew] - Qiita<br><a href="http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2" target="_blank" rel="external">http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2</a></p>
-</blockquote>
-<p>それでもconflictしてるかんじだったので、とりあえずREADME.mdをリネーム</p>
-<pre><code>$ cd $(brew --prefix)
-$ mv README.md README.md.org
-</code></pre><p>そこでupdateかけなおしたら問題なくなった。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;homebrew-のアップデートでエラー&quot;&gt;&lt;a href=&quot;#homebrew-のアップデートでエラー&quot; class=&quot;headerlink&quot; title=&quot;homebrew のアップデートでエラー&quot;&gt;&lt;/a&gt;homebrew のアップデートでエラー&lt;/h2&gt;&lt;
-    
-    </summary>
-    
-      <category term="Homebrew" scheme="http://mersy.github.io/categories/Homebrew/"/>
     
     
   </entry>
