@@ -72,6 +72,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
+    <article id="post-quickpost" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/quickpost.html" class="article-date">
+  <time datetime="2014-04-02T00:15:39.000Z" itemprop="datePublished">2014-04-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/quickpost.html">Data API で投稿画面を作ってみる</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="fileの選択でカメラを使える様にする"><a href="#fileの選択でカメラを使える様にする" class="headerlink" title="fileの選択でカメラを使える様にする"></a>fileの選択でカメラを使える様にする</h2><p>こんなかんじで実装</p>
+<pre><code>&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot; id=&quot;entryImage&quot; name=&quot;entryImage&quot; class=&quot;form-control&quot;/&gt;
+</code></pre><p>カメラで写真をとると落ちるのは本体がしょぼいからか？<br>とりあえず、iOS Safariで確認。</p>
+<h2 id="localStorageにデータを保存"><a href="#localStorageにデータを保存" class="headerlink" title="localStorageにデータを保存"></a>localStorageにデータを保存</h2><p>DataAPIのPathとかをlocalStorageに保存する様にする</p>
+<pre><code>function setlocalStorage() {
+  var configDataAPIval = document.getElementById(&quot;configDataAPI&quot;).value;
+  var configBlogidval = document.getElementById(&quot;configBlogid&quot;).value;
+  var uploadDirImagesval = document.getElementById(&quot;uploadDirImages&quot;).value;
+  var uploadDirFilesval = document.getElementById(&quot;uploadDirFiles&quot;).value;
+
+  // 保存したい適当なオブジェクト
+  var obj = {
+      configDataAPI:configDataAPIval,
+      configBlogid:configBlogidval,
+      uploadDirImages:uploadDirImagesval,
+      uploadDirFiles:uploadDirFilesval
+  };
+
+  // オブジェクトから JSON 文字列に変換
+  var str = JSON.stringify(obj);
+
+  if (configDataAPIval) {
+    localStorage.setItem(&quot;quickpost&quot;,str);
+  }
+}
+</code></pre><p>こんなかんじで localStorage.setItem で保存はできるぽい。</p>
+<pre><code>storage.clear();
+</code></pre><p>でstorageはclear。</p>
+<h2 id="memo"><a href="#memo" class="headerlink" title="memo"></a>memo</h2><ul>
+<li>HTML5で使えるスマートフォンの機能 ｜ Developers.IO<br><a href="http://dev.classmethod.jp/smartphone/mobile-html5/#camera" target="_blank" rel="external">http://dev.classmethod.jp/smartphone/mobile-html5/#camera</a></li>
+<li>HTML5でできるカメラアプリを実際に体験しよう<br><a href="http://www.slideshare.net/Hidetaro7/html5-12803108" target="_blank" rel="external">http://www.slideshare.net/Hidetaro7/html5-12803108</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cj9jnqxyr002jl308v1fd3uk8" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-getuser" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/article/getuser.html" class="article-date">
@@ -144,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cj8sea292001cft08dctrtwd4" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cj9jnqxxy001al308zf7kqm2k" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -294,7 +368,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chef.html" data-id="cj8sea28a000jft08x87r6cen" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/chef.html" data-id="cj9jnqxx2000il308hnlsotaw" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -343,7 +417,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cj8sea29j001sft08h5em7x8s" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cj9jnqxy7001ql308uujz7bkh" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/labelOnTask.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -417,7 +491,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cj8sea28z0019ft08euf0poxs" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cj9jnqxxx0019l308vjplpncc" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/flexibleSearchOnJekyll.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -465,7 +539,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cj8sea2ax002oft08kst1kovw" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cj9jnqxyv002pl308wd8a82qp" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/sitemapByjekyll.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -520,7 +594,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cj8sea2as002ift086pzjge4p" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cj9jnqxyq002hl308im4bdb35" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestbybranch.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -572,7 +646,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cj8sea28p000zft08wxe19lbh" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cj9jnqxxj000wl308ioi5ajty" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/dataapimemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -638,7 +712,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cj8sea2ap002gft08128g9i72" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cj9jnqxyp002fl308y6kdmwsx" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestMtml.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -749,64 +823,9 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cj8sea2b2002tft08bxx2rs1j" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cj9jnqxyv002rl308fkppmmtv" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-boxen" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/boxen.html" class="article-date">
-  <time datetime="2013-10-12T03:10:00.000Z" itemprop="datePublished">2013-10-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/boxen/">boxen</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/boxen.html">BOXEN memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>あまりよくわかってないけど、マシンを初期から設定するのが楽になるという感じっぽい。</p>
-<blockquote>
-<p>BOXEN<br><a href="http://boxen.github.com/" target="_blank" rel="external">http://boxen.github.com/</a></p>
-</blockquote>
-<p>こういうので、MTがローカルで動かすための環境とかさくっと用意できるんだろうか？<br>vagrantでも全然いいんだけど。そんなこといいだしたらmampとかでもいいんだろうけど。</p>
-<ul>
-<li>boxenを使ってMacのセットアップ - あんこの成長記録<br><a href="http://d.hatena.ne.jp/nekonokataomoi/20130511/1368255689" target="_blank" rel="external">http://d.hatena.ne.jp/nekonokataomoi/20130511/1368255689</a></li>
-<li>BOXEN 使ってみた話 // Speaker Deck<br><a href="https://speakerdeck.com/yosshi1202/boxen-shi-tutemitahua" target="_blank" rel="external">https://speakerdeck.com/yosshi1202/boxen-shi-tutemitahua</a></li>
-<li>Mac - Boxen使わなくても許されるのは2012年までだよね - Qiita [キータ]<br><a href="http://qiita.com/yuku_t/items/c6f20de0e4f4c352046c" target="_blank" rel="external">http://qiita.com/yuku_t/items/c6f20de0e4f4c352046c</a></li>
-<li>sonots:blog : Boxen を試してみたよ<br><a href="http://blog.livedoor.jp/sonots/archives/33009323.html" target="_blank" rel="external">http://blog.livedoor.jp/sonots/archives/33009323.html</a></li>
-</ul>
-<p>ソフトも入れられるらしい。<br>追加したソフトとかの情報もアップデートしておけば、さくっと復元できるってことかな。</p>
-<p>まぁ、TimeMachineでバックアップとってあればそこから復元出来るという話ですが。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/boxen.html" data-id="cj8sea288000ift08jkx919q0" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/boxen.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -858,7 +877,7 @@ $ knife solo prepare test_vagrant5
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
   </div>
 
@@ -869,6 +888,10 @@ $ knife solo prepare test_vagrant5
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/remotework.html">リモートワーク</a>
+          </li>
         
           <li>
             <a href="/article/drupal-url-alias.html">DrupalのURLが新しいものにならないときはURLエイリアスを削除する</a>
@@ -884,10 +907,6 @@ $ knife solo prepare test_vagrant5
         
           <li>
             <a href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a>
-          </li>
-        
-          <li>
-            <a href="/article/writeblog.html">ブログかいてみる</a>
           </li>
         
       </ul>

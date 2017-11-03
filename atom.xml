@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-10-15T06:53:25.000Z</updated>
+  <updated>2017-11-03T08:48:03.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>リモートワーク</title>
+    <link href="http://mersy.github.io/article/remotework.html"/>
+    <id>http://mersy.github.io/article/remotework.html</id>
+    <published>2017-11-03T08:43:22.000Z</published>
+    <updated>2017-11-03T08:48:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>社員の在宅勤務は一般化するのか。自分の例で説明してみる<br><a href="http://blogos.com/article/254439/" target="_blank" rel="external">http://blogos.com/article/254439/</a></p>
+</blockquote>
+<p>作業を把握しづらいというのはなんとなくわかるかなー。<br>把握しようとはしないけど、なんとなく知っておきたいときとかに。</p>
+<p>なんかこう通知やらなんかで報告確認しやすい自動ななにかでやれればという気がする。</p>
+<p>んで、リモートでやってるのだけど、一緒の場で面と向かって作業した方が早い場合もあるのが事実なので、リモートでその状態にどこまでちかづけられるのかが重要だと思ってるこの頃。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;社員の在宅勤務は一般化するのか。自分の例で説明してみる&lt;br&gt;&lt;a href=&quot;http://blogos.com/article/254439/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blogos.com/
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>DrupalのURLが新しいものにならないときはURLエイリアスを削除する</title>
@@ -847,38 +874,6 @@ $ service mysqld start
     </summary>
     
       <category term="Vagrant,CentOS," scheme="http://mersy.github.io/categories/Vagrant-CentOS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VMWare memo</title>
-    <link href="http://mersy.github.io/article/vmware.html"/>
-    <id>http://mersy.github.io/article/vmware.html</id>
-    <published>2014-05-08T00:52:58.000Z</published>
-    <updated>2014-05-08T18:34:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ネットワークが繋がらない"><a href="#ネットワークが繋がらない" class="headerlink" title="ネットワークが繋がらない"></a>ネットワークが繋がらない</h2><p>ネットワークがつながらない時の参考リンク</p>
-<p>色々試してて、「device eth0 does not seem to be present, delaying initialization」というのがでたのでそこから調べる。</p>
-<ul>
-<li>VMwareで「Device eth0 does not seem to be present, delaying initialization」と表示された時の対処法　その２｜リナックスマスター.JP 公式ブログ<br><a href="http://www.linuxmaster.jp/linux_blog/2011/09/vmwaredevice-eth0-does-not-seem-to-be-present-delaying-initialization.html" target="_blank" rel="external">http://www.linuxmaster.jp/linux_blog/2011/09/vmwaredevice-eth0-does-not-seem-to-be-present-delaying-initialization.html</a></li>
-</ul>
-<p>一応↑のを試したら解決はした。</p>
-<ul>
-<li>VMwareFusionに移動した仮想マシンのネットワークが使えなくなったので復活させる [俺の備忘録]<br><a href="http://o.inchiki.jp/obbr/55" target="_blank" rel="external">http://o.inchiki.jp/obbr/55</a></li>
-<li>VMware FusionにインストールしたCentOSのネットワーク設定 | bl6.jp<br><a href="http://bl6.jp/dev/linux/vmware-fusion-centos-network-setting/" target="_blank" rel="external">http://bl6.jp/dev/linux/vmware-fusion-centos-network-setting/</a></li>
-<li>vmware で centos をコピーするとネットワーク(eth0)にアクセスできなくなる - Yahoo!ジオシティーズ<br><a href="http://geocities.yahoo.co.jp/gl/ds301b/view/20110928/1317221758" target="_blank" rel="external">http://geocities.yahoo.co.jp/gl/ds301b/view/20110928/1317221758</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;ネットワークが繋がらない&quot;&gt;&lt;a href=&quot;#ネットワークが繋がらない&quot; class=&quot;headerlink&quot; title=&quot;ネットワークが繋がらない&quot;&gt;&lt;/a&gt;ネットワークが繋がらない&lt;/h2&gt;&lt;p&gt;ネットワークがつながらない時の参考リンク&lt;/p&gt;
-&lt;p&gt;色々
-    
-    </summary>
-    
-      <category term="VMWare" scheme="http://mersy.github.io/categories/VMWare/"/>
     
     
   </entry>
