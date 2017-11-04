@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-11-03T08:48:03.000Z</updated>
+  <updated>2017-11-04T23:40:37.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Craft CMS で管理しているサイトに静的な HTML を設置する</title>
+    <link href="http://mersy.github.io/article/staticfiles-craftcms.html"/>
+    <id>http://mersy.github.io/article/staticfiles-craftcms.html</id>
+    <published>2017-11-04T23:30:19.000Z</published>
+    <updated>2017-11-04T23:40:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>example.com/</code> を Craft で管理していて、 <code>/book/</code> など下層含めて出力している。</p>
+<p>このときに <code>/book/magazine/</code> のような Craft 管理内の階層で静的ファイルを置きたい場合。</p>
+<p>とりあえず、 <code>template/book/magazine/</code> のような感じでおいてしまえば静的ファイルの内容がそのまま表示される。</p>
+<hr>
+<p>ドキュメントルートが <code>public</code> になるのでそちらでも良さそうなかんじではあるのだけれども。<br>以下はとりあえず調べず思いつきでやってみたことメモ。</p>
+<p>何も意識せず <code>/book/magazine/</code> をおくだけだと <code>/book/</code> は403になる。 <code>/book/magazine/</code> は見れる。</p>
+<p><code>index.php</code> を <code>/book/</code> 以下に置くと <code>/book/</code> がトップページと同じ挙動になる。ここはなんかrouteとか指定すればうまくいくのかも？</p>
+<p><code>.htaccess</code> を <code>/book/</code> においても特段変わらず。ま、そうかも。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;example.com/&lt;/code&gt; を Craft で管理していて、 &lt;code&gt;/book/&lt;/code&gt; など下層含めて出力している。&lt;/p&gt;
+&lt;p&gt;このときに &lt;code&gt;/book/magazine/&lt;/code&gt; のような Craft 管理内の階層
+    
+    </summary>
+    
+      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>リモートワーク</title>
@@ -783,97 +812,6 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
     </summary>
     
       <category term="MovableType" scheme="http://mersy.github.io/categories/MovableType/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vagrant memo</title>
-    <link href="http://mersy.github.io/article/vagrant.html"/>
-    <id>http://mersy.github.io/article/vagrant.html</id>
-    <published>2014-05-08T09:21:03.000Z</published>
-    <updated>2014-05-09T02:02:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vagrant に限らず。。。環境構築関係メモ。</p>
-<ul>
-<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
-<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
-<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
-</ul>
-<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
-<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
-</code></pre><p>そのうえで改めてboxを作り直す。</p>
-<pre><code>$ vagrant package
-$ vagrant box add &lt;NewBoxName&gt; package.box
-$ vagrant box list
-$ rm -rf package.box
-</code></pre><p>その上で</p>
-<pre><code>$ vagrant init &lt;NewBoxName&gt;
-</code></pre><p>でVagrantfileを編集しておく。</p>
-<blockquote>
-<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
-</blockquote>
-<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
-<ul>
-<li>PHP</li>
-<li>MySQL</li>
-<li>Ruby</li>
-<li>Python</li>
-<li>phpMyAdmin</li>
-</ul>
-<blockquote>
-<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
-</blockquote>
-<p>これに、いくつか入れておいた。</p>
-<ul>
-<li>wget</li>
-<li>make</li>
-<li>gcc</li>
-<li>Perlのmodule</li>
-<li>ImageMagick</li>
-</ul>
-<p>とりあえずここまで。</p>
-<p>後入れようとおもってるもの。</p>
-<ul>
-<li>cpanm</li>
-<li>Nginx</li>
-<li>Starman</li>
-</ul>
-<p>一緒にしておくか、box分けるか。</p>
-<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
-<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
-</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
-<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
-</code></pre><p>コメントを外しておく</p>
-<pre><code># AddHandler cgi-script .cgi
-↓
-AddHandler cgi-script .cgi
-</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
-<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
-    Options +ExecCGI
-    AddHandler cgi-script .cgi .pl
-&lt;/Directory&gt;
-</code></pre><p>みたいなかんじのを追加しておく</p>
-<pre><code>$ sudo service httpd stop
-$ sudo service httpd start
-</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
-</ul>
-<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
-<pre><code>$ chkconfig mysqld on
-$ chkconfig --list mysqld
-$ service mysqld start
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vagrant に限らず。。。環境構築関係メモ。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vagrant&lt;br&gt;&lt;a href=&quot;http://www.vagrantup.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.vagrantup.
-    
-    </summary>
-    
-      <category term="Vagrant,CentOS," scheme="http://mersy.github.io/categories/Vagrant-CentOS/"/>
     
     
   </entry>

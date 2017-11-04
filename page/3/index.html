@@ -72,6 +72,117 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
+    <article id="post-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/vagrant.html" class="article-date">
+  <time datetime="2014-05-08T09:21:03.000Z" itemprop="datePublished">2014-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/vagrant.html">Vagrant memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Vagrant に限らず。。。環境構築関係メモ。</p>
+<ul>
+<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
+<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
+<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
+</ul>
+<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
+<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
+</code></pre><p>そのうえで改めてboxを作り直す。</p>
+<pre><code>$ vagrant package
+$ vagrant box add &lt;NewBoxName&gt; package.box
+$ vagrant box list
+$ rm -rf package.box
+</code></pre><p>その上で</p>
+<pre><code>$ vagrant init &lt;NewBoxName&gt;
+</code></pre><p>でVagrantfileを編集しておく。</p>
+<blockquote>
+<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
+</blockquote>
+<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Ruby</li>
+<li>Python</li>
+<li>phpMyAdmin</li>
+</ul>
+<blockquote>
+<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
+</blockquote>
+<p>これに、いくつか入れておいた。</p>
+<ul>
+<li>wget</li>
+<li>make</li>
+<li>gcc</li>
+<li>Perlのmodule</li>
+<li>ImageMagick</li>
+</ul>
+<p>とりあえずここまで。</p>
+<p>後入れようとおもってるもの。</p>
+<ul>
+<li>cpanm</li>
+<li>Nginx</li>
+<li>Starman</li>
+</ul>
+<p>一緒にしておくか、box分けるか。</p>
+<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
+<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
+</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
+<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
+</code></pre><p>コメントを外しておく</p>
+<pre><code># AddHandler cgi-script .cgi
+↓
+AddHandler cgi-script .cgi
+</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
+<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl
+&lt;/Directory&gt;
+</code></pre><p>みたいなかんじのを追加しておく</p>
+<pre><code>$ sudo service httpd stop
+$ sudo service httpd start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
+<pre><code>$ chkconfig mysqld on
+$ chkconfig --list mysqld
+$ service mysqld start
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/vagrant.html" data-id="cj9lz2jjx002wj208qm93xupq" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/vagrant.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vmware" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/article/vmware.html" class="article-date">
@@ -113,7 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/vmware.html" data-id="cj9lz14jf002vio08cglvjc36" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/vmware.html" data-id="cj9lz2jjx002yj2080ojhga8m" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/vmware.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -187,7 +298,7 @@ $ sudo service jenkins start
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/jenkins.html" data-id="cj9lz14il001qio08q22zl402" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/jenkins.html" data-id="cj9lz2jiv001pj2086r1zqq43" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/jenkins.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -242,7 +353,7 @@ $ mv README.md README.md.org
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/homebrew.html" data-id="cj9lz14ii001nio08mm1qip29" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/homebrew.html" data-id="cj9lz2jis001kj2084nf70m4r" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/homebrew.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -337,7 +448,7 @@ casper.run();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cj9lz14ho000jio08pjh7fe8z" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cj9lz2jhx000ij208h74dw87z" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -444,7 +555,7 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/publish.html" data-id="cj9lz14j3002dio08jzwv0unp" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/publish.html" data-id="cj9lz2jji002dj2089qt895fi" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -518,7 +629,7 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cj9lz14iw0024io08qphkbx3f" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cj9lz2jja0024j208u1uj94mj" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -569,7 +680,7 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cj9lz14hl000eio08zsd9ft94" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cj9lz2jhq000cj208i5i3sdhn" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -649,7 +760,7 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/s3.html" data-id="cj9lz14jd002rio08lwewycpj" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/s3.html" data-id="cj9lz2jjs002mj208m27xgqj5" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -720,73 +831,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cj9lz14is001zio08cxiyrt1j" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cj9lz2jj6001zj208ajy728x4" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-powercms" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/powercms.html" class="article-date">
-  <time datetime="2014-04-03T10:00:44.000Z" itemprop="datePublished">2014-04-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/powercms.html">PowerCMS 相談会</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>PowerCMS設計・構築相談会というのがあるというので、参加させてもらった。</p>
-<blockquote>
-<p>[セミナー情報]【東京開催】PowerCMS設計・構築相談会を開催します。 (アルファサード - アクセシビリティ, CMS, Movable Type サイト構築のリーディングカンパニー)<br><a href="http://alfasado.net/contents/news/201403281538.html" target="_blank" rel="external">http://alfasado.net/contents/news/201403281538.html</a></p>
-</blockquote>
-<p>なにか相談したいことがあったわけじゃなかったのだけど申し込みさせてもらって、聞いてきた。<br>結果としては進行中案件で気になってることとか色々おしえてもらっていってほんとよかった！</p>
-<p>PowerCMSを使った案件をやらせてもらうことはあるけど、大体決まった機能しかつかってなくても，その中でもまだまだ知らないことたくさん・・・<br>勉強せにゃ。</p>
-<h3 id="import-をtoolsで"><a href="#import-をtoolsで" class="headerlink" title="import をtoolsで"></a>import をtoolsで</h3><p>管理画面から記事とかのimportをしようとするときにエラーになる場合はjobをつかってやってみる。</p>
-<p>方法不明なので調べる。</p>
-<h3 id="RequestCaches"><a href="#RequestCaches" class="headerlink" title="RequestCaches"></a>RequestCaches</h3><p>書き方はこんな感じ</p>
-<pre><code>&lt;MTRequestCache key=&quot;foo&quot;&gt;
-~~
-&lt;/MTRequestCache&gt;
-</code></pre><p>囲まれたところを、fooとしてキャッシュしてくれる。<br>場所によってかえるならkeyを変える様にする。</p>
-<h4 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h4><p>「キャッシュする」はパラメータを一緒にする<br>「ビルド結果をキャッシュする」はパラメータを別に扱う</p>
-<p>再構築、キャッシュ、あたりがちょっと普段から弱いとおもってるので、これはちゃんと理解しないとだなぁ。</p>
-<p>DynamicMTMLもだな、、、仕組みも、、、PHPも・・・。</p>
-<p>他の参加者の方の質問とかもとても勉強になった。</p>
-<ul>
-<li>再構築トリガーを自在にコントロールする(2) | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html" target="_blank" rel="external">http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html</a></li>
-<li>一定ルールにマッチする場合にHTTPS⇄HTTPを指定してリダイレクトさせる | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2014/04/httpshttp.html" target="_blank" rel="external">http://www.powercms.jp/blog/2014/04/httpshttp.html</a></li>
-<li>Movable Type用画像アップロード機能補助プラグイン　ImageUploadUtility｜SKELETON CART<br><a href="http://skeleton.juxtaposition.jp/image-upload-utility/" target="_blank" rel="external">http://skeleton.juxtaposition.jp/image-upload-utility/</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cj9lz14j3002cio08o63zjr0c" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -851,6 +898,10 @@ $ npm -v
       <ul>
         
           <li>
+            <a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a>
+          </li>
+        
+          <li>
             <a href="/article/remotework.html">リモートワーク</a>
           </li>
         
@@ -864,10 +915,6 @@ $ npm -v
         
           <li>
             <a href="/article/fastly.html">Fastly memo</a>
-          </li>
-        
-          <li>
-            <a href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a>
           </li>
         
       </ul>
