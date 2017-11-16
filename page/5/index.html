@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,124 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-dataapimemo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/dataapimemo.html" class="article-date">
+  <time datetime="2013-10-13T23:30:00.000Z" itemprop="datePublished">2013-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/dataapimemo.html">Data API memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="外部サイトから許可する-DataAPICORSAllowOrigin"><a href="#外部サイトから許可する-DataAPICORSAllowOrigin" class="headerlink" title="外部サイトから許可する DataAPICORSAllowOrigin"></a>外部サイトから許可する DataAPICORSAllowOrigin</h2><p>外部サイトからDataAPIをたたけるようにするためには、「DataAPICORSAllowOrigin」の指定がmt-configに必要</p>
+<blockquote>
+<p>DataAPICORSAllowOrigin<br><a href="http://www.movabletype.jp/beta/60/dataapicorsalloworigin.html" target="_blank" rel="external">http://www.movabletype.jp/beta/60/dataapicorsalloworigin.html</a></p>
+</blockquote>
+<p>書き方はこんな感じ。</p>
+<pre><code>DataAPICORSAllowOrigin  http://www.example.com, http://beta.example.com
+</code></pre><p>こんな感じでサイドバーに出せた。</p>
+<blockquote>
+<p>mersy memo<br><a href="http://mersy.github.io/">http://mersy.github.io/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cja34biac000zikjx2i0fg9x6" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/dataapimemo.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-pullrequestMtml" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/pullrequestMtml.html" class="article-date">
+  <time datetime="2013-10-13T22:30:00.000Z" itemprop="datePublished">2013-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/pullrequestMtml.html">Pull Request でMTMLのレビュー？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MTMLのバージョン管理<br><a href="http://mersy.github.io/mtmlVersionControl.html">http://mersy.github.io/mtmlVersionControl.html</a></p>
+<p>この話に通じるところがあるのかもしれないけれども、Pull Request ベースの開発とかのスライドを見ながら。</p>
+<script async class="speakerdeck-embed" data-id="bb1c0a10f1bc0130062a02c06ebb4dee" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<script async class="speakerdeck-embed" data-id="e259eab004af0131fe7d62fc9b040ffd" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+<blockquote>
+<p>「GitHubでつくる、たのしい開発現場」YAPC:ASIA Tokyo2013 | Act as Professional - hiroki.jp<br><a href="http://hiroki.jp/yapcasia-2013-github" target="_blank" rel="external">http://hiroki.jp/yapcasia-2013-github</a></p>
+</blockquote>
+<script async class="speakerdeck-embed" data-id="51b4379004a301319a7f5a401ba27687" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>プロジェクトに使うMTMLをGithubとかで管理はしてて、それのレビューとかをpull requestすることはできそうなきがする。</p>
+<p>できそうなきはするんだけど、一度MTに入れて動くかどうかを試さないといけないというのが難しいところなきもする。</p>
+<p>プログラム書かれてる方々はテストとかそういうのをまわしてるんだろうけど、MTMLを書くことをコードを書く、というのと大体同義に扱うと、テストと同じあたりの位置づけになるんだろうなぁ。<br>MTの環境がサーバーに1つしかないとかなると当ててテストなんて出来ないし。<br>んじゃ案件ごとにローカルに環境をおければいいんだろうか。。それが現実的なのかなぁ、、、、</p>
+<p>プログラムを書くか、テンプレートを書くかということで根本的に違う話で、そのまま当てはめることが出来ない、ってのもあるんだろうな。</p>
+<blockquote>
+<p>非開発者もGitHub Flowに巻き込んでみんなハッピーになった話 - Masatomo Nakano Blog<br><a href="http://blog.madoro.org/mn/93" target="_blank" rel="external">http://blog.madoro.org/mn/93</a></p>
+<p>具体的には、N個(N=アクティブな開発者の数くらいが良さそう)のfeature branchのテスト用のHeroku appを予め作っておいて、feature branchにpushされるたびに、Jenkinsからその中の一つへデプロイされる感じにした。</p>
+</blockquote>
+<p>こういう環境が用意できれば、branch on MT 的なイメージはだいぶ進められるんじゃないかなぁ。1つの検証環境に紐尽く複数の開発環境。開発環境でOKの物がどんどん検証環境にpushされていくイメージ。<br>開発も確認もダイナミックに進められれば問題はなさそう。</p>
+<blockquote>
+<p>また、開発者も、それまでは、merge後、非開発者に指摘されると「めんどくせーなー」という意識が生まれがちで、かつ、その場合mergeから時間が経っていることも多く、その変更に対するフレッシュさが減り、再度作業を始めるまでの心理的な負担(実際、実装を思い出すための脳のコストも高そう)も高かった。それが、pull-request中に非開発者からフィードバックが貰えることで、そのpull-requestにcommitを追加することだけでさくっと修正できて、全体のスピード感がとてもあがったし、開発者の負担も減った。</p>
+</blockquote>
+<p>2つも3つも進んだと思ったら、またスタートへ戻るというのはやっぱり負担が大きいよな。。。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cja34bic9002oikjxi8zs7u46" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/pullrequestMtml.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-tocOnOmniMarkupPreviewer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -171,9 +289,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cj9lz2jjw002uj208air8hniv" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cja34bici0032ikjxasyqjdmt" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -226,9 +344,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/boxen.html" data-id="cj9lz2jhu000fj2089ek7ixtc" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/boxen.html" data-id="cja34bi9b000fikjxxnwgw9gt" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/boxen.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/boxen.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -287,9 +405,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/openTerminalonST2Sidebar.html" data-id="cj9lz2jje0028j208ge68ufgp" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/openTerminalonST2Sidebar.html" data-id="cja34bic3002iikjxo1obi3ez" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/openTerminalonST2Sidebar.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/openTerminalonST2Sidebar.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -399,9 +517,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmlVersionControl.html" data-id="cj9lz2jjd0025j208rbssmsc2" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtmlVersionControl.html" data-id="cja34bic0002gikjx2jwes07k" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mtmlVersionControl.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtmlVersionControl.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -455,9 +573,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/DataAPIforCategoryArchive.html" data-id="cj9lz2jho000bj2083v2xwzcg" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/DataAPIforCategoryArchive.html" data-id="cja34bi8r000aikjx9lmmfr0h" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/DataAPIforCategoryArchive.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/DataAPIforCategoryArchive.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -522,9 +640,9 @@ url: http://mersy.github.io/
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/jekyllmemo.html" data-id="cj9lz2jiu001mj208b61i8evz" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/jekyllmemo.html" data-id="cja34biax001pikjx4wpkgceq" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/jekyllmemo.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/jekyllmemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -545,7 +663,7 @@ url: http://mersy.github.io/
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -555,9 +673,9 @@ url: http://mersy.github.io/
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
     </div>
   </div>
 
@@ -565,9 +683,9 @@ url: http://mersy.github.io/
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a>
+      <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a>
     </div>
   </div>
 
@@ -584,9 +702,17 @@ url: http://mersy.github.io/
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/dashboard-devto.html">DEVの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
+          </li>
         
           <li>
             <a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a>
@@ -598,14 +724,6 @@ url: http://mersy.github.io/
         
           <li>
             <a href="/article/drupal-url-alias.html">DrupalのURLが新しいものにならないときはURLエイリアスを削除する</a>
-          </li>
-        
-          <li>
-            <a href="/article/deployhq-user.html">DeployHQ のユーザの種類メモ</a>
-          </li>
-        
-          <li>
-            <a href="/article/fastly.html">Fastly memo</a>
           </li>
         
       </ul>
@@ -621,7 +739,7 @@ url: http://mersy.github.io/
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 mersy<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-11-04T23:43:21.000Z</updated>
+  <updated>2017-11-16T23:39:37.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DEVの投稿画面</title>
+    <link href="http://mersy.github.io/article/dashboard-devto.html"/>
+    <id>http://mersy.github.io/article/dashboard-devto.html</id>
+    <published>2017-11-16T23:36:28.000Z</published>
+    <updated>2017-11-16T23:39:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
+<p><img src="source/asset/20171117_devto.png" alt=""></p>
+<p>なかなかシンプル。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;高速と話題の DEV &lt;a href=&quot;https://dev.to/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://dev.to/&lt;/a&gt; のダッシュボード&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;source/asset/20171117_d
+    
+    </summary>
+    
+    
+      <category term="dashboard" scheme="http://mersy.github.io/tags/dashboard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</title>
+    <link href="http://mersy.github.io/article/localfile-googleanalytics.html"/>
+    <id>http://mersy.github.io/article/localfile-googleanalytics.html</id>
+    <published>2017-11-16T23:32:18.000Z</published>
+    <updated>2017-11-16T23:39:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
+<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
+<p>この辺を見る限り</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
+<p>という感じで書けば良さそう。</p>
+<p>あと、ページ開いたこと自体を計測する場合は</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
+<p>のようにURLもセットしておく必要があるっぽい。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3591847/google-analytics-f
+    
+    </summary>
+    
+    
+      <category term="GoogleAnalytics" scheme="http://mersy.github.io/tags/GoogleAnalytics/"/>
+    
+  </entry>
   
   <entry>
     <title>Craft CMS で管理しているサイトに静的な HTML を設置する</title>
@@ -652,166 +705,6 @@ layout: false
     </summary>
     
       <category term="middleman" scheme="http://mersy.github.io/categories/middleman/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MTにメールで投稿する</title>
-    <link href="http://mersy.github.io/article/mtbymail.html"/>
-    <id>http://mersy.github.io/article/mtbymail.html</id>
-    <published>2014-05-08T21:21:56.000Z</published>
-    <updated>2014-05-08T21:44:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>先日、S3に移したりしたときに、MTも候補にいれたのだけど、メールでの投稿が期待できなさそうだったので、今回は除外した。<br>スマホのアプリは今回除外。</p>
-<ul>
-<li>Post Office</li>
-<li>Moober / MovaMotion</li>
-<li>MailPack</li>
-<li>ケータイポスト for MT</li>
-</ul>
-<p>たまたま、MT関係のプラグインを見つけたのでとりあえずそれを試してみた。</p>
-<p>環境：Xserver, MT 6.0.3</p>
-<h2 id="Post-Office-a-plugin-for-Movable-Type"><a href="#Post-Office-a-plugin-for-Movable-Type" class="headerlink" title="Post Office, a plugin for Movable Type"></a>Post Office, a plugin for Movable Type</h2><p>movabletype/mt-plugin-post-office<br><a href="https://github.com/movabletype/mt-plugin-post-office" target="_blank" rel="external">https://github.com/movabletype/mt-plugin-post-office</a></p>
-<p>設定してみた感じでは問題なく動いていたが、いくつか気になるところがあるので実用には至らず。<br>送信元がiPhoneのGmailというのも影響してる可能性はあるけど。</p>
-<ul>
-<li>添付した画像の表示がオカシイ。縦100%みたいな感じに延び延びになった。cssとの兼ね合いかも知れない。</li>
-<li>2byte文字の処理が怪しい。管理画面の一覧ではちゃんと表示されてたけどオモテ側では化けてた。</li>
-<li>テキストだけおくっても、1つのpostに二重に表示されてた。これもメーラーの原因ポイけど。</li>
-</ul>
-<h2 id="Moober-MovaMotion"><a href="#Moober-MovaMotion" class="headerlink" title="Moober / MovaMotion"></a>Moober / MovaMotion</h2><p>携帯電話から使うMTベースのTwitter風マイクロブログ(3)。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2009/05/post_209.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2009/05/post_209.html</a><br>携帯からMTにメールで投稿するMoblogプラグイン「Moober」。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2007/12/post_155.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2007/12/post_155.html</a></p>
-<h2 id="MailPack"><a href="#MailPack" class="headerlink" title="MailPack"></a>MailPack</h2><p>Movable Typeで簡単携帯投稿！メール投稿プラグイン:MailPack - Movable Type技術ブログ<br><a href="http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html" target="_blank" rel="external">http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html</a></p>
-<h2 id="ケータイポスト-for-MT"><a href="#ケータイポスト-for-MT" class="headerlink" title="ケータイポスト for MT"></a>ケータイポスト for MT</h2><p>ケータイポスト for MT｜ソフトウェア製品・無料ツール｜アイデアマンズ株式会社(ideaman’s Inc.)<br><a href="http://www.ideamans.com/products/keitaipost4mt/" target="_blank" rel="external">http://www.ideamans.com/products/keitaipost4mt/</a></p>
-<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><p>DataAPIでのQuickPostはつくったけど、スマホじゃないと使えない気がするけど、どうなんだろうな。<br>まだメールの方が使い慣れてる（頻度が多い）からメールをツールに選んだ。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先日、S3に移したりしたときに、MTも候補にいれたのだけど、メールでの投稿が期待できなさそうだったので、今回は除外した。&lt;br&gt;スマホのアプリは今回除外。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Post Office&lt;/li&gt;
-&lt;li&gt;Moober / MovaMotion&lt;/li&gt;
-
-    
-    </summary>
-    
-      <category term="MovableType" scheme="http://mersy.github.io/categories/MovableType/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MTのメモ</title>
-    <link href="http://mersy.github.io/article/mtmemo.html"/>
-    <id>http://mersy.github.io/article/mtmemo.html</id>
-    <published>2014-05-08T10:07:27.000Z</published>
-    <updated>2014-08-13T04:42:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="タグの情報を調べる"><a href="#タグの情報を調べる" class="headerlink" title="タグの情報を調べる"></a>タグの情報を調べる</h2><p>movabletype/lib/MT/Template/ContextHandlers.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm</a></p>
-<h2 id="コールバック"><a href="#コールバック" class="headerlink" title="コールバック"></a>コールバック</h2><h3 id="ユーザー関係"><a href="#ユーザー関係" class="headerlink" title="ユーザー関係"></a>ユーザー関係</h3><ul>
-<li>cms_edit.author</li>
-<li>cms_view_permission_filter.author</li>
-<li>cms_save_permission_filter.author</li>
-<li>cms_delete_permission_filter.author</li>
-<li>cms_save_filter.author</li>
-<li>cms_pre_save.author</li>
-<li>cms_post_save.author</li>
-<li>cms_post_delete.author</li>
-</ul>
-<h3 id="ブログ関係"><a href="#ブログ関係" class="headerlink" title="ブログ関係"></a>ブログ関係</h3><ul>
-<li>cms_edit.blog</li>
-<li>cms_view_permission_filter.blog</li>
-<li>cms_save_permission_filter.blog</li>
-<li>cms_delete_permission_filter.blog</li>
-<li>cms_pre_save.blog</li>
-<li>cms_post_save.blog</li>
-<li>cms_save_filter.blog</li>
-<li>cms_post_delete.blog</li>
-</ul>
-<h3 id="フォルダ関係"><a href="#フォルダ関係" class="headerlink" title="フォルダ関係"></a>フォルダ関係</h3><ul>
-<li>cms_edit.folder</li>
-<li>cms_view_permission_filter.folder</li>
-<li>cms_save_permission_filter.folder</li>
-<li>cms_delete_permission_filter.folder</li>
-<li>cms_pre_save.folder</li>
-<li>cms_post_save.folder</li>
-<li>cms_save_filter.folder</li>
-<li>cms_post_delete.folder</li>
-</ul>
-<h3 id="カテゴリ関係"><a href="#カテゴリ関係" class="headerlink" title="カテゴリ関係"></a>カテゴリ関係</h3><ul>
-<li>cms_edit.category</li>
-<li>cms_view_permission_filter.category</li>
-<li>cms_save_permission_filter.category</li>
-<li>cms_delete_permission_filter.category</li>
-<li>cms_pre_save.category</li>
-<li>cms_post_save.category</li>
-<li>cms_save_filter.category</li>
-<li>cms_post_delete.category</li>
-</ul>
-<h3 id="コメント関係"><a href="#コメント関係" class="headerlink" title="コメント関係"></a>コメント関係</h3><ul>
-<li>cms_edit.comment</li>
-<li>cms_view_permission_filter.comment</li>
-<li>cms_save_permission_filter.comment</li>
-<li>cms_delete_permission_filter.comment</li>
-<li>cms_pre_save.comment</li>
-<li>cms_post_save.comment</li>
-<li>cms_post_delete.comment</li>
-</ul>
-<h3 id="コメント投稿者関係"><a href="#コメント投稿者関係" class="headerlink" title="コメント投稿者関係"></a>コメント投稿者関係</h3><ul>
-<li>cms_edit.commenter</li>
-<li>cms_view_permission_filter.commenter</li>
-<li>cms_delete_permission_filter.commenter</li>
-</ul>
-<h3 id="ブログ記事関係"><a href="#ブログ記事関係" class="headerlink" title="ブログ記事関係"></a>ブログ記事関係</h3><ul>
-<li>cms_edit.entry</li>
-<li>cms_view_permission_filter.entry</li>
-<li>cms_delete_permission_filter.entry</li>
-<li>cms_pre_save.entry</li>
-<li>cms_post_save.entry</li>
-<li>cms_post_delete.entry</li>
-</ul>
-<h3 id="ウェブページ関係"><a href="#ウェブページ関係" class="headerlink" title="ウェブページ関係"></a>ウェブページ関係</h3><ul>
-<li>cms_edit.page</li>
-<li>cms_view_permission_filter.page</li>
-<li>cms_delete_permission_filter.page</li>
-<li>cms_pre_save.page</li>
-<li>cms_post_save.page</li>
-<li>cms_post_delete.page</li>
-</ul>
-<h3 id="トラックバック関係"><a href="#トラックバック関係" class="headerlink" title="トラックバック関係"></a>トラックバック関係</h3><ul>
-<li>cms_edit.ping</li>
-<li>cms_view_permission_filter.ping</li>
-<li>cms_save_permission_filter.ping</li>
-<li>cms_delete_permission_filter.ping</li>
-<li>cms_pre_save.ping</li>
-<li>cms_post_save.ping</li>
-<li>cms_post_delete.ping</li>
-</ul>
-<h2 id="mt-staticを独立させる"><a href="#mt-staticを独立させる" class="headerlink" title="mt-staticを独立させる"></a>mt-staticを独立させる</h2><p>mt-staticディレクトリを新しく作成する</p>
-<pre><code>/var/www/html/mt/plugins/mt-static/
-</code></pre><p>.htaccessを作成して、mt-staticにおく</p>
-<pre><code>&lt;IfModule mod_rewite.c&gt;
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
-&lt;/IfModule&gt;
-</code></pre><p>まだ理解不足。よくわかってない。</p>
-<p>mt-config</p>
-<pre><code>StaticWebPath /mt/plugins/mt-static/
-</code></pre><blockquote>
-<p>MovableTypeプラグインのコードを書く準備を40秒で済ませる - blog.aklaswad.com<br><a href="http://blog.aklaswad.com/2007/000191.html" target="_blank" rel="external">http://blog.aklaswad.com/2007/000191.html</a><br>Amazon.co.jp： Movable Type 5 プロフェッショナルガイド: 荒木勇次郎: 本<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim</a></p>
-</blockquote>
-<h1 id="MultiBlog"><a href="#MultiBlog" class="headerlink" title="MultiBlog"></a>MultiBlog</h1><p>MultiBlog経由の再構築はおもいところがあるので、RebuildTriggerとかで対応する様にする。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;タグの情報を調べる&quot;&gt;&lt;a href=&quot;#タグの情報を調べる&quot; class=&quot;headerlink&quot; title=&quot;タグの情報を調べる&quot;&gt;&lt;/a&gt;タグの情報を調べる&lt;/h2&gt;&lt;p&gt;movabletype/lib/MT/Template/ContextHandler
-    
-    </summary>
-    
-      <category term="MovableType" scheme="http://mersy.github.io/categories/MovableType/"/>
     
     
   </entry>

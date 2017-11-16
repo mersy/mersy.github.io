@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-dashboard-devto" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/dashboard-devto.html" class="article-date">
+  <time datetime="2017-11-16T23:36:28.000Z" itemprop="datePublished">2017-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/dashboard-devto.html">DEVの投稿画面</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
+<p><img src="source/asset/20171117_devto.png" alt=""></p>
+<p>なかなかシンプル。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/dashboard-devto.html" data-id="cja34bia1000rikjx1p0djhim" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/dashboard-devto.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dashboard/">dashboard</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-localfile-googleanalytics" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/localfile-googleanalytics.html" class="article-date">
+  <time datetime="2017-11-16T23:32:18.000Z" itemprop="datePublished">2017-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
+<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
+<p>この辺を見る限り</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
+<p>という感じで書けば良さそう。</p>
+<p>あと、ページ開いたこと自体を計測する場合は</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
+<p>のようにURLもセットしておく必要があるっぽい。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cja34biba001uikjxhgv3vvtg" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-staticfiles-craftcms" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -110,9 +201,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cj9lz2jju002rj208sa3i1flz" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cja34bicf002yikjx4urmiab1" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -158,9 +249,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cj9lz2jjr002lj208o2wybpki" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cja34bicd002tikjxlui6hwuo" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -203,9 +294,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cj9lz2jik0012j2084662nzsg" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cja34biak0019ikjx74fjfd8g" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -256,9 +347,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cj9lz2jif000wj208k6q226nu" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cja34biaf0013ikjx9y02nykw" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
@@ -324,9 +415,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cj9lz2jil0016j208dh3i5atm" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cja34bian001bikjx16c2b117" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cache/">cache</a></li></ul>
@@ -369,9 +460,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cj9lz2jj1001tj208q02rb20q" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cja34bibc001wikjxyfb2jih2" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/">Excel</a></li></ul>
@@ -414,9 +505,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cj9lz2jjy0031j208qhntaagr" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cja34bicl0039ikjxqhgjklyo" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/writeblog.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/writeblog.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -461,175 +552,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cj9lz2jic000qj208sulmpakv" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cja34bi9z000qikjx4jfdcwoc" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/craft-systememail.html#disqus_thread" class="article-comment-link">Commentaires</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-craft-cache" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/craft-cache.html" class="article-date">
-  <time datetime="2017-04-20T11:35:10.000Z" itemprop="datePublished">2017-04-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Craft-CMS/">Craft CMS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/craft-cache.html">craft cache memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Craft CMS のキャッシュ周りがよくわからなかったのでメモ</p>
-<p>公式ドキュメント<br><a href="https://craftcms.com/docs/templating/cache" target="_blank" rel="external">https://craftcms.com/docs/templating/cache</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div><div class="line">    &#123;% for block in entry.myMatrixField %&#125;</div><div class="line">        &lt;p&gt;&#123;&#123; block.text &#125;&#125;&lt;/p&gt;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">&#123;% endcache %&#125;</div></pre></td></tr></table></figure>
-<h2 id="キャッシュの削除"><a href="#キャッシュの削除" class="headerlink" title="キャッシュの削除"></a>キャッシュの削除</h2><p>管理画面からキャッシュの削除ができる</p>
-<p><a href="https://craftcms.com/classreference/tools/ClearCachesTool" target="_blank" rel="external">https://craftcms.com/classreference/tools/ClearCachesTool</a></p>
-<ul>
-<li>全て<ul>
-<li>全てのキャッシュを削除</li>
-</ul>
-</li>
-<li>データキャッシュ（Data caches）<br>-</li>
-<li>RSSキャッシュ（RSS caches）<br>-</li>
-<li>アセットキャッシュ（Asset caches）<br>-</li>
-<li>コンパイル済のテンプレート（Compiled templates）<br>-</li>
-<li>一時的なファイル（Temp files）<br>-</li>
-<li>アセット変換インデックス（Asset transform index）<br>-</li>
-<li>アセットのインデックス化データ（Asset indexing data）<br>-</li>
-<li>テンプレートキャッシュ（Template caches）<br>-</li>
-</ul>
-<h2 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h2><p>山本さんに教えてもらった効率がよいという方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">処理時間のかかるループ処理などのブロックごとにcacheタグで囲む</div><div class="line">それぞれ &#123;% cache using key &quot;&lt;cachekey&gt;&quot; %&#125; の形式でキーを指定する</div><div class="line">同一のキーでも、呼び出されるURLが異なればキャッシュは区別される</div></pre></td></tr></table></figure>
-<p>キャッシュキーがあればそのキャッシュだけを削除しやすいみたい  </p>
-<h2 id="cacheDuration"><a href="#cacheDuration" class="headerlink" title="cacheDuration"></a>cacheDuration</h2><p><a href="https://craftcms.com/docs/config-settings#cacheDuration" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheDuration</a></p>
-<p>テンプレートで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div></pre></td></tr></table></figure></p>
-<p>で囲われているところはキャッシュされる。</p>
-<p>初期値は ‘P1D’ （1日）。</p>
-<pre><code>&apos;cacheDuration&apos; =&gt; &apos;P1W&apos;,
-</code></pre><h2 id="cacheElementQueries"><a href="#cacheElementQueries" class="headerlink" title="cacheElementQueries"></a>cacheElementQueries</h2><p><a href="https://craftcms.com/docs/config-settings#cacheElementQueries" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheElementQueries</a></p>
-<p>デフォルトではエントリ更新時にテンプレートキャッシュ削除されるが、それを無効にする設定。初期値は ‘true’ 。</p>
-<pre><code>&apos;cacheElementQueries&apos; =&gt; false,
-</code></pre><p>更新が多いがアクセスも多い場合は、 ‘false’ にしたうえでキャッシュをコントロールしたほうが良さそう。</p>
-<hr>
-<p>キャッシュ削除をcronジョブと連携できそう？？<br><a href="https://github.com/themccallister/craft.cache-clear" target="_blank" rel="external">https://github.com/themccallister/craft.cache-clear</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cj9lz2jib000nj208mw6uz9ps" class="article-share-link">Partager</a>
-      
-        <a href="http://mersy.github.io/article/craft-cache.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/craft-systememail.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/hexo.html" class="article-date">
-  <time datetime="2017-03-26T03:00:00.000Z" itemprop="datePublished">2017-03-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/hexo.html">Hexo memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>mdファイルで書きたい</li>
-<li>できればgithubpage使いたい</li>
-</ul>
-<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
-<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
-<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>config_yamlに設定を書く<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:mersy/mersy.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
-<p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
-<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
-<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
-<blockquote>
-<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
-</blockquote>
-<p>コマンド（cmd-shift-P）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- hexo new          # Create a new post</div><div class="line">- hexo publish      # Publish a draft post</div><div class="line">- hexo generate     # Generate static files</div><div class="line">- hexo deploy       # Generate static files and deploy</div><div class="line">- hexo clean        # Clean the cache file and generated files</div></pre></td></tr></table></figure>
-<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new</div></pre></td></tr></table></figure>
-<p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
-<p>でローカルで下書きが確認できる</p>
-<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
-<li>/scaffolds<ul>
-<li>draft.md : ドラフト投稿用のテンプレート</li>
-<li>post.md : 投稿用のテンプレート</li>
-<li>page.md : 固定ページ用のテンプレート</li>
-</ul>
-</li>
-</ul>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>カテゴリの設定</li>
-<li>検索（flexibeSearch）</li>
-<li>引用のデザイン</li>
-</ul>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
-<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
-<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
-<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cj9lz2jiq001gj208pzvwoaj9" class="article-share-link">Partager</a>
-      
-        <a href="http://mersy.github.io/article/hexo.html#disqus_thread" class="article-comment-link">Commentaires</a>
-      
-      
     </footer>
   </div>
   
@@ -648,7 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -658,9 +587,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
     </div>
   </div>
 
@@ -668,9 +597,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a>
+      <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a>
     </div>
   </div>
 
@@ -687,9 +616,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/dashboard-devto.html">DEVの投稿画面</a>
+          </li>
+        
+          <li>
+            <a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
+          </li>
         
           <li>
             <a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a>
@@ -701,14 +638,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <li>
             <a href="/article/drupal-url-alias.html">DrupalのURLが新しいものにならないときはURLエイリアスを削除する</a>
-          </li>
-        
-          <li>
-            <a href="/article/deployhq-user.html">DeployHQ のユーザの種類メモ</a>
-          </li>
-        
-          <li>
-            <a href="/article/fastly.html">Fastly memo</a>
           </li>
         
       </ul>
@@ -724,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 mersy<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
