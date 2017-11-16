@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-11-16T23:39:37.000Z</updated>
+  <updated>2017-11-16T23:51:28.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -20,17 +20,17 @@
     <link href="http://mersy.github.io/article/dashboard-devto.html"/>
     <id>http://mersy.github.io/article/dashboard-devto.html</id>
     <published>2017-11-16T23:36:28.000Z</published>
-    <updated>2017-11-16T23:39:37.000Z</updated>
+    <updated>2017-11-16T23:51:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
-<p><img src="source/asset/20171117_devto.png" alt=""></p>
+<p><img src="../asset/20171117_devto.png" alt=""></p>
 <p>なかなかシンプル。</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;高速と話題の DEV &lt;a href=&quot;https://dev.to/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://dev.to/&lt;/a&gt; のダッシュボード&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;source/asset/20171117_d
+&lt;p&gt;&lt;img src=&quot;../asset/20171117_devto
     
     </summary>
     
