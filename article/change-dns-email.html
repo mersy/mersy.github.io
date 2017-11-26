@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定 | mersy note</title>
+  <title>DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する | mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
-<meta name="keywords" content="GoogleAnalytics">
+  <meta name="description" content="ドメイン管理を valueドメインから Route53 に変更する。それにあたってのひとまずメモメモ。 変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。 今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自">
+<meta name="keywords" content="AWS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定">
-<meta property="og:url" content="http://mersy.github.io/article/localfile-googleanalytics.html">
+<meta property="og:title" content="DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する">
+<meta property="og:url" content="http://mersy.github.io/article/change-dns-email.html">
 <meta property="og:site_name" content="mersy note">
-<meta property="og:description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
-<meta property="og:updated_time" content="2017-11-16T23:39:20.000Z">
+<meta property="og:description" content="ドメイン管理を valueドメインから Route53 に変更する。それにあたってのひとまずメモメモ。 変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。 今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自">
+<meta property="og:updated_time" content="2017-11-26T07:32:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定">
-<meta name="twitter:description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
+<meta name="twitter:title" content="DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する">
+<meta name="twitter:description" content="ドメイン管理を valueドメインから Route53 に変更する。それにあたってのひとまずメモメモ。 変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。 今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自">
   
     <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
   
@@ -75,10 +75,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-localfile-googleanalytics" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-change-dns-email" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/article/localfile-googleanalytics.html" class="article-date">
-  <time datetime="2017-11-16T23:32:18.000Z" itemprop="datePublished">2017-11-17</time>
+    <a href="/article/change-dns-email.html" class="article-date">
+  <time datetime="2017-11-26T07:06:41.000Z" itemprop="datePublished">2017-11-26</time>
 </a>
     
   </div>
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
   
     <h1 class="article-title" itemprop="name">
-      ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定
+      DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する
     </h1>
   
 
@@ -97,24 +97,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
-<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
-<p>この辺を見る限り</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
-<p>という感じで書けば良さそう。</p>
-<p>あと、ページ開いたこと自体を計測する場合は</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
-<p>のようにURLもセットしておく必要があるっぽい。</p>
+        <p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
+<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
+<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
+<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
+<blockquote>
+<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
+</blockquote>
+<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
+<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
+<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
+<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
+</ul>
+<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
+<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
+</ul>
+<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
+<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
+<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
+<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
+<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjagg6svw0020mqjxu9n7sp8r" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/change-dns-email.html" data-id="cjagg6su4000fmqjx2l2zxnyk" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/change-dns-email.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +137,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 <nav id="article-nav">
   
-    <a href="/article/dashboard-devto.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          DEVの投稿画面
-        
-      </div>
-    </a>
   
-  
-    <a href="/article/staticfiles-craftcms.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/article/dashboard-devto.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Craft CMS で管理しているサイトに静的な HTML を設置する</div>
+      <div class="article-nav-title">DEVの投稿画面</div>
     </a>
   
 </nav>
@@ -246,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   var disqus_shortname = 'mersymemogithubpage';
   
-  var disqus_url = 'http://mersy.github.io/article/localfile-googleanalytics.html';
+  var disqus_url = 'http://mersy.github.io/article/change-dns-email.html';
   
   (function(){
     var dsq = document.createElement('script');

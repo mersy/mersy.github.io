@@ -3,19 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定 | mersy note</title>
+  <title>Tag: AWS | mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
-<meta name="keywords" content="GoogleAnalytics">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定">
-<meta property="og:url" content="http://mersy.github.io/article/localfile-googleanalytics.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="mersy note">
+<meta property="og:url" content="http://mersy.github.io/tags/AWS/index.html">
 <meta property="og:site_name" content="mersy note">
-<meta property="og:description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
-<meta property="og:updated_time" content="2017-11-16T23:39:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定">
-<meta name="twitter:description" content="HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。 https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-urlhttps://stackoverflow.com/questions/22761200/using-google-analyti">
+<meta name="twitter:title" content="mersy note">
   
     <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
   
@@ -75,79 +70,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-localfile-googleanalytics" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/localfile-googleanalytics.html" class="article-date">
-  <time datetime="2017-11-16T23:32:18.000Z" itemprop="datePublished">2017-11-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/article/change-dns-email.html" class="archive-article-date">
+  <time datetime="2017-11-26T07:06:41.000Z" itemprop="datePublished">Nov 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
-<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
-<p>この辺を見る限り</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
-<p>という感じで書けば良さそう。</p>
-<p>あと、ページ開いたこと自体を計測する場合は</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
-<p>のようにURLもセットしておく必要があるっぽい。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjagg6svw0020mqjxu9n7sp8r" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/article/dashboard-devto.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          DEVの投稿画面
-        
-      </div>
-    </a>
-  
-  
-    <a href="/article/staticfiles-craftcms.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Craft CMS で管理しているサイトに静的な HTML を設置する</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 </section>
         
           <aside id="sidebar">
@@ -246,13 +202,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   var disqus_shortname = 'mersymemogithubpage';
   
-  var disqus_url = 'http://mersy.github.io/article/localfile-googleanalytics.html';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
