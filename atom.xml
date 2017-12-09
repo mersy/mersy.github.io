@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-11-26T07:32:08.000Z</updated>
+  <updated>2017-12-09T11:47:55.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>スタイルガイドの汎用化</title>
+    <link href="http://mersy.github.io/article/styleguide.html"/>
+    <id>http://mersy.github.io/article/styleguide.html</id>
+    <published>2017-12-09T11:44:20.000Z</published>
+    <updated>2017-12-09T11:47:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>田村さんがスタイルガイドのベース？を公開されていた。すばらしい。</p>
+<blockquote>
+<p>Japan Web Production Standards<br><a href="http://standards.masizime.com/" target="_blank" rel="external">http://standards.masizime.com/</a></p>
+</blockquote>
+<p>各作業者によって違いはあるにせよ、この辺って関係各所はそれをベースにすすめた方が長い目で見るとメリットがおおきいんじゃなかろうか、というきがする。</p>
+<p>とりあえず乗っかっておきつつ、気になるところをコメントなりしあっていいものにするのがよさそうな流れなきがするのだけれども。</p>
+<p>それは、最近CSSとか書いてない側からの戯れ言かもしれない。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;田村さんがスタイルガイドのベース？を公開されていた。すばらしい。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Japan Web Production Standards&lt;br&gt;&lt;a href=&quot;http://standards.masizime.com/&quot; target=&quot;_
+    
+    </summary>
+    
+      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+    
+    
+      <category term="html, css, styleguide" scheme="http://mersy.github.io/tags/html-css-styleguide/"/>
+    
+  </entry>
   
   <entry>
     <title>DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</title>
@@ -666,32 +697,6 @@
     
       &lt;h2 id=&quot;アプリをデバッグ&quot;&gt;&lt;a href=&quot;#アプリをデバッグ&quot; class=&quot;headerlink&quot; title=&quot;アプリをデバッグ&quot;&gt;&lt;/a&gt;アプリをデバッグ&lt;/h2&gt;&lt;p&gt;アプリを右クリックでコンソールが開く&lt;/p&gt;
 &lt;h2 id=&quot;scroll-bar-の表示&quot;
-    
-    </summary>
-    
-      <category term="Chrome MovableType" scheme="http://mersy.github.io/categories/Chrome-MovableType/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome Extensionをつくってみる</title>
-    <link href="http://mersy.github.io/article/chromeextension.html"/>
-    <id>http://mersy.github.io/article/chromeextension.html</id>
-    <published>2014-06-24T03:43:24.000Z</published>
-    <updated>2014-06-24T03:44:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="拡張をデバッグ"><a href="#拡張をデバッグ" class="headerlink" title="拡張をデバッグ"></a>拡張をデバッグ</h2><p>拡張をタブで開くためのURL</p>
-<blockquote>
-<p>chrome-extension://&lt;拡張のID&gt;/popup.html</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;拡張をデバッグ&quot;&gt;&lt;a href=&quot;#拡張をデバッグ&quot; class=&quot;headerlink&quot; title=&quot;拡張をデバッグ&quot;&gt;&lt;/a&gt;拡張をデバッグ&lt;/h2&gt;&lt;p&gt;拡張をタブで開くためのURL&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;chrome-extensio
     
     </summary>
     

@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MTMarkdownOptions | mersy note</title>
+  <title>Archives: 2017/12 | mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。  MTMarkdownOptions | テンプレートタグリファレンスhttp://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html  知らなかった！ &amp;lt;MTMarkdownOptions outpu">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MTMarkdownOptions">
-<meta property="og:url" content="http://mersy.github.io/article/mtmakdownoptions.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="mersy note">
+<meta property="og:url" content="http://mersy.github.io/archives/2017/12/index.html">
 <meta property="og:site_name" content="mersy note">
-<meta property="og:description" content="MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。  MTMarkdownOptions | テンプレートタグリファレンスhttp://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html  知らなかった！ &amp;lt;MTMarkdownOptions outpu">
-<meta property="og:updated_time" content="2014-05-02T07:55:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MTMarkdownOptions">
-<meta name="twitter:description" content="MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。  MTMarkdownOptions | テンプレートタグリファレンスhttp://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html  知らなかった！ &amp;lt;MTMarkdownOptions outpu">
+<meta name="twitter:title" content="mersy note">
   
     <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
   
@@ -74,105 +70,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-mtmakdownoptions" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/mtmakdownoptions.html" class="article-date">
-  <time datetime="2014-05-02T02:06:33.000Z" itemprop="datePublished">2014-05-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      MTMarkdownOptions
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/article/styleguide.html" class="archive-article-date">
+  <time datetime="2017-12-09T11:44:20.000Z" itemprop="datePublished">Dec 9</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/article/styleguide.html">スタイルガイドの汎用化</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
-<blockquote>
-<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
-</blockquote>
-<p>知らなかった！</p>
-<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
-# &lt;mt:EntryTitle&gt;
----
-&lt;mt:EntryBody&gt;
-&lt;/MTMarkdownOptions&gt;
-</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
-<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
-<blockquote>
-<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
-</blockquote>
-<p>とりあえず、指定の仕方がよくわからん。</p>
-<p>filtersについてのコードはこの辺。</p>
-<blockquote>
-<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
-</blockquote>
-<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
-<blockquote>
-<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
-</blockquote>
-<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
-<hr>
-<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
-<p>使えそうなモジュールはこの辺？</p>
-<blockquote>
-<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
-</blockquote>
-<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjaza0txe002eokjxmwx6xfqk" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/article/publish.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          VMWare上でMarkdownをePubなどに変換
-        
-      </div>
-    </a>
-  
-  
-    <a href="/article/StaticPress.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">StaticPressのメモ</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 </section>
         
           <aside id="sidebar">
@@ -271,13 +202,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   var disqus_shortname = 'mersymemogithubpage';
   
-  var disqus_url = 'http://mersy.github.io/article/mtmakdownoptions.html';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
