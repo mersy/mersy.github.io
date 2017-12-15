@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-15T00:07:05.000Z</updated>
+  <updated>2017-12-15T00:23:23.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://mersy.github.io/article/craft3.html"/>
     <id>http://mersy.github.io/article/craft3.html</id>
     <published>2017-12-14T22:00:00.000Z</published>
-    <updated>2017-12-15T00:07:05.000Z</updated>
+    <updated>2017-12-15T00:23:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>これは <a href="https://adventar.org/calendars/2212" target="_blank" rel="external">Craft CMS Advent Calendar 2017</a> 15日目の記事です。</p>
 <p>Dot All でいくつか Craft CMS の次期バージョンの話が出ました。</p>
@@ -77,12 +77,8 @@
 <blockquote>
 <p>Server Requirements</p>
 <p>Craft requires the following:</p>
-<pre><code>PHP 7.0+
-MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+
-A web server (Apache, Nginx, IIS)
-A minimum of 256MB of memory allocated to PHP
-A minimum of 200MB of free disk space
-</code></pre><p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
+<p>PHP 7.0+<br>MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+<br>A web server (Apache, Nginx, IIS)<br>A minimum of 256MB of memory allocated to PHP<br>A minimum of 200MB of free disk space</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
 </blockquote>
 <h2 id="Craft-3-Class-Reference"><a href="#Craft-3-Class-Reference" class="headerlink" title="Craft 3 Class Reference"></a>Craft 3 Class Reference</h2><p>プラグイン開発などの際につかいそうですね。</p>
 <blockquote>
