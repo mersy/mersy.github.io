@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-09T11:47:55.000Z</updated>
+  <updated>2017-12-15T00:05:38.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,94 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Craft CMS の次期バージョン Craft 3 について調べてみた</title>
+    <link href="http://mersy.github.io/article/craft3.html"/>
+    <id>http://mersy.github.io/article/craft3.html</id>
+    <published>2017-12-14T22:00:00.000Z</published>
+    <updated>2017-12-15T00:05:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>これは <a href="https://adventar.org/calendars/2212" target="_blank" rel="external">Craft CMS Advent Calendar 2017</a> 15日目の記事です。</p>
+<p>Dot All でいくつか Craft CMS の次期バージョンの話が出ました。</p>
+<blockquote>
+<p>Dot All: The Official Craft CMS Developer Conference | Dot All<br><a href="http://dotall.com/2017" target="_blank" rel="external">http://dotall.com/2017</a></p>
+</blockquote>
+<p>Craft 3 について詳しくおっていなかったので、少し調べてみました。<br>だいたいのことは <a href="https://craftcms.com/news/dot-all-2017-announcements" target="_blank" rel="external">https://craftcms.com/news/dot-all-2017-announcements</a> に書かれてありますね。</p>
+<h2 id="2018年4月4日にリリース"><a href="#2018年4月4日にリリース" class="headerlink" title="2018年4月4日にリリース"></a>2018年4月4日にリリース</h2><p>2018年4月4日にリリースされるようですね。<br>BUNさんも書いてましたが、ちょうど先日 RC2 が出ましたね！</p>
+<blockquote>
+<p>Craft 3 RC | Craft CMS<br><a href="https://craftcms.com/3" target="_blank" rel="external">https://craftcms.com/3</a></p>
+<p>cms/CHANGELOG-v3.md at master · craftcms/cms<br><a href="https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md" target="_blank" rel="external">https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md</a></p>
+</blockquote>
+<p>いくつか変わった部分についてもリリース出てますね。</p>
+<p><a href="https://craftcms.com/news/craft-3-rc" target="_blank" rel="external">https://craftcms.com/news/craft-3-rc</a></p>
+<ul>
+<li>管理画面のUI改善</li>
+<li>高速化</li>
+<li>ImageEditor の追加</li>
+<li>Yii 2 ベースへの変更</li>
+<li>インストール時でもデータベースの接続設定が可能に</li>
+<li>アプリ内プラグインストア</li>
+<li>ユーザーやグローバルセットのフィールドレイアウトでタブが利用可能</li>
+</ul>
+<p>などなど。</p>
+<h2 id="プラグインストア"><a href="#プラグインストア" class="headerlink" title="プラグインストア"></a>プラグインストア</h2><p>プラグインが管理画面からインストール出来るようになりましたね。</p>
+<p><img src="../asset/pluginstore.png" alt=""></p>
+<blockquote>
+<p>Plugin Store FAQ · craftcms/cms Wiki<br><a href="https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ" target="_blank" rel="external">https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ</a></p>
+</blockquote>
+<p>既に、Craft 3 でうごくプラグイン類がリストにされていますね。</p>
+<blockquote>
+<p>Craft 3 Plugins<br><a href="https://plugins.craftcms.com/" target="_blank" rel="external">https://plugins.craftcms.com/</a></p>
+</blockquote>
+<p>とりあえず今は無償のプラグインだけがリストされてるみたいですね。</p>
+<h2 id="ライセンスの変更"><a href="#ライセンスの変更" class="headerlink" title="ライセンスの変更"></a>ライセンスの変更</h2><p>ライセンスが変わったようですね。</p>
+<blockquote>
+<p>The Craft License | license<br><a href="https://craftcms.github.io/license/" target="_blank" rel="external">https://craftcms.github.io/license/</a></p>
+</blockquote>
+<h2 id="料金体系の変更"><a href="#料金体系の変更" class="headerlink" title="料金体系の変更"></a>料金体系の変更</h2><p>Craft Personal, Client, Pro のライセンス料はそのままですが、アップデートしていく場合は1年ごとのサブスクリプションになるようです。</p>
+<p>Client は $39/年、 Pro は $59/年 とのこと。</p>
+<p>プラグインストアからのプラグインアップデートをする場合も含まれるようですね。</p>
+<h2 id="リッチエディタの変更"><a href="#リッチエディタの変更" class="headerlink" title="リッチエディタの変更"></a>リッチエディタの変更</h2><p>これまでは Redactor が使われていたのですが、 CKEditor も使うことが出来るようになるみたいですね。<br>「リッチテキスト」のフィールド自体がなくなり、使う場合は Redactor または CKEditor のいずれかをインストールする必要があります。</p>
+<blockquote>
+<p>CKEditor 5 Developer Preview (v1.0.0-alpha.2)<br><a href="https://ckeditor5.github.io/" target="_blank" rel="external">https://ckeditor5.github.io/</a></p>
+</blockquote>
+<p>Craft の場合、フィールドの組み合わせを色々できるので、リッチエディタを使う場合がそこまで多くはないかもしれないですが、これは期待出来ますね。</p>
+<p>![](../asset/ckeditor.png</p>
+<h2 id="composerでのインストール"><a href="#composerでのインストール" class="headerlink" title="composerでのインストール"></a>composerでのインストール</h2><p>composerをつかってインストールすることが出来るようになりました。</p>
+<blockquote>
+<p>Craft 3 is available as a Composer package, and for the duration of the Beta, Composer is the only way to install Craft 3. (We’ll introduce an alternate, non-Composer installation method once it’s out of Beta.)</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/installation.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/installation.md</a></p>
+</blockquote>
+<h3 id="memory-limit-が-256MB以上"><a href="#memory-limit-が-256MB以上" class="headerlink" title="memory_limit が 256MB以上"></a>memory_limit が 256MB以上</h3><p>Craft 3 のアップデートで、PHP の <code>memory_limit</code> が 256MB 以上必要になったようです。</p>
+<blockquote>
+<p>Server Requirements</p>
+<p>Craft requires the following:</p>
+<pre><code>PHP 7.0+
+MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+
+A web server (Apache, Nginx, IIS)
+A minimum of 256MB of memory allocated to PHP
+A minimum of 200MB of free disk space
+</code></pre><p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
+</blockquote>
+<h2 id="Craft-3-Class-Reference"><a href="#Craft-3-Class-Reference" class="headerlink" title="Craft 3 Class Reference"></a>Craft 3 Class Reference</h2><p>プラグイン開発などの際につかいそうですね。</p>
+<blockquote>
+<p>Craft 3 Class Reference<br><a href="https://docs.craftcms.com/api/v3/" target="_blank" rel="external">https://docs.craftcms.com/api/v3/</a></p>
+</blockquote>
+<p>BUNさんに教えてもらいましたが、 Craft 3 ではテンプレートからもクラスにアクセスできるらしいです。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;これは &lt;a href=&quot;https://adventar.org/calendars/2212&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Craft CMS Advent Calendar 2017&lt;/a&gt; 15日目の記事です。&lt;/p&gt;
+&lt;p&gt;Dot
+    
+    </summary>
+    
+      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>スタイルガイドの汎用化</title>
@@ -670,37 +758,6 @@
     </summary>
     
       <category term="Editor Atom" scheme="http://mersy.github.io/categories/Editor-Atom/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome Appsをつくってみる</title>
-    <link href="http://mersy.github.io/article/chromeapp.html"/>
-    <id>http://mersy.github.io/article/chromeapp.html</id>
-    <published>2014-07-11T07:11:50.000Z</published>
-    <updated>2014-07-11T08:46:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="アプリをデバッグ"><a href="#アプリをデバッグ" class="headerlink" title="アプリをデバッグ"></a>アプリをデバッグ</h2><p>アプリを右クリックでコンソールが開く</p>
-<h2 id="scroll-bar-の表示"><a href="#scroll-bar-の表示" class="headerlink" title="scroll bar の表示"></a>scroll bar の表示</h2><p>こんな感じで。</p>
-<pre><code>html, body {
-  overflow-y: visible;
-}
-</code></pre><h2 id="Chrome-apps-on-Android-and-iOS"><a href="#Chrome-apps-on-Android-and-iOS" class="headerlink" title="Chrome apps on Android and iOS"></a>Chrome apps on Android and iOS</h2><p>Chrome appsをmobileアプリにするなんとか。</p>
-<blockquote>
-<p>MobileChromeApps/mobile-chrome-apps<br><a href="https://github.com/MobileChromeApps/mobile-chrome-apps" target="_blank" rel="external">https://github.com/MobileChromeApps/mobile-chrome-apps</a></p>
-</blockquote>
-<p>iOSシミュレータで動くところまでは確認。<br>DataAPI絡みでどこかで引っかかってる様子。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;アプリをデバッグ&quot;&gt;&lt;a href=&quot;#アプリをデバッグ&quot; class=&quot;headerlink&quot; title=&quot;アプリをデバッグ&quot;&gt;&lt;/a&gt;アプリをデバッグ&lt;/h2&gt;&lt;p&gt;アプリを右クリックでコンソールが開く&lt;/p&gt;
-&lt;h2 id=&quot;scroll-bar-の表示&quot;
-    
-    </summary>
-    
-      <category term="Chrome MovableType" scheme="http://mersy.github.io/categories/Chrome-MovableType/"/>
     
     
   </entry>

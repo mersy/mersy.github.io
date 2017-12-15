@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>VMWare上でMarkdownをePubなどに変換 | mersy note</title>
+  <title>Craft CMS の次期バージョン Craft 3 について調べてみた | mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。 PandocVMWare 上の CentOS に PandocをインストールするMacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。  Pandoc - Installing">
+  <meta name="description" content="これは Craft CMS Advent Calendar 2017 15日目の記事です。 Dot All でいくつか Craft CMS の次期バージョンの話が出ました。  Dot All: The Official Craft CMS Developer Conference | Dot Allhttp://dotall.com/2017  Craft 3 について詳しくおっていなかったので、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMWare上でMarkdownをePubなどに変換">
-<meta property="og:url" content="http://mersy.github.io/article/publish.html">
+<meta property="og:title" content="Craft CMS の次期バージョン Craft 3 について調べてみた">
+<meta property="og:url" content="http://mersy.github.io/article/craft3.html">
 <meta property="og:site_name" content="mersy note">
-<meta property="og:description" content="ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。 PandocVMWare 上の CentOS に PandocをインストールするMacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。  Pandoc - Installing">
-<meta property="og:updated_time" content="2014-05-04T01:51:01.000Z">
+<meta property="og:description" content="これは Craft CMS Advent Calendar 2017 15日目の記事です。 Dot All でいくつか Craft CMS の次期バージョンの話が出ました。  Dot All: The Official Craft CMS Developer Conference | Dot Allhttp://dotall.com/2017  Craft 3 について詳しくおっていなかったので、">
+<meta property="og:image" content="http://mersy.github.io/asset/pluginstore.png">
+<meta property="og:updated_time" content="2017-12-15T00:05:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMWare上でMarkdownをePubなどに変換">
-<meta name="twitter:description" content="ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。 PandocVMWare 上の CentOS に PandocをインストールするMacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。  Pandoc - Installing">
+<meta name="twitter:title" content="Craft CMS の次期バージョン Craft 3 について調べてみた">
+<meta name="twitter:description" content="これは Craft CMS Advent Calendar 2017 15日目の記事です。 Dot All でいくつか Craft CMS の次期バージョンの話が出ました。  Dot All: The Official Craft CMS Developer Conference | Dot Allhttp://dotall.com/2017  Craft 3 について詳しくおっていなかったので、">
+<meta name="twitter:image" content="http://mersy.github.io/asset/pluginstore.png">
   
     <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
   
@@ -74,14 +76,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-publish" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-craft3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/article/publish.html" class="article-date">
-  <time datetime="2014-05-02T07:06:37.000Z" itemprop="datePublished">2014-05-02</time>
+    <a href="/article/craft3.html" class="article-date">
+  <time datetime="2017-12-14T22:00:00.000Z" itemprop="datePublished">2017-12-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a>
+    <a class="article-category-link" href="/categories/Craft-CMS/">Craft CMS</a>
   </div>
 
   </div>
@@ -92,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
   
     <h1 class="article-title" itemprop="name">
-      VMWare上でMarkdownをePubなどに変換
+      Craft CMS の次期バージョン Craft 3 について調べてみた
     </h1>
   
 
@@ -100,78 +102,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。<br>MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。</p>
-<h2 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h2><h3 id="VMWare-上の-CentOS-に-Pandocをインストールする"><a href="#VMWare-上の-CentOS-に-Pandocをインストールする" class="headerlink" title="VMWare 上の CentOS に Pandocをインストールする"></a>VMWare 上の CentOS に Pandocをインストールする</h3><p>MacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。</p>
+        <p>これは <a href="https://adventar.org/calendars/2212" target="_blank" rel="external">Craft CMS Advent Calendar 2017</a> 15日目の記事です。</p>
+<p>Dot All でいくつか Craft CMS の次期バージョンの話が出ました。</p>
 <blockquote>
-<p>Pandoc - Installing<br><a href="http://johnmacfarlane.net/pandoc/installing.html" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/installing.html</a></p>
+<p>Dot All: The Official Craft CMS Developer Conference | Dot All<br><a href="http://dotall.com/2017" target="_blank" rel="external">http://dotall.com/2017</a></p>
 </blockquote>
-<p>よくわかってなかったけど、必要そうなモノ</p>
-<ul>
-<li>haskell-platform</li>
-<li>cabal</li>
-<li>ghc</li>
-</ul>
-<p>以下のサイトをみながら、色々試行錯誤してHaskell環境を整えた。</p>
-<ul>
-<li>CentOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
-<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
-<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
-<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
-</ul>
-<p>./configure<br>して<br>make<br>make install<br>が走って良かった・・・・</p>
-<p>pandocをインストール</p>
-<pre><code>cabal update
-cabal install pandoc
-</code></pre><p>インストールされた後、pathが通ってなかったりはしてましたが。。。</p>
-<pre><code>PATH=$HOME/applications/haskell/ghc-7.6.3/bin:$PATH
-PATH=$HOME/applications/haskell/haskell-platform-2013.2.0.0/bin:$PATH
-PATH=$HOME/.cabal/bin:$PATH
-</code></pre><p>を.bash_profileに追加</p>
-<p>CentOS6.4へhaskell(ghc-7.6.3), haskell-platform-2013.2.0.0, pandocインストール | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/15052.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/15052.html</a></p>
-<p>で、インストール用のスクリプトが紹介されてるから、次はコレを使ってみてもいいのかもしれない。</p>
-<pre><code>pandoc -f markdown -t html sample.md -s -o sample.html
-</code></pre><p>で、mdからhtmlが作成されたのを確認。</p>
-<h3 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h3><ul>
-<li>Pandocでテキストデータ変換 | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12512.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12512.html</a></li>
-<li>entOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
-<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
-<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
-<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
-</ul>
-<h2 id="GitBook"><a href="#GitBook" class="headerlink" title="GitBook"></a>GitBook</h2><p>GitBookを試してみる</p>
+<p>Craft 3 について詳しくおっていなかったので、少し調べてみました。<br>だいたいのことは <a href="https://craftcms.com/news/dot-all-2017-announcements" target="_blank" rel="external">https://craftcms.com/news/dot-all-2017-announcements</a> に書かれてありますね。</p>
+<h2 id="2018年4月4日にリリース"><a href="#2018年4月4日にリリース" class="headerlink" title="2018年4月4日にリリース"></a>2018年4月4日にリリース</h2><p>2018年4月4日にリリースされるようですね。<br>BUNさんも書いてましたが、ちょうど先日 RC2 が出ましたね！</p>
 <blockquote>
-<p>GitBook<br><a href="http://www.gitbook.io/" target="_blank" rel="external">http://www.gitbook.io/</a></p>
+<p>Craft 3 RC | Craft CMS<br><a href="https://craftcms.com/3" target="_blank" rel="external">https://craftcms.com/3</a></p>
+<p>cms/CHANGELOG-v3.md at master · craftcms/cms<br><a href="https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md" target="_blank" rel="external">https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md</a></p>
 </blockquote>
-<h3 id="CentOSにnode-jsをインストールする"><a href="#CentOSにnode-jsをインストールする" class="headerlink" title="CentOSにnode.jsをインストールする"></a>CentOSにnode.jsをインストールする</h3><p>以下のリンクを参考にして、nodeを入れる</p>
+<p>いくつか変わった部分についてもリリース出てますね。</p>
+<p><a href="https://craftcms.com/news/craft-3-rc" target="_blank" rel="external">https://craftcms.com/news/craft-3-rc</a></p>
 <ul>
-<li>CentOS5.5 に node.js をインストールする - xykの日記<br><a href="http://d.hatena.ne.jp/xyk/20120131/1327998901" target="_blank" rel="external">http://d.hatena.ne.jp/xyk/20120131/1327998901</a></li>
-<li>creationix/nvm<br><a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></li>
+<li>管理画面のUI改善</li>
+<li>高速化</li>
+<li>ImageEditor の追加</li>
+<li>Yii 2 ベースへの変更</li>
+<li>インストール時でもデータベースの接続設定が可能に</li>
+<li>アプリ内プラグインストア</li>
+<li>ユーザーやグローバルセットのフィールドレイアウトでタブが利用可能</li>
 </ul>
-<p>メモ</p>
-<pre><code># yum -y install openssl-devel
-
-$ vi .bashrc
-</code></pre><p>以下を追記</p>
-<pre><code>. ~/.nvm/nvm.sh
-nvm use v0.10.28
-</code></pre><p>versionを確認</p>
-<pre><code>$ node -v
-$ npm -v
-</code></pre><h3 id="GitBookをインストール"><a href="#GitBookをインストール" class="headerlink" title="GitBookをインストール"></a>GitBookをインストール</h3><p>とりあえずローカル環境で動作を試す。</p>
-<pre><code>npm install gitbook -g
-</code></pre><ul>
-<li>GitbookIO/gitbook<br><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">https://github.com/GitbookIO/gitbook</a></li>
-<li>Node.js - gitbook試してみた - Qiita<br><a href="http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0" target="_blank" rel="external">http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0</a></li>
-</ul>
-<h2 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h2><p>Gruntでやる方法</p>
-<p>MarkdownからEPUB データを生成する「grunt-mdeb」を書いてみた – Mach3.laBlog<br><a href="http://blog.mach3.jp/2014/02/13/grunt-mdeb.html" target="_blank" rel="external">http://blog.mach3.jp/2014/02/13/grunt-mdeb.html</a></p>
+<p>などなど。</p>
+<h2 id="プラグインストア"><a href="#プラグインストア" class="headerlink" title="プラグインストア"></a>プラグインストア</h2><p>プラグインが管理画面からインストール出来るようになりましたね。</p>
+<p><img src="../asset/pluginstore.png" alt=""></p>
+<blockquote>
+<p>Plugin Store FAQ · craftcms/cms Wiki<br><a href="https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ" target="_blank" rel="external">https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ</a></p>
+</blockquote>
+<p>既に、Craft 3 でうごくプラグイン類がリストにされていますね。</p>
+<blockquote>
+<p>Craft 3 Plugins<br><a href="https://plugins.craftcms.com/" target="_blank" rel="external">https://plugins.craftcms.com/</a></p>
+</blockquote>
+<p>とりあえず今は無償のプラグインだけがリストされてるみたいですね。</p>
+<h2 id="ライセンスの変更"><a href="#ライセンスの変更" class="headerlink" title="ライセンスの変更"></a>ライセンスの変更</h2><p>ライセンスが変わったようですね。</p>
+<blockquote>
+<p>The Craft License | license<br><a href="https://craftcms.github.io/license/" target="_blank" rel="external">https://craftcms.github.io/license/</a></p>
+</blockquote>
+<h2 id="料金体系の変更"><a href="#料金体系の変更" class="headerlink" title="料金体系の変更"></a>料金体系の変更</h2><p>Craft Personal, Client, Pro のライセンス料はそのままですが、アップデートしていく場合は1年ごとのサブスクリプションになるようです。</p>
+<p>Client は $39/年、 Pro は $59/年 とのこと。</p>
+<p>プラグインストアからのプラグインアップデートをする場合も含まれるようですね。</p>
+<h2 id="リッチエディタの変更"><a href="#リッチエディタの変更" class="headerlink" title="リッチエディタの変更"></a>リッチエディタの変更</h2><p>これまでは Redactor が使われていたのですが、 CKEditor も使うことが出来るようになるみたいですね。<br>「リッチテキスト」のフィールド自体がなくなり、使う場合は Redactor または CKEditor のいずれかをインストールする必要があります。</p>
+<blockquote>
+<p>CKEditor 5 Developer Preview (v1.0.0-alpha.2)<br><a href="https://ckeditor5.github.io/" target="_blank" rel="external">https://ckeditor5.github.io/</a></p>
+</blockquote>
+<p>Craft の場合、フィールドの組み合わせを色々できるので、リッチエディタを使う場合がそこまで多くはないかもしれないですが、これは期待出来ますね。</p>
+<p>![](../asset/ckeditor.png</p>
+<h2 id="composerでのインストール"><a href="#composerでのインストール" class="headerlink" title="composerでのインストール"></a>composerでのインストール</h2><p>composerをつかってインストールすることが出来るようになりました。</p>
+<blockquote>
+<p>Craft 3 is available as a Composer package, and for the duration of the Beta, Composer is the only way to install Craft 3. (We’ll introduce an alternate, non-Composer installation method once it’s out of Beta.)</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/installation.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/installation.md</a></p>
+</blockquote>
+<h3 id="memory-limit-が-256MB以上"><a href="#memory-limit-が-256MB以上" class="headerlink" title="memory_limit が 256MB以上"></a>memory_limit が 256MB以上</h3><p>Craft 3 のアップデートで、PHP の <code>memory_limit</code> が 256MB 以上必要になったようです。</p>
+<blockquote>
+<p>Server Requirements</p>
+<p>Craft requires the following:</p>
+<pre><code>PHP 7.0+
+MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+
+A web server (Apache, Nginx, IIS)
+A minimum of 256MB of memory allocated to PHP
+A minimum of 200MB of free disk space
+</code></pre><p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
+</blockquote>
+<h2 id="Craft-3-Class-Reference"><a href="#Craft-3-Class-Reference" class="headerlink" title="Craft 3 Class Reference"></a>Craft 3 Class Reference</h2><p>プラグイン開発などの際につかいそうですね。</p>
+<blockquote>
+<p>Craft 3 Class Reference<br><a href="https://docs.craftcms.com/api/v3/" target="_blank" rel="external">https://docs.craftcms.com/api/v3/</a></p>
+</blockquote>
+<p>BUNさんに教えてもらいましたが、 Craft 3 ではテンプレートからもクラスにアクセスできるらしいです。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjb75ktet002rbgjxpqcr6kz3" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/craft3.html" data-id="cjb75ktd8000tbgjxzjhw58aw" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/craft3.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -180,19 +184,10 @@ $ npm -v
     
 <nav id="article-nav">
   
-    <a href="/article/casperjs.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CasperJSメモ
-        
-      </div>
-    </a>
   
-  
-    <a href="/article/mtmakdownoptions.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/article/styleguide.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MTMarkdownOptions</div>
+      <div class="article-nav-title">スタイルガイドの汎用化</div>
     </a>
   
 </nav>
@@ -304,7 +299,7 @@ $ npm -v
 <script>
   var disqus_shortname = 'mersymemogithubpage';
   
-  var disqus_url = 'http://mersy.github.io/article/publish.html';
+  var disqus_url = 'http://mersy.github.io/article/craft3.html';
   
   (function(){
     var dsq = document.createElement('script');

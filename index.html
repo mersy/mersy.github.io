@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-craft3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/craft3.html" class="article-date">
+  <time datetime="2017-12-14T22:00:00.000Z" itemprop="datePublished">2017-12-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Craft-CMS/">Craft CMS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>これは <a href="https://adventar.org/calendars/2212" target="_blank" rel="external">Craft CMS Advent Calendar 2017</a> 15日目の記事です。</p>
+<p>Dot All でいくつか Craft CMS の次期バージョンの話が出ました。</p>
+<blockquote>
+<p>Dot All: The Official Craft CMS Developer Conference | Dot All<br><a href="http://dotall.com/2017" target="_blank" rel="external">http://dotall.com/2017</a></p>
+</blockquote>
+<p>Craft 3 について詳しくおっていなかったので、少し調べてみました。<br>だいたいのことは <a href="https://craftcms.com/news/dot-all-2017-announcements" target="_blank" rel="external">https://craftcms.com/news/dot-all-2017-announcements</a> に書かれてありますね。</p>
+<h2 id="2018年4月4日にリリース"><a href="#2018年4月4日にリリース" class="headerlink" title="2018年4月4日にリリース"></a>2018年4月4日にリリース</h2><p>2018年4月4日にリリースされるようですね。<br>BUNさんも書いてましたが、ちょうど先日 RC2 が出ましたね！</p>
+<blockquote>
+<p>Craft 3 RC | Craft CMS<br><a href="https://craftcms.com/3" target="_blank" rel="external">https://craftcms.com/3</a></p>
+<p>cms/CHANGELOG-v3.md at master · craftcms/cms<br><a href="https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md" target="_blank" rel="external">https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md</a></p>
+</blockquote>
+<p>いくつか変わった部分についてもリリース出てますね。</p>
+<p><a href="https://craftcms.com/news/craft-3-rc" target="_blank" rel="external">https://craftcms.com/news/craft-3-rc</a></p>
+<ul>
+<li>管理画面のUI改善</li>
+<li>高速化</li>
+<li>ImageEditor の追加</li>
+<li>Yii 2 ベースへの変更</li>
+<li>インストール時でもデータベースの接続設定が可能に</li>
+<li>アプリ内プラグインストア</li>
+<li>ユーザーやグローバルセットのフィールドレイアウトでタブが利用可能</li>
+</ul>
+<p>などなど。</p>
+<h2 id="プラグインストア"><a href="#プラグインストア" class="headerlink" title="プラグインストア"></a>プラグインストア</h2><p>プラグインが管理画面からインストール出来るようになりましたね。</p>
+<p><img src="../asset/pluginstore.png" alt=""></p>
+<blockquote>
+<p>Plugin Store FAQ · craftcms/cms Wiki<br><a href="https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ" target="_blank" rel="external">https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ</a></p>
+</blockquote>
+<p>既に、Craft 3 でうごくプラグイン類がリストにされていますね。</p>
+<blockquote>
+<p>Craft 3 Plugins<br><a href="https://plugins.craftcms.com/" target="_blank" rel="external">https://plugins.craftcms.com/</a></p>
+</blockquote>
+<p>とりあえず今は無償のプラグインだけがリストされてるみたいですね。</p>
+<h2 id="ライセンスの変更"><a href="#ライセンスの変更" class="headerlink" title="ライセンスの変更"></a>ライセンスの変更</h2><p>ライセンスが変わったようですね。</p>
+<blockquote>
+<p>The Craft License | license<br><a href="https://craftcms.github.io/license/" target="_blank" rel="external">https://craftcms.github.io/license/</a></p>
+</blockquote>
+<h2 id="料金体系の変更"><a href="#料金体系の変更" class="headerlink" title="料金体系の変更"></a>料金体系の変更</h2><p>Craft Personal, Client, Pro のライセンス料はそのままですが、アップデートしていく場合は1年ごとのサブスクリプションになるようです。</p>
+<p>Client は $39/年、 Pro は $59/年 とのこと。</p>
+<p>プラグインストアからのプラグインアップデートをする場合も含まれるようですね。</p>
+<h2 id="リッチエディタの変更"><a href="#リッチエディタの変更" class="headerlink" title="リッチエディタの変更"></a>リッチエディタの変更</h2><p>これまでは Redactor が使われていたのですが、 CKEditor も使うことが出来るようになるみたいですね。<br>「リッチテキスト」のフィールド自体がなくなり、使う場合は Redactor または CKEditor のいずれかをインストールする必要があります。</p>
+<blockquote>
+<p>CKEditor 5 Developer Preview (v1.0.0-alpha.2)<br><a href="https://ckeditor5.github.io/" target="_blank" rel="external">https://ckeditor5.github.io/</a></p>
+</blockquote>
+<p>Craft の場合、フィールドの組み合わせを色々できるので、リッチエディタを使う場合がそこまで多くはないかもしれないですが、これは期待出来ますね。</p>
+<p>![](../asset/ckeditor.png</p>
+<h2 id="composerでのインストール"><a href="#composerでのインストール" class="headerlink" title="composerでのインストール"></a>composerでのインストール</h2><p>composerをつかってインストールすることが出来るようになりました。</p>
+<blockquote>
+<p>Craft 3 is available as a Composer package, and for the duration of the Beta, Composer is the only way to install Craft 3. (We’ll introduce an alternate, non-Composer installation method once it’s out of Beta.)</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/installation.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/installation.md</a></p>
+</blockquote>
+<h3 id="memory-limit-が-256MB以上"><a href="#memory-limit-が-256MB以上" class="headerlink" title="memory_limit が 256MB以上"></a>memory_limit が 256MB以上</h3><p>Craft 3 のアップデートで、PHP の <code>memory_limit</code> が 256MB 以上必要になったようです。</p>
+<blockquote>
+<p>Server Requirements</p>
+<p>Craft requires the following:</p>
+<pre><code>PHP 7.0+
+MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+
+A web server (Apache, Nginx, IIS)
+A minimum of 256MB of memory allocated to PHP
+A minimum of 200MB of free disk space
+</code></pre><p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
+</blockquote>
+<h2 id="Craft-3-Class-Reference"><a href="#Craft-3-Class-Reference" class="headerlink" title="Craft 3 Class Reference"></a>Craft 3 Class Reference</h2><p>プラグイン開発などの際につかいそうですね。</p>
+<blockquote>
+<p>Craft 3 Class Reference<br><a href="https://docs.craftcms.com/api/v3/" target="_blank" rel="external">https://docs.craftcms.com/api/v3/</a></p>
+</blockquote>
+<p>BUNさんに教えてもらいましたが、 Craft 3 ではテンプレートからもクラスにアクセスできるらしいです。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/craft3.html" data-id="cjb75ktd8000tbgjxzjhw58aw" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/craft3.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-styleguide" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -109,9 +218,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/styleguide.html" data-id="cjaza0ty10034okjx44yn7zwd" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/styleguide.html" data-id="cjb75ktf20037bgjxhpu3y2tp" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/styleguide.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/styleguide.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
@@ -172,9 +281,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/change-dns-email.html" data-id="cjaza0tv8000jokjxwkaosuhj" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/change-dns-email.html" data-id="cjb75ktd0000ibgjxvbkrcu3n" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/change-dns-email.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/change-dns-email.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li></ul>
@@ -215,9 +324,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashboard-devto.html" data-id="cjaza0tvm000yokjxs8itlanj" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/dashboard-devto.html" data-id="cjb75ktda000ybgjxvug3wuuv" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/dashboard-devto.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/dashboard-devto.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dashboard/">dashboard</a></li></ul>
@@ -263,9 +372,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjaza0twy0021okjx9ld65in2" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjb75kteb0022bgjxatg8mtu2" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li></ul>
@@ -315,9 +424,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cjaza0ty30036okjx25s0i7ua" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cjb75ktf10035bgjx9stuj8dy" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -363,9 +472,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjaza0txw002xokjxke8c0kmu" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjb75ktez002zbgjxlovtk016" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -408,9 +517,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjaza0tvv0017okjxvnxdut3j" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjb75ktdu001bbgjxty4psjvk" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -461,9 +570,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cjaza0tvr0015okjxdvlgtu1n" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cjb75ktds001abgjxn7v385i9" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
@@ -529,9 +638,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cjaza0tvy001cokjxiwfpg5io" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cjb75ktdx001fbgjxvygc87t2" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cache/">cache</a></li></ul>
@@ -543,55 +652,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   
-    <article id="post-mac-excel-font" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/mac-excel-font.html" class="article-date">
-  <time datetime="2017-09-25T11:17:11.000Z" itemprop="datePublished">2017-09-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Excelの資料を開いていて、セルを動かそうとしても重い。<br>スクロールが発生するタイミングがすごく重そうな感じだった。<br>マシンを再起動しても、重いということでしらべていたら、フォントの関係があるかも？とのことで。</p>
-<blockquote>
-<p>Excel for Mac 2016が起動しないまたはすぐに落ちる - Qiita<br><a href="https://qiita.com/foursue/items/81606a831863499fe3f8" target="_blank" rel="external">https://qiita.com/foursue/items/81606a831863499fe3f8</a></p>
-</blockquote>
-<p>開いたファイルは確かにあまり普段みないフォントになっていた。<br>セル全部選択して、ヒラギノとか適当なのにしたら直った。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cjaza0tx00023okjxbt15r88x" class="article-share-link">Delen</a>
-      
-        <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Commentaren</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/">Excel</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -599,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -609,7 +673,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
@@ -628,7 +692,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
@@ -638,9 +702,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a>
+          </li>
         
           <li>
             <a href="/article/styleguide.html">スタイルガイドの汎用化</a>
@@ -656,10 +724,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <li>
             <a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
-          </li>
-        
-          <li>
-            <a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a>
           </li>
         
       </ul>
