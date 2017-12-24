@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-24T00:09:48.000Z</updated>
+  <updated>2017-12-24T00:14:54.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://mersy.github.io/article/drupal-lightsail.html"/>
     <id>http://mersy.github.io/article/drupal-lightsail.html</id>
     <published>2017-12-23T11:06:27.000Z</published>
-    <updated>2017-12-24T00:09:48.000Z</updated>
+    <updated>2017-12-24T00:14:54.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="lightsailでDrupalを立ち上げる"><a href="#lightsailでDrupalを立ち上げる" class="headerlink" title="lightsailでDrupalを立ち上げる"></a>lightsailでDrupalを立ち上げる</h2><p>Drupal の勉強をしてみようとおもっていたのと、Lightsail を使ってみたことがなかったのでこの機会に使ってみる。</p>
 <p><a href="https://amazonlightsail.com/ja/" target="_blank" rel="external">https://amazonlightsail.com/ja/</a></p>
 <p>Drupal が用意されているのでそれを使うだけで良さそうなので。</p>
 <p>Drupal を選択するとこんな感じになる。</p>
-<p><img src="../asset/20171216lightsail_drupal.png" alt=""></p>
+<p><img src="../asset/20171216_lightsail_drupal.png" alt=""></p>
 <p>ここから開くと</p>
 <p><img src="../asset/20171216_lightsail2.png" alt=""></p>
 <p>みたいな感じに。</p>
