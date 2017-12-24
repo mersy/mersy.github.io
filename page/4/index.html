@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-homebrew" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/homebrew.html" class="article-date">
+  <time datetime="2014-05-05T02:01:37.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Homebrew/">Homebrew</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/homebrew.html">Homebrewメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="homebrew-のアップデートでエラー"><a href="#homebrew-のアップデートでエラー" class="headerlink" title="homebrew のアップデートでエラー"></a>homebrew のアップデートでエラー</h2><p>アップデートしようとしたらエラーになった</p>
+<pre><code>$ brew update
+</code></pre><p>とりあえず、以下の記事を参考にして修正</p>
+<pre><code>$ cd $(brew --prefix)
+$ git fetch origin
+$ git reset —hard origin/master
+</code></pre><blockquote>
+<p>ヾ(oﾟωﾟo)ﾉﾞbrew updateでエラーでたった[Homebrew] - Qiita<br><a href="http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2" target="_blank" rel="external">http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2</a></p>
+</blockquote>
+<p>それでもconflictしてるかんじだったので、とりあえずREADME.mdをリネーム</p>
+<pre><code>$ cd $(brew --prefix)
+$ mv README.md README.md.org
+</code></pre><p>そこでupdateかけなおしたら問題なくなった。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/homebrew.html" data-id="cjbkfx2jc0020mz0ap1oxfn44" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/homebrew.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-casperjs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -155,9 +210,9 @@ casper.run();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cjbk0vabw0005lt0ahgm2idjl" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cjbkfx2hq000hmz0aez3kduii" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -262,9 +317,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjbk0vadx002klt0apzeye0at" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjbkfx2kc002xmz0amp5xyqnl" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -336,9 +391,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjbk0vadp0028lt0a7ubc7xjl" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjbkfx2k5002lmz0agtu08t86" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -387,9 +442,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cjbk0vabq0003lt0abrbecq3a" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cjbkfx2hh000emz0a0iohk321" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -467,9 +522,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/s3.html" data-id="cjbk0vae6002wlt0agnziusxn" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/s3.html" data-id="cjbkfx2kj0039mz0awwjxv2vc" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -538,9 +593,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cjbk0vado0023lt0alnwuj37w" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cjbkfx2k4002imz0aslonu9jq" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -602,9 +657,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cjbk0vadv002ilt0awyk3h1tr" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cjbkfx2kc002vmz0ayfulz0h6" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -676,9 +731,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjbk0vae2002qlt0awxnnvf6t" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjbkfx2kf0033mz0avikkpv94" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -760,159 +815,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjbk0vad4001dlt0aaex58fp2" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjbkfx2j0001kmz0atztpnc1s" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Commentaren</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-chef" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/chef.html" class="article-date">
-  <time datetime="2013-12-15T05:30:00.000Z" itemprop="datePublished">2013-12-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/chef/">chef</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/chef.html">chefを使ってみる</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="環境の下準備"><a href="#環境の下準備" class="headerlink" title="環境の下準備"></a>環境の下準備</h2><p>Macに入っているRubyのバージョンがberkshelfをインストールする際に古いと怒られる。<br>その辺までのRbenvのインストールなどは</p>
-<blockquote>
-<p>AWS EC2サーバに対するknife solo実行環境構築手順 on Mac OS Xを一から整理してみる ｜ Developers.IO<br><a href="http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/" target="_blank" rel="external">http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/</a></p>
-</blockquote>
-<p>を参考にした。</p>
-<h2 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h2><p>ssh出来るようにする</p>
-<pre><code>vagrant ssh-config --host hostname &gt;&gt; ~/.ssh/config
-</code></pre><p>cpanmのインストールでこけるときは</p>
-<pre><code>yum -y install perl-core
-</code></pre><p>あたりを試してみる</p>
-<h2 id="cookbookを使ってみる"><a href="#cookbookを使ってみる" class="headerlink" title="cookbookを使ってみる"></a>cookbookを使ってみる</h2><p>cookbook色々</p>
-<blockquote>
-<p>Opscode Community<br><a href="http://community.opscode.com/cookbooks/" target="_blank" rel="external">http://community.opscode.com/cookbooks/</a></p>
-<p>hjfuji/mtos-cookbook<br><a href="https://github.com/hjfuji/mtos-cookbook" target="_blank" rel="external">https://github.com/hjfuji/mtos-cookbook</a></p>
-</blockquote>
-<h2 id="ChefでApache、PHP、MySQLをインストール"><a href="#ChefでApache、PHP、MySQLをインストール" class="headerlink" title="ChefでApache、PHP、MySQLをインストール"></a>ChefでApache、PHP、MySQLをインストール</h2><p>Vagrantの使い方 - Qiita [キータ]<br><a href="http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d" target="_blank" rel="external">http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d</a></p>
-<p>test_vagrant5 でSSHできる様にする</p>
-<pre><code>$ vagrant ssh-config --host test_vagrant5 &gt;&gt; ~/.ssh/config
-</code></pre><p>作業環境</p>
-<pre><code>$ cd ~/test_vagrant/
-$ knife solo init chef-repo &amp;&amp; cd chef-repo
-
--repo
-Creating kitchen...
-Creating knife.rb in kitchen...
-Creating cupboards...
-Setting up Berkshelf...
-</code></pre><p>test_vagrant5 で操作出来るようにする</p>
-<pre><code>$ knife solo prepare test_vagrant5
-</code></pre><p>色々ずらずらとインストールされる。</p>
-<p>cookbookを作る</p>
-<pre><code>$ knife cookbook create lamp -o site-cookbooks
-</code></pre><p>cookbook を修正</p>
-<pre><code>$ vi site-cookbooks/lamp/recipes/default.rb
-</code></pre><p>以下を追記</p>
-<pre><code># stop iptables
-service &quot;iptables&quot; do
-  action [:stop, :disable]
-end
-
-# install apache
-%w{httpd httpd-devel}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-# install php
-%w{php php-common php-devel php-mbstring php-xml php-pear php-mysql}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-# install mysql
-%w{mysql-server mysql-devel}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-# service configuration
-
-service &quot;httpd&quot; do
-  supports :status =&gt; true, :restart =&gt; true, :reload =&gt; true
-  action [:enable, :start]
-end
-
-service &quot;mysqld&quot; do
-  action [:enable, :start]
-end
-</code></pre><p>json修正</p>
-<pre><code>$ vi nodes/test_vagrant5.json
-</code></pre><p>以下の様に修正。</p>
-<pre><code>{
-    &quot;run_list&quot;:[
-        &quot;lamp&quot;
-    ]
-}
-</code></pre><p>vagrantファイルの修正</p>
-<pre><code>config.vm.provision :chef_solo do |chef|
-  chef.cookbooks_path = &quot;chef-repo/site-cookbooks&quot;
-  chef.roles_path = &quot;chef-repo/roles&quot;
-  chef.data_bags_path = &quot;chef-repo/data_bags&quot;
-  chef.add_recipe = &quot;lamp&quot;
-
-  # You may also specify custom JSON attributes:
-  chef.json = {}
-end
-</code></pre><p>仮想マシンを再起動</p>
-<pre><code>$ vagrant provision
-
-
-
-$ knife solo prepare test_vagrant5
-</code></pre><p>みたいなコマンドうつけど、　test_vagrant5 のところは、</p>
-<pre><code>$ vagrant ssh-config --host test_vagrant5 &gt;&gt; ~/.ssh/config
-</code></pre><p>で追加したホストだとおもうんだけど、ここの名前が違うとかはとりあえず意識しなくてもいいのかな？？<br>できあがった作業フォルダ内の　Vagrantfile と cookbook だけを共有しておくとかでいいのか。コピペして立ち上がったみたいだし。</p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>AWS EC2サーバに対するknife solo実行環境構築手順 on Mac OS Xを一から整理してみる ｜ Developers.IO<br><a href="http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/" target="_blank" rel="external">http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/</a></li>
-<li>今っぽい Vagrant + Chef Solo チュートリアル - Qiita [キータ]<br><a href="http://qiita.com/taiki45/items/b46a2f32248720ec2bae" target="_blank" rel="external">http://qiita.com/taiki45/items/b46a2f32248720ec2bae</a></li>
-<li>Opscode Community<br><a href="http://community.opscode.com/cookbooks/" target="_blank" rel="external">http://community.opscode.com/cookbooks/</a></li>
-<li>Vagrantで作るChefの簡単レシピ<br><a href="http://yungsang.com/vagrant/" target="_blank" rel="external">http://yungsang.com/vagrant/</a></li>
-<li>Vagrantの使い方 - Qiita [キータ]<br><a href="http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d" target="_blank" rel="external">http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d</a></li>
-</ul>
-<ul>
-<li>morafabio/vagrant-php-development-box<br><a href="https://github.com/morafabio/vagrant-php-development-box" target="_blank" rel="external">https://github.com/morafabio/vagrant-php-development-box</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chef.html" data-id="cjbk0vac9000clt0avkujz1o3" class="article-share-link">Delen</a>
-      
-        <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -933,7 +838,7 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -943,9 +848,9 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
   </div>
 
@@ -955,14 +860,14 @@ $ knife solo prepare test_vagrant5
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
@@ -972,9 +877,13 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/server201712.html">ドメインの移管</a>
+          </li>
         
           <li>
             <a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a>
@@ -990,10 +899,6 @@ $ knife solo prepare test_vagrant5
         
           <li>
             <a href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a>
-          </li>
-        
-          <li>
-            <a href="/article/dashboard-devto.html">DEVの投稿画面</a>
           </li>
         
       </ul>

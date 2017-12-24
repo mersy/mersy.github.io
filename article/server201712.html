@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014/6 | mersy note</title>
+  <title>ドメインの移管 | mersy note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="mersy note">
-<meta property="og:url" content="http://mersy.github.io/archives/2014/06/index.html">
+  <meta name="description" content="ドメインをvalue domain から Route53 へ移管する。 メール関係周りの設定そのドメインのメールを1つ作ってgmailに転送している。普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。転送しつつ、自動返信とかできるようにしておきたい。 とりあえずさくらのメールボックスを契約。  セキュリティ対策を強化した">
+<meta name="keywords" content="AWS, Route53">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ドメインの移管">
+<meta property="og:url" content="http://mersy.github.io/article/server201712.html">
 <meta property="og:site_name" content="mersy note">
+<meta property="og:description" content="ドメインをvalue domain から Route53 へ移管する。 メール関係周りの設定そのドメインのメールを1つ作ってgmailに転送している。普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。転送しつつ、自動返信とかできるようにしておきたい。 とりあえずさくらのメールボックスを契約。  セキュリティ対策を強化した">
+<meta property="og:image" content="http://mersy.github.io/asset/20171224_aws_hostzone01.png">
+<meta property="og:image" content="http://mersy.github.io/asset/20171224_aws_hostzone02.png">
+<meta property="og:image" content="http://mersy.github.io/asset/20171224_aws_hostzone03.png">
+<meta property="og:updated_time" content="2017-12-24T07:16:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mersy note">
+<meta name="twitter:title" content="ドメインの移管">
+<meta name="twitter:description" content="ドメインをvalue domain から Route53 へ移管する。 メール関係周りの設定そのドメインのメールを1つ作ってgmailに転送している。普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。転送しつつ、自動返信とかできるようにしておきたい。 とりあえずさくらのメールボックスを契約。  セキュリティ対策を強化した">
+<meta name="twitter:image" content="http://mersy.github.io/asset/20171224_aws_hostzone01.png">
   
     <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
   
@@ -70,40 +79,100 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/article/chromeextension.html" class="archive-article-date">
-  <time datetime="2014-06-24T03:43:24.000Z" itemprop="datePublished">Jun 24</time>
+        <section id="main"><article id="post-server201712" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/server201712.html" class="article-date">
+  <time datetime="2017-12-24T08:05:41.000Z" itemprop="datePublished">2017-12-24</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/article/chromeextension.html">Chrome Extensionをつくってみる</a>
+    <h1 class="article-title" itemprop="name">
+      ドメインの移管
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ドメインをvalue domain から Route53 へ移管する。</p>
+<h2 id="メール関係周りの設定"><a href="#メール関係周りの設定" class="headerlink" title="メール関係周りの設定"></a>メール関係周りの設定</h2><p>そのドメインのメールを1つ作ってgmailに転送している。<br>普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。<br>転送しつつ、自動返信とかできるようにしておきたい。</p>
+<p>とりあえずさくらのメールボックスを契約。</p>
+<blockquote>
+<p>セキュリティ対策を強化したメールサーバー専用プラン【メールボックス】<br><a href="https://www.sakura.ne.jp/mail/" target="_blank" rel="external">https://www.sakura.ne.jp/mail/</a></p>
+</blockquote>
+<p>年額1029円なのでまぁこれで問題ないかな、と。<br>→ ロリポップの契約があったのでそちらですすめる</p>
+<p>ロリポップに独自ドメインを追加しておき、今回用のメールアドレスを作成しておく。<br>転送設定まで完了。</p>
+<h2 id="AWSまわり"><a href="#AWSまわり" class="headerlink" title="AWSまわり"></a>AWSまわり</h2><p>この辺を参考にDNSをまずRoute53にうつす。</p>
+<blockquote>
+<p>Route53にドメインを移管する – blog.10rane.com<br><a href="http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/" target="_blank" rel="external">http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/</a><br>お名前.comからAmazon Route 53へドメインを移管する ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/aws/onamae-to-route53/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/aws/onamae-to-route53/</a><br>既存ドメインの DNS サービスを Amazon Route 53 に移行する - Amazon Route 53<br><a href="http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html" target="_blank" rel="external">http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html</a></p>
+</blockquote>
+<p>そのうえでドメイン移管。</p>
+<p>2017.12.24 ドメイン移管も完了</p>
+<h2 id="メール設定"><a href="#メール設定" class="headerlink" title="メール設定"></a>メール設定</h2><p>ロリポップのメールサーバへのレコード情報はサイトに掲載されてないみたいなので、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nslookup hogehoge.main.jp</div></pre></td></tr></table></figure>
+<p>とか契約してあるロリポップドメインのIPを調べる。</p>
+<p>MXレコードは <code>10 mx01.lolipop.jp.</code> らしい。</p>
+<h3 id="Route53の設定"><a href="#Route53の設定" class="headerlink" title="Route53の設定"></a>Route53の設定</h3><p>Route53の「Hosted Zones」からドメインを選ぶ。</p>
+<p><img src="../asset/20171224_aws_hostzone01.png" alt=""></p>
+<p>メール用に mail. のサブドメインでAレコードを追加。</p>
+<p><img src="../asset/20171224_aws_hostzone02.png" alt=""></p>
+<p>これはいらなかったのかも？？<br>IPは先ほどしらべたロリポップのもの。</p>
+<p>MXレコードを追加する。</p>
+<p><img src="../asset/20171224_aws_hostzone03.png" alt=""></p>
+<p>こっちはサブドメインではないからそのままで追加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ dig mersy418.com</div><div class="line">$ dig mail.mersy418.com</div></pre></td></tr></table></figure>
+<p>で確認。</p>
+<p>テストメールを送ったところ、ロリポップのWebメールにもメールがあり、転送先にも転送されていた。</p>
+<blockquote>
+<p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
+</blockquote>
+<h2 id="サブドメインの設定"><a href="#サブドメインの設定" class="headerlink" title="サブドメインの設定"></a>サブドメインの設定</h2><p>Route53に移せたので、</p>
+<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html">http://mersy.github.io/article/drupal-lightsail.html</a></p>
+<p>で作成したサイトにサブドメインでアクセス出来るように設定してみる。</p>
+<p><code>Crate Record Set</code> で <code>d8.</code> のサブドメインに対して <code>Aレコード</code> で Lightsailの Public IP を登録。</p>
+<p><a href="http://d8.mersy418.com/" target="_blank" rel="external">http://d8.mersy418.com/</a></p>
+<p>でアクセス出来た。</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/server201712.html" data-id="cjbkfx2ki0037mz0az77m1ga6" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/server201712.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/article/drupal-lightsail.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">LightsailでDrupalを立ち上げる</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -202,11 +271,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   var disqus_shortname = 'mersymemogithubpage';
   
+  var disqus_url = 'http://mersy.github.io/article/server201712.html';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
