@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-15T00:23:23.000Z</updated>
+  <updated>2017-12-24T00:09:48.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LightsailでDrupalを立ち上げる</title>
+    <link href="http://mersy.github.io/article/drupal-lightsail.html"/>
+    <id>http://mersy.github.io/article/drupal-lightsail.html</id>
+    <published>2017-12-23T11:06:27.000Z</published>
+    <updated>2017-12-24T00:09:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="lightsailでDrupalを立ち上げる"><a href="#lightsailでDrupalを立ち上げる" class="headerlink" title="lightsailでDrupalを立ち上げる"></a>lightsailでDrupalを立ち上げる</h2><p>Drupal の勉強をしてみようとおもっていたのと、Lightsail を使ってみたことがなかったのでこの機会に使ってみる。</p>
+<p><a href="https://amazonlightsail.com/ja/" target="_blank" rel="external">https://amazonlightsail.com/ja/</a></p>
+<p>Drupal が用意されているのでそれを使うだけで良さそうなので。</p>
+<p>Drupal を選択するとこんな感じになる。</p>
+<p><img src="../asset/20171216lightsail_drupal.png" alt=""></p>
+<p>ここから開くと</p>
+<p><img src="../asset/20171216_lightsail2.png" alt=""></p>
+<p>みたいな感じに。</p>
+<p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
+<p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat bitnami_application_password</div></pre></td></tr></table></figure>
+<blockquote>
+<p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
+</blockquote>
+<p>ということで、調べたパスワードで</p>
+<p>ID : user<br>Password : xxxx</p>
+<p>でログインができる。</p>
+<p>ログインできたらID/Passを変更しておく。</p>
+<h2 id="テーマを適用する"><a href="#テーマを適用する" class="headerlink" title="テーマを適用する"></a>テーマを適用する</h2><p>Bootstrap 入ってた方がとりあえずは楽そうなきがしたので、</p>
+<blockquote>
+<p>Theme project | Drupal.org<br><a href="https://www.drupal.org/project/project_theme" target="_blank" rel="external">https://www.drupal.org/project/project_theme</a></p>
+</blockquote>
+<p>で、 bootstrap で検索。</p>
+<blockquote>
+<p>Bootstrap Business | Drupal.org<br><a href="https://www.drupal.org/project/bootstrap_business" target="_blank" rel="external">https://www.drupal.org/project/bootstrap_business</a></p>
+</blockquote>
+<p>以下も参考に読んでみた。</p>
+<blockquote>
+<p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush</div></pre></td></tr></table></figure>
+<p>で Drush が入っているのを確認。</p>
+<p>Drush については以下を参考にさせてもらった。</p>
+<blockquote>
+<p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
+</blockquote>
+<p>このテーマをダウンロード</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush dl bootstrap_business</div></pre></td></tr></table></figure>
+<p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
+<p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
+<h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
+<li>ドメイン割り当て</li>
+<li>コンテンツタイプ作成</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;lightsailでDrupalを立ち上げる&quot;&gt;&lt;a href=&quot;#lightsailでDrupalを立ち上げる&quot; class=&quot;headerlink&quot; title=&quot;lightsailでDrupalを立ち上げる&quot;&gt;&lt;/a&gt;lightsailでDrupalを立ち上
+    
+    </summary>
+    
+      <category term="Drupal" scheme="http://mersy.github.io/categories/Drupal/"/>
+    
+    
+      <category term="Drupal" scheme="http://mersy.github.io/tags/Drupal/"/>
+    
+  </entry>
   
   <entry>
     <title>Craft CMS の次期バージョン Craft 3 について調べてみた</title>
@@ -709,51 +775,6 @@
     </summary>
     
       <category term="Node.js" scheme="http://mersy.github.io/categories/Node-js/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Atom memo</title>
-    <link href="http://mersy.github.io/article/atom.html"/>
-    <id>http://mersy.github.io/article/atom.html</id>
-    <published>2014-07-11T07:15:32.000Z</published>
-    <updated>2014-07-22T22:10:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
-<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
-<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
-</blockquote>
-<p>Cmd + Shift + H でコマンド選択</p>
-<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
-<blockquote>
-<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
-</blockquote>
-<p>Snippetなのか、Packageなのか？？</p>
-<p>autocomplete-snippets にリストを追加する感じ？？</p>
-<blockquote>
-<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
-</blockquote>
-<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
-<blockquote>
-<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
-</blockquote>
-<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
-<p>このあたりの設定が影響してる様子。</p>
-<blockquote>
-<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
-</blockquote>
-<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。&lt;/p&gt;
-&lt;h2 id=&quot;Package&quot;&gt;&lt;a href=&quot;#Package&quot; class=&quot;headerlink&quot; title=&quot;Package&quot;&gt;&lt;/a&gt;Package&lt;/h2&gt;&lt;h3 i
-    
-    </summary>
-    
-      <category term="Editor Atom" scheme="http://mersy.github.io/categories/Editor-Atom/"/>
     
     
   </entry>

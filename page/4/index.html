@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-casperjs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/casperjs.html" class="article-date">
+  <time datetime="2014-05-05T01:53:31.000Z" itemprop="datePublished">2014-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CasperJS/">CasperJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/casperjs.html">CasperJSメモ</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CasperJS</p>
+<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
+<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
+<pre><code>$ brew update
+$ brew install casperjs --devel
+$ casperjs --version
+1.1.0-beta3
+</code></pre><p>インストールできた</p>
+<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
+<blockquote>
+<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html">http://mersy.github.io/homebrew.html</a></p>
+</blockquote>
+<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
+<pre><code>// sample01.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net/&apos;,function(){
+  this.echo(this.getTitle());
+});
+
+casper.run();
+</code></pre><p>sample01.jsを作成</p>
+<pre><code>$ casperjs sample01.js
+bit part 合同会社
+</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
+<pre><code>// sample2.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;,function(){
+  this.capture(&apos;sample02.png&apos;);
+});
+
+casper.run();
+</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
+<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;);
+
+casper.viewport(1024, 768).then(function() {
+    this.capture(&apos;sample03.png&apos;);
+});
+
+casper.run();
+</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
+<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
+<blockquote>
+<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
+<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cjbk0om0z000kle0aob8clg0e" class="article-share-link">Partager</a>
+      
+        <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Commentaires</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-publish" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -167,9 +262,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjb760bfs002rckjxhbrx20qa" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjbk0om2r002xle0a2zdrdz2c" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -241,9 +336,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjb760bfk002eckjxcpp72tth" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjbk0om2o002ple0amcgrjhtz" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -292,9 +387,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cjb760bdu000bckjxqy1i3m4e" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cjbk0om0m000ele0al7kk0zef" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -372,9 +467,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/s3.html" data-id="cjb760bfw0030ckjx595cnwmo" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/s3.html" data-id="cjbk0om2v0037le0a51hkg8vl" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/s3.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -443,9 +538,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cjb760bfh002bckjxq0bucw2q" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mtfor.html" data-id="cjbk0om2l002gle0avsgi5rkj" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/mtfor.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -507,9 +602,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cjb760bfr002pckjxryumaxqg" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cjbk0om2p002ule0ac87h58y4" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -581,9 +676,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjb760bfv002wckjx0vbv80if" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjbk0om2u0034le0arxd0c1pu" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -665,9 +760,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjb760bew001lckjx709zbqny" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjbk0om1x001qle0ax25r20sr" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -815,58 +910,9 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chef.html" data-id="cjb760be2000kckjxzt1v8oof" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/chef.html" data-id="cjbk0om19000ole0afn3hj5t2" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-labelOnTask" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/labelOnTask.html" class="article-date">
-  <time datetime="2013-10-22T19:00:00.000Z" itemprop="datePublished">2013-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Task/">Task</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/labelOnTask.html">Taskにつけるラベルの考え方</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Github Issuesを使うが故のラベリングというところはあるんだろうけど、この分類も参考にしたいところ。</p>
-<blockquote><br>Github Issues を利用したリリースマネージャのお仕事 - hakobera’s blog<br><a href="http://hakobera.hatenablog.com/entry/2013/10/22/133014" target="_blank" rel="external">http://hakobera.hatenablog.com/entry/2013/10/22/133014</a><br><br>  <table><br>  <tbody><tr><br>    <th>from-customer<br>    </th><td>クライアントからの問い合わせをトリガーに作成された Issue。この時点ではバグかどうかはわからないが、取りこぼさないようにとりあえず Issue として作成する</td><br>  </tr><br>  <tr><br>    <th>bug</th><br>    <td>社内で気が付いた Issue、もしくは from-customer の Issue がバグだった場合につける</td><br>  </tr><br>  <tr><br>    <th>critical</th><br>    <td>bugの中でも特に緊急性の高い Issue につける</td><br>  </tr><br>  <tr><br>    <th>confirm-spec</th><br>    <td>仕様確認が必要な Issue につける</td><br>  </tr><br>  <tr><br>    <th>final-check</th><br>    <td>修正が完了し、ビジネス側、クラアントに最終チェックして欲しい Issue につける</td><br>  </tr><br>  </tbody></table><br></blockquote>
-
-<p>ラベルでありながらいくつかの属性を持ってそうな感じ。</p>
-<p>from-customer、bug はどちらかというとメモ的要素も大きそうだけれども、これが優先度にもつながるから会った方がよさそう。</p>
-<p>critical は優先度高い物を目立たせるため。</p>
-<p>confirm-spec、final-check はステータスってかんじか？</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cjb760bf60021ckjxesd3atno" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/labelOnTask.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -887,7 +933,7 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -897,9 +943,9 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
   </div>
 
@@ -907,9 +953,9 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
     </div>
   </div>
 
@@ -926,9 +972,13 @@ $ knife solo prepare test_vagrant5
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a>
+          </li>
         
           <li>
             <a href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a>
@@ -946,10 +996,6 @@ $ knife solo prepare test_vagrant5
             <a href="/article/dashboard-devto.html">DEVの投稿画面</a>
           </li>
         
-          <li>
-            <a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -963,7 +1009,7 @@ $ knife solo prepare test_vagrant5
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 mersy<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

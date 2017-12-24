@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-fastly" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/fastly.html" class="article-date">
+  <time datetime="2017-09-28T19:28:15.000Z" itemprop="datePublished">2017-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/fastly.html">Fastly memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
+<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
+<p>VCL（Varnish Configuration Language）というのに記載する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">sub vcl_recv &#123;</div><div class="line"></div><div class="line">  /* unset state tracking header to avoid client sending it */</div><div class="line">  if (req.restarts == 0) &#123;</div><div class="line">    unset req.http.X-Authed;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (!req.http.X-Authed) &#123;</div><div class="line">    /* stash the original URL and Host for later */</div><div class="line">    set req.http.X-Orig-URL = req.url;</div><div class="line"></div><div class="line">    /* set the URL to what the auth backend expects */</div><div class="line">    set req.url = &quot;/authenticate&quot;;</div><div class="line"></div><div class="line">    /* Auth requests won&apos;t be cached, so pass */</div><div class="line">    return(pass);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (req.http.X-Authed == &quot;true&quot;) &#123;</div><div class="line">    /* were authed, so proceed with the request */</div><div class="line">    /* reset the URL */</div><div class="line">    set req.url = req.http.X-Orig-URL;</div><div class="line"></div><div class="line">  &#125; else &#123;</div><div class="line">    /* the auth backend refused the request, so 403 the client */</div><div class="line">    error 403;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<blockquote>
+<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
+</blockquote>
+<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
+<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
+<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
+<blockquote>
+<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
+</blockquote>
+<p>そのほか Response headers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
+<p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
+<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
+<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cjbk0om1w001nle0aw5qw7evu" class="article-share-link">Partager</a>
+      
+        <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Commentaires</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cache/">cache</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-mac-excel-font" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -103,9 +171,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cjb760bfb0024ckjxr4dukhxd" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cjbk0om2i002fle0akvse8nce" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/">Excel</a></li></ul>
@@ -148,9 +216,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cjb760bg2003hckjxudmqfkxb" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cjbk0om3l004ple0atod1z0yw" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/writeblog.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/writeblog.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -195,9 +263,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cjb760bea000tckjxmpo5c9n5" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cjbk0om1d000ule0a6xlgnr2h" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/craft-systememail.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/craft-systememail.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
@@ -272,9 +340,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cjb760be8000rckjxnd1jcjep" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cjbk0om1c000tle0a2t16mggn" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/craft-cache.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/craft-cache.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
@@ -359,9 +427,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cjb760bf3001rckjxq41te8wd" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cjbk0om20001vle0a9vjflikv" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/hexo.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/hexo.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -406,9 +474,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/hello-world.html" data-id="cjb760bez001ockjxylp5twwm" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/hello-world.html" data-id="cjbk0om1z001tle0ausxyh8ug" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/hello-world.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/hello-world.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -459,9 +527,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashboard_medium.html" data-id="cjb760bee0010ckjxku64u2tv" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dashboard_medium.html" data-id="cjbk0om1h0012le0aempsirl7" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/dashboard_medium.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/dashboard_medium.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -514,9 +582,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashdocset.html" data-id="cjb760beg0014ckjx06vlibis" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dashdocset.html" data-id="cjbk0om1k0016le0avyau9abm" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/dashdocset.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/dashdocset.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -563,75 +631,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/node.html" data-id="cjb760bfn002ickjxdqq5rtn7" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/node.html" data-id="cjbk0om2q002vle0agiziye0h" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/node.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-atom" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/atom.html" class="article-date">
-  <time datetime="2014-07-11T07:15:32.000Z" itemprop="datePublished">2014-07-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Editor-Atom/">Editor Atom</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/atom.html">Atom memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
-<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
-<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
-</blockquote>
-<p>Cmd + Shift + H でコマンド選択</p>
-<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
-<blockquote>
-<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
-</blockquote>
-<p>Snippetなのか、Packageなのか？？</p>
-<p>autocomplete-snippets にリストを追加する感じ？？</p>
-<blockquote>
-<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
-</blockquote>
-<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
-<blockquote>
-<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
-</blockquote>
-<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
-<p>このあたりの設定が影響してる様子。</p>
-<blockquote>
-<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
-</blockquote>
-<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/atom.html" data-id="cjb760bdy000eckjxiygjsci7" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/atom.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/node.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -652,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -662,9 +664,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
   </div>
 
@@ -672,9 +674,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
     </div>
   </div>
 
@@ -691,9 +693,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a>
+          </li>
         
           <li>
             <a href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a>
@@ -711,10 +717,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/article/dashboard-devto.html">DEVの投稿画面</a>
           </li>
         
-          <li>
-            <a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -728,7 +730,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 mersy<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
