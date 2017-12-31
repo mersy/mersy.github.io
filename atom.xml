@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-30T08:41:13.000Z</updated>
+  <updated>2017-12-31T11:34:59.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</title>
+    <link href="http://mersy.github.io/article/book-yahoo1on1.html"/>
+    <id>http://mersy.github.io/article/book-yahoo1on1.html</id>
+    <published>2017-12-31T11:23:18.000Z</published>
+    <updated>2017-12-31T11:34:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法 | 本間浩輔 | ビジネス・経済 | Kindleストア | Amazon<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/mersys-22/ref=nosim</a></p>
+<p>最近本を読むときの背景として、リモートだったらどうするか？というのを意識して読んでいるなぁというのを再認識した気がする。</p>
+<p>1on1に相当するようなことをやるとしたらどうやるか？<br>上司と部下というのが前提の話なわけだけれども、そもそもとして、フラットな組織の場合波動するのがいいんだろう？とか。</p>
+<p>一人では仕事はできないしチームでやるのが基本なので、1on1のようなのはどういう風にとりいれていくのがいいんだろうか？というのを考えるきっかけにもなる。</p>
+<p>テキストでの共有についてとコンテキストの話が出ていたけど、確かにそこには違いがあるので、それはしっかりと埋めていく必要があるとは思う。</p>
+<p>Slackとかのテキストチャット（1:1、チャンネル・グループ）<br>音声チャット<br>映像付きのチャット</p>
+<p>これらも使い分けが必要だし、それは目的にもよってかわるなぁ。</p>
+<p>基本はチャンネルやグループで使うのがベースにありつつ、1on1みたいな使い方であればDM的な使い方になるのかなぁ。</p>
+<p>テキストのいいとこは頻繁なやりとりは出来る気がするな。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法 | 本間浩輔 | ビジネス・経済 | Kindleストア | Amazon&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/me
+    
+    </summary>
+    
+      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【読了】ジョイ・インク</title>
@@ -786,38 +815,6 @@
       &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Mediumの投稿画面</title>
-    <link href="http://mersy.github.io/article/dashboard_medium.html"/>
-    <id>http://mersy.github.io/article/dashboard_medium.html</id>
-    <published>2016-12-10T05:30:00.000Z</published>
-    <updated>2016-12-10T05:33:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="入力画面"><a href="#入力画面" class="headerlink" title="入力画面"></a>入力画面</h2><p>タイトルと本文欄に分かれている</p>
-<p><img src="/asset/20161210_img01.png" alt="入力画面"></p>
-<p>挿入ボタン</p>
-<p><img src="/asset/20161210_img02.png" alt="入力画面"></p>
-<p>画像はD&amp;Dでも挿入出来る</p>
-<h2 id="ショートカット"><a href="#ショートカット" class="headerlink" title="ショートカット"></a>ショートカット</h2><p>見出しは <code>cmd + alt + 1</code></p>
-<p>サブ見出しは <code>cmd + alt + 2</code></p>
-<p>Markdown的に入力できるものもあるみたいだが、独自な印象</p>
-<h2 id="Exportは出来る？"><a href="#Exportは出来る？" class="headerlink" title="Exportは出来る？"></a>Exportは出来る？</h2><p>HTMLファイルとしてexportされる様子</p>
-<p>Export content from Medium – Medium Support<br><a href="https://help.medium.com/hc/en-us/articles/214043918-Export-content-from-Medium" target="_blank" rel="external">https://help.medium.com/hc/en-us/articles/214043918-Export-content-from-Medium</a></p>
-<p>HTMLデータとして残す分にはいいが、データとしてコンテンツ部分を残すのは難しそう。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;入力画面&quot;&gt;&lt;a href=&quot;#入力画面&quot; class=&quot;headerlink&quot; title=&quot;入力画面&quot;&gt;&lt;/a&gt;入力画面&lt;/h2&gt;&lt;p&gt;タイトルと本文欄に分かれている&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/asset/20161210_img01.png&quot; al
-    
-    </summary>
-    
-      <category term="dashboard" scheme="http://mersy.github.io/categories/dashboard/"/>
     
     
   </entry>
