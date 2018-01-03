@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,215 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-craft-cache" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/craft-cache.html" class="article-date">
+  <time datetime="2017-04-20T11:35:10.000Z" itemprop="datePublished">2017-04-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Craft-CMS/">Craft CMS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/craft-cache.html">craft cache memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Craft CMS のキャッシュ周りがよくわからなかったのでメモ</p>
+<p>公式ドキュメント<br><a href="https://craftcms.com/docs/templating/cache" target="_blank" rel="external">https://craftcms.com/docs/templating/cache</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div><div class="line">    &#123;% for block in entry.myMatrixField %&#125;</div><div class="line">        &lt;p&gt;&#123;&#123; block.text &#125;&#125;&lt;/p&gt;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">&#123;% endcache %&#125;</div></pre></td></tr></table></figure>
+<h2 id="キャッシュの削除"><a href="#キャッシュの削除" class="headerlink" title="キャッシュの削除"></a>キャッシュの削除</h2><p>管理画面からキャッシュの削除ができる</p>
+<p><a href="https://craftcms.com/classreference/tools/ClearCachesTool" target="_blank" rel="external">https://craftcms.com/classreference/tools/ClearCachesTool</a></p>
+<ul>
+<li>全て<ul>
+<li>全てのキャッシュを削除</li>
+</ul>
+</li>
+<li>データキャッシュ（Data caches）<br>-</li>
+<li>RSSキャッシュ（RSS caches）<br>-</li>
+<li>アセットキャッシュ（Asset caches）<br>-</li>
+<li>コンパイル済のテンプレート（Compiled templates）<br>-</li>
+<li>一時的なファイル（Temp files）<br>-</li>
+<li>アセット変換インデックス（Asset transform index）<br>-</li>
+<li>アセットのインデックス化データ（Asset indexing data）<br>-</li>
+<li>テンプレートキャッシュ（Template caches）<br>-</li>
+</ul>
+<h2 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h2><p>山本さんに教えてもらった効率がよいという方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">処理時間のかかるループ処理などのブロックごとにcacheタグで囲む</div><div class="line">それぞれ &#123;% cache using key &quot;&lt;cachekey&gt;&quot; %&#125; の形式でキーを指定する</div><div class="line">同一のキーでも、呼び出されるURLが異なればキャッシュは区別される</div></pre></td></tr></table></figure>
+<p>キャッシュキーがあればそのキャッシュだけを削除しやすいみたい  </p>
+<h2 id="cacheDuration"><a href="#cacheDuration" class="headerlink" title="cacheDuration"></a>cacheDuration</h2><p><a href="https://craftcms.com/docs/config-settings#cacheDuration" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheDuration</a></p>
+<p>テンプレートで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div></pre></td></tr></table></figure></p>
+<p>で囲われているところはキャッシュされる。</p>
+<p>初期値は ‘P1D’ （1日）。</p>
+<pre><code>&apos;cacheDuration&apos; =&gt; &apos;P1W&apos;,
+</code></pre><h2 id="cacheElementQueries"><a href="#cacheElementQueries" class="headerlink" title="cacheElementQueries"></a>cacheElementQueries</h2><p><a href="https://craftcms.com/docs/config-settings#cacheElementQueries" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheElementQueries</a></p>
+<p>デフォルトではエントリ更新時にテンプレートキャッシュ削除されるが、それを無効にする設定。初期値は ‘true’ 。</p>
+<pre><code>&apos;cacheElementQueries&apos; =&gt; false,
+</code></pre><p>更新が多いがアクセスも多い場合は、 ‘false’ にしたうえでキャッシュをコントロールしたほうが良さそう。</p>
+<hr>
+<p>キャッシュ削除をcronジョブと連携できそう？？<br><a href="https://github.com/themccallister/craft.cache-clear" target="_blank" rel="external">https://github.com/themccallister/craft.cache-clear</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cjbyeu0th001albjx78w8y0fr" class="article-share-link">Partager</a>
+      
+        <a href="http://mersy.github.io/article/craft-cache.html#disqus_thread" class="article-comment-link">Commentaires</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/hexo.html" class="article-date">
+  <time datetime="2017-03-26T03:00:00.000Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/hexo.html">Hexo memo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>mdファイルで書きたい</li>
+<li>できればgithubpage使いたい</li>
+</ul>
+<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
+<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
+<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>config_yamlに設定を書く<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:mersy/mersy.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
+<p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
+<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
+<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
+<blockquote>
+<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
+</blockquote>
+<p>コマンド（cmd-shift-P）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- hexo new          # Create a new post</div><div class="line">- hexo publish      # Publish a draft post</div><div class="line">- hexo generate     # Generate static files</div><div class="line">- hexo deploy       # Generate static files and deploy</div><div class="line">- hexo clean        # Clean the cache file and generated files</div></pre></td></tr></table></figure>
+<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new</div></pre></td></tr></table></figure>
+<p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
+<p>でローカルで下書きが確認できる</p>
+<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
+<li>/scaffolds<ul>
+<li>draft.md : ドラフト投稿用のテンプレート</li>
+<li>post.md : 投稿用のテンプレート</li>
+<li>page.md : 固定ページ用のテンプレート</li>
+</ul>
+</li>
+</ul>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>カテゴリの設定</li>
+<li>検索（flexibeSearch）</li>
+<li>引用のデザイン</li>
+</ul>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
+<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
+<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
+<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cjbyeu0u7002flbjxuhwkmuec" class="article-share-link">Partager</a>
+      
+        <a href="http://mersy.github.io/article/hexo.html#disqus_thread" class="article-comment-link">Commentaires</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/hello-world.html" class="article-date">
+  <time datetime="2017-03-26T02:55:12.000Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/hello-world.html">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/hello-world.html" data-id="cjbyeu0u30029lbjxnegyuahs" class="article-share-link">Partager</a>
+      
+        <a href="http://mersy.github.io/article/hello-world.html#disqus_thread" class="article-comment-link">Commentaires</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-dashboard_medium" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -113,9 +322,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashboard_medium.html" data-id="cjbuq0sm8001bg00aal2hjd63" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dashboard_medium.html" data-id="cjbyeu0tn001jlbjxn8cp2tlq" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/dashboard_medium.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/dashboard_medium.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -168,9 +377,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashdocset.html" data-id="cjbuq0smc001fg00azv22e94n" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dashdocset.html" data-id="cjbyeu0to001mlbjxneq9f2bk" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/dashdocset.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/dashdocset.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -217,9 +426,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/node.html" data-id="cjbuq0snj0030g00am9bcxjgo" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/node.html" data-id="cjbyeu0ul003clbjxbb1t0n3j" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/node.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/node.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -283,9 +492,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/atom.html" data-id="cjbuq0slp000lg00a09u4rmum" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/atom.html" data-id="cjbyeu0sq000llbjxb8yxih4y" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/atom.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/atom.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -335,9 +544,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chromeapp.html" data-id="cjbuq0slz000xg00amq5d97tx" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/chromeapp.html" data-id="cjbyeu0tb0014lbjxtfizen6o" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/chromeapp.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/chromeapp.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -381,9 +590,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chromeextension.html" data-id="cjbuq0sm1000zg00a7n8oa6yi" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/chromeextension.html" data-id="cjbyeu0td0017lbjxm82q9x71" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/chromeextension.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/chromeextension.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -456,320 +665,9 @@ layout: false
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/middleman.html" data-id="cjbuq0sna002mg00aiyeqhd2j" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/middleman.html" data-id="cjbyeu0ug002zlbjxi8pnpdvx" class="article-share-link">Partager</a>
       
-        <a href="http://mersy.github.io/article/middleman.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mtbymail" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/mtbymail.html" class="article-date">
-  <time datetime="2014-05-08T21:21:56.000Z" itemprop="datePublished">2014-05-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/mtbymail.html">MTにメールで投稿する</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先日、S3に移したりしたときに、MTも候補にいれたのだけど、メールでの投稿が期待できなさそうだったので、今回は除外した。<br>スマホのアプリは今回除外。</p>
-<ul>
-<li>Post Office</li>
-<li>Moober / MovaMotion</li>
-<li>MailPack</li>
-<li>ケータイポスト for MT</li>
-</ul>
-<p>たまたま、MT関係のプラグインを見つけたのでとりあえずそれを試してみた。</p>
-<p>環境：Xserver, MT 6.0.3</p>
-<h2 id="Post-Office-a-plugin-for-Movable-Type"><a href="#Post-Office-a-plugin-for-Movable-Type" class="headerlink" title="Post Office, a plugin for Movable Type"></a>Post Office, a plugin for Movable Type</h2><p>movabletype/mt-plugin-post-office<br><a href="https://github.com/movabletype/mt-plugin-post-office" target="_blank" rel="external">https://github.com/movabletype/mt-plugin-post-office</a></p>
-<p>設定してみた感じでは問題なく動いていたが、いくつか気になるところがあるので実用には至らず。<br>送信元がiPhoneのGmailというのも影響してる可能性はあるけど。</p>
-<ul>
-<li>添付した画像の表示がオカシイ。縦100%みたいな感じに延び延びになった。cssとの兼ね合いかも知れない。</li>
-<li>2byte文字の処理が怪しい。管理画面の一覧ではちゃんと表示されてたけどオモテ側では化けてた。</li>
-<li>テキストだけおくっても、1つのpostに二重に表示されてた。これもメーラーの原因ポイけど。</li>
-</ul>
-<h2 id="Moober-MovaMotion"><a href="#Moober-MovaMotion" class="headerlink" title="Moober / MovaMotion"></a>Moober / MovaMotion</h2><p>携帯電話から使うMTベースのTwitter風マイクロブログ(3)。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2009/05/post_209.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2009/05/post_209.html</a><br>携帯からMTにメールで投稿するMoblogプラグイン「Moober」。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2007/12/post_155.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2007/12/post_155.html</a></p>
-<h2 id="MailPack"><a href="#MailPack" class="headerlink" title="MailPack"></a>MailPack</h2><p>Movable Typeで簡単携帯投稿！メール投稿プラグイン:MailPack - Movable Type技術ブログ<br><a href="http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html" target="_blank" rel="external">http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html</a></p>
-<h2 id="ケータイポスト-for-MT"><a href="#ケータイポスト-for-MT" class="headerlink" title="ケータイポスト for MT"></a>ケータイポスト for MT</h2><p>ケータイポスト for MT｜ソフトウェア製品・無料ツール｜アイデアマンズ株式会社(ideaman’s Inc.)<br><a href="http://www.ideamans.com/products/keitaipost4mt/" target="_blank" rel="external">http://www.ideamans.com/products/keitaipost4mt/</a></p>
-<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><p>DataAPIでのQuickPostはつくったけど、スマホじゃないと使えない気がするけど、どうなんだろうな。<br>まだメールの方が使い慣れてる（頻度が多い）からメールをツールに選んだ。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtbymail.html" data-id="cjbuq0snd002og00a6fwl0n0a" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/mtbymail.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mtmemo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/mtmemo.html" class="article-date">
-  <time datetime="2014-05-08T10:07:27.000Z" itemprop="datePublished">2014-05-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/MovableType/">MovableType</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/mtmemo.html">MTのメモ</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="タグの情報を調べる"><a href="#タグの情報を調べる" class="headerlink" title="タグの情報を調べる"></a>タグの情報を調べる</h2><p>movabletype/lib/MT/Template/ContextHandlers.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm</a></p>
-<h2 id="コールバック"><a href="#コールバック" class="headerlink" title="コールバック"></a>コールバック</h2><h3 id="ユーザー関係"><a href="#ユーザー関係" class="headerlink" title="ユーザー関係"></a>ユーザー関係</h3><ul>
-<li>cms_edit.author</li>
-<li>cms_view_permission_filter.author</li>
-<li>cms_save_permission_filter.author</li>
-<li>cms_delete_permission_filter.author</li>
-<li>cms_save_filter.author</li>
-<li>cms_pre_save.author</li>
-<li>cms_post_save.author</li>
-<li>cms_post_delete.author</li>
-</ul>
-<h3 id="ブログ関係"><a href="#ブログ関係" class="headerlink" title="ブログ関係"></a>ブログ関係</h3><ul>
-<li>cms_edit.blog</li>
-<li>cms_view_permission_filter.blog</li>
-<li>cms_save_permission_filter.blog</li>
-<li>cms_delete_permission_filter.blog</li>
-<li>cms_pre_save.blog</li>
-<li>cms_post_save.blog</li>
-<li>cms_save_filter.blog</li>
-<li>cms_post_delete.blog</li>
-</ul>
-<h3 id="フォルダ関係"><a href="#フォルダ関係" class="headerlink" title="フォルダ関係"></a>フォルダ関係</h3><ul>
-<li>cms_edit.folder</li>
-<li>cms_view_permission_filter.folder</li>
-<li>cms_save_permission_filter.folder</li>
-<li>cms_delete_permission_filter.folder</li>
-<li>cms_pre_save.folder</li>
-<li>cms_post_save.folder</li>
-<li>cms_save_filter.folder</li>
-<li>cms_post_delete.folder</li>
-</ul>
-<h3 id="カテゴリ関係"><a href="#カテゴリ関係" class="headerlink" title="カテゴリ関係"></a>カテゴリ関係</h3><ul>
-<li>cms_edit.category</li>
-<li>cms_view_permission_filter.category</li>
-<li>cms_save_permission_filter.category</li>
-<li>cms_delete_permission_filter.category</li>
-<li>cms_pre_save.category</li>
-<li>cms_post_save.category</li>
-<li>cms_save_filter.category</li>
-<li>cms_post_delete.category</li>
-</ul>
-<h3 id="コメント関係"><a href="#コメント関係" class="headerlink" title="コメント関係"></a>コメント関係</h3><ul>
-<li>cms_edit.comment</li>
-<li>cms_view_permission_filter.comment</li>
-<li>cms_save_permission_filter.comment</li>
-<li>cms_delete_permission_filter.comment</li>
-<li>cms_pre_save.comment</li>
-<li>cms_post_save.comment</li>
-<li>cms_post_delete.comment</li>
-</ul>
-<h3 id="コメント投稿者関係"><a href="#コメント投稿者関係" class="headerlink" title="コメント投稿者関係"></a>コメント投稿者関係</h3><ul>
-<li>cms_edit.commenter</li>
-<li>cms_view_permission_filter.commenter</li>
-<li>cms_delete_permission_filter.commenter</li>
-</ul>
-<h3 id="ブログ記事関係"><a href="#ブログ記事関係" class="headerlink" title="ブログ記事関係"></a>ブログ記事関係</h3><ul>
-<li>cms_edit.entry</li>
-<li>cms_view_permission_filter.entry</li>
-<li>cms_delete_permission_filter.entry</li>
-<li>cms_pre_save.entry</li>
-<li>cms_post_save.entry</li>
-<li>cms_post_delete.entry</li>
-</ul>
-<h3 id="ウェブページ関係"><a href="#ウェブページ関係" class="headerlink" title="ウェブページ関係"></a>ウェブページ関係</h3><ul>
-<li>cms_edit.page</li>
-<li>cms_view_permission_filter.page</li>
-<li>cms_delete_permission_filter.page</li>
-<li>cms_pre_save.page</li>
-<li>cms_post_save.page</li>
-<li>cms_post_delete.page</li>
-</ul>
-<h3 id="トラックバック関係"><a href="#トラックバック関係" class="headerlink" title="トラックバック関係"></a>トラックバック関係</h3><ul>
-<li>cms_edit.ping</li>
-<li>cms_view_permission_filter.ping</li>
-<li>cms_save_permission_filter.ping</li>
-<li>cms_delete_permission_filter.ping</li>
-<li>cms_pre_save.ping</li>
-<li>cms_post_save.ping</li>
-<li>cms_post_delete.ping</li>
-</ul>
-<h2 id="mt-staticを独立させる"><a href="#mt-staticを独立させる" class="headerlink" title="mt-staticを独立させる"></a>mt-staticを独立させる</h2><p>mt-staticディレクトリを新しく作成する</p>
-<pre><code>/var/www/html/mt/plugins/mt-static/
-</code></pre><p>.htaccessを作成して、mt-staticにおく</p>
-<pre><code>&lt;IfModule mod_rewite.c&gt;
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
-&lt;/IfModule&gt;
-</code></pre><p>まだ理解不足。よくわかってない。</p>
-<p>mt-config</p>
-<pre><code>StaticWebPath /mt/plugins/mt-static/
-</code></pre><blockquote>
-<p>MovableTypeプラグインのコードを書く準備を40秒で済ませる - blog.aklaswad.com<br><a href="http://blog.aklaswad.com/2007/000191.html" target="_blank" rel="external">http://blog.aklaswad.com/2007/000191.html</a><br>Amazon.co.jp： Movable Type 5 プロフェッショナルガイド: 荒木勇次郎: 本<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim</a></p>
-</blockquote>
-<h1 id="MultiBlog"><a href="#MultiBlog" class="headerlink" title="MultiBlog"></a>MultiBlog</h1><p>MultiBlog経由の再構築はおもいところがあるので、RebuildTriggerとかで対応する様にする。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmemo.html" data-id="cjbuq0snh002vg00afkelr0qr" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/mtmemo.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/vagrant.html" class="article-date">
-  <time datetime="2014-05-08T09:21:03.000Z" itemprop="datePublished">2014-05-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/vagrant.html">Vagrant memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Vagrant に限らず。。。環境構築関係メモ。</p>
-<ul>
-<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
-<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
-<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
-</ul>
-<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
-<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
-</code></pre><p>そのうえで改めてboxを作り直す。</p>
-<pre><code>$ vagrant package
-$ vagrant box add &lt;NewBoxName&gt; package.box
-$ vagrant box list
-$ rm -rf package.box
-</code></pre><p>その上で</p>
-<pre><code>$ vagrant init &lt;NewBoxName&gt;
-</code></pre><p>でVagrantfileを編集しておく。</p>
-<blockquote>
-<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
-</blockquote>
-<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
-<ul>
-<li>PHP</li>
-<li>MySQL</li>
-<li>Ruby</li>
-<li>Python</li>
-<li>phpMyAdmin</li>
-</ul>
-<blockquote>
-<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
-</blockquote>
-<p>これに、いくつか入れておいた。</p>
-<ul>
-<li>wget</li>
-<li>make</li>
-<li>gcc</li>
-<li>Perlのmodule</li>
-<li>ImageMagick</li>
-</ul>
-<p>とりあえずここまで。</p>
-<p>後入れようとおもってるもの。</p>
-<ul>
-<li>cpanm</li>
-<li>Nginx</li>
-<li>Starman</li>
-</ul>
-<p>一緒にしておくか、box分けるか。</p>
-<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
-<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
-</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
-<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
-</code></pre><p>コメントを外しておく</p>
-<pre><code># AddHandler cgi-script .cgi
-↓
-AddHandler cgi-script .cgi
-</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
-<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
-    Options +ExecCGI
-    AddHandler cgi-script .cgi .pl
-&lt;/Directory&gt;
-</code></pre><p>みたいなかんじのを追加しておく</p>
-<pre><code>$ sudo service httpd stop
-$ sudo service httpd start
-</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
-</ul>
-<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
-<pre><code>$ chkconfig mysqld on
-$ chkconfig --list mysqld
-$ service mysqld start
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/vagrant.html" data-id="cjbuq0so5003vg00agtqkvrnw" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/vagrant.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://mersy.github.io/article/middleman.html#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
     </footer>
@@ -790,7 +688,7 @@ $ service mysqld start
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -800,9 +698,9 @@ $ service mysqld start
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
   </div>
 
@@ -810,9 +708,9 @@ $ service mysqld start
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
     </div>
   </div>
 
@@ -821,7 +719,7 @@ $ service mysqld start
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
   </div>
 
@@ -829,28 +727,28 @@ $ service mysqld start
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/book-aruaruwebmarketing.html">【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</a>
+          </li>
+        
+          <li>
+            <a href="/article/book-tutawatteiruka.html">【読了】伝わっているか？</a>
+          </li>
         
           <li>
             <a href="/article/book-yahoo1on1.html">【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</a>
           </li>
         
           <li>
+            <a href="/article/document-git-wiki.html">ドキュメントをGit管理にするかWikiにするか</a>
+          </li>
+        
+          <li>
             <a href="/article/book-joyinc.html">【読了】ジョイ・インク</a>
-          </li>
-        
-          <li>
-            <a href="/article/server201712.html">ドメインの移管</a>
-          </li>
-        
-          <li>
-            <a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a>
-          </li>
-        
-          <li>
-            <a href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a>
           </li>
         
       </ul>
@@ -865,8 +763,8 @@ $ service mysqld start
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 mersy<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 mersy<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

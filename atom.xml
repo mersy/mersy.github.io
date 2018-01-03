@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2017-12-31T11:34:59.000Z</updated>
+  <updated>2018-01-03T01:54:13.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</title>
+    <link href="http://mersy.github.io/article/book-aruaruwebmarketing.html"/>
+    <id>http://mersy.github.io/article/book-aruaruwebmarketing.html</id>
+    <published>2018-01-03T01:00:00.000Z</published>
+    <updated>2018-01-03T01:54:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>「あるある」で学ぶ 右肩上がりのWebマーケティング<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B072X7ZHW6/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B072X7ZHW6/mersys-22/ref=nosim</a></p>
+<p>普段の制作の進め方など自分が制作側として出来ているかどうか？の振り返りによかった。</p>
+<p>定期的に見直したい。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;「あるある」で学ぶ 右肩上がりのWebマーケティング&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B072X7ZHW6/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;ext
+    
+    </summary>
+    
+      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【読了】伝わっているか？</title>
+    <link href="http://mersy.github.io/article/book-tutawatteiruka.html"/>
+    <id>http://mersy.github.io/article/book-tutawatteiruka.html</id>
+    <published>2018-01-02T06:47:04.000Z</published>
+    <updated>2018-01-03T01:53:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>伝わっているか？<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B00KST3AT6/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B00KST3AT6/mersys-22/ref=nosim</a></p>
+<ul>
+<li>いらない言葉を捨てる<ul>
+<li>あってもなくても変わらない上に逆効果</li>
+</ul>
+</li>
+<li>限定。「だけしか」</li>
+<li>選ばれている。</li>
+<li>相手が「嬉しい」が「伝わる」の始まり</li>
+</ul>
+<p>他にもメモしたいところがたくさんあった。</p>
+<p>いろいろな場面で参考にしたい内容が多かったので読み返ししたいところ。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;伝わっているか？&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B00KST3AT6/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www
+    
+    </summary>
+    
+      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</title>
@@ -41,6 +96,35 @@
     
       <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>ドキュメントをGit管理にするかWikiにするか</title>
+    <link href="http://mersy.github.io/article/document-git-wiki.html"/>
+    <id>http://mersy.github.io/article/document-git-wiki.html</id>
+    <published>2017-12-31T04:39:35.000Z</published>
+    <updated>2018-01-03T01:54:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>実装に関係しそうなドキュメント類はMarkdownかasciidocとかで管理するか、BacklogやRedmineとかのWikiで管理するのがいいんじゃないか、、、、とは思っているのだけれども。</p>
+<p>gitbookで設計書を作成したら最高だった話 - フォトシンス エンジニアブログ<br><a href="http://akerun.hateblo.jp/entry/2017/12/26/110102" target="_blank" rel="external">http://akerun.hateblo.jp/entry/2017/12/26/110102</a></p>
+<p>脱Word、脱Markdown、asciidocでドキュメント作成する際のアレコレ - Qiita<br><a href="https://qiita.com/tamikura@github/items/5d3f62dae55617ee42bb" target="_blank" rel="external">https://qiita.com/tamikura@github/items/5d3f62dae55617ee42bb</a></p>
+<p>以前はmarkdownのファイルにしていた。</p>
+<p>Google Docsでやってたこともあった。</p>
+<p>最近はなんとなく Wiki に落ち着いてきてはいる。</p>
+<p>Gitbookも便利だとは思うし、asciidoc もよいとはおもうのだけど。</p>
+<p>実際に開発するメンバーとしてはどれが使いやすいんだろうなぁ。。。人それぞれだったりするしな。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;実装に関係しそうなドキュメント類はMarkdownかasciidocとかで管理するか、BacklogやRedmineとかのWikiで管理するのがいいんじゃないか、、、、とは思っているのだけれども。&lt;/p&gt;
+&lt;p&gt;gitbookで設計書を作成したら最高だった話 - フォトシン
+    
+    </summary>
+    
+    
+      <category term="git, markdown, backlog, redmine" scheme="http://mersy.github.io/tags/git-markdown-backlog-redmine/"/>
     
   </entry>
   
@@ -666,156 +750,6 @@
     
     
       <category term="Craft CMS" scheme="http://mersy.github.io/tags/Craft-CMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>craft cache memo</title>
-    <link href="http://mersy.github.io/article/craft-cache.html"/>
-    <id>http://mersy.github.io/article/craft-cache.html</id>
-    <published>2017-04-20T11:35:10.000Z</published>
-    <updated>2017-04-20T12:02:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Craft CMS のキャッシュ周りがよくわからなかったのでメモ</p>
-<p>公式ドキュメント<br><a href="https://craftcms.com/docs/templating/cache" target="_blank" rel="external">https://craftcms.com/docs/templating/cache</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div><div class="line">    &#123;% for block in entry.myMatrixField %&#125;</div><div class="line">        &lt;p&gt;&#123;&#123; block.text &#125;&#125;&lt;/p&gt;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">&#123;% endcache %&#125;</div></pre></td></tr></table></figure>
-<h2 id="キャッシュの削除"><a href="#キャッシュの削除" class="headerlink" title="キャッシュの削除"></a>キャッシュの削除</h2><p>管理画面からキャッシュの削除ができる</p>
-<p><a href="https://craftcms.com/classreference/tools/ClearCachesTool" target="_blank" rel="external">https://craftcms.com/classreference/tools/ClearCachesTool</a></p>
-<ul>
-<li>全て<ul>
-<li>全てのキャッシュを削除</li>
-</ul>
-</li>
-<li>データキャッシュ（Data caches）<br>-</li>
-<li>RSSキャッシュ（RSS caches）<br>-</li>
-<li>アセットキャッシュ（Asset caches）<br>-</li>
-<li>コンパイル済のテンプレート（Compiled templates）<br>-</li>
-<li>一時的なファイル（Temp files）<br>-</li>
-<li>アセット変換インデックス（Asset transform index）<br>-</li>
-<li>アセットのインデックス化データ（Asset indexing data）<br>-</li>
-<li>テンプレートキャッシュ（Template caches）<br>-</li>
-</ul>
-<h2 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h2><p>山本さんに教えてもらった効率がよいという方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">処理時間のかかるループ処理などのブロックごとにcacheタグで囲む</div><div class="line">それぞれ &#123;% cache using key &quot;&lt;cachekey&gt;&quot; %&#125; の形式でキーを指定する</div><div class="line">同一のキーでも、呼び出されるURLが異なればキャッシュは区別される</div></pre></td></tr></table></figure>
-<p>キャッシュキーがあればそのキャッシュだけを削除しやすいみたい  </p>
-<h2 id="cacheDuration"><a href="#cacheDuration" class="headerlink" title="cacheDuration"></a>cacheDuration</h2><p><a href="https://craftcms.com/docs/config-settings#cacheDuration" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheDuration</a></p>
-<p>テンプレートで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div></pre></td></tr></table></figure></p>
-<p>で囲われているところはキャッシュされる。</p>
-<p>初期値は ‘P1D’ （1日）。</p>
-<pre><code>&apos;cacheDuration&apos; =&gt; &apos;P1W&apos;,
-</code></pre><h2 id="cacheElementQueries"><a href="#cacheElementQueries" class="headerlink" title="cacheElementQueries"></a>cacheElementQueries</h2><p><a href="https://craftcms.com/docs/config-settings#cacheElementQueries" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheElementQueries</a></p>
-<p>デフォルトではエントリ更新時にテンプレートキャッシュ削除されるが、それを無効にする設定。初期値は ‘true’ 。</p>
-<pre><code>&apos;cacheElementQueries&apos; =&gt; false,
-</code></pre><p>更新が多いがアクセスも多い場合は、 ‘false’ にしたうえでキャッシュをコントロールしたほうが良さそう。</p>
-<hr>
-<p>キャッシュ削除をcronジョブと連携できそう？？<br><a href="https://github.com/themccallister/craft.cache-clear" target="_blank" rel="external">https://github.com/themccallister/craft.cache-clear</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Craft CMS のキャッシュ周りがよくわからなかったのでメモ&lt;/p&gt;
-&lt;p&gt;公式ドキュメント&lt;br&gt;&lt;a href=&quot;https://craftcms.com/docs/templating/cache&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;h
-    
-    </summary>
-    
-      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
-    
-    
-      <category term="Craft CMS" scheme="http://mersy.github.io/tags/Craft-CMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo memo</title>
-    <link href="http://mersy.github.io/article/hexo.html"/>
-    <id>http://mersy.github.io/article/hexo.html</id>
-    <published>2017-03-26T03:00:00.000Z</published>
-    <updated>2017-09-24T00:54:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li>mdファイルで書きたい</li>
-<li>できればgithubpage使いたい</li>
-</ul>
-<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
-<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
-<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>config_yamlに設定を書く<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:mersy/mersy.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
-<p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
-<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
-<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
-<blockquote>
-<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
-</blockquote>
-<p>コマンド（cmd-shift-P）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- hexo new          # Create a new post</div><div class="line">- hexo publish      # Publish a draft post</div><div class="line">- hexo generate     # Generate static files</div><div class="line">- hexo deploy       # Generate static files and deploy</div><div class="line">- hexo clean        # Clean the cache file and generated files</div></pre></td></tr></table></figure>
-<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new</div></pre></td></tr></table></figure>
-<p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
-<p>でローカルで下書きが確認できる</p>
-<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
-<li>/scaffolds<ul>
-<li>draft.md : ドラフト投稿用のテンプレート</li>
-<li>post.md : 投稿用のテンプレート</li>
-<li>page.md : 固定ページ用のテンプレート</li>
-</ul>
-</li>
-</ul>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>カテゴリの設定</li>
-<li>検索（flexibeSearch）</li>
-<li>引用のデザイン</li>
-</ul>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
-<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
-<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
-<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;mdファイルで書きたい&lt;/li&gt;
-&lt;li&gt;できればgithubpage使いたい&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hexo&lt;br&gt;&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://hex
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://mersy.github.io/categories/Hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://mersy.github.io/article/hello-world.html"/>
-    <id>http://mersy.github.io/article/hello-world.html</id>
-    <published>2017-03-26T02:55:12.000Z</published>
-    <updated>2017-03-26T02:55:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
