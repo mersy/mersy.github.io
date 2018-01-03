@@ -59,9 +59,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-middleman" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/middleman.html" class="article-date">
+  <time datetime="2014-05-08T23:17:14.000Z" itemprop="datePublished">2014-05-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/middleman/">middleman</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/middleman.html">middlemanを使ってみる</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="middleman"><a href="#middleman" class="headerlink" title="middleman"></a>middleman</h2><blockquote>
+<p>Middleman: 効率的な作業を可能にする Ruby 製の静的サイト生成ツール<br><a href="http://middlemanapp.com/jp/" target="_blank" rel="external">http://middlemanapp.com/jp/</a></p>
+</blockquote>
+<h2 id="middleman-のインストール"><a href="#middleman-のインストール" class="headerlink" title="middleman のインストール"></a>middleman のインストール</h2><pre><code>$ gem install middleman
+</code></pre><p>インストールが終わったらbundleをインストール</p>
+<pre><code>$ gem install bundler
+</code></pre><p>一度 Terminalを閉じて再起動</p>
+<h2 id="middlemanを使う"><a href="#middlemanを使う" class="headerlink" title="middlemanを使う"></a>middlemanを使う</h2><p>プロジェクトのディレクトリへ移動。</p>
+<pre><code>$ bundle install
+</code></pre><p>必要なものがインストール。</p>
+<pre><code>$ middleman server
+</code></pre><p>で立ち上がる</p>
+<pre><code>$ middleman build
+</code></pre><p>でビルドされる</p>
+<h2 id="build-server-でエラーが出た場合"><a href="#build-server-でエラーが出た場合" class="headerlink" title="build / server でエラーが出た場合"></a>build / server でエラーが出た場合</h2><p>色々原因は考えられるが、</p>
+<blockquote>
+<p>middleman をアップデートしたらこれまでのプロジェクトでエラーになった場合の解決方法 - HAM MEDIA MEMO<br><a href="http://h2ham.net/middleman-update-server-error" target="_blank" rel="external">http://h2ham.net/middleman-update-server-error</a></p>
+</blockquote>
+<p>を参考に</p>
+<pre><code>$ bundle update
+</code></pre><p>しておく。</p>
+<h2 id="テンプレート"><a href="#テンプレート" class="headerlink" title="テンプレート"></a>テンプレート</h2><p>デフォルトのレイアウトは source/layouts の layout.erb 。</p>
+<p>カスタマイズするときは source/layouts フォルダにadmin.erbなどと作っておく。</p>
+<h3 id="layoutに特定のテンプレートを使う場合"><a href="#layoutに特定のテンプレートを使う場合" class="headerlink" title="layoutに特定のテンプレートを使う場合"></a>layoutに特定のテンプレートを使う場合</h3><pre><code>---
+layout: admin
+---
+</code></pre><h3 id="layoutを指定しない場合"><a href="#layoutを指定しない場合" class="headerlink" title="layoutを指定しない場合"></a>layoutを指定しない場合</h3><pre><code>---
+layout: false
+---
+</code></pre><h2 id="リンク"><a href="#リンク" class="headerlink" title="リンク"></a>リンク</h2><ul>
+<li>Middleman: Hand-crafted frontend development<br><a href="http://middlemanapp.com/" target="_blank" rel="external">http://middlemanapp.com/</a></li>
+<li>Bundler: The best way to manage a Ruby application’s gems<br><a href="http://bundler.io/" target="_blank" rel="external">http://bundler.io/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/middleman.html" data-id="cjbzi5547002v5gjx9zwhzvds" class="article-share-link">Delen</a>
+      
+        <a href="http://mersy.github.io/article/middleman.html#disqus_thread" class="article-comment-link">Commentaren</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-mtbymail" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -122,9 +197,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtbymail.html" data-id="cjbyeu0uf002xlbjx2xibrow8" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtbymail.html" data-id="cjbzi5549002x5gjxy0ow9a40" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/mtbymail.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtbymail.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -260,9 +335,9 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmemo.html" data-id="cjbyeu0uj0037lbjx7p0f74bc" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtmemo.html" data-id="cjbzi554d00345gjx9ho7d315" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/mtmemo.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtmemo.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -371,9 +446,9 @@ $ service mysqld start
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/vagrant.html" data-id="cjbyeu0v20047lbjxke3f6ca7" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/vagrant.html" data-id="cjbzi555n00595gjxnhx07pux" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/vagrant.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/vagrant.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -424,9 +499,9 @@ $ service mysqld start
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/vmware.html" data-id="cjbyeu0v30049lbjx8d18x8ry" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/vmware.html" data-id="cjbzi555p005b5gjxqw50dxgh" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/vmware.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/vmware.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -498,9 +573,9 @@ $ sudo service jenkins start
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/jenkins.html" data-id="cjbyeu0ub002nlbjxvz29mkci" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/jenkins.html" data-id="cjbzi5540002l5gjxoge3bplv" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/jenkins.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/jenkins.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -553,9 +628,9 @@ $ mv README.md README.md.org
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/homebrew.html" data-id="cjbyeu0ua002mlbjxn2bf7vwp" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/homebrew.html" data-id="cjbzi553y002g5gjxyj22ua2d" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/homebrew.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/homebrew.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -648,9 +723,9 @@ casper.run();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cjbyeu0t80010lbjxpnys7wwu" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/casperjs.html" data-id="cjbzi552l000w5gjxcfrzclga" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/casperjs.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -755,9 +830,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjbyeu0uo003hlbjxx1x7gn5u" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/publish.html" data-id="cjbzi554m003f5gjx6t9b1yc5" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/publish.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -829,60 +904,9 @@ $ npm -v
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjbyeu0ui0035lbjx45ka3t5i" class="article-share-link">Partager</a>
+      <a data-url="http://mersy.github.io/article/mtmakdownoptions.html" data-id="cjbzi554c00335gjxt4fd0v01" class="article-share-link">Delen</a>
       
-        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Commentaires</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-StaticPress" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/StaticPress.html" class="article-date">
-  <time datetime="2014-04-28T05:07:31.000Z" itemprop="datePublished">2014-04-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/WordPress/">WordPress</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/StaticPress.html">StaticPressのメモ</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。</p>
-<blockquote>
-<p>StaticPress<br><a href="http://ja.staticpress.net/" target="_blank" rel="external">http://ja.staticpress.net/</a></p>
-</blockquote>
-<p>とりあえず、StaticPressを使うためには、Permalinkをそれに対応出来る様に .html 的な感じになるようにしておかないとNG。<br>考えたらあたりまえだけど、 hogehoge?p=xxx みたいなのだと、スタティックにできるわけないです。</p>
-<p>スマホの切り替えとかは不要になるから、関係なさそうなプラグインは削除した。</p>
-<p>テーマも拘ってないから、デフォルトのに変更した。</p>
-<h2 id="空ファイル"><a href="#空ファイル" class="headerlink" title="空ファイル"></a>空ファイル</h2><p>ファイルが生成されてるんだけど、空っぽというのがちらほらあるので色々調整してみた。</p>
-<p>テーマをデフォルト系のものにしても変化無し。<br>プラグインをほとんど無効にして作成し直したら解決。<br>多分、テーマではなくてプラグインだと思う。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/StaticPress.html" data-id="cjbyeu0so000klbjxdg6mvmpt" class="article-share-link">Partager</a>
-      
-        <a href="http://mersy.github.io/article/StaticPress.html#disqus_thread" class="article-comment-link">Commentaires</a>
+        <a href="http://mersy.github.io/article/mtmakdownoptions.html#disqus_thread" class="article-comment-link">Commentaren</a>
       
       
     </footer>
@@ -903,7 +927,7 @@ $ npm -v
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categorieën</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
@@ -913,7 +937,7 @@ $ npm -v
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
@@ -923,7 +947,7 @@ $ npm -v
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
     </div>
@@ -932,7 +956,7 @@ $ npm -v
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
@@ -942,9 +966,13 @@ $ npm -v
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/book-kanban-in-action.html">カンバン仕事術</a>
+          </li>
         
           <li>
             <a href="/article/book-aruaruwebmarketing.html">【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</a>
@@ -962,10 +990,6 @@ $ npm -v
             <a href="/article/document-git-wiki.html">ドキュメントをGit管理にするかWikiにするか</a>
           </li>
         
-          <li>
-            <a href="/article/book-joyinc.html">【読了】ジョイ・インク</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -979,7 +1003,7 @@ $ npm -v
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 mersy<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
