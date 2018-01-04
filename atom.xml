@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-04T12:56:46.000Z</updated>
+  <updated>2018-01-04T13:16:03.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>立ち戻るメモツール</title>
+    <link href="http://mersy.github.io/article/dailymemo.html"/>
+    <id>http://mersy.github.io/article/dailymemo.html</id>
+    <published>2018-01-04T13:06:58.000Z</published>
+    <updated>2018-01-04T13:16:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>使い捨てのアウトラインというので、そこに一纏めにするというのがあったのだけど。<br>とりあえず、似たようなことを、mac, iOS 標準のmemoアプリで試してみたりしてる。<br>確認しようと思ってることや、今日やらないといけないことを忘れないようにするメモ、とか。</p>
+<p>Milanote なんかも良さそうな気はしている。</p>
+<p>The notes app for creative work - Milanote<br><a href="https://www.milanote.com/" target="_blank" rel="external">https://www.milanote.com/</a></p>
+<p>ただ、結構リッチなかんじだから、スマホだとどうなんだろうな、とかが気になる。<br>テキストメモ中心なら scrapbox とかもいいんだろうか。。</p>
+<p>Scrapbox - A workspace that organizes for you<br><a href="https://scrapbox.io/" target="_blank" rel="external">https://scrapbox.io/</a></p>
+<p>どちらかというとたくさん書いて整理する、という感じなんだろうな。</p>
+<p>昔は紙のノートというページ数も幅も制限があるなかで整理してまとめるとかしていた気がする。<br>書くのもタイピングよりは手書きの方が遅い訳だし。<br>（なんか、最近変換がばかになったのか、自分の日本語がおかしいのかtypoなり誤変換が多い気もするのだけど・・・）</p>
+<p>デジタルなメモとしてのノートを手に入れて、コレまでの制限が取っ払われてハッピーになった気もする。<br>が、その制限のないなかで逆にとっちらかったり、よくわからなくなってしまったりしてる気もする。</p>
+<p>ツールを使う側が追いつけていない、成長できていないんだろうな。</p>
+<p>とりあえずその母艦というか、スタート的なメモとして、Workflowy をまた試してみるかな。</p>
+<p>WorkFlowy - Organize your brain.<br><a href="https://workflowy.com/" target="_blank" rel="external">https://workflowy.com/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使い捨てのアウトラインというので、そこに一纏めにするというのがあったのだけど。&lt;br&gt;とりあえず、似たようなことを、mac, iOS 標準のmemoアプリで試してみたりしてる。&lt;br&gt;確認しようと思ってることや、今日やらないといけないことを忘れないようにするメモ、とか。&lt;/
+    
+    </summary>
+    
+      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【読了】アウトライン・プロセッシング入門</title>
@@ -738,33 +769,6 @@
     
     
       <category term="cache" scheme="http://mersy.github.io/tags/cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac の Excel で挙動が重いときはフォントを変えてみる</title>
-    <link href="http://mersy.github.io/article/mac-excel-font.html"/>
-    <id>http://mersy.github.io/article/mac-excel-font.html</id>
-    <published>2017-09-25T11:17:11.000Z</published>
-    <updated>2017-09-25T11:59:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Excelの資料を開いていて、セルを動かそうとしても重い。<br>スクロールが発生するタイミングがすごく重そうな感じだった。<br>マシンを再起動しても、重いということでしらべていたら、フォントの関係があるかも？とのことで。</p>
-<blockquote>
-<p>Excel for Mac 2016が起動しないまたはすぐに落ちる - Qiita<br><a href="https://qiita.com/foursue/items/81606a831863499fe3f8" target="_blank" rel="external">https://qiita.com/foursue/items/81606a831863499fe3f8</a></p>
-</blockquote>
-<p>開いたファイルは確かにあまり普段みないフォントになっていた。<br>セル全部選択して、ヒラギノとか適当なのにしたら直った。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Excelの資料を開いていて、セルを動かそうとしても重い。&lt;br&gt;スクロールが発生するタイミングがすごく重そうな感じだった。&lt;br&gt;マシンを再起動しても、重いということでしらべていたら、フォントの関係があるかも？とのことで。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Exce
-    
-    </summary>
-    
-    
-      <category term="Excel" scheme="http://mersy.github.io/tags/Excel/"/>
     
   </entry>
   

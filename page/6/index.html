@@ -72,6 +72,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
+    <article id="post-flexibleSearchOnJekyll" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/flexibleSearchOnJekyll.html" class="article-date">
+  <time datetime="2013-10-17T23:00:00.000Z" itemprop="datePublished">2013-10-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/flexibleSearchOnJekyll.html">flexibleSearchをJekyll（Github Pages）で使う</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Github Pagesだと動的なことができないから、flexibleSearchをJekyllで使ってみる方法で検索部分を実装してみた</p>
+<blockquote>
+<p>tinybeans/jq-plugin-flexibleSearch<br><a href="https://github.com/tinybeans/jq-plugin-flexibleSearch" target="_blank" rel="external">https://github.com/tinybeans/jq-plugin-flexibleSearch</a></p>
+</blockquote>
+<p>flexibleSearchはJSONベースの検索システム。</p>
+<h2 id="JSONの生成"><a href="#JSONの生成" class="headerlink" title="JSONの生成"></a>JSONの生成</h2><p>JSONをどうやってだすんだろう？？というところでかなり時間がかかった。</p>
+<script src="//gist.github.com/7033839.js"></script>
+<p>こんなかんじで、一応エラーが出ないJSONを生成することが出来た。<br>flexibleSearchの次期バージョンからitemではなくitemsになってるので要注意。</p>
+<p>最新版はGithubのdevelopブランチに入っている。</p>
+<h2 id="flexibleSearch"><a href="#flexibleSearch" class="headerlink" title="flexibleSearch"></a>flexibleSearch</h2><p>js部分はこんな感じで。</p>
+<script src="//gist.github.com/7035259.js"></script>
+<p>最新版ではjQueryの他に mustache.jsも必須になってます。</p>
+<blockquote>
+<p>mustache<br><a href="http://mustache.github.io/" target="_blank" rel="external">http://mustache.github.io/</a></p>
+</blockquote>
+<p>JavaScriptのをおとしておきます。</p>
+<blockquote>
+<p>janl/mustache.js<br><a href="https://github.com/janl/mustache.js" target="_blank" rel="external">https://github.com/janl/mustache.js</a></p>
+</blockquote>
+<h3 id="検索結果ページ"><a href="#検索結果ページ" class="headerlink" title="検索結果ページ"></a>検索結果ページ</h3><p>検索結果のページは</p>
+<pre><code>&lt;div id=&quot;fs-result&quot;&gt;&lt;/div&gt;
+</code></pre><p>を埋め込むだけ。</p>
+<script src="//gist.github.com/7049726.js"></script>
+<p>結果表示部分はこんな感じでflexibleSearch.jsを書き換えておいた。</p>
+<script src="//gist.github.com/7049773.js"></script>
+<p>ここは近いうちにオプション側で指定出来るようになるとのこと。</p>
+<h3 id="検索フォーム"><a href="#検索フォーム" class="headerlink" title="検索フォーム"></a>検索フォーム</h3><p>検索フォーム部分も同様にflexibleSearch.jsを書き換え。</p>
+<script src="//gist.github.com/7049781.js"></script>
+<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブをflexibleSearchで作成した</p>
+<p>JSONにcategoriesとしてcategoryを出すように修正。</p>
+<script src="//gist.github.com/7056249.js"></script>
+<p>サイドバーのカテゴリリスト部分は以下の様な感じで修正。</p>
+<script src="//gist.github.com/7056240.js"></script>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cjc0in7nu002ef6jxjjxu85uc" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/flexibleSearchOnJekyll.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-sitemapByjekyll" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/article/sitemapByjekyll.html" class="article-date">
@@ -108,7 +182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cjc0hxjd30041dxjxbii3mc2p" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cjc0in7or0040f6jxsou8f02o" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/sitemapByjekyll.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -163,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cjc0hxjck003kdxjx0ubeo2g1" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cjc0in7ol003qf6jx1lm30odi" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestbybranch.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -215,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cjc0hxjab001rdxjxqbefiqxe" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cjc0in7nf001vf6jx1eqegi2x" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/dataapimemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -281,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cjc0hxjco003odxjx79rtoxs7" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cjc0in7oj003nf6jx3v0ygb3z" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestMtml.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -392,7 +466,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cjc0hxjd50044dxjxt0swksgp" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cjc0in7ot0047f6jxsp0mvscd" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -447,7 +521,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/boxen.html" data-id="cjc0hxj9n000xdxjxbdqcc4pp" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/boxen.html" data-id="cjc0in7ma000xf6jxvh14sf88" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/boxen.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -508,7 +582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/openTerminalonST2Sidebar.html" data-id="cjc0hxjce003gdxjxo45pudgr" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/openTerminalonST2Sidebar.html" data-id="cjc0in7of003if6jxi98izh0z" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/openTerminalonST2Sidebar.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -620,7 +694,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mtmlVersionControl.html" data-id="cjc0hxjc20037dxjx8vs40jpc" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mtmlVersionControl.html" data-id="cjc0in7ob003df6jxw6olgpkd" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/mtmlVersionControl.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -676,76 +750,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/DataAPIforCategoryArchive.html" data-id="cjc0hxj8y000idxjxk5chgy19" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/DataAPIforCategoryArchive.html" data-id="cjc0in7lw000hf6jxg4xfv1ne" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/DataAPIforCategoryArchive.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-jekyllmemo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/jekyllmemo.html" class="article-date">
-  <time datetime="2013-10-10T05:30:00.000Z" itemprop="datePublished">2013-10-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Jekyll/">Jekyll</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/jekyllmemo.html">Jekyll memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ドキュメント"><a href="#ドキュメント" class="headerlink" title="ドキュメント"></a>ドキュメント</h2><p><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="external">http://jekyllrb.com/docs/home/</a></p>
-<h2 id="たちあげ"><a href="#たちあげ" class="headerlink" title="たちあげ"></a>たちあげ</h2><pre><code>$ jekyll serve --watch
-</code></pre><h2 id="確認URL"><a href="#確認URL" class="headerlink" title="確認URL"></a>確認URL</h2><blockquote>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-</blockquote>
-<h2 id="Permalink"><a href="#Permalink" class="headerlink" title="Permalink"></a>Permalink</h2><p>_config.yml に</p>
-<pre><code>permalink: /:title.html
-</code></pre><p>なかんじで記載</p>
-<p><a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="external">http://jekyllrb.com/docs/permalinks/</a></p>
-<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><p>_draft フォルダにいれる</p>
-<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブはflexibleSearchをつかって実装</p>
-<blockquote>
-<p><a href="/flexibleSearchOnJekyll.html">flexibleSearchをJekyllで使う</a></p>
-</blockquote>
-<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><p>以下のテンプレートをatom.xmlやfeed.xmlとかで追加する。</p>
-<script src="https://gist.github.com/mersy/6933219.js"></script>
-
-<p>_config.ymlに以下の項目がなければ入れておく。</p>
-<pre><code>name: mersy memo
-description: いろいろメモ
-url: http://mersy.github.io/
-</code></pre><p>head にrssへのリンクも入れておく</p>
-<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;{{ site.name }}&quot; href=&quot;/atom.xml&quot; /&gt;
-</code></pre><h2 id="デザイン"><a href="#デザイン" class="headerlink" title="デザイン"></a>デザイン</h2><p>Start Bootstrap - Free HTML Templates for Bootstrap 3<br><a href="http://startbootstrap.com/" target="_blank" rel="external">http://startbootstrap.com/</a></p>
-<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>Gistも直接埋め込めるらしい</p>
-<script src="//gist.github.com/mersy/59bf604a8929a8f7acf6.js"></script>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/jekyllmemo.html" data-id="cjc0hxjbl002odxjx4nsr57cj" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/jekyllmemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -758,7 +765,7 @@ url: http://mersy.github.io/
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -810,6 +817,10 @@ url: http://mersy.github.io/
       <ul>
         
           <li>
+            <a href="/article/dailymemo.html">立ち戻るメモツール</a>
+          </li>
+        
+          <li>
             <a href="/article/book-outliner.html">【読了】アウトライン・プロセッシング入門</a>
           </li>
         
@@ -823,10 +834,6 @@ url: http://mersy.github.io/
         
           <li>
             <a href="/article/book-tutawatteiruka.html">【読了】伝わっているか？</a>
-          </li>
-        
-          <li>
-            <a href="/article/book-yahoo1on1.html">【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</a>
           </li>
         
       </ul>
