@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-03T20:14:56.000Z</updated>
+  <updated>2018-01-04T12:56:46.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【読了】アウトライン・プロセッシング入門</title>
+    <link href="http://mersy.github.io/article/book-outliner.html"/>
+    <id>http://mersy.github.io/article/book-outliner.html</id>
+    <published>2018-01-04T12:47:55.000Z</published>
+    <updated>2018-01-04T12:56:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>アウトライン・プロセッシング入門<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/mersys-22/ref=nosim</a></p>
+<p>を読んだ。</p>
+<p>アウトラインで書くというのは悪くないし、WorkFlowyとかはいいかもなー、と思ったりもしている。が乗り換えられてない。</p>
+<p>データ自体のポータビリティが若干気になるところではあったりもする。</p>
+<p>アウトライン的な使い方は難しいかもだけど、markdownでlistでいいかな、とか思ったりもしてしまう。</p>
+<p>アウトライナーの使い方と昨日読んだカンバンは使い方の自由度が高いというところは似てるんだろうな。</p>
+<p>文章を書くということが増えるのであればありなのかもなー。<br>書類系とかはありなのかもしれないな。</p>
+<p>あとは、何だろうな、パーツ的につかうとなると、Scrivenerとかも文章かくにはいいのかもしれないけど。</p>
+<p>Scrivener | Literature &amp; Latte<br><a href="https://www.literatureandlatte.com/scrivener/overview" target="_blank" rel="external">https://www.literatureandlatte.com/scrivener/overview</a></p>
+<p>あとは、 Ulyssesとか。この辺は好みの問題か。</p>
+<p>共有を優先するなら paper（ <a href="http://paper.dropbox.com/" target="_blank" rel="external">http://paper.dropbox.com/</a> ） とか Google Docs （<a href="http://drive.google.com/）" target="_blank" rel="external">http://drive.google.com/）</a> で十分な気がしないでもない。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;アウトライン・プロセッシング入門&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;htt
+    
+    </summary>
+    
+      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>カンバン仕事術</title>
@@ -734,28 +765,6 @@
     
     
       <category term="Excel" scheme="http://mersy.github.io/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ブログかいてみる</title>
-    <link href="http://mersy.github.io/article/writeblog.html"/>
-    <id>http://mersy.github.io/article/writeblog.html</id>
-    <published>2017-09-22T23:22:19.000Z</published>
-    <updated>2017-09-22T23:22:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>とりあえず、ブログとしてサクッといけるかテスト。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;とりあえず、ブログとしてサクッといけるかテスト。&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
-    
     
   </entry>
   
