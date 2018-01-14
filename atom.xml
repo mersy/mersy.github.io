@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-14T01:46:00.000Z</updated>
+  <updated>2018-01-14T11:51:47.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>memo netlify cms</title>
+    <link href="http://mersy.github.io/article/netlify.html"/>
+    <id>http://mersy.github.io/article/netlify.html</id>
+    <published>2018-01-14T11:41:44.000Z</published>
+    <updated>2018-01-14T11:51:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Netlify CMS | Open-Source Content Management System<br><a href="https://www.netlifycms.org/docs/start-with-a-template/" target="_blank" rel="external">https://www.netlifycms.org/docs/start-with-a-template/</a></p>
+<p>CMSっぽいものがあるみたいなので試してみた。</p>
+<p>githubのリポジトリと連携。</p>
+<p><img src="../asset/201801114_netlify01.png" alt=""></p>
+<p>Static Site Generator については GatsbyJS を選択してみた。Hugoも選択可能。</p>
+<p>GatsbyJS<br><a href="https://www.gatsbyjs.org/" target="_blank" rel="external">https://www.gatsbyjs.org/</a></p>
+<p>ボタンをポチるだけで問題なくdeployまでできてすげー、と。</p>
+<p><code>/admin/</code> で管理画面ぽいのもあるのでコレは便利そう。</p>
+<p><img src="../asset/2011801114_netlify02.png" alt=""></p>
+<p>最初、管理画面から記事を投稿した際にpathの指定を <code>/</code> からはじめなかったからコンパイルエラーになっていた。</p>
+<p>原稿のmdファイルもmasterにコミットすれば反映された。<br>これは結構理想に近いかもしれない。</p>
+<p>アイテム周りの置き場所がいまいちわかっていないのでその辺は整理してみる。</p>
+<p>Home | Gatsby + Netlify CMS<br><a href="https://mersy.netlify.com/" target="_blank" rel="external">https://mersy.netlify.com/</a></p>
+<p>できれば見た目の選択が簡単にできて、あとは原稿とアイテムを管理画面、ローカルからのコミットの両方が出来れば結構いい感じかも。</p>
+<p>下書きっていう概念がないのかな。その辺はもう少しドキュメントを読んでみようと思う。</p>
+<p>もし問題なく使えるようであれば、サブドメインを設定しつつ、githubpagesにおいてるものを持って行ってもいいのかもしれない。<br>pathの追加が必要ってことだろうなー。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Netlify CMS | Open-Source Content Management System&lt;br&gt;&lt;a href=&quot;https://www.netlifycms.org/docs/start-with-a-template/&quot; target=&quot;_blank&quot; r
+    
+    </summary>
+    
+      <category term="CMS" scheme="http://mersy.github.io/categories/CMS/"/>
+    
+    
+      <category term="Netlify" scheme="http://mersy.github.io/tags/Netlify/"/>
+    
+  </entry>
   
   <entry>
     <title>memo Contentful</title>
@@ -729,31 +767,6 @@
     </summary>
     
       <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>DrupalのURLが新しいものにならないときはURLエイリアスを削除する</title>
-    <link href="http://mersy.github.io/article/drupal-url-alias.html"/>
-    <id>http://mersy.github.io/article/drupal-url-alias.html</id>
-    <published>2017-10-15T06:50:31.000Z</published>
-    <updated>2017-10-15T06:53:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Drupal ですでに登録してあるコンテンツのURLエイリアスを変更しても、元のもののままだったりしてしまう場合は</p>
-<p><code>環境設定　&gt; 検索とメタデータ &gt; URL エイリアス</code></p>
-<p>といくと、 URLエイリアスの一覧がでてくるので、そこで古いものを削除すると、新しいものになる</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Drupal ですでに登録してあるコンテンツのURLエイリアスを変更しても、元のもののままだったりしてしまう場合は&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;環境設定　&amp;gt; 検索とメタデータ &amp;gt; URL エイリアス&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;といくと、 URLエイリアスの一覧が
-    
-    </summary>
-    
-      <category term="Drupal" scheme="http://mersy.github.io/categories/Drupal/"/>
     
     
   </entry>
