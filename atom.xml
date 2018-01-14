@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-08T09:16:38.000Z</updated>
+  <updated>2018-01-14T01:46:00.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>memo Contentful</title>
+    <link href="http://mersy.github.io/article/contentful.html"/>
+    <id>http://mersy.github.io/article/contentful.html</id>
+    <published>2018-01-14T00:27:05.000Z</published>
+    <updated>2018-01-14T01:46:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Contentful: Content Infrastructure for Digital Teams<br><a href="https://www.contentful.com/" target="_blank" rel="external">https://www.contentful.com/</a></p>
+<p>コンテンツタイプの管理ができるCMSみたいなもの。</p>
+<p>ブログのベースに使えるか試してみる。</p>
+<hr>
+<p>contentful/discovery-app-react: A React.js based version of the Contentful Discovery app<br><a href="https://github.com/contentful/discovery-app-react" target="_blank" rel="external">https://github.com/contentful/discovery-app-react</a></p>
+<p>用意されてるサンプルアプリはこんなかんじでコンテンツタイプの中身を見ることが出来るアプリだった。</p>
+<p><img src="../asset/20180114_contentful.png" alt=""></p>
+<hr>
+<p>kristofferdarj/contentful-vue: A small blog with a vue.js frontend and contentful as backend. Used for my personal blog.<br><a href="https://github.com/kristofferdarj/contentful-vue" target="_blank" rel="external">https://github.com/kristofferdarj/contentful-vue</a></p>
+<p>これを一応触ってみたけどエラー表示。多分設定とか少し必要そうなので後回し。</p>
+<p>cloneして書いてるとおりにコマンドたたいて、store.jsの設定をいじればいいんだとは思うが。</p>
+<p>とおもって見てたら単にコンパイルがこけてた。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">ERROR  Failed to compile with 1 errors                               9:33:24 AM</div><div class="line"></div><div class="line">error  in ./src/components/v-hero.vue</div><div class="line"></div><div class="line">Module build failed:</div><div class="line">     @include mdc-theme-prop(background-color, $color, $edgeOptOut: true);</div><div class="line">                                                    ^</div><div class="line">     Mixin mdc-theme-prop has no parameter named $edgeOptOut</div><div class="line">     in /Users/mersy/Dropbox/works/sample-contentful_vue/contentful-vue/node_modules/@material/button/_mixins.scss (line 42, column 55)</div></pre></td></tr></table></figure>
+<p><code>/contentful-vue/node_modules/@material/theme/_mixins.scss</code></p>
+<p>の22行目にある</p>
+<p><code>@mixin mdc-theme-prop($property, $style, $important: false) {</code></p>
+<p>を</p>
+<p><code>@mixin mdc-theme-prop($property, $style, $important: false, $edgeOptOut: true) {</code></p>
+<p>にしてコンパイルは一応通った。</p>
+<p>表示とか直すの大変なので一旦終了。</p>
+<hr>
+<p>次はこれを試してみる。</p>
+<p>Nuxt.jsとContentfulでブログ作ってみた - Qiita<br><a href="https://qiita.com/hisako135/items/082115b50df92ef3e941" target="_blank" rel="external">https://qiita.com/hisako135/items/082115b50df92ef3e941</a></p>
+<p>うまく動いていないので後で調べる。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Contentful: Content Infrastructure for Digital Teams&lt;br&gt;&lt;a href=&quot;https://www.contentful.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.
+    
+    </summary>
+    
+      <category term="CMS" scheme="http://mersy.github.io/categories/CMS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【読了】初めての自動テスト</title>
@@ -711,41 +755,6 @@
     
       <category term="Drupal" scheme="http://mersy.github.io/categories/Drupal/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>DeployHQ のユーザの種類メモ</title>
-    <link href="http://mersy.github.io/article/deployhq-user.html"/>
-    <id>http://mersy.github.io/article/deployhq-user.html</id>
-    <published>2017-10-03T12:57:13.000Z</published>
-    <updated>2017-10-03T13:05:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>DeployHQ のユーザの種類メモ</p>
-<blockquote>
-<p>Account administration - access to all aspects of the account including billing<br>User management - access to all projects and user management<br>All projects - access to all projects with the ability to make all changes including deleting a project<br>Specific projects - access to a certain project with restricted abilities, i.e. a user cannot delete a project</p>
-<p>Getting Started - DeployHQ<br><a href="https://www.deployhq.com/academy/manual/getting-started" target="_blank" rel="external">https://www.deployhq.com/academy/manual/getting-started</a></p>
-</blockquote>
-<ul>
-<li>Account administration - とりあえずアドミン</li>
-<li>User management - 全部のプロジェクトの操作とユーザー管理</li>
-<li>All projects - 全部のプロジェクトにアクセスできて、削除も可能</li>
-<li>Specific projects - 特定のプロジェクトのみ</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;DeployHQ のユーザの種類メモ&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Account administration - access to all aspects of the account including billing&lt;br&gt;User management
-    
-    </summary>
-    
-      <category term="memo" scheme="http://mersy.github.io/categories/memo/"/>
-    
-    
-      <category term="deploy" scheme="http://mersy.github.io/tags/deploy/"/>
     
   </entry>
   

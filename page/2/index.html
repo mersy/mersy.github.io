@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
@@ -71,6 +71,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-server201712" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/server201712.html" class="article-date">
+  <time datetime="2017-12-24T08:05:41.000Z" itemprop="datePublished">2017-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/server201712.html">ドメインの移管</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ドメインをvalue domain から Route53 へ移管する。</p>
+<h2 id="メール関係周りの設定"><a href="#メール関係周りの設定" class="headerlink" title="メール関係周りの設定"></a>メール関係周りの設定</h2><p>そのドメインのメールを1つ作ってgmailに転送している。<br>普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。<br>転送しつつ、自動返信とかできるようにしておきたい。</p>
+<p>とりあえずさくらのメールボックスを契約。</p>
+<blockquote>
+<p>セキュリティ対策を強化したメールサーバー専用プラン【メールボックス】<br><a href="https://www.sakura.ne.jp/mail/" target="_blank" rel="external">https://www.sakura.ne.jp/mail/</a></p>
+</blockquote>
+<p>年額1029円なのでまぁこれで問題ないかな、と。<br>→ ロリポップの契約があったのでそちらですすめる</p>
+<p>ロリポップに独自ドメインを追加しておき、今回用のメールアドレスを作成しておく。<br>転送設定まで完了。</p>
+<h2 id="AWSまわり"><a href="#AWSまわり" class="headerlink" title="AWSまわり"></a>AWSまわり</h2><p>この辺を参考にDNSをまずRoute53にうつす。</p>
+<blockquote>
+<p>Route53にドメインを移管する – blog.10rane.com<br><a href="http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/" target="_blank" rel="external">http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/</a><br>お名前.comからAmazon Route 53へドメインを移管する ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/aws/onamae-to-route53/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/aws/onamae-to-route53/</a><br>既存ドメインの DNS サービスを Amazon Route 53 に移行する - Amazon Route 53<br><a href="http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html" target="_blank" rel="external">http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html</a></p>
+</blockquote>
+<p>そのうえでドメイン移管。</p>
+<p>2017.12.24 ドメイン移管も完了</p>
+<h2 id="メール設定"><a href="#メール設定" class="headerlink" title="メール設定"></a>メール設定</h2><p>ロリポップのメールサーバへのレコード情報はサイトに掲載されてないみたいなので、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nslookup hogehoge.main.jp</div></pre></td></tr></table></figure>
+<p>とか契約してあるロリポップドメインのIPを調べる。</p>
+<p>MXレコードは <code>10 mx01.lolipop.jp.</code> らしい。</p>
+<h3 id="Route53の設定"><a href="#Route53の設定" class="headerlink" title="Route53の設定"></a>Route53の設定</h3><p>Route53の「Hosted Zones」からドメインを選ぶ。</p>
+<p><img src="../asset/20171224_aws_hostzone01.png" alt=""></p>
+<p>メール用に mail. のサブドメインでAレコードを追加。</p>
+<p><img src="../asset/20171224_aws_hostzone02.png" alt=""></p>
+<p>これはいらなかったのかも？？<br>IPは先ほどしらべたロリポップのもの。</p>
+<p>MXレコードを追加する。</p>
+<p><img src="../asset/20171224_aws_hostzone03.png" alt=""></p>
+<p>こっちはサブドメインではないからそのままで追加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ dig mersy418.com</div><div class="line">$ dig mail.mersy418.com</div></pre></td></tr></table></figure>
+<p>で確認。</p>
+<p>テストメールを送ったところ、ロリポップのWebメールにもメールがあり、転送先にも転送されていた。</p>
+<blockquote>
+<p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
+</blockquote>
+<h2 id="サブドメインの設定"><a href="#サブドメインの設定" class="headerlink" title="サブドメインの設定"></a>サブドメインの設定</h2><p>Route53に移せたので、</p>
+<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html">http://mersy.github.io/article/drupal-lightsail.html</a></p>
+<p>で作成したサイトにサブドメインでアクセス出来るように設定してみる。</p>
+<p><code>Crate Record Set</code> で <code>d8.</code> のサブドメインに対して <code>Aレコード</code> で Lightsailの Public IP を登録。</p>
+<p><a href="http://d8.mersy418.com/" target="_blank" rel="external">http://d8.mersy418.com/</a></p>
+<p>でアクセス出来た。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/server201712.html" data-id="cjce4fujk0042dijx59qg8aay" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/server201712.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-drupal-lightsail" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -146,9 +224,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/drupal-lightsail.html" data-id="cjc5ztxti0026s1jxy5o23q1s" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/drupal-lightsail.html" data-id="cjce4fui50027dijxz23wbbn4" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/drupal-lightsail.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/drupal-lightsail.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Drupal/">Drupal</a></li></ul>
@@ -253,9 +331,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft3.html" data-id="cjc5ztxsw001js1jxfbao4894" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/craft3.html" data-id="cjce4fuhl001mdijx0xwhfzuh" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/craft3.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/craft3.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -302,9 +380,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/styleguide.html" data-id="cjc5ztxv70047s1jxc3wcmrj5" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/styleguide.html" data-id="cjce4fujp0049dijx6qab92pn" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/styleguide.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/styleguide.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
@@ -365,9 +443,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/change-dns-email.html" data-id="cjc5ztxsa0014s1jx36ery5zg" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/change-dns-email.html" data-id="cjce4fuh50014dijxu5r3qs1n" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/change-dns-email.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/change-dns-email.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li></ul>
@@ -408,9 +486,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dashboard-devto.html" data-id="cjc5ztxt4001ns1jxv73c51r5" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/dashboard-devto.html" data-id="cjce4fuhp001qdijxf3v3kw68" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/dashboard-devto.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/dashboard-devto.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dashboard/">dashboard</a></li></ul>
@@ -456,9 +534,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjc5ztxua002zs1jxee79wihr" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/localfile-googleanalytics.html" data-id="cjce4fuit0030dijxfn8djasr" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/localfile-googleanalytics.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li></ul>
@@ -508,9 +586,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cjc5ztxv60046s1jxdeu110nz" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cjce4fujo0047dijx5bubbzbf" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -556,9 +634,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjc5ztxv1003ws1jxwtv6g9aj" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjce4fujh003xdijx1kn011g3" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -601,66 +679,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjc5ztxtm0027s1jxz322vl7b" class="article-share-link">Delen</a>
+      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjce4fui6002adijxeikw388s" class="article-share-link">Share</a>
       
-        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Commentaren</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-deployhq-user" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/deployhq-user.html" class="article-date">
-  <time datetime="2017-10-03T12:57:13.000Z" itemprop="datePublished">2017-10-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/memo/">memo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/deployhq-user.html">DeployHQ のユーザの種類メモ</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>DeployHQ のユーザの種類メモ</p>
-<blockquote>
-<p>Account administration - access to all aspects of the account including billing<br>User management - access to all projects and user management<br>All projects - access to all projects with the ability to make all changes including deleting a project<br>Specific projects - access to a certain project with restricted abilities, i.e. a user cannot delete a project</p>
-<p>Getting Started - DeployHQ<br><a href="https://www.deployhq.com/academy/manual/getting-started" target="_blank" rel="external">https://www.deployhq.com/academy/manual/getting-started</a></p>
-</blockquote>
-<ul>
-<li>Account administration - とりあえずアドミン</li>
-<li>User management - 全部のプロジェクトの操作とユーザー管理</li>
-<li>All projects - 全部のプロジェクトにアクセスできて、削除も可能</li>
-<li>Specific projects - 特定のプロジェクトのみ</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cjc5ztxtf001zs1jxdklsoen7" class="article-share-link">Delen</a>
-      
-        <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Commentaren</a>
+        <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deploy/">deploy</a></li></ul>
-
     </footer>
   </div>
   
@@ -679,9 +702,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CMS/">CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
     </div>
   </div>
 
@@ -689,7 +712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
     </div>
@@ -708,7 +731,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
     </div>
@@ -718,9 +741,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/article/contentful.html">memo Contentful</a>
+          </li>
         
           <li>
             <a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a>
@@ -736,10 +763,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <li>
             <a href="/article/book-kanban-in-action.html">カンバン仕事術</a>
-          </li>
-        
-          <li>
-            <a href="/article/book-aruaruwebmarketing.html">【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</a>
           </li>
         
       </ul>
