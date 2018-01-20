@@ -1,30 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>Chrome Extensionをつくってみる | mersy note</title>
+  <meta name="author" content="mersy">
+  
+  <meta name="description" content="拡張をデバッグ拡張をタブで開くためのURL
+
+chrome-extension://&amp;lt;拡張のID&amp;gt;/popup.html">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="拡張をデバッグ拡張をタブで開くためのURL  chrome-extension://&amp;lt;拡張のID&amp;gt;/popup.html">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Chrome Extensionをつくってみる">
-<meta property="og:url" content="http://mersy.github.io/article/chromeextension.html">
-<meta property="og:site_name" content="mersy note">
-<meta property="og:description" content="拡張をデバッグ拡張をタブで開くためのURL  chrome-extension://&amp;lt;拡張のID&amp;gt;/popup.html">
-<meta property="og:updated_time" content="2014-06-24T03:44:12.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chrome Extensionをつくってみる">
-<meta name="twitter:description" content="拡張をデバッグ拡張をタブで開くためのURL  chrome-extension://&amp;lt;拡張のID&amp;gt;/popup.html">
+
+  <meta property="og:title" content="Chrome Extensionをつくってみる"/>
+  <meta property="og:site_name" content="mersy note"/>
+
   
-    <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+    <meta property="og:image" content="undefined"/>
   
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,69 +35,42 @@
 
 </head>
 
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRMD4G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">mersy note</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mersy.github.io"></form>
-      </div>
-    </div>
-  </div>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">mersy note</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="//">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/atom.xml">rss</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-chromeextension" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/chromeextension.html" class="article-date">
-  <time datetime="2014-06-24T03:43:24.000Z" itemprop="datePublished">2014-06-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
-    <h1 class="article-title" itemprop="name">
-      Chrome Extensionをつくってみる
-    </h1>
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-06-24T03:43:24.000Z"><a href="/article/chromeextension.html">2014-06-24</a></time>
+      
+      
+  
+    <h1 class="title">Chrome Extensionをつくってみる</h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <h2 id="拡張をデバッグ"><a href="#拡張をデバッグ" class="headerlink" title="拡張をデバッグ"></a>拡張をデバッグ</h2><p>拡張をタブで開くためのURL</p>
 <blockquote>
@@ -107,163 +79,308 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chromeextension.html" data-id="cjcmrehzr001muc0aprecx0ru" class="article-share-link">Share</a>
+    <footer>
       
-        <a href="http://mersy.github.io/article/chromeextension.html#disqus_thread" class="article-comment-link">Comments</a>
+        
+  
+  <div class="categories">
+    <a href="/categories/Chrome-MovableType/">Chrome MovableType</a>
+  </div>
+
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
-      
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/article/chromeapp.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Chrome Appsをつくってみる
-        
-      </div>
-    </a>
-  
-  
-    <a href="/article/middleman.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">middlemanを使ってみる</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-<section id="comments">
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
   <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
+  
 </section>
-</section>
-        
-          <aside id="sidebar">
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:mersy.github.io">
+  </form>
+</div>
+
   
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+  
+    <li><a href="/categories/Blog/">Blog</a><small>3</small></li>
+  
+    <li><a href="/categories/Book/">Book</a><small>7</small></li>
+  
+    <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+  
+    <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+  
+    <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+  
+    <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+  
+    <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+  
+    <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+  
+    <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+  
+    <li><a href="/categories/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+  
+    <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+  
+    <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+  
+    <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+  
+    <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+  
+    <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+  
+    <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+  
+    <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+  
+    <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+  
+    <li><a href="/categories/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+  
+    <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+  
+    <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+  
+    <li><a href="/categories/blog/">blog</a><small>3</small></li>
+  
+    <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+  
+    <li><a href="/categories/chef/">chef</a><small>1</small></li>
+  
+    <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/categories/memo/">memo</a><small>1</small></li>
+  
+    <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/AWS/">AWS</a><small>1</small></li>
+  
+    <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
+  
+    <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
+  
+    <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
+  
+    <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
+  
+    <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
+  
+    <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
+  
+    <li><a href="/tags/cache/">cache</a><small>1</small></li>
+  
+    <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/tags/deploy/">deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a><small>1</small></li>
+  
+    <li><a href="/tags/html-css-styleguide/">html, css, styleguide</a><small>1</small></li>
+  
+    <li><a href="/tags/jira/">jira</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS-S3-Route53/">AWS S3 Route53</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CMS/">CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CasperJS/">CasperJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-MovableType/">Chrome MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Craft-CMS/">Craft CMS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dash/">Dash</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Drupal/">Drupal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Editor-Atom/">Editor Atom</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Homebrew/">Homebrew</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType/">MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-DataAPI/">MovableType DataAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MovableType-Git/">MovableType Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pandoc-ePub/">Pandoc ePub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SublimeText/">SublimeText</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Task/">Task</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VMWare/">VMWare</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WordPress/">WordPress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/boxen/">boxen</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/chef/">chef</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dashboard/">dashboard</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/memo/">memo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/middleman/">middleman</a></li></ul>
-    </div>
+      <li>
+        <a href="/article/blog-20180120project.html">どのプロジェクト（タスク）管理ツールを使うか問題2017</a>
+      </li>
+    
+      <li>
+        <a href="/article/blogsync-hatena.html">memo blogsync</a>
+      </li>
+    
+      <li>
+        <a href="/article/netlify.html">memo netlify cms</a>
+      </li>
+    
+      <li>
+        <a href="/article/contentful.html">memo Contentful</a>
+      </li>
+    
+      <li>
+        <a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">Archiv</h3>
+    <ul class="entry">
+    
+      <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+    
+      <li><a href="/categories/Blog/">Blog</a><small>3</small></li>
+    
+      <li><a href="/categories/Book/">Book</a><small>7</small></li>
+    
+      <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+    
+      <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+    
+      <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+    
+      <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+    
+      <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+    
+      <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+    
+      <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+    
+      <li><a href="/categories/Git/">Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+    
+      <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+    
+      <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+    
+      <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+    
+      <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+    
+      <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+    
+      <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+    
+      <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+    
+      <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+    
+      <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+    
+      <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+    
+      <li><a href="/categories/Task/">Task</a><small>1</small></li>
+    
+      <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+    
+      <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+    
+      <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+    
+      <li><a href="/categories/blog/">blog</a><small>3</small></li>
+    
+      <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+    
+      <li><a href="/categories/chef/">chef</a><small>1</small></li>
+    
+      <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+    
+      <li><a href="/categories/memo/">memo</a><small>1</small></li>
+    
+      <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+    
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backlog/">backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jira/">jira</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/backlog/" style="font-size: 10px;">backlog</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a> <a href="/tags/jira/" style="font-size: 10px;">jira</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/article/blog-20180120project.html">どのプロジェクト（タスク）管理ツールを使うか問題2017</a>
-          </li>
-        
-          <li>
-            <a href="/article/blogsync-hatena.html">memo blogsync</a>
-          </li>
-        
-          <li>
-            <a href="/article/netlify.html">memo netlify cms</a>
-          </li>
-        
-          <li>
-            <a href="/article/contentful.html">memo Contentful</a>
-          </li>
-        
-          <li>
-            <a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 mersy<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    <div class="clearfix"></div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+  <footer id="footer" class="inner"><div class="alignleft">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  &copy; 2018 mersy
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-<script>
-  var disqus_shortname = 'mersymemogithubpage';
-  
-  var disqus_url = 'http://mersy.github.io/article/chromeextension.html';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'mersymemogithubpage';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
 </script>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  </div>
 </body>
 </html>
