@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-20T00:52:20.000Z</updated>
+  <updated>2018-01-20T02:22:54.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>どのプロジェクト（タスク）管理ツールを使うか問題2017</title>
+    <link href="http://mersy.github.io/article/blog-20180120project.html"/>
+    <id>http://mersy.github.io/article/blog-20180120project.html</id>
+    <published>2018-01-20T02:16:24.000Z</published>
+    <updated>2018-01-20T02:22:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ちょうど昨年後半 bit part でもredmineからの乗り換えを考えてた。</p>
+<p>FablicにJIRAを導入をしようとしたけど諦めた話 - inFablic | Fablic, inc. Developer’s Blog.<br><a href="http://in.fablic.co.jp/entry/jira-not-adopted" target="_blank" rel="external">http://in.fablic.co.jp/entry/jira-not-adopted</a></p>
+<ul>
+<li>gitlab</li>
+<li>wrike</li>
+<li>taskworld</li>
+<li>backlog</li>
+</ul>
+<p>あたりをベースに検討して、費用ともろもろ考えて結局backlogにおちついた。</p>
+<p>taskworldがリポジトリ周りのサービスとしっかり連携できればもしかしたらtaskworldになったかもしれない。</p>
+<p>んで、最近、複数のspaceのbacklogにいて、それらを串刺ししてみれないか、というのがあったりもする。<br>結局それぞれを見に行かないといけなくなるし。</p>
+<p>この辺サービスとしてつくってみてもいいのかなぁ。</p>
+<p>Backlog ショーケース｜開発者向け｜Backlog [バックログ]<br><a href="https://www.backlog.jp/developer/showcase/" target="_blank" rel="external">https://www.backlog.jp/developer/showcase/</a></p>
+<p>で紹介されてる <code>Backlog Milestones</code> が近いのかな。<br>ちょっと試してみよう。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ちょうど昨年後半 bit part でもredmineからの乗り換えを考えてた。&lt;/p&gt;
+&lt;p&gt;FablicにJIRAを導入をしようとしたけど諦めた話 - inFablic | Fablic, inc. Developer’s Blog.&lt;br&gt;&lt;a href=&quot;http:
+    
+    </summary>
+    
+      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+    
+    
+      <category term="backlog" scheme="http://mersy.github.io/tags/backlog/"/>
+    
+      <category term="jira" scheme="http://mersy.github.io/tags/jira/"/>
+    
+  </entry>
   
   <entry>
     <title>memo blogsync</title>
@@ -746,35 +785,6 @@
     
     
       <category term="GoogleAnalytics" scheme="http://mersy.github.io/tags/GoogleAnalytics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Craft CMS で管理しているサイトに静的な HTML を設置する</title>
-    <link href="http://mersy.github.io/article/staticfiles-craftcms.html"/>
-    <id>http://mersy.github.io/article/staticfiles-craftcms.html</id>
-    <published>2017-11-04T23:30:19.000Z</published>
-    <updated>2017-11-04T23:43:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>example.com/</code> を Craft で管理していて、 <code>/book/</code> など下層含めて出力している。</p>
-<p>このときに <code>/book/magazine/</code> のような Craft 管理内の階層で静的ファイルを置きたい場合。</p>
-<p>とりあえず、 <code>templates/book/magazine/</code> のような感じでおいてしまえば静的ファイルの内容がそのまま表示される。</p>
-<hr>
-<p>ドキュメントルートが <code>public</code> になるのでそちらでも良さそうなかんじではあるのだけれども。<br>以下はとりあえず調べず思いつきでやってみたことメモ。</p>
-<p>何も意識せず <code>/book/magazine/</code> をおくだけだと <code>/book/</code> は403になる。 <code>/book/magazine/</code> は見れる。</p>
-<p><code>index.php</code> を <code>/book/</code> 以下に置くと <code>/book/</code> がトップページと同じ挙動になる。ここはなんかrouteとか指定すればうまくいくのかも？</p>
-<p><code>.htaccess</code> を <code>/book/</code> においても特段変わらず。ま、そうかも。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;example.com/&lt;/code&gt; を Craft で管理していて、 &lt;code&gt;/book/&lt;/code&gt; など下層含めて出力している。&lt;/p&gt;
-&lt;p&gt;このときに &lt;code&gt;/book/magazine/&lt;/code&gt; のような Craft 管理内の階層
-    
-    </summary>
-    
-      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
-    
     
   </entry>
   

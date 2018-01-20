@@ -72,6 +72,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
+    <article id="post-powercms" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/powercms.html" class="article-date">
+  <time datetime="2014-04-03T10:00:44.000Z" itemprop="datePublished">2014-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/powercms.html">PowerCMS 相談会</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>PowerCMS設計・構築相談会というのがあるというので、参加させてもらった。</p>
+<blockquote>
+<p>[セミナー情報]【東京開催】PowerCMS設計・構築相談会を開催します。 (アルファサード - アクセシビリティ, CMS, Movable Type サイト構築のリーディングカンパニー)<br><a href="http://alfasado.net/contents/news/201403281538.html" target="_blank" rel="external">http://alfasado.net/contents/news/201403281538.html</a></p>
+</blockquote>
+<p>なにか相談したいことがあったわけじゃなかったのだけど申し込みさせてもらって、聞いてきた。<br>結果としては進行中案件で気になってることとか色々おしえてもらっていってほんとよかった！</p>
+<p>PowerCMSを使った案件をやらせてもらうことはあるけど、大体決まった機能しかつかってなくても，その中でもまだまだ知らないことたくさん・・・<br>勉強せにゃ。</p>
+<h3 id="import-をtoolsで"><a href="#import-をtoolsで" class="headerlink" title="import をtoolsで"></a>import をtoolsで</h3><p>管理画面から記事とかのimportをしようとするときにエラーになる場合はjobをつかってやってみる。</p>
+<p>方法不明なので調べる。</p>
+<h3 id="RequestCaches"><a href="#RequestCaches" class="headerlink" title="RequestCaches"></a>RequestCaches</h3><p>書き方はこんな感じ</p>
+<pre><code>&lt;MTRequestCache key=&quot;foo&quot;&gt;
+~~
+&lt;/MTRequestCache&gt;
+</code></pre><p>囲まれたところを、fooとしてキャッシュしてくれる。<br>場所によってかえるならkeyを変える様にする。</p>
+<h4 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h4><p>「キャッシュする」はパラメータを一緒にする<br>「ビルド結果をキャッシュする」はパラメータを別に扱う</p>
+<p>再構築、キャッシュ、あたりがちょっと普段から弱いとおもってるので、これはちゃんと理解しないとだなぁ。</p>
+<p>DynamicMTMLもだな、、、仕組みも、、、PHPも・・・。</p>
+<p>他の参加者の方の質問とかもとても勉強になった。</p>
+<ul>
+<li>再構築トリガーを自在にコントロールする(2) | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html" target="_blank" rel="external">http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html</a></li>
+<li>一定ルールにマッチする場合にHTTPS⇄HTTPを指定してリダイレクトさせる | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2014/04/httpshttp.html" target="_blank" rel="external">http://www.powercms.jp/blog/2014/04/httpshttp.html</a></li>
+<li>Movable Type用画像アップロード機能補助プラグイン　ImageUploadUtility｜SKELETON CART<br><a href="http://skeleton.juxtaposition.jp/image-upload-utility/" target="_blank" rel="external">http://skeleton.juxtaposition.jp/image-upload-utility/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/powercms.html" data-id="cjcmqc0k4003zcn0a3tk9mo51" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/powercms.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-quickpost" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/article/quickpost.html" class="article-date">
@@ -134,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjcmn3lfe0042420aahv1gtw6" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/quickpost.html" data-id="cjcmqc0ke0048cn0a37wpud06" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/quickpost.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -218,7 +282,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjcmn3leb002j420ag40z3so9" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/getuser.html" data-id="cjcmqc0ij002pcn0a4mbeu4nu" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/getuser.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -368,7 +432,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/chef.html" data-id="cjcmn3ld70017420adurkl8qx" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/chef.html" data-id="cjcmqc0gi001dcn0a0u15j2b2" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/chef.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -417,7 +481,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cjcmn3leo0034420a94becfdr" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/labelOnTask.html" data-id="cjcmqc0j80037cn0azciadv98" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/labelOnTask.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -491,7 +555,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cjcmn3le8002g420ausfpwd0e" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/flexibleSearchOnJekyll.html" data-id="cjcmqc0ii002ocn0anddm82fo" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/flexibleSearchOnJekyll.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -539,7 +603,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cjcmn3lfl004c420aq0gm5oko" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/sitemapByjekyll.html" data-id="cjcmqc0kp004fcn0alszce4e6" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/sitemapByjekyll.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -594,7 +658,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cjcmn3lfc003z420ak021irw7" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestbybranch.html" data-id="cjcmqc0kd0047cn0aa5bimlch" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestbybranch.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -646,7 +710,7 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cjcmn3ldr0020420aokoqucm1" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/dataapimemo.html" data-id="cjcmqc0hz0027cn0a6dvigec1" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/dataapimemo.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -712,120 +776,9 @@ $ knife solo prepare test_vagrant5
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cjcmn3lfb003y420aasqjdrz1" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/pullrequestMtml.html" data-id="cjcmqc0kb0044cn0a5jnusnb0" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/pullrequestMtml.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-tocOnOmniMarkupPreviewer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/tocOnOmniMarkupPreviewer.html" class="article-date">
-  <time datetime="2013-10-12T09:30:00.000Z" itemprop="datePublished">2013-10-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SublimeText/">SublimeText</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/tocOnOmniMarkupPreviewer.html">OmniMarkupPreviewer で目次を表示する</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Markdown の原稿で目次が出せたらいいなとおもって調べてたら以下の記事に出会った。</p>
-<blockquote>
-<p>SublimeText2でMarkdownにTOCを挿入する<br><a href="http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/" target="_blank" rel="external">http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/</a></p>
-</blockquote>
-<p>SublimeTextで使ってたのは OmniMarkupPreviewer だったからこれでも拡張できるのかも？？とおもったので設定ファイルを眺めてみた。</p>
-<p>Preferences &gt; Package Settings &gt; OmniMarkupPreviewer &gt; Setting - Default</p>
-<p>で開く設定ファイルのなかに</p>
-<pre><code>// MarkdownRenderer options
-&quot;renderer_options-MarkdownRenderer&quot;: {
-    // Valid extensions:
-    // - OFFICIAL (Python Markdown) -
-    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
-    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
-    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
-    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
-    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
-    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
-    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
-    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
-    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
-    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
-    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
-    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
-    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
-    // - 3RD PARTY -
-    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
-    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
-    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
-    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
-    //                   typographically nicer (&quot;curly&quot;) quotes, proper
-    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
-    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
-    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;]
-</code></pre><p>っていう部分があって</p>
-<pre><code>// MarkdownRenderer options
-&quot;renderer_options-MarkdownRenderer&quot;: {
-    // Valid extensions:
-    // - OFFICIAL (Python Markdown) -
-    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
-    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
-    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
-    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
-    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
-    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
-    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
-    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
-    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
-    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
-    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
-    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
-    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
-    // - 3RD PARTY -
-    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
-    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
-    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
-    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
-    //                   typographically nicer (&quot;curly&quot;) quotes, proper
-    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
-    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
-    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;,&quot;toc&quot;]
-</code></pre><p>ってかんじで、「,”toc”」を追加してみた。</p>
-<blockquote>
-<p>Table of Contents Extension — Python Markdown<br><a href="http://pythonhosted.org/Markdown/extensions/toc.html" target="_blank" rel="external">http://pythonhosted.org/Markdown/extensions/toc.html</a></p>
-</blockquote>
-<p>をみてみると、</p>
-<pre><code>[TOC]
-</code></pre><p>と記述すると目次が出来るみたいなので、それを .md のファイルに入れてみたら目次が出た。<br>なんと便利なんでしょ。</p>
-<p>目次を出す階層を指定出来たりするといいんだろうけど、これでひとまず十分。</p>
-<p>仕様書とか、テキストだけだとキツイかもしれないけど、1箇所に集中してまとめとくとかするときはこれでもいいなぁ。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html" data-id="cjcmn3lfp004g420amskt5pt1" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/tocOnOmniMarkupPreviewer.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -858,7 +811,7 @@ $ knife solo prepare test_vagrant5
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backlog/">backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jira/">jira</a></li></ul>
     </div>
   </div>
 
@@ -868,7 +821,7 @@ $ knife solo prepare test_vagrant5
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/backlog/" style="font-size: 10px;">backlog</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a> <a href="/tags/jira/" style="font-size: 10px;">jira</a>
     </div>
   </div>
 
@@ -890,6 +843,10 @@ $ knife solo prepare test_vagrant5
       <ul>
         
           <li>
+            <a href="/article/blog-20180120project.html">どのプロジェクト（タスク）管理ツールを使うか問題2017</a>
+          </li>
+        
+          <li>
             <a href="/article/blogsync-hatena.html">memo blogsync</a>
           </li>
         
@@ -903,10 +860,6 @@ $ knife solo prepare test_vagrant5
         
           <li>
             <a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a>
-          </li>
-        
-          <li>
-            <a href="/article/dailymemo.html">立ち戻るメモツール</a>
           </li>
         
       </ul>

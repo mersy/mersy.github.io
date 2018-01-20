@@ -72,6 +72,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="outer">
         <section id="main">
   
+    <article id="post-staticfiles-craftcms" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/staticfiles-craftcms.html" class="article-date">
+  <time datetime="2017-11-04T23:30:19.000Z" itemprop="datePublished">2017-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Craft-CMS/">Craft CMS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>example.com/</code> を Craft で管理していて、 <code>/book/</code> など下層含めて出力している。</p>
+<p>このときに <code>/book/magazine/</code> のような Craft 管理内の階層で静的ファイルを置きたい場合。</p>
+<p>とりあえず、 <code>templates/book/magazine/</code> のような感じでおいてしまえば静的ファイルの内容がそのまま表示される。</p>
+<hr>
+<p>ドキュメントルートが <code>public</code> になるのでそちらでも良さそうなかんじではあるのだけれども。<br>以下はとりあえず調べず思いつきでやってみたことメモ。</p>
+<p>何も意識せず <code>/book/magazine/</code> をおくだけだと <code>/book/</code> は403になる。 <code>/book/magazine/</code> は見れる。</p>
+<p><code>index.php</code> を <code>/book/</code> 以下に置くと <code>/book/</code> がトップページと同じ挙動になる。ここはなんかrouteとか指定すればうまくいくのかも？</p>
+<p><code>.htaccess</code> を <code>/book/</code> においても特段変わらず。ま、そうかも。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mersy.github.io/article/staticfiles-craftcms.html" data-id="cjcmqc0kz004hcn0avfrjlue6" class="article-share-link">Share</a>
+      
+        <a href="http://mersy.github.io/article/staticfiles-craftcms.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-remotework" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/article/remotework.html" class="article-date">
@@ -108,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjcmn3lff0043420aaqs6o6py" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/remotework.html" data-id="cjcmqc0kg004bcn0awjkpkozo" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/remotework.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -153,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjcmn3le3002a420au8j64slh" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/drupal-url-alias.html" data-id="cjcmqc0ie002icn0adrgjmft5" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/drupal-url-alias.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -206,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cjcmn3ldx0022420aqwjg4qbp" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/deployhq-user.html" data-id="cjcmqc0i40028cn0akn957ayn" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/deployhq-user.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -274,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cjcmn3le7002d420ai2b3o2pe" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/fastly.html" data-id="cjcmqc0ig002jcn0ac6cf29ze" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/fastly.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -319,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cjcmn3leq0037420a7729hv86" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/mac-excel-font.html" data-id="cjcmqc0jm003hcn0azfviv7la" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/mac-excel-font.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -364,7 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cjcmn3lfv004r420a6w0d9zcs" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/writeblog.html" data-id="cjcmqc0lx004zcn0a9caddcee" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/writeblog.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -411,7 +461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cjcmn3ldh001j420aqoqnv1k0" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/craft-systememail.html" data-id="cjcmqc0gw001mcn0amrj2r4hq" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/craft-systememail.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -488,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cjcmn3lde001h420axzwxwk1c" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/craft-cache.html" data-id="cjcmqc0h4001rcn0a0sjvmvpc" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/craft-cache.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -575,56 +625,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cjcmn3lef002o420akx44robe" class="article-share-link">Share</a>
+      <a data-url="http://mersy.github.io/article/hexo.html" data-id="cjcmqc0ir002vcn0at5rbnm7z" class="article-share-link">Share</a>
       
         <a href="http://mersy.github.io/article/hexo.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/article/hello-world.html" class="article-date">
-  <time datetime="2017-03-26T02:55:12.000Z" itemprop="datePublished">2017-03-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/article/hello-world.html">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mersy.github.io/article/hello-world.html" data-id="cjcmn3lec002l420av5chg55o" class="article-share-link">Share</a>
-      
-        <a href="http://mersy.github.io/article/hello-world.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -657,7 +660,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS-Route53/">AWS, Route53</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Craft-CMS/">Craft CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drupal/">Drupal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleAnalytics/">GoogleAnalytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backlog/">backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html-css-styleguide/">html, css, styleguide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jira/">jira</a></li></ul>
     </div>
   </div>
 
@@ -667,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a>
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/AWS-Route53/" style="font-size: 10px;">AWS, Route53</a> <a href="/tags/Craft-CMS/" style="font-size: 20px;">Craft CMS</a> <a href="/tags/Drupal/" style="font-size: 10px;">Drupal</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/GoogleAnalytics/" style="font-size: 10px;">GoogleAnalytics</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/backlog/" style="font-size: 10px;">backlog</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/git-markdown-backlog-redmine/" style="font-size: 10px;">git, markdown, backlog, redmine</a> <a href="/tags/html-css-styleguide/" style="font-size: 10px;">html, css, styleguide</a> <a href="/tags/jira/" style="font-size: 10px;">jira</a>
     </div>
   </div>
 
@@ -689,6 +692,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         
           <li>
+            <a href="/article/blog-20180120project.html">どのプロジェクト（タスク）管理ツールを使うか問題2017</a>
+          </li>
+        
+          <li>
             <a href="/article/blogsync-hatena.html">memo blogsync</a>
           </li>
         
@@ -702,10 +709,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
           <li>
             <a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a>
-          </li>
-        
-          <li>
-            <a href="/article/dailymemo.html">立ち戻るメモツール</a>
           </li>
         
       </ul>
