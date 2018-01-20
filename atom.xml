@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-14T11:55:14.000Z</updated>
+  <updated>2018-01-20T00:52:20.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>memo blogsync</title>
+    <link href="http://mersy.github.io/article/blogsync-hatena.html"/>
+    <id>http://mersy.github.io/article/blogsync-hatena.html</id>
+    <published>2018-01-20T00:41:18.000Z</published>
+    <updated>2018-01-20T00:52:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ブログ書くツールを探してるというか考えているのだけど。<br>MTでもWPでもFlat File系でもいいといえばよい。</p>
+<p>なんとなく、Githubとかにmdファイルと画像とかをcommitしたら反映されるようになってほしいな、というのがありつつ。<br>そのうえで管理画面的なのもあって、そこから更新すると同じようにGitに反映されるのがいいなぁ、と。</p>
+<p>前者はPCとかで作業してるときはその方が楽そうだし、後者はブラウザからやるときは楽そうだな、と。<br>netlify cms は iPad で日本語入力が出来なかった。。。それだけが残念すぎる。</p>
+<p>mdファイルで考えてるのはデータの持ち運びやすさが大きいかな、と。</p>
+<p>サーバに静的ジェネレータおいといてそこで生成させるとかでも出来そうな気がするけど。<br>MTとDataAPIでもいいわけだし。</p>
+<p>contentfulとかnetlify cmsとかみてて大体よさそうなのだけど最後なんかちょっとたりないな、、と。<br>ないなら作ればいいのかもしれないけど。</p>
+<p>はてなブログと同期するツールがあったのだけどこれがなかなかよさそうなかんじではあるけど、鬼門はやはり画像か。</p>
+<ul>
+<li>motemen/blogsync: Push and pull blog entries from/to local filesystem<br><a href="https://github.com/motemen/blogsync" target="_blank" rel="external">https://github.com/motemen/blogsync</a></li>
+<li>Markdownドキュメントをgithubで管理して、はてなブログでホストする ~ Mackerelの場合 - Hatena Developer Blog<br><a href="http://developer.hatenastaff.com/entry/developers-advent-calendar-2015/day7" target="_blank" rel="external">http://developer.hatenastaff.com/entry/developers-advent-calendar-2015/day7</a></li>
+</ul>
+<p>この辺なんかいいツールがないかなー、といってブログを書こうとおもって、ツールを探すという本末転倒なことは変わらない。</p>
+<p>API提供してるものを間にかませつつ、SPA的なフレームワークみたいなのがあれば良さそうな気がする。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ブログ書くツールを探してるというか考えているのだけど。&lt;br&gt;MTでもWPでもFlat File系でもいいといえばよい。&lt;/p&gt;
+&lt;p&gt;なんとなく、Githubとかにmdファイルと画像とかをcommitしたら反映されるようになってほしいな、というのがありつつ。&lt;br&gt;そのう
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>memo netlify cms</title>
@@ -740,33 +774,6 @@
     </summary>
     
       <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>リモートワーク</title>
-    <link href="http://mersy.github.io/article/remotework.html"/>
-    <id>http://mersy.github.io/article/remotework.html</id>
-    <published>2017-11-03T08:43:22.000Z</published>
-    <updated>2017-11-03T08:48:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>社員の在宅勤務は一般化するのか。自分の例で説明してみる<br><a href="http://blogos.com/article/254439/" target="_blank" rel="external">http://blogos.com/article/254439/</a></p>
-</blockquote>
-<p>作業を把握しづらいというのはなんとなくわかるかなー。<br>把握しようとはしないけど、なんとなく知っておきたいときとかに。</p>
-<p>なんかこう通知やらなんかで報告確認しやすい自動ななにかでやれればという気がする。</p>
-<p>んで、リモートでやってるのだけど、一緒の場で面と向かって作業した方が早い場合もあるのが事実なので、リモートでその状態にどこまでちかづけられるのかが重要だと思ってるこの頃。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;社員の在宅勤務は一般化するのか。自分の例で説明してみる&lt;br&gt;&lt;a href=&quot;http://blogos.com/article/254439/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blogos.com/
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
     
     
   </entry>
