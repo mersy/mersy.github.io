@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-20T02:50:00.000Z</updated>
+  <updated>2018-01-27T05:31:28.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>今更だけどMacのライブ変換に戻してみる</title>
+    <link href="http://mersy.github.io/article/mac-live-input.html"/>
+    <id>http://mersy.github.io/article/mac-live-input.html</id>
+    <published>2018-01-27T05:23:55.000Z</published>
+    <updated>2018-01-27T05:31:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>なんとなく最近日本語入力が意図した感じになっていない気がしていて、ATOKのせいというよりは自分の入力ミスが原因なんだろうなぁとは思うのだけれども。。</p>
+<p>ATOKの設定を少し変えてみたりしたけど、特に変わらず。<br>というか、ATOKの設定が多くて他にあるんだろうなぁ。。。</p>
+<p>変換の区切りが良くないのか、なんなのか。</p>
+<p>とりあえずは入力をミスらないようにタイピングの練習をし直した方がいいような気もするが、今更だけどATOKを止めてみて、macのライブ変換を使ってみることにする。</p>
+<p>どうなることやら。</p>
+<p>音声入力の方が早い場合もあるわけで、そういうのもそろそろ考えてみてもいいんだろうなー。</p>
+<p>参考リンク</p>
+<ul>
+<li>新Mac OSの日本語入力が「驚くほど使える」のを知っていますか？ - 日経トレンディネット<br><a href="http://trendy.nikkeibp.co.jp/article/pickup/20151014/1066979/?rt=nocnt" target="_blank" rel="external">http://trendy.nikkeibp.co.jp/article/pickup/20151014/1066979/?rt=nocnt</a></li>
+<li>【mac OS】日本語入力時に入力ミスを自動修正してくれる『タイプミスを修正』をオン/オフする方法 ≫ 使い方・方法まとめサイト - usedoor<br><a href="http://usedoor.jp/howto/digital/mac-os/os-nihongo-nyuuryoku-typing-miss-jidou-shuusei/" target="_blank" rel="external">http://usedoor.jp/howto/digital/mac-os/os-nihongo-nyuuryoku-typing-miss-jidou-shuusei/</a></li>
+<li>Macintoshの文字入力「ライブ変換」機能が快適すぎる理由 ｜IT小ネタ帳<br><a href="http://setsuzoku.nifty.com/koneta_detail/170306000237_1.htm" target="_blank" rel="external">http://setsuzoku.nifty.com/koneta_detail/170306000237_1.htm</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;なんとなく最近日本語入力が意図した感じになっていない気がしていて、ATOKのせいというよりは自分の入力ミスが原因なんだろうなぁとは思うのだけれども。。&lt;/p&gt;
+&lt;p&gt;ATOKの設定を少し変えてみたりしたけど、特に変わらず。&lt;br&gt;というか、ATOKの設定が多くて他にあるんだ
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="http://mersy.github.io/tags/Mac/"/>
+    
+      <category term="ATOK" scheme="http://mersy.github.io/tags/ATOK/"/>
+    
+  </entry>
   
   <entry>
     <title>どのプロジェクト（タスク）管理ツールを使うか問題2017</title>
@@ -760,35 +797,6 @@
     
     
       <category term="dashboard" scheme="http://mersy.github.io/tags/dashboard/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</title>
-    <link href="http://mersy.github.io/article/localfile-googleanalytics.html"/>
-    <id>http://mersy.github.io/article/localfile-googleanalytics.html</id>
-    <published>2017-11-16T23:32:18.000Z</published>
-    <updated>2017-11-16T23:39:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
-<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
-<p>この辺を見る限り</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
-<p>という感じで書けば良さそう。</p>
-<p>あと、ページ開いたこと自体を計測する場合は</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
-<p>のようにURLもセットしておく必要があるっぽい。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3591847/google-analytics-f
-    
-    </summary>
-    
-    
-      <category term="GoogleAnalytics" scheme="http://mersy.github.io/tags/GoogleAnalytics/"/>
     
   </entry>
   
