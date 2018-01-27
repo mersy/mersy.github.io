@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mersy.github.io/"/>
-  <updated>2018-01-27T05:31:28.000Z</updated>
+  <updated>2018-01-27T05:45:10.000Z</updated>
   <id>http://mersy.github.io/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ramboxを使い始めてみた</title>
+    <link href="http://mersy.github.io/article/use-rambox.html"/>
+    <id>http://mersy.github.io/article/use-rambox.html</id>
+    <published>2018-01-27T05:32:47.000Z</published>
+    <updated>2018-01-27T05:45:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ちょっと必要があってRamboxを使い始めてみた。</p>
+<blockquote>
+<p>Rambox<br><a href="http://rambox.pro/" target="_blank" rel="external">http://rambox.pro/</a></p>
+</blockquote>
+<p>似たようなツールはいくつかあって知ってはいたけど、使ったことはなかった。</p>
+<p>これまでメールとカレンダーはGoogle関係のみだったので、MailPlane をずっと使い続けていた。<br>単にこれはなれでしかなくて、他のツールでもいいんだけど。</p>
+<p>今回Googleではなく、Office 365 のアカウント？アウトルックのアカウントのメールを受け取る必要があり、Webメールを常に見るのはちょっと面倒だな、と思ったので常時開いているメール関係のアプリに集約したかったというのがあり。</p>
+<p>常時開いているアプリなので見落としも減るだろうな、と。</p>
+<p>Rambox に Slack も入れてみたけど、Cmd + F で検索が動かないとか基本的なところがきになるので、 Slack はこれまで通り標準のアプリで動かしておくことにする。</p>
+<p>Rambox メールアプリだとリンクのコピーができないのがちょっと使いづらい。<br>フォント周りはなんか太いのか少しきになるけどそのへんはいずれ慣れるかもしれないからとりあえずスルー。</p>
+<p>探してみたら Shift も対応してそうなので次はそれを試してみてもいいのかもしれないな。</p>
+<blockquote>
+<p>Shift - The Best Desktop Email Client for Gmail and Outlook.com<br><a href="https://tryshift.com/" target="_blank" rel="external">https://tryshift.com/</a></p>
+</blockquote>
+<p>軽いといいんだけどなー。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ちょっと必要があってRamboxを使い始めてみた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rambox&lt;br&gt;&lt;a href=&quot;http://rambox.pro/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://rambox.pro/&lt;/a
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+    
+    
+      <category term="Mail" scheme="http://mersy.github.io/tags/Mail/"/>
+    
+  </entry>
   
   <entry>
     <title>今更だけどMacのライブ変換に戻してみる</title>
@@ -773,30 +812,6 @@
     
     
       <category term="AWS" scheme="http://mersy.github.io/tags/AWS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DEVの投稿画面</title>
-    <link href="http://mersy.github.io/article/dashboard-devto.html"/>
-    <id>http://mersy.github.io/article/dashboard-devto.html</id>
-    <published>2017-11-16T23:36:28.000Z</published>
-    <updated>2017-11-16T23:51:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
-<p><img src="../asset/20171117_devto.png" alt=""></p>
-<p>なかなかシンプル。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;高速と話題の DEV &lt;a href=&quot;https://dev.to/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://dev.to/&lt;/a&gt; のダッシュボード&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;../asset/20171117_devto
-    
-    </summary>
-    
-    
-      <category term="dashboard" scheme="http://mersy.github.io/tags/dashboard/"/>
     
   </entry>
   
