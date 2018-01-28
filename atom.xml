@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://note.mersy418.com/"/>
+  <link href="https://note.mersy418.com/"/>
   <updated>2018-01-28T06:29:39.000Z</updated>
-  <id>http://note.mersy418.com/</id>
+  <id>https://note.mersy418.com/</id>
   
   <author>
     <name>mersy</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>CMS実装のための仕様共有方法を考える</title>
-    <link href="http://note.mersy418.com/article/communication-cms.html"/>
-    <id>http://note.mersy418.com/article/communication-cms.html</id>
+    <link href="https://note.mersy418.com/article/communication-cms.html"/>
+    <id>https://note.mersy418.com/article/communication-cms.html</id>
     <published>2018-01-28T05:58:01.000Z</published>
     <updated>2018-01-28T06:29:39.000Z</updated>
     
@@ -47,17 +47,17 @@
     
     </summary>
     
-      <category term="Direction" scheme="http://note.mersy418.com/categories/Direction/"/>
+      <category term="Direction" scheme="https://note.mersy418.com/categories/Direction/"/>
     
     
-      <category term="Sketch" scheme="http://note.mersy418.com/tags/Sketch/"/>
+      <category term="Sketch" scheme="https://note.mersy418.com/tags/Sketch/"/>
     
   </entry>
   
   <entry>
     <title>Ramboxを使い始めてみた</title>
-    <link href="http://note.mersy418.com/article/use-rambox.html"/>
-    <id>http://note.mersy418.com/article/use-rambox.html</id>
+    <link href="https://note.mersy418.com/article/use-rambox.html"/>
+    <id>https://note.mersy418.com/article/use-rambox.html</id>
     <published>2018-01-27T05:32:47.000Z</published>
     <updated>2018-01-27T07:50:58.000Z</updated>
     
@@ -87,17 +87,17 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mail" scheme="http://note.mersy418.com/tags/Mail/"/>
+      <category term="Mail" scheme="https://note.mersy418.com/tags/Mail/"/>
     
   </entry>
   
   <entry>
     <title>今更だけどMacのライブ変換に戻してみる</title>
-    <link href="http://note.mersy418.com/article/mac-live-input.html"/>
-    <id>http://note.mersy418.com/article/mac-live-input.html</id>
+    <link href="https://note.mersy418.com/article/mac-live-input.html"/>
+    <id>https://note.mersy418.com/article/mac-live-input.html</id>
     <published>2018-01-27T05:23:55.000Z</published>
     <updated>2018-01-27T05:31:28.000Z</updated>
     
@@ -122,19 +122,19 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="http://note.mersy418.com/tags/Mac/"/>
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
-      <category term="ATOK" scheme="http://note.mersy418.com/tags/ATOK/"/>
+      <category term="ATOK" scheme="https://note.mersy418.com/tags/ATOK/"/>
     
   </entry>
   
   <entry>
     <title>どのプロジェクト（タスク）管理ツールを使うか問題2017</title>
-    <link href="http://note.mersy418.com/article/blog-20180120project.html"/>
-    <id>http://note.mersy418.com/article/blog-20180120project.html</id>
+    <link href="https://note.mersy418.com/article/blog-20180120project.html"/>
+    <id>https://note.mersy418.com/article/blog-20180120project.html</id>
     <published>2018-01-20T02:16:24.000Z</published>
     <updated>2018-01-20T02:50:00.000Z</updated>
     
@@ -165,19 +165,19 @@
     
     </summary>
     
-      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="backlog" scheme="http://note.mersy418.com/tags/backlog/"/>
+      <category term="backlog" scheme="https://note.mersy418.com/tags/backlog/"/>
     
-      <category term="jira" scheme="http://note.mersy418.com/tags/jira/"/>
+      <category term="jira" scheme="https://note.mersy418.com/tags/jira/"/>
     
   </entry>
   
   <entry>
     <title>memo blogsync</title>
-    <link href="http://note.mersy418.com/article/blogsync-hatena.html"/>
-    <id>http://note.mersy418.com/article/blogsync-hatena.html</id>
+    <link href="https://note.mersy418.com/article/blogsync-hatena.html"/>
+    <id>https://note.mersy418.com/article/blogsync-hatena.html</id>
     <published>2018-01-20T00:41:18.000Z</published>
     <updated>2018-01-20T00:52:20.000Z</updated>
     
@@ -203,15 +203,15 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
   </entry>
   
   <entry>
     <title>memo netlify cms</title>
-    <link href="http://note.mersy418.com/article/netlify.html"/>
-    <id>http://note.mersy418.com/article/netlify.html</id>
+    <link href="https://note.mersy418.com/article/netlify.html"/>
+    <id>https://note.mersy418.com/article/netlify.html</id>
     <published>2018-01-14T11:41:44.000Z</published>
     <updated>2018-01-14T11:55:14.000Z</updated>
     
@@ -239,17 +239,17 @@
     
     </summary>
     
-      <category term="CMS" scheme="http://note.mersy418.com/categories/CMS/"/>
+      <category term="CMS" scheme="https://note.mersy418.com/categories/CMS/"/>
     
     
-      <category term="Netlify" scheme="http://note.mersy418.com/tags/Netlify/"/>
+      <category term="Netlify" scheme="https://note.mersy418.com/tags/Netlify/"/>
     
   </entry>
   
   <entry>
     <title>memo Contentful</title>
-    <link href="http://note.mersy418.com/article/contentful.html"/>
-    <id>http://note.mersy418.com/article/contentful.html</id>
+    <link href="https://note.mersy418.com/article/contentful.html"/>
+    <id>https://note.mersy418.com/article/contentful.html</id>
     <published>2018-01-14T00:27:05.000Z</published>
     <updated>2018-01-14T01:46:00.000Z</updated>
     
@@ -285,15 +285,15 @@
     
     </summary>
     
-      <category term="CMS" scheme="http://note.mersy418.com/categories/CMS/"/>
+      <category term="CMS" scheme="https://note.mersy418.com/categories/CMS/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】初めての自動テスト</title>
-    <link href="http://note.mersy418.com/article/book-the-way-of-the-web-tester.html"/>
-    <id>http://note.mersy418.com/article/book-the-way-of-the-web-tester.html</id>
+    <link href="https://note.mersy418.com/article/book-the-way-of-the-web-tester.html"/>
+    <id>https://note.mersy418.com/article/book-the-way-of-the-web-tester.html</id>
     <published>2018-01-08T08:22:01.000Z</published>
     <updated>2018-01-08T09:16:38.000Z</updated>
     
@@ -311,15 +311,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>立ち戻るメモツール</title>
-    <link href="http://note.mersy418.com/article/dailymemo.html"/>
-    <id>http://note.mersy418.com/article/dailymemo.html</id>
+    <link href="https://note.mersy418.com/article/dailymemo.html"/>
+    <id>https://note.mersy418.com/article/dailymemo.html</id>
     <published>2018-01-04T13:06:58.000Z</published>
     <updated>2018-01-04T13:16:03.000Z</updated>
     
@@ -342,15 +342,15 @@
     
     </summary>
     
-      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】アウトライン・プロセッシング入門</title>
-    <link href="http://note.mersy418.com/article/book-outliner.html"/>
-    <id>http://note.mersy418.com/article/book-outliner.html</id>
+    <link href="https://note.mersy418.com/article/book-outliner.html"/>
+    <id>https://note.mersy418.com/article/book-outliner.html</id>
     <published>2018-01-04T12:47:55.000Z</published>
     <updated>2018-01-04T12:56:46.000Z</updated>
     
@@ -373,15 +373,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>カンバン仕事術</title>
-    <link href="http://note.mersy418.com/article/book-kanban-in-action.html"/>
-    <id>http://note.mersy418.com/article/book-kanban-in-action.html</id>
+    <link href="https://note.mersy418.com/article/book-kanban-in-action.html"/>
+    <id>https://note.mersy418.com/article/book-kanban-in-action.html</id>
     <published>2018-01-03T07:17:13.000Z</published>
     <updated>2018-01-03T20:14:56.000Z</updated>
     
@@ -408,15 +408,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</title>
-    <link href="http://note.mersy418.com/article/book-aruaruwebmarketing.html"/>
-    <id>http://note.mersy418.com/article/book-aruaruwebmarketing.html</id>
+    <link href="https://note.mersy418.com/article/book-aruaruwebmarketing.html"/>
+    <id>https://note.mersy418.com/article/book-aruaruwebmarketing.html</id>
     <published>2018-01-03T01:00:00.000Z</published>
     <updated>2018-01-03T01:54:13.000Z</updated>
     
@@ -431,15 +431,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】伝わっているか？</title>
-    <link href="http://note.mersy418.com/article/book-tutawatteiruka.html"/>
-    <id>http://note.mersy418.com/article/book-tutawatteiruka.html</id>
+    <link href="https://note.mersy418.com/article/book-tutawatteiruka.html"/>
+    <id>https://note.mersy418.com/article/book-tutawatteiruka.html</id>
     <published>2018-01-02T06:47:04.000Z</published>
     <updated>2018-01-03T01:53:57.000Z</updated>
     
@@ -463,15 +463,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</title>
-    <link href="http://note.mersy418.com/article/book-yahoo1on1.html"/>
-    <id>http://note.mersy418.com/article/book-yahoo1on1.html</id>
+    <link href="https://note.mersy418.com/article/book-yahoo1on1.html"/>
+    <id>https://note.mersy418.com/article/book-yahoo1on1.html</id>
     <published>2017-12-31T11:23:18.000Z</published>
     <updated>2017-12-31T11:34:59.000Z</updated>
     
@@ -492,15 +492,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>ドキュメントをGit管理にするかWikiにするか</title>
-    <link href="http://note.mersy418.com/article/document-git-wiki.html"/>
-    <id>http://note.mersy418.com/article/document-git-wiki.html</id>
+    <link href="https://note.mersy418.com/article/document-git-wiki.html"/>
+    <id>https://note.mersy418.com/article/document-git-wiki.html</id>
     <published>2017-12-31T04:39:35.000Z</published>
     <updated>2018-01-03T01:54:30.000Z</updated>
     
@@ -522,14 +522,14 @@
     </summary>
     
     
-      <category term="git, markdown, backlog, redmine" scheme="http://note.mersy418.com/tags/git-markdown-backlog-redmine/"/>
+      <category term="git, markdown, backlog, redmine" scheme="https://note.mersy418.com/tags/git-markdown-backlog-redmine/"/>
     
   </entry>
   
   <entry>
     <title>【読了】ジョイ・インク</title>
-    <link href="http://note.mersy418.com/article/book-joyinc.html"/>
-    <id>http://note.mersy418.com/article/book-joyinc.html</id>
+    <link href="https://note.mersy418.com/article/book-joyinc.html"/>
+    <id>https://note.mersy418.com/article/book-joyinc.html</id>
     <published>2017-12-30T08:02:37.000Z</published>
     <updated>2017-12-30T08:41:13.000Z</updated>
     
@@ -565,15 +565,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>ドメインの移管</title>
-    <link href="http://note.mersy418.com/article/server201712.html"/>
-    <id>http://note.mersy418.com/article/server201712.html</id>
+    <link href="https://note.mersy418.com/article/server201712.html"/>
+    <id>https://note.mersy418.com/article/server201712.html</id>
     <published>2017-12-24T08:05:41.000Z</published>
     <updated>2017-12-24T07:16:12.000Z</updated>
     
@@ -625,14 +625,14 @@
     </summary>
     
     
-      <category term="AWS, Route53" scheme="http://note.mersy418.com/tags/AWS-Route53/"/>
+      <category term="AWS, Route53" scheme="https://note.mersy418.com/tags/AWS-Route53/"/>
     
   </entry>
   
   <entry>
     <title>LightsailでDrupalを立ち上げる</title>
-    <link href="http://note.mersy418.com/article/drupal-lightsail.html"/>
-    <id>http://note.mersy418.com/article/drupal-lightsail.html</id>
+    <link href="https://note.mersy418.com/article/drupal-lightsail.html"/>
+    <id>https://note.mersy418.com/article/drupal-lightsail.html</id>
     <published>2017-12-23T11:06:27.000Z</published>
     <updated>2017-12-24T00:14:54.000Z</updated>
     
@@ -688,17 +688,17 @@
     
     </summary>
     
-      <category term="Drupal" scheme="http://note.mersy418.com/categories/Drupal/"/>
+      <category term="Drupal" scheme="https://note.mersy418.com/categories/Drupal/"/>
     
     
-      <category term="Drupal" scheme="http://note.mersy418.com/tags/Drupal/"/>
+      <category term="Drupal" scheme="https://note.mersy418.com/tags/Drupal/"/>
     
   </entry>
   
   <entry>
     <title>Craft CMS の次期バージョン Craft 3 について調べてみた</title>
-    <link href="http://note.mersy418.com/article/craft3.html"/>
-    <id>http://note.mersy418.com/article/craft3.html</id>
+    <link href="https://note.mersy418.com/article/craft3.html"/>
+    <id>https://note.mersy418.com/article/craft3.html</id>
     <published>2017-12-14T22:00:00.000Z</published>
     <updated>2017-12-15T00:23:23.000Z</updated>
     
@@ -774,15 +774,15 @@
     
     </summary>
     
-      <category term="Craft CMS" scheme="http://note.mersy418.com/categories/Craft-CMS/"/>
+      <category term="Craft CMS" scheme="https://note.mersy418.com/categories/Craft-CMS/"/>
     
     
   </entry>
   
   <entry>
     <title>スタイルガイドの汎用化</title>
-    <link href="http://note.mersy418.com/article/styleguide.html"/>
-    <id>http://note.mersy418.com/article/styleguide.html</id>
+    <link href="https://note.mersy418.com/article/styleguide.html"/>
+    <id>https://note.mersy418.com/article/styleguide.html</id>
     <published>2017-12-09T11:44:20.000Z</published>
     <updated>2017-12-09T11:47:55.000Z</updated>
     
@@ -803,10 +803,10 @@
     
     </summary>
     
-      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="html, css, styleguide" scheme="http://note.mersy418.com/tags/html-css-styleguide/"/>
+      <category term="html, css, styleguide" scheme="https://note.mersy418.com/tags/html-css-styleguide/"/>
     
   </entry>
   
