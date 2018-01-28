@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://mersy.github.io/"/>
+  <link href="http://note.mersy418.com/"/>
   <updated>2018-01-27T07:50:58.000Z</updated>
-  <id>http://mersy.github.io/</id>
+  <id>http://note.mersy418.com/</id>
   
   <author>
     <name>mersy</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Ramboxを使い始めてみた</title>
-    <link href="http://mersy.github.io/article/use-rambox.html"/>
-    <id>http://mersy.github.io/article/use-rambox.html</id>
+    <link href="http://note.mersy418.com/article/use-rambox.html"/>
+    <id>http://note.mersy418.com/article/use-rambox.html</id>
     <published>2018-01-27T05:32:47.000Z</published>
     <updated>2018-01-27T07:50:58.000Z</updated>
     
@@ -48,17 +48,17 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mail" scheme="http://mersy.github.io/tags/Mail/"/>
+      <category term="Mail" scheme="http://note.mersy418.com/tags/Mail/"/>
     
   </entry>
   
   <entry>
     <title>今更だけどMacのライブ変換に戻してみる</title>
-    <link href="http://mersy.github.io/article/mac-live-input.html"/>
-    <id>http://mersy.github.io/article/mac-live-input.html</id>
+    <link href="http://note.mersy418.com/article/mac-live-input.html"/>
+    <id>http://note.mersy418.com/article/mac-live-input.html</id>
     <published>2018-01-27T05:23:55.000Z</published>
     <updated>2018-01-27T05:31:28.000Z</updated>
     
@@ -83,19 +83,19 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="http://mersy.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://note.mersy418.com/tags/Mac/"/>
     
-      <category term="ATOK" scheme="http://mersy.github.io/tags/ATOK/"/>
+      <category term="ATOK" scheme="http://note.mersy418.com/tags/ATOK/"/>
     
   </entry>
   
   <entry>
     <title>どのプロジェクト（タスク）管理ツールを使うか問題2017</title>
-    <link href="http://mersy.github.io/article/blog-20180120project.html"/>
-    <id>http://mersy.github.io/article/blog-20180120project.html</id>
+    <link href="http://note.mersy418.com/article/blog-20180120project.html"/>
+    <id>http://note.mersy418.com/article/blog-20180120project.html</id>
     <published>2018-01-20T02:16:24.000Z</published>
     <updated>2018-01-20T02:50:00.000Z</updated>
     
@@ -126,19 +126,19 @@
     
     </summary>
     
-      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="backlog" scheme="http://mersy.github.io/tags/backlog/"/>
+      <category term="backlog" scheme="http://note.mersy418.com/tags/backlog/"/>
     
-      <category term="jira" scheme="http://mersy.github.io/tags/jira/"/>
+      <category term="jira" scheme="http://note.mersy418.com/tags/jira/"/>
     
   </entry>
   
   <entry>
     <title>memo blogsync</title>
-    <link href="http://mersy.github.io/article/blogsync-hatena.html"/>
-    <id>http://mersy.github.io/article/blogsync-hatena.html</id>
+    <link href="http://note.mersy418.com/article/blogsync-hatena.html"/>
+    <id>http://note.mersy418.com/article/blogsync-hatena.html</id>
     <published>2018-01-20T00:41:18.000Z</published>
     <updated>2018-01-20T00:52:20.000Z</updated>
     
@@ -164,15 +164,15 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://mersy.github.io/categories/Blog/"/>
+      <category term="Blog" scheme="http://note.mersy418.com/categories/Blog/"/>
     
     
   </entry>
   
   <entry>
     <title>memo netlify cms</title>
-    <link href="http://mersy.github.io/article/netlify.html"/>
-    <id>http://mersy.github.io/article/netlify.html</id>
+    <link href="http://note.mersy418.com/article/netlify.html"/>
+    <id>http://note.mersy418.com/article/netlify.html</id>
     <published>2018-01-14T11:41:44.000Z</published>
     <updated>2018-01-14T11:55:14.000Z</updated>
     
@@ -200,17 +200,17 @@
     
     </summary>
     
-      <category term="CMS" scheme="http://mersy.github.io/categories/CMS/"/>
+      <category term="CMS" scheme="http://note.mersy418.com/categories/CMS/"/>
     
     
-      <category term="Netlify" scheme="http://mersy.github.io/tags/Netlify/"/>
+      <category term="Netlify" scheme="http://note.mersy418.com/tags/Netlify/"/>
     
   </entry>
   
   <entry>
     <title>memo Contentful</title>
-    <link href="http://mersy.github.io/article/contentful.html"/>
-    <id>http://mersy.github.io/article/contentful.html</id>
+    <link href="http://note.mersy418.com/article/contentful.html"/>
+    <id>http://note.mersy418.com/article/contentful.html</id>
     <published>2018-01-14T00:27:05.000Z</published>
     <updated>2018-01-14T01:46:00.000Z</updated>
     
@@ -246,15 +246,15 @@
     
     </summary>
     
-      <category term="CMS" scheme="http://mersy.github.io/categories/CMS/"/>
+      <category term="CMS" scheme="http://note.mersy418.com/categories/CMS/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】初めての自動テスト</title>
-    <link href="http://mersy.github.io/article/book-the-way-of-the-web-tester.html"/>
-    <id>http://mersy.github.io/article/book-the-way-of-the-web-tester.html</id>
+    <link href="http://note.mersy418.com/article/book-the-way-of-the-web-tester.html"/>
+    <id>http://note.mersy418.com/article/book-the-way-of-the-web-tester.html</id>
     <published>2018-01-08T08:22:01.000Z</published>
     <updated>2018-01-08T09:16:38.000Z</updated>
     
@@ -272,15 +272,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>立ち戻るメモツール</title>
-    <link href="http://mersy.github.io/article/dailymemo.html"/>
-    <id>http://mersy.github.io/article/dailymemo.html</id>
+    <link href="http://note.mersy418.com/article/dailymemo.html"/>
+    <id>http://note.mersy418.com/article/dailymemo.html</id>
     <published>2018-01-04T13:06:58.000Z</published>
     <updated>2018-01-04T13:16:03.000Z</updated>
     
@@ -303,15 +303,15 @@
     
     </summary>
     
-      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】アウトライン・プロセッシング入門</title>
-    <link href="http://mersy.github.io/article/book-outliner.html"/>
-    <id>http://mersy.github.io/article/book-outliner.html</id>
+    <link href="http://note.mersy418.com/article/book-outliner.html"/>
+    <id>http://note.mersy418.com/article/book-outliner.html</id>
     <published>2018-01-04T12:47:55.000Z</published>
     <updated>2018-01-04T12:56:46.000Z</updated>
     
@@ -334,15 +334,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>カンバン仕事術</title>
-    <link href="http://mersy.github.io/article/book-kanban-in-action.html"/>
-    <id>http://mersy.github.io/article/book-kanban-in-action.html</id>
+    <link href="http://note.mersy418.com/article/book-kanban-in-action.html"/>
+    <id>http://note.mersy418.com/article/book-kanban-in-action.html</id>
     <published>2018-01-03T07:17:13.000Z</published>
     <updated>2018-01-03T20:14:56.000Z</updated>
     
@@ -369,15 +369,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】「あるある」で学ぶ 右肩上がりのWebマーケティング</title>
-    <link href="http://mersy.github.io/article/book-aruaruwebmarketing.html"/>
-    <id>http://mersy.github.io/article/book-aruaruwebmarketing.html</id>
+    <link href="http://note.mersy418.com/article/book-aruaruwebmarketing.html"/>
+    <id>http://note.mersy418.com/article/book-aruaruwebmarketing.html</id>
     <published>2018-01-03T01:00:00.000Z</published>
     <updated>2018-01-03T01:54:13.000Z</updated>
     
@@ -392,15 +392,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】伝わっているか？</title>
-    <link href="http://mersy.github.io/article/book-tutawatteiruka.html"/>
-    <id>http://mersy.github.io/article/book-tutawatteiruka.html</id>
+    <link href="http://note.mersy418.com/article/book-tutawatteiruka.html"/>
+    <id>http://note.mersy418.com/article/book-tutawatteiruka.html</id>
     <published>2018-01-02T06:47:04.000Z</published>
     <updated>2018-01-03T01:53:57.000Z</updated>
     
@@ -424,15 +424,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</title>
-    <link href="http://mersy.github.io/article/book-yahoo1on1.html"/>
-    <id>http://mersy.github.io/article/book-yahoo1on1.html</id>
+    <link href="http://note.mersy418.com/article/book-yahoo1on1.html"/>
+    <id>http://note.mersy418.com/article/book-yahoo1on1.html</id>
     <published>2017-12-31T11:23:18.000Z</published>
     <updated>2017-12-31T11:34:59.000Z</updated>
     
@@ -453,15 +453,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>ドキュメントをGit管理にするかWikiにするか</title>
-    <link href="http://mersy.github.io/article/document-git-wiki.html"/>
-    <id>http://mersy.github.io/article/document-git-wiki.html</id>
+    <link href="http://note.mersy418.com/article/document-git-wiki.html"/>
+    <id>http://note.mersy418.com/article/document-git-wiki.html</id>
     <published>2017-12-31T04:39:35.000Z</published>
     <updated>2018-01-03T01:54:30.000Z</updated>
     
@@ -483,14 +483,14 @@
     </summary>
     
     
-      <category term="git, markdown, backlog, redmine" scheme="http://mersy.github.io/tags/git-markdown-backlog-redmine/"/>
+      <category term="git, markdown, backlog, redmine" scheme="http://note.mersy418.com/tags/git-markdown-backlog-redmine/"/>
     
   </entry>
   
   <entry>
     <title>【読了】ジョイ・インク</title>
-    <link href="http://mersy.github.io/article/book-joyinc.html"/>
-    <id>http://mersy.github.io/article/book-joyinc.html</id>
+    <link href="http://note.mersy418.com/article/book-joyinc.html"/>
+    <id>http://note.mersy418.com/article/book-joyinc.html</id>
     <published>2017-12-30T08:02:37.000Z</published>
     <updated>2017-12-30T08:41:13.000Z</updated>
     
@@ -526,15 +526,15 @@
     
     </summary>
     
-      <category term="Book" scheme="http://mersy.github.io/categories/Book/"/>
+      <category term="Book" scheme="http://note.mersy418.com/categories/Book/"/>
     
     
   </entry>
   
   <entry>
     <title>ドメインの移管</title>
-    <link href="http://mersy.github.io/article/server201712.html"/>
-    <id>http://mersy.github.io/article/server201712.html</id>
+    <link href="http://note.mersy418.com/article/server201712.html"/>
+    <id>http://note.mersy418.com/article/server201712.html</id>
     <published>2017-12-24T08:05:41.000Z</published>
     <updated>2017-12-24T07:16:12.000Z</updated>
     
@@ -571,7 +571,7 @@
 <p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
 </blockquote>
 <h2 id="サブドメインの設定"><a href="#サブドメインの設定" class="headerlink" title="サブドメインの設定"></a>サブドメインの設定</h2><p>Route53に移せたので、</p>
-<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html">http://mersy.github.io/article/drupal-lightsail.html</a></p>
+<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html" target="_blank" rel="external">http://mersy.github.io/article/drupal-lightsail.html</a></p>
 <p>で作成したサイトにサブドメインでアクセス出来るように設定してみる。</p>
 <p><code>Crate Record Set</code> で <code>d8.</code> のサブドメインに対して <code>Aレコード</code> で Lightsailの Public IP を登録。</p>
 <p><a href="http://d8.mersy418.com/" target="_blank" rel="external">http://d8.mersy418.com/</a></p>
@@ -586,14 +586,14 @@
     </summary>
     
     
-      <category term="AWS, Route53" scheme="http://mersy.github.io/tags/AWS-Route53/"/>
+      <category term="AWS, Route53" scheme="http://note.mersy418.com/tags/AWS-Route53/"/>
     
   </entry>
   
   <entry>
     <title>LightsailでDrupalを立ち上げる</title>
-    <link href="http://mersy.github.io/article/drupal-lightsail.html"/>
-    <id>http://mersy.github.io/article/drupal-lightsail.html</id>
+    <link href="http://note.mersy418.com/article/drupal-lightsail.html"/>
+    <id>http://note.mersy418.com/article/drupal-lightsail.html</id>
     <published>2017-12-23T11:06:27.000Z</published>
     <updated>2017-12-24T00:14:54.000Z</updated>
     
@@ -649,17 +649,17 @@
     
     </summary>
     
-      <category term="Drupal" scheme="http://mersy.github.io/categories/Drupal/"/>
+      <category term="Drupal" scheme="http://note.mersy418.com/categories/Drupal/"/>
     
     
-      <category term="Drupal" scheme="http://mersy.github.io/tags/Drupal/"/>
+      <category term="Drupal" scheme="http://note.mersy418.com/tags/Drupal/"/>
     
   </entry>
   
   <entry>
     <title>Craft CMS の次期バージョン Craft 3 について調べてみた</title>
-    <link href="http://mersy.github.io/article/craft3.html"/>
-    <id>http://mersy.github.io/article/craft3.html</id>
+    <link href="http://note.mersy418.com/article/craft3.html"/>
+    <id>http://note.mersy418.com/article/craft3.html</id>
     <published>2017-12-14T22:00:00.000Z</published>
     <updated>2017-12-15T00:23:23.000Z</updated>
     
@@ -735,15 +735,15 @@
     
     </summary>
     
-      <category term="Craft CMS" scheme="http://mersy.github.io/categories/Craft-CMS/"/>
+      <category term="Craft CMS" scheme="http://note.mersy418.com/categories/Craft-CMS/"/>
     
     
   </entry>
   
   <entry>
     <title>スタイルガイドの汎用化</title>
-    <link href="http://mersy.github.io/article/styleguide.html"/>
-    <id>http://mersy.github.io/article/styleguide.html</id>
+    <link href="http://note.mersy418.com/article/styleguide.html"/>
+    <id>http://note.mersy418.com/article/styleguide.html</id>
     <published>2017-12-09T11:44:20.000Z</published>
     <updated>2017-12-09T11:47:55.000Z</updated>
     
@@ -764,17 +764,17 @@
     
     </summary>
     
-      <category term="blog" scheme="http://mersy.github.io/categories/blog/"/>
+      <category term="blog" scheme="http://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="html, css, styleguide" scheme="http://mersy.github.io/tags/html-css-styleguide/"/>
+      <category term="html, css, styleguide" scheme="http://note.mersy418.com/tags/html-css-styleguide/"/>
     
   </entry>
   
   <entry>
     <title>DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</title>
-    <link href="http://mersy.github.io/article/change-dns-email.html"/>
-    <id>http://mersy.github.io/article/change-dns-email.html</id>
+    <link href="http://note.mersy418.com/article/change-dns-email.html"/>
+    <id>http://note.mersy418.com/article/change-dns-email.html</id>
     <published>2017-11-26T07:06:41.000Z</published>
     <updated>2017-11-26T07:32:08.000Z</updated>
     
@@ -812,7 +812,7 @@
     </summary>
     
     
-      <category term="AWS" scheme="http://mersy.github.io/tags/AWS/"/>
+      <category term="AWS" scheme="http://note.mersy418.com/tags/AWS/"/>
     
   </entry>
   
