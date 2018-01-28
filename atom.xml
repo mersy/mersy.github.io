@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://note.mersy418.com/"/>
-  <updated>2018-01-27T07:50:58.000Z</updated>
+  <updated>2018-01-28T06:29:39.000Z</updated>
   <id>http://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMS実装のための仕様共有方法を考える</title>
+    <link href="http://note.mersy418.com/article/communication-cms.html"/>
+    <id>http://note.mersy418.com/article/communication-cms.html</id>
+    <published>2018-01-28T05:58:01.000Z</published>
+    <updated>2018-01-28T06:29:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ワイヤーにコメントをつける感じのくらいが個人的にはベストだと思っているのだけれども。</p>
+<blockquote>
+<p>開発者のやりとりも捗る！プロトタイピングツール「InVision」って何？ - WPJ<br><a href="https://www.webprofessional.jp/evolution-of-prototyping-tool-invision/" target="_blank" rel="external">https://www.webprofessional.jp/evolution-of-prototyping-tool-invision/</a></p>
+</blockquote>
+<p>そう考えるとPowerPointが今のところはまともなツールのようなきがしてしまう。</p>
+<p>いいと言えばいいのだけど、PowerPointはワイヤーを作る方の機能が若干足りない気がする。</p>
+<ul>
+<li>DIST.18 「Sketch時代のWebデザインワークフロー」 - 勉強会メモ - Qiita<br><a href="https://qiita.com/ezawa800/items/b465180208419a96662e" target="_blank" rel="external">https://qiita.com/ezawa800/items/b465180208419a96662e</a></li>
+<li>marcosvidal/Sketch-Notebook<br><a href="https://github.com/marcosvidal/Sketch-Notebook" target="_blank" rel="external">https://github.com/marcosvidal/Sketch-Notebook</a></li>
+</ul>
+<p>この辺を読んでみて、とりあえず Sketch でやって見るのが良さそうな気がしている。<br>他のアプリケーションもいずれは似たような機能ができるようになるとは思うのだけど。</p>
+<p>Mac しかないみたいだけど、その辺は Invision あたりを経由させるとかでどうにかしたいところではある。</p>
+<p>このへんは案件によっても異なってくるだろうし、どういうデザインデータを共有されるか、とかでも変わるだろうし、どのスコープ、タイミングから入ってくるかも変わるだろうから一概には言えないだけに難しいところだなー。</p>
+<p>とりあえず、なんとなくなワイヤーとpsdだけが来てしまって、さて、CMSに組み込む際に仕様をどこかにまとめておかねば、というタイミングで、markdownのテキストにまとめるだけで、実装する側が迷わずにいけるのかどうか？この点を重視しないといけないなぁ、と思っているところである。</p>
+<p>とは言え、テキストレベルですら仕様をまとめきれていないこともあり、メンバーに迷惑をかけているのでそれはそれとして個人的な課題であるので改善しないといけないな。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ワイヤーにコメントをつける感じのくらいが個人的にはベストだと思っているのだけれども。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;開発者のやりとりも捗る！プロトタイピングツール「InVision」って何？ - WPJ&lt;br&gt;&lt;a href=&quot;https://www.webpro
+    
+    </summary>
+    
+      <category term="Direction" scheme="http://note.mersy418.com/categories/Direction/"/>
+    
+    
+      <category term="Sketch" scheme="http://note.mersy418.com/tags/Sketch/"/>
+    
+  </entry>
   
   <entry>
     <title>Ramboxを使い始めてみた</title>
@@ -768,51 +807,6 @@
     
     
       <category term="html, css, styleguide" scheme="http://note.mersy418.com/tags/html-css-styleguide/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</title>
-    <link href="http://note.mersy418.com/article/change-dns-email.html"/>
-    <id>http://note.mersy418.com/article/change-dns-email.html</id>
-    <published>2017-11-26T07:06:41.000Z</published>
-    <updated>2017-11-26T07:32:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
-<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
-<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
-<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
-<blockquote>
-<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
-</blockquote>
-<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
-<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
-<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
-<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
-</ul>
-<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
-<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
-</ul>
-<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
-<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
-<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
-<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
-<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ドメイン管理を valueドメインから Route53 に変更する。&lt;br&gt;それにあたってのひとまずメモメモ。&lt;/p&gt;
-&lt;p&gt;変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。&lt;/p&gt;
-&lt;
-    
-    </summary>
-    
-    
-      <category term="AWS" scheme="http://note.mersy418.com/tags/AWS/"/>
     
   </entry>
   
