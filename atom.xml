@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-01-28T06:29:39.000Z</updated>
+  <updated>2018-01-28T08:18:46.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Pages のこのサイトをSSL対応した</title>
+    <link href="https://note.mersy418.com/article/blog-githubpage-https.html"/>
+    <id>https://note.mersy418.com/article/blog-githubpage-https.html</id>
+    <published>2018-01-28T08:10:16.000Z</published>
+    <updated>2018-01-28T08:18:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今更だけれども。</p>
+<ul>
+<li>CloudFrontを利用して独自ドメインのGitHub PagesをHTTPS化する - Qiita<br><a href="https://qiita.com/iogi/items/82618c1d56abba6b9337" target="_blank" rel="external">https://qiita.com/iogi/items/82618c1d56abba6b9337</a></li>
+<li>Github Pagesでホスティングしつつ、CloudFrontを使ってサイトをSSL対応の独自ドメインにする - Qiita<br><a href="https://qiita.com/kechol/items/9609e1ab4a673e05b613" target="_blank" rel="external">https://qiita.com/kechol/items/9609e1ab4a673e05b613</a></li>
+</ul>
+<p>この辺の記事を参考にさせてもらってこのサイトをHTTPSにした。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今更だけれども。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CloudFrontを利用して独自ドメインのGitHub PagesをHTTPS化する - Qiita&lt;br&gt;&lt;a href=&quot;https://qiita.com/iogi/items/82618c1d56abba6b9337&quot; 
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="githubpages" scheme="https://note.mersy418.com/tags/githubpages/"/>
+    
+      <category term="SSL" scheme="https://note.mersy418.com/tags/SSL/"/>
+    
+      <category term="CloudFront" scheme="https://note.mersy418.com/tags/CloudFront/"/>
+    
+      <category term="AWS" scheme="https://note.mersy418.com/tags/AWS/"/>
+    
+  </entry>
   
   <entry>
     <title>CMS実装のための仕様共有方法を考える</title>
@@ -59,7 +95,7 @@
     <link href="https://note.mersy418.com/article/use-rambox.html"/>
     <id>https://note.mersy418.com/article/use-rambox.html</id>
     <published>2018-01-27T05:32:47.000Z</published>
-    <updated>2018-01-27T07:50:58.000Z</updated>
+    <updated>2018-01-28T08:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>ちょっと必要があってRamboxを使い始めてみた。</p>
 <blockquote>
@@ -776,37 +812,6 @@
     
       <category term="Craft CMS" scheme="https://note.mersy418.com/categories/Craft-CMS/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>スタイルガイドの汎用化</title>
-    <link href="https://note.mersy418.com/article/styleguide.html"/>
-    <id>https://note.mersy418.com/article/styleguide.html</id>
-    <published>2017-12-09T11:44:20.000Z</published>
-    <updated>2017-12-09T11:47:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>田村さんがスタイルガイドのベース？を公開されていた。すばらしい。</p>
-<blockquote>
-<p>Japan Web Production Standards<br><a href="http://standards.masizime.com/" target="_blank" rel="external">http://standards.masizime.com/</a></p>
-</blockquote>
-<p>各作業者によって違いはあるにせよ、この辺って関係各所はそれをベースにすすめた方が長い目で見るとメリットがおおきいんじゃなかろうか、というきがする。</p>
-<p>とりあえず乗っかっておきつつ、気になるところをコメントなりしあっていいものにするのがよさそうな流れなきがするのだけれども。</p>
-<p>それは、最近CSSとか書いてない側からの戯れ言かもしれない。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;田村さんがスタイルガイドのベース？を公開されていた。すばらしい。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Japan Web Production Standards&lt;br&gt;&lt;a href=&quot;http://standards.masizime.com/&quot; target=&quot;_
-    
-    </summary>
-    
-      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
-    
-    
-      <category term="html, css, styleguide" scheme="https://note.mersy418.com/tags/html-css-styleguide/"/>
     
   </entry>
   
