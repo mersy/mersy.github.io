@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 3 | mersy note</title>
+  <title>Page 3 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,101 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-12-14T22:00:00.000Z"><a href="/article/craft3.html">2017-12-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/craft3.html">Craft CMS の次期バージョン Craft 3 について調べてみた</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>これは <a href="https://adventar.org/calendars/2212" target="_blank" rel="external">Craft CMS Advent Calendar 2017</a> 15日目の記事です。</p>
+<p>Dot All でいくつか Craft CMS の次期バージョンの話が出ました。</p>
+<blockquote>
+<p>Dot All: The Official Craft CMS Developer Conference | Dot All<br><a href="http://dotall.com/2017" target="_blank" rel="external">http://dotall.com/2017</a></p>
+</blockquote>
+<p>Craft 3 について詳しくおっていなかったので、少し調べてみました。<br>だいたいのことは <a href="https://craftcms.com/news/dot-all-2017-announcements" target="_blank" rel="external">https://craftcms.com/news/dot-all-2017-announcements</a> に書かれてありますね。</p>
+<h2 id="2018年4月4日にリリース"><a href="#2018年4月4日にリリース" class="headerlink" title="2018年4月4日にリリース"></a>2018年4月4日にリリース</h2><p>2018年4月4日にリリースされるようですね。<br>BUNさんも書いてましたが、ちょうど先日 RC2 が出ましたね！</p>
+<blockquote>
+<p>Craft 3 RC | Craft CMS<br><a href="https://craftcms.com/3" target="_blank" rel="external">https://craftcms.com/3</a></p>
+<p>cms/CHANGELOG-v3.md at master · craftcms/cms<br><a href="https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md" target="_blank" rel="external">https://github.com/craftcms/cms/blob/master/CHANGELOG-v3.md</a></p>
+</blockquote>
+<p>いくつか変わった部分についてもリリース出てますね。</p>
+<p><a href="https://craftcms.com/news/craft-3-rc" target="_blank" rel="external">https://craftcms.com/news/craft-3-rc</a></p>
+<ul>
+<li>管理画面のUI改善</li>
+<li>高速化</li>
+<li>ImageEditor の追加</li>
+<li>Yii 2 ベースへの変更</li>
+<li>インストール時でもデータベースの接続設定が可能に</li>
+<li>アプリ内プラグインストア</li>
+<li>ユーザーやグローバルセットのフィールドレイアウトでタブが利用可能</li>
+</ul>
+<p>などなど。</p>
+<h2 id="プラグインストア"><a href="#プラグインストア" class="headerlink" title="プラグインストア"></a>プラグインストア</h2><p>プラグインが管理画面からインストール出来るようになりましたね。</p>
+<p><img src="../asset/pluginstore.png" alt=""></p>
+<blockquote>
+<p>Plugin Store FAQ · craftcms/cms Wiki<br><a href="https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ" target="_blank" rel="external">https://github.com/craftcms/cms/wiki/Plugin-Store-FAQ</a></p>
+</blockquote>
+<p>既に、Craft 3 でうごくプラグイン類がリストにされていますね。</p>
+<blockquote>
+<p>Craft 3 Plugins<br><a href="https://plugins.craftcms.com/" target="_blank" rel="external">https://plugins.craftcms.com/</a></p>
+</blockquote>
+<p>とりあえず今は無償のプラグインだけがリストされてるみたいですね。</p>
+<h2 id="ライセンスの変更"><a href="#ライセンスの変更" class="headerlink" title="ライセンスの変更"></a>ライセンスの変更</h2><p>ライセンスが変わったようですね。</p>
+<blockquote>
+<p>The Craft License | license<br><a href="https://craftcms.github.io/license/" target="_blank" rel="external">https://craftcms.github.io/license/</a></p>
+</blockquote>
+<h2 id="料金体系の変更"><a href="#料金体系の変更" class="headerlink" title="料金体系の変更"></a>料金体系の変更</h2><p>Craft Personal, Client, Pro のライセンス料はそのままですが、アップデートしていく場合は1年ごとのサブスクリプションになるようです。</p>
+<p>Client は $39/年、 Pro は $59/年 とのこと。</p>
+<p>プラグインストアからのプラグインアップデートをする場合も含まれるようですね。</p>
+<h2 id="リッチエディタの変更"><a href="#リッチエディタの変更" class="headerlink" title="リッチエディタの変更"></a>リッチエディタの変更</h2><p>これまでは Redactor が使われていたのですが、 CKEditor も使うことが出来るようになるみたいですね。<br>「リッチテキスト」のフィールド自体がなくなり、使う場合は Redactor または CKEditor のいずれかをインストールする必要があります。</p>
+<blockquote>
+<p>CKEditor 5 Developer Preview (v1.0.0-alpha.2)<br><a href="https://ckeditor5.github.io/" target="_blank" rel="external">https://ckeditor5.github.io/</a></p>
+</blockquote>
+<p>Craft の場合、フィールドの組み合わせを色々できるので、リッチエディタを使う場合がそこまで多くはないかもしれないですが、これは期待出来ますね。</p>
+<p><img src="../asset/ckeditor.png" alt=""></p>
+<h2 id="composerでのインストール"><a href="#composerでのインストール" class="headerlink" title="composerでのインストール"></a>composerでのインストール</h2><p>composerをつかってインストールすることが出来るようになりました。</p>
+<blockquote>
+<p>Craft 3 is available as a Composer package, and for the duration of the Beta, Composer is the only way to install Craft 3. (We’ll introduce an alternate, non-Composer installation method once it’s out of Beta.)</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/installation.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/installation.md</a></p>
+</blockquote>
+<h3 id="memory-limit-が-256MB以上"><a href="#memory-limit-が-256MB以上" class="headerlink" title="memory_limit が 256MB以上"></a>memory_limit が 256MB以上</h3><p>Craft 3 のアップデートで、PHP の <code>memory_limit</code> が 256MB 以上必要になったようです。</p>
+<blockquote>
+<p>Server Requirements</p>
+<p>Craft requires the following:</p>
+<p>PHP 7.0+<br>MySQL 5.5+ (with InnoDB) or PostgreSQL 9.5+<br>A web server (Apache, Nginx, IIS)<br>A minimum of 256MB of memory allocated to PHP<br>A minimum of 200MB of free disk space</p>
+<p><a href="https://github.com/craftcms/docs/blob/master/en/requirements.md" target="_blank" rel="external">https://github.com/craftcms/docs/blob/master/en/requirements.md</a></p>
+</blockquote>
+<h2 id="Craft-3-Class-Reference"><a href="#Craft-3-Class-Reference" class="headerlink" title="Craft 3 Class Reference"></a>Craft 3 Class Reference</h2><p>プラグイン開発などの際につかいそうですね。</p>
+<blockquote>
+<p>Craft 3 Class Reference<br><a href="https://docs.craftcms.com/api/v3/" target="_blank" rel="external">https://docs.craftcms.com/api/v3/</a></p>
+</blockquote>
+<p>BUNさんに教えてもらいましたが、 Craft 3 ではテンプレートからもクラスにアクセスできるらしいです。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -440,69 +535,32 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-25T11:17:11.000Z"><a href="/article/mac-excel-font.html">2017-09-25</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Excelの資料を開いていて、セルを動かそうとしても重い。<br>スクロールが発生するタイミングがすごく重そうな感じだった。<br>マシンを再起動しても、重いということでしらべていたら、フォントの関係があるかも？とのことで。</p>
-<blockquote>
-<p>Excel for Mac 2016が起動しないまたはすぐに落ちる - Qiita<br><a href="https://qiita.com/foursue/items/81606a831863499fe3f8" target="_blank" rel="external">https://qiita.com/foursue/items/81606a831863499fe3f8</a></p>
-</blockquote>
-<p>開いたファイルは確かにあまり普段みないフォントになっていた。<br>セル全部選択して、ヒラギノとか適当なのにしたら直った。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/2/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/2/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/4/" class="alignright next">Nächste Seite</a>
+    <a href="/page/4/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>6</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>7</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>7</small></li>
   
@@ -617,7 +675,11 @@
   
     <li><a href="/tags/html-css-styleguide/">html, css, styleguide</a><small>1</small></li>
   
+    <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
+  
     <li><a href="/tags/jira/">jira</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
   
   </ul>
 </div>
@@ -625,8 +687,12 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/ipad-byword.html">iPadでのブログ原稿ツールにBywordを使ってみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-githubpage-https.html">Github Pages のこのサイトをSSL対応した</a>
@@ -644,22 +710,18 @@
         <a href="/article/mac-live-input.html">今更だけどMacのライブ変換に戻してみる</a>
       </li>
     
-      <li>
-        <a href="/article/blog-20180120project.html">どのプロジェクト（タスク）管理ツールを使うか問題2017</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>6</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>7</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>7</small></li>
     
