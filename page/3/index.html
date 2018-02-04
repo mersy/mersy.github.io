@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 3 | mersy note</title>
+  <title>Seite 3 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,82 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-12-23T11:06:27.000Z"><a href="/article/drupal-lightsail.html">2017-12-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="lightsailでDrupalを立ち上げる"><a href="#lightsailでDrupalを立ち上げる" class="headerlink" title="lightsailでDrupalを立ち上げる"></a>lightsailでDrupalを立ち上げる</h2><p>Drupal の勉強をしてみようとおもっていたのと、Lightsail を使ってみたことがなかったのでこの機会に使ってみる。</p>
+<p><a href="https://amazonlightsail.com/ja/" target="_blank" rel="external">https://amazonlightsail.com/ja/</a></p>
+<p>Drupal が用意されているのでそれを使うだけで良さそうなので。</p>
+<p>Drupal を選択するとこんな感じになる。</p>
+<p><img src="../asset/20171216_lightsail_drupal.png" alt=""></p>
+<p>ここから開くと</p>
+<p><img src="../asset/20171216_lightsail2.png" alt=""></p>
+<p>みたいな感じに。</p>
+<p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
+<p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat bitnami_application_password</div></pre></td></tr></table></figure>
+<blockquote>
+<p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
+</blockquote>
+<p>ということで、調べたパスワードで</p>
+<p>ID : user<br>Password : xxxx</p>
+<p>でログインができる。</p>
+<p>ログインできたらID/Passを変更しておく。</p>
+<h2 id="テーマを適用する"><a href="#テーマを適用する" class="headerlink" title="テーマを適用する"></a>テーマを適用する</h2><p>Bootstrap 入ってた方がとりあえずは楽そうなきがしたので、</p>
+<blockquote>
+<p>Theme project | Drupal.org<br><a href="https://www.drupal.org/project/project_theme" target="_blank" rel="external">https://www.drupal.org/project/project_theme</a></p>
+</blockquote>
+<p>で、 bootstrap で検索。</p>
+<blockquote>
+<p>Bootstrap Business | Drupal.org<br><a href="https://www.drupal.org/project/bootstrap_business" target="_blank" rel="external">https://www.drupal.org/project/bootstrap_business</a></p>
+</blockquote>
+<p>以下も参考に読んでみた。</p>
+<blockquote>
+<p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush</div></pre></td></tr></table></figure>
+<p>で Drush が入っているのを確認。</p>
+<p>Drush については以下を参考にさせてもらった。</p>
+<blockquote>
+<p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
+</blockquote>
+<p>このテーマをダウンロード</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush dl bootstrap_business</div></pre></td></tr></table></figure>
+<p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
+<p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
+<h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
+<li>ドメイン割り当て</li>
+<li>コンテンツタイプ作成</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -475,92 +551,32 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-28T19:28:15.000Z"><a href="/article/fastly.html">2017-09-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/fastly.html">Fastly memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
-<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
-<p>VCL（Varnish Configuration Language）というのに記載する。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">sub vcl_recv &#123;</div><div class="line"></div><div class="line">  /* unset state tracking header to avoid client sending it */</div><div class="line">  if (req.restarts == 0) &#123;</div><div class="line">    unset req.http.X-Authed;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (!req.http.X-Authed) &#123;</div><div class="line">    /* stash the original URL and Host for later */</div><div class="line">    set req.http.X-Orig-URL = req.url;</div><div class="line"></div><div class="line">    /* set the URL to what the auth backend expects */</div><div class="line">    set req.url = &quot;/authenticate&quot;;</div><div class="line"></div><div class="line">    /* Auth requests won&apos;t be cached, so pass */</div><div class="line">    return(pass);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (req.http.X-Authed == &quot;true&quot;) &#123;</div><div class="line">    /* were authed, so proceed with the request */</div><div class="line">    /* reset the URL */</div><div class="line">    set req.url = req.http.X-Orig-URL;</div><div class="line"></div><div class="line">  &#125; else &#123;</div><div class="line">    /* the auth backend refused the request, so 403 the client */</div><div class="line">    error 403;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
-<blockquote>
-<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
-</blockquote>
-<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
-<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
-<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
-<blockquote>
-<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
-</blockquote>
-<p>そのほか Response headers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
-<p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
-<hr>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
-<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
-<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/2/" class="alignleft prev">Prev</a>
+    <a href="/page/2/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/4/" class="alignright next">Next</a>
+    <a href="/page/4/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>7</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>8</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>7</small></li>
   
@@ -687,8 +703,12 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/yummyftppro.html">Yummy FTP Pro を FTP ソフトとして使い始めてみた</a>
+      </li>
     
       <li>
         <a href="/article/ipad-byword.html">iPadでのブログ原稿ツールにBywordを使ってみる</a>
@@ -706,22 +726,18 @@
         <a href="/article/use-rambox.html">Ramboxを使い始めてみた</a>
       </li>
     
-      <li>
-        <a href="/article/mac-live-input.html">今更だけどMacのライブ変換に戻してみる</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>7</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>8</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>7</small></li>
     
