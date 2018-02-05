@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 5 | mersy note</title>
+  <title>Page 5 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,51 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-07-26T06:24:06.000Z"><a href="/article/dashdocset.html">2014-07-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/dashdocset.html">Dash memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Dash - Documentation Browser, Snippet Manager - Kapeli<br><a href="http://kapeli.com/dash" target="_blank" rel="external">http://kapeli.com/dash</a></p>
+<h2 id="Sublime-Text-Package"><a href="#Sublime-Text-Package" class="headerlink" title="Sublime Text Package"></a>Sublime Text Package</h2><p>farcaller/DashDoc<br><a href="https://github.com/farcaller/DashDoc" target="_blank" rel="external">https://github.com/farcaller/DashDoc</a></p>
+<p>タグを選択して、Ctrl + h でDashで検索できる</p>
+<h2 id="Docset"><a href="#Docset" class="headerlink" title="Docset"></a>Docset</h2><h3 id="リンク"><a href="#リンク" class="headerlink" title="リンク"></a>リンク</h3><ul>
+<li>Generating Dash Docsets - Kapeli<br><a href="http://kapeli.com/docsets" target="_blank" rel="external">http://kapeli.com/docsets</a></li>
+<li>miukoba/phpdoc-ja-docset<br><a href="https://github.com/miukoba/phpdoc-ja-docset" target="_blank" rel="external">https://github.com/miukoba/phpdoc-ja-docset</a></li>
+<li>PHP日本語版のDash用Docsetを作った (user notes付き) | mimemo<br><a href="http://www.miukoba.net/blog/2013/12/14/Japanese-PHP-Docset-for-Dash/" target="_blank" rel="external">http://www.miukoba.net/blog/2013/12/14/Japanese-PHP-Docset-for-Dash/</a></li>
+<li>Dashに自作Docsetを用意する｜memememotwo<br><a href="http://ameblo.jp/toki917/entry-11847834153.html" target="_blank" rel="external">http://ameblo.jp/toki917/entry-11847834153.html</a></li>
+<li>Doxygen: Main Page<br><a href="http://www.stack.nl/~dimitri/doxygen/" target="_blank" rel="external">http://www.stack.nl/~dimitri/doxygen/</a></li>
+<li>exlee/d3-dash-gen<br><a href="https://github.com/exlee/d3-dash-gen" target="_blank" rel="external">https://github.com/exlee/d3-dash-gen</a></li>
+<li>OSX 用のドキュメントブラウザ Dash - こしごぇ（Ｂ）<br><a href="http://koshigoeb.hateblo.jp/entry/2012/08/01/001308" target="_blank" rel="external">http://koshigoeb.hateblo.jp/entry/2012/08/01/001308</a></li>
+<li>doxygenで生成したドキュメントをDashで読む » rt:anote<br><a href="http://rtanote.sakura.ne.jp/blog/?p=611" target="_blank" rel="external">http://rtanote.sakura.ne.jp/blog/?p=611</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -617,96 +662,32 @@ $ service mysqld start
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-05T06:28:43.000Z"><a href="/article/jenkins.html">2014-05-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/jenkins.html">Jenkins memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to Jenkins CI! | Jenkins CI<br><a href="http://jenkins-ci.org/" target="_blank" rel="external">http://jenkins-ci.org/</a></p>
-<h2 id="VMware-のCentOSにインストール"><a href="#VMware-のCentOSにインストール" class="headerlink" title="VMware のCentOSにインストール"></a>VMware のCentOSにインストール</h2><p>以下の記事を参考に設定</p>
-<blockquote>
-<p>Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insider<br><a href="http://www.buildinsider.net/enterprise/jenkins/01" target="_blank" rel="external">http://www.buildinsider.net/enterprise/jenkins/01</a></p>
-</blockquote>
-<h3 id="repositoryの追加とインストール"><a href="#repositoryの追加とインストール" class="headerlink" title="repositoryの追加とインストール"></a>repositoryの追加とインストール</h3><p>repositoryを追加してインストールしてみる</p>
-<pre><code>$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
-$ sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
-$ sudo yum install jenkins
-</code></pre><h3 id="Jenkinsを起動する"><a href="#Jenkinsを起動する" class="headerlink" title="Jenkinsを起動する"></a>Jenkinsを起動する</h3><p>起動してみる</p>
-<pre><code>$ sudo service jenkins start
-</code></pre><p>エラーがでたので、javaをインストール</p>
-<pre><code>$ yum install java-1.6.0-openjdk
-
-$ java -version
-java version &quot;1.6.0_30&quot;
-</code></pre><p>再度起動してみる</p>
-<pre><code>$ sudo service jenkins start
-Starting Jenkins                                           [  OK  ]
-</code></pre><p><a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> にアクセスする</p>
-<p>8080があいてないみたいなので修正</p>
-<pre><code>$ sudo vi /etc/sysconfig/iptables
-</code></pre><p>以下をCOMMITの上に追加。</p>
-<pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
-</code></pre><p>再起動</p>
-<pre><code>$ sudo service iptables restart
-
-$ sudo service jenkins start
-</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li>Installing Jenkins on RedHat distributions - Jenkins - Jenkins Wiki<br><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions" target="_blank" rel="external">https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions</a></li>
-<li>CentOS に Jenkinsをインストール・ポートとURLの変更・ユーザ設定・プラグイン追加まで | 田舎に住みたいエンジニアの日記　　<br><a href="http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/" target="_blank" rel="external">http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/4/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/4/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/6/" class="alignright next">Nächste Seite</a>
+    <a href="/page/6/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>8</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>9</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>7</small></li>
   
@@ -831,7 +812,7 @@ $ sudo service jenkins start
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
-    <li><a href="/tags/sketch/">sketch</a><small>0</small></li>
+    <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
   
   </ul>
 </div>
@@ -839,8 +820,12 @@ $ sudo service jenkins start
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/use-sketch.html">Sketch を使ってみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-task-management-tool.html">ツールを使ったから進捗が滞りなく進む訳ではないという話</a>
@@ -858,22 +843,18 @@ $ sudo service jenkins start
         <a href="/article/blog-githubpage-https.html">Github Pages のこのサイトをSSL対応した</a>
       </li>
     
-      <li>
-        <a href="/article/communication-cms.html">CMS実装のための仕様共有方法を考える</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>8</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>9</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>7</small></li>
     
