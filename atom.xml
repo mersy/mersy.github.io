@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-05T23:41:01.000Z</updated>
+  <updated>2018-02-06T20:10:52.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bearのタグリストにカスタムアイコンがついていた</title>
+    <link href="https://note.mersy418.com/article/blog-bear-custom-icons.html"/>
+    <id>https://note.mersy418.com/article/blog-bear-custom-icons.html</id>
+    <published>2018-02-06T20:00:00.000Z</published>
+    <updated>2018-02-06T20:10:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>メモ系は <a href="http://www.bear-writer.com/" target="_blank" rel="external">Bear</a> を使ってるんですが最近なんか一つのタグだけ表示が違うなー、、、と。</p>
+<p><img src="../asset/20180207_bear_tag.png" alt=""></p>
+<p>気になるから色々調べたりしてたのですが、よくわからず、何だろうなー状態。ファイルが壊れてたりしたら嫌だな、と。</p>
+<p>そんなことを slack に書いてたら BUN さんが教えてくれたんですが、 1.4 からタグにカスタムアイコンが出てたらしい。</p>
+<blockquote>
+<p>List of Custom Icons for Tags in Bear app – DJ Chuang – Medium<br><a href="https://medium.com/@djchuang/i-would-love-to-see-a-list-of-the-100-tagcons-in-the-bear-app-so-far-ive-only-discovered-these-b45a5980e979" target="_blank" rel="external">https://medium.com/@djchuang/i-would-love-to-see-a-list-of-the-100-tagcons-in-the-bear-app-so-far-ive-only-discovered-these-b45a5980e979</a></p>
+</blockquote>
+<p>んで、これは <code>#beauty</code> のタグに着くアイコンなんだそうな。。。</p>
+<p>確かに他もでた。</p>
+<p><img src="../asset/20180207_bear_icons.png" alt=""></p>
+<p>ということで、この設定はOFF!!!</p>
+<p>BUNさんの検索力素晴らしい。。。自分の検索力の無さよ。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;メモ系は &lt;a href=&quot;http://www.bear-writer.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bear&lt;/a&gt; を使ってるんですが最近なんか一つのタグだけ表示が違うなー、、、と。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Sketch を使ってみる</title>
@@ -204,13 +239,13 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="AWS" scheme="https://note.mersy418.com/tags/AWS/"/>
-    
       <category term="githubpages" scheme="https://note.mersy418.com/tags/githubpages/"/>
     
       <category term="SSL" scheme="https://note.mersy418.com/tags/SSL/"/>
     
       <category term="CloudFront" scheme="https://note.mersy418.com/tags/CloudFront/"/>
+    
+      <category term="AWS" scheme="https://note.mersy418.com/tags/AWS/"/>
     
   </entry>
   
@@ -692,35 +727,6 @@
     
       <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>ドキュメントをGit管理にするかWikiにするか</title>
-    <link href="https://note.mersy418.com/article/document-git-wiki.html"/>
-    <id>https://note.mersy418.com/article/document-git-wiki.html</id>
-    <published>2017-12-31T04:39:35.000Z</published>
-    <updated>2018-01-03T01:54:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>実装に関係しそうなドキュメント類はMarkdownかasciidocとかで管理するか、BacklogやRedmineとかのWikiで管理するのがいいんじゃないか、、、、とは思っているのだけれども。</p>
-<p>gitbookで設計書を作成したら最高だった話 - フォトシンス エンジニアブログ<br><a href="http://akerun.hateblo.jp/entry/2017/12/26/110102" target="_blank" rel="external">http://akerun.hateblo.jp/entry/2017/12/26/110102</a></p>
-<p>脱Word、脱Markdown、asciidocでドキュメント作成する際のアレコレ - Qiita<br><a href="https://qiita.com/tamikura@github/items/5d3f62dae55617ee42bb" target="_blank" rel="external">https://qiita.com/tamikura@github/items/5d3f62dae55617ee42bb</a></p>
-<p>以前はmarkdownのファイルにしていた。</p>
-<p>Google Docsでやってたこともあった。</p>
-<p>最近はなんとなく Wiki に落ち着いてきてはいる。</p>
-<p>Gitbookも便利だとは思うし、asciidoc もよいとはおもうのだけど。</p>
-<p>実際に開発するメンバーとしてはどれが使いやすいんだろうなぁ。。。人それぞれだったりするしな。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;実装に関係しそうなドキュメント類はMarkdownかasciidocとかで管理するか、BacklogやRedmineとかのWikiで管理するのがいいんじゃないか、、、、とは思っているのだけれども。&lt;/p&gt;
-&lt;p&gt;gitbookで設計書を作成したら最高だった話 - フォトシン
-    
-    </summary>
-    
-    
-      <category term="git, markdown, backlog, redmine" scheme="https://note.mersy418.com/tags/git-markdown-backlog-redmine/"/>
     
   </entry>
   
