@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-06T20:10:52.000Z</updated>
+  <updated>2018-02-08T13:03:28.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日英の切り替えをKarabinerに戻してみた</title>
+    <link href="https://note.mersy418.com/article/blog-karabiner.html"/>
+    <id>https://note.mersy418.com/article/blog-karabiner.html</id>
+    <published>2018-02-07T22:00:00.000Z</published>
+    <updated>2018-02-08T13:03:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昔は Karabiner 使ってて、どっかから「⌘英かな」を使ってきてたのだけど、なんか調子悪いなー、って書いたら BUN さんに最近の Karabiner で問題ないと教えてもらったので再度インストールしてみた。</p>
+<blockquote>
+<p>Karabiner - Software for macOS<br><a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="external">https://pqrs.org/osx/karabiner/</a><br>本家 Karabiner-Elements が USキーボードの左右 Commandキーによる「英数 / かな」の切り替えに対応！ | R<br><a href="https://beadored.com/the-original-karabiner-elements-command-switching-eisuu-kana/" target="_blank" rel="external">https://beadored.com/the-original-karabiner-elements-command-switching-eisuu-kana/</a></p>
+</blockquote>
+<p>問題なく使えている様子。</p>
+<p>ただ、Mac の設定で caps lock を control に変更してるのを上書きして無効にする？みたいなので <code>simple modications</code> で <code>caps_lock</code> を <code>left_control</code> に設定した。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昔は Karabiner 使ってて、どっかから「⌘英かな」を使ってきてたのだけど、なんか調子悪いなー、って書いたら BUN さんに最近の Karabiner で問題ないと教えてもらったので再度インストールしてみた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Karabiner
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Bearのタグリストにカスタムアイコンがついていた</title>
@@ -693,35 +723,6 @@
     <summary type="html">
     
       &lt;p&gt;伝わっているか？&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B00KST3AT6/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www
-    
-    </summary>
-    
-      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【読了】ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法</title>
-    <link href="https://note.mersy418.com/article/book-yahoo1on1.html"/>
-    <id>https://note.mersy418.com/article/book-yahoo1on1.html</id>
-    <published>2017-12-31T11:23:18.000Z</published>
-    <updated>2017-12-31T11:34:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法 | 本間浩輔 | ビジネス・経済 | Kindleストア | Amazon<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/mersys-22/ref=nosim</a></p>
-<p>最近本を読むときの背景として、リモートだったらどうするか？というのを意識して読んでいるなぁというのを再認識した気がする。</p>
-<p>1on1に相当するようなことをやるとしたらどうやるか？<br>上司と部下というのが前提の話なわけだけれども、そもそもとして、フラットな組織の場合波動するのがいいんだろう？とか。</p>
-<p>一人では仕事はできないしチームでやるのが基本なので、1on1のようなのはどういう風にとりいれていくのがいいんだろうか？というのを考えるきっかけにもなる。</p>
-<p>テキストでの共有についてとコンテキストの話が出ていたけど、確かにそこには違いがあるので、それはしっかりと埋めていく必要があるとは思う。</p>
-<p>Slackとかのテキストチャット（1:1、チャンネル・グループ）<br>音声チャット<br>映像付きのチャット</p>
-<p>これらも使い分けが必要だし、それは目的にもよってかわるなぁ。</p>
-<p>基本はチャンネルやグループで使うのがベースにありつつ、1on1みたいな使い方であればDM的な使い方になるのかなぁ。</p>
-<p>テキストのいいとこは頻繁なやりとりは出来る気がするな。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ヤフーの１ｏｎ１―――部下を成長させるコミュニケーションの技法 | 本間浩輔 | ビジネス・経済 | Kindleストア | Amazon&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B0716B52LP/me
     
     </summary>
     

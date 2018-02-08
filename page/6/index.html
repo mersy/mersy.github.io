@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 6 | mersy note</title>
+  <title>Page 6 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,107 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-05-08T09:21:03.000Z"><a href="/article/vagrant.html">2014-05-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/vagrant.html">Vagrant memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Vagrant に限らず。。。環境構築関係メモ。</p>
+<ul>
+<li>Vagrant<br><a href="http://www.vagrantup.com/" target="_blank" rel="external">http://www.vagrantup.com/</a></li>
+<li>Vagrant Cloud<br><a href="https://vagrantcloud.com/" target="_blank" rel="external">https://vagrantcloud.com/</a></li>
+<li>Discover Featured Vagrant Boxes<br><a href="https://vagrantcloud.com/discover/featured" target="_blank" rel="external">https://vagrantcloud.com/discover/featured</a></li>
+</ul>
+<h2 id="IPが割り振れないとき"><a href="#IPが割り振れないとき" class="headerlink" title="IPが割り振れないとき"></a>IPが割り振れないとき</h2><p>VagrantでIPが割り振れないときは、vagrant ssh してる時に</p>
+<pre><code>sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
+</code></pre><p>そのうえで改めてboxを作り直す。</p>
+<pre><code>$ vagrant package
+$ vagrant box add &lt;NewBoxName&gt; package.box
+$ vagrant box list
+$ rm -rf package.box
+</code></pre><p>その上で</p>
+<pre><code>$ vagrant init &lt;NewBoxName&gt;
+</code></pre><p>でVagrantfileを編集しておく。</p>
+<blockquote>
+<p>VagrantでIPアドレスの割り当てに失敗したときの解決策 | メモ帳代わりのブログ<br><a href="http://www.absolute-keitarou.net/blog/?p=583" target="_blank" rel="external">http://www.absolute-keitarou.net/blog/?p=583</a></p>
+</blockquote>
+<h2 id="CentOS-6-5-x86-64-LAMP-Box"><a href="#CentOS-6-5-x86-64-LAMP-Box" class="headerlink" title="CentOS 6.5 (x86_64) LAMP+　Box"></a>CentOS 6.5 (x86_64) LAMP+　Box</h2><p>Includes</p>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Ruby</li>
+<li>Python</li>
+<li>phpMyAdmin</li>
+</ul>
+<blockquote>
+<p>kevindeleon/centos65-x86_64-LAMP<br><a href="https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP" target="_blank" rel="external">https://vagrantcloud.com/kevindeleon/centos65-x86_64\-LAMP</a></p>
+</blockquote>
+<p>これに、いくつか入れておいた。</p>
+<ul>
+<li>wget</li>
+<li>make</li>
+<li>gcc</li>
+<li>Perlのmodule</li>
+<li>ImageMagick</li>
+</ul>
+<p>とりあえずここまで。</p>
+<p>後入れようとおもってるもの。</p>
+<ul>
+<li>cpanm</li>
+<li>Nginx</li>
+<li>Starman</li>
+</ul>
+<p>一緒にしておくか、box分けるか。</p>
+<h2 id="権限周り"><a href="#権限周り" class="headerlink" title="権限周り"></a>権限周り</h2><p>触れるように権限設定する</p>
+<pre><code>$ sudo chown -R vagrant:vagrant /var/www/html
+</code></pre><h2 id="cgi"><a href="#cgi" class="headerlink" title="cgi"></a>cgi</h2><p>httpd.confを書き換える</p>
+<pre><code>$ sudo vi /etc/httpd/conf/httpd.conf
+</code></pre><p>コメントを外しておく</p>
+<pre><code># AddHandler cgi-script .cgi
+↓
+AddHandler cgi-script .cgi
+</code></pre><p>この辺の/var/www/cgi-bin/のところに</p>
+<pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl
+&lt;/Directory&gt;
+</code></pre><p>みたいなかんじのを追加しておく</p>
+<pre><code>$ sudo service httpd stop
+$ sudo service httpd start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Python - メモ：Vagrant環境でCGI（試行錯誤中） - Qiita<br><a href="http://qiita.com/juniskw/items/6f19587cfc3843f47618" target="_blank" rel="external">http://qiita.com/juniskw/items/6f19587cfc3843f47618</a></li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQLが立ち上がるように初期設定"><a href="#MySQLが立ち上がるように初期設定" class="headerlink" title="MySQLが立ち上がるように初期設定"></a>MySQLが立ち上がるように初期設定</h3><p>MySQLが立ち上がるように初期設定しておく</p>
+<pre><code>$ chkconfig mysqld on
+$ chkconfig --list mysqld
+$ service mysqld start
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -625,86 +726,32 @@ $ npm -v
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-03T10:00:44.000Z"><a href="/article/powercms.html">2014-04-03</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/powercms.html">PowerCMS 相談会</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>PowerCMS設計・構築相談会というのがあるというので、参加させてもらった。</p>
-<blockquote>
-<p>[セミナー情報]【東京開催】PowerCMS設計・構築相談会を開催します。 (アルファサード - アクセシビリティ, CMS, Movable Type サイト構築のリーディングカンパニー)<br><a href="http://alfasado.net/contents/news/201403281538.html" target="_blank" rel="external">http://alfasado.net/contents/news/201403281538.html</a></p>
-</blockquote>
-<p>なにか相談したいことがあったわけじゃなかったのだけど申し込みさせてもらって、聞いてきた。<br>結果としては進行中案件で気になってることとか色々おしえてもらっていってほんとよかった！</p>
-<p>PowerCMSを使った案件をやらせてもらうことはあるけど、大体決まった機能しかつかってなくても，その中でもまだまだ知らないことたくさん・・・<br>勉強せにゃ。</p>
-<h3 id="import-をtoolsで"><a href="#import-をtoolsで" class="headerlink" title="import をtoolsで"></a>import をtoolsで</h3><p>管理画面から記事とかのimportをしようとするときにエラーになる場合はjobをつかってやってみる。</p>
-<p>方法不明なので調べる。</p>
-<h3 id="RequestCaches"><a href="#RequestCaches" class="headerlink" title="RequestCaches"></a>RequestCaches</h3><p>書き方はこんな感じ</p>
-<pre><code>&lt;MTRequestCache key=&quot;foo&quot;&gt;
-~~
-&lt;/MTRequestCache&gt;
-</code></pre><p>囲まれたところを、fooとしてキャッシュしてくれる。<br>場所によってかえるならkeyを変える様にする。</p>
-<h4 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h4><p>「キャッシュする」はパラメータを一緒にする<br>「ビルド結果をキャッシュする」はパラメータを別に扱う</p>
-<p>再構築、キャッシュ、あたりがちょっと普段から弱いとおもってるので、これはちゃんと理解しないとだなぁ。</p>
-<p>DynamicMTMLもだな、、、仕組みも、、、PHPも・・・。</p>
-<p>他の参加者の方の質問とかもとても勉強になった。</p>
-<ul>
-<li>再構築トリガーを自在にコントロールする(2) | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html" target="_blank" rel="external">http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html</a></li>
-<li>一定ルールにマッチする場合にHTTPS⇄HTTPを指定してリダイレクトさせる | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2014/04/httpshttp.html" target="_blank" rel="external">http://www.powercms.jp/blog/2014/04/httpshttp.html</a></li>
-<li>Movable Type用画像アップロード機能補助プラグイン　ImageUploadUtility｜SKELETON CART<br><a href="http://skeleton.juxtaposition.jp/image-upload-utility/" target="_blank" rel="external">http://skeleton.juxtaposition.jp/image-upload-utility/</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/5/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/5/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/7/" class="alignright next">Nächste Seite</a>
+    <a href="/page/7/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>10</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>11</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>7</small></li>
   
@@ -799,11 +846,13 @@ $ npm -v
   
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>2</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>3</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/RSS/">RSS</a><small>0</small></li>
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
@@ -839,8 +888,12 @@ $ npm -v
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-karabiner.html">日英の切り替えをKarabinerに戻してみた</a>
+      </li>
     
       <li>
         <a href="/article/blog-bear-custom-icons.html">Bearのタグリストにカスタムアイコンがついていた</a>
@@ -858,22 +911,18 @@ $ npm -v
         <a href="/article/yummyftppro.html">Yummy FTP Pro を FTP ソフトとして使い始めてみた</a>
       </li>
     
-      <li>
-        <a href="/article/ipad-byword.html">iPadでのブログ原稿ツールにBywordを使ってみる</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>10</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>11</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>7</small></li>
     
