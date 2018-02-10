@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Página 6 | mersy note</title>
+  <title>Page 6 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,58 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-05-08T21:21:56.000Z"><a href="/article/mtbymail.html">2014-05-09</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtbymail.html">MTにメールで投稿する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>先日、S3に移したりしたときに、MTも候補にいれたのだけど、メールでの投稿が期待できなさそうだったので、今回は除外した。<br>スマホのアプリは今回除外。</p>
+<ul>
+<li>Post Office</li>
+<li>Moober / MovaMotion</li>
+<li>MailPack</li>
+<li>ケータイポスト for MT</li>
+</ul>
+<p>たまたま、MT関係のプラグインを見つけたのでとりあえずそれを試してみた。</p>
+<p>環境：Xserver, MT 6.0.3</p>
+<h2 id="Post-Office-a-plugin-for-Movable-Type"><a href="#Post-Office-a-plugin-for-Movable-Type" class="headerlink" title="Post Office, a plugin for Movable Type"></a>Post Office, a plugin for Movable Type</h2><p>movabletype/mt-plugin-post-office<br><a href="https://github.com/movabletype/mt-plugin-post-office" target="_blank" rel="external">https://github.com/movabletype/mt-plugin-post-office</a></p>
+<p>設定してみた感じでは問題なく動いていたが、いくつか気になるところがあるので実用には至らず。<br>送信元がiPhoneのGmailというのも影響してる可能性はあるけど。</p>
+<ul>
+<li>添付した画像の表示がオカシイ。縦100%みたいな感じに延び延びになった。cssとの兼ね合いかも知れない。</li>
+<li>2byte文字の処理が怪しい。管理画面の一覧ではちゃんと表示されてたけどオモテ側では化けてた。</li>
+<li>テキストだけおくっても、1つのpostに二重に表示されてた。これもメーラーの原因ポイけど。</li>
+</ul>
+<h2 id="Moober-MovaMotion"><a href="#Moober-MovaMotion" class="headerlink" title="Moober / MovaMotion"></a>Moober / MovaMotion</h2><p>携帯電話から使うMTベースのTwitter風マイクロブログ(3)。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2009/05/post_209.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2009/05/post_209.html</a><br>携帯からMTにメールで投稿するMoblogプラグイン「Moober」。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2007/12/post_155.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2007/12/post_155.html</a></p>
+<h2 id="MailPack"><a href="#MailPack" class="headerlink" title="MailPack"></a>MailPack</h2><p>Movable Typeで簡単携帯投稿！メール投稿プラグイン:MailPack - Movable Type技術ブログ<br><a href="http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html" target="_blank" rel="external">http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html</a></p>
+<h2 id="ケータイポスト-for-MT"><a href="#ケータイポスト-for-MT" class="headerlink" title="ケータイポスト for MT"></a>ケータイポスト for MT</h2><p>ケータイポスト for MT｜ソフトウェア製品・無料ツール｜アイデアマンズ株式会社(ideaman’s Inc.)<br><a href="http://www.ideamans.com/products/keitaipost4mt/" target="_blank" rel="external">http://www.ideamans.com/products/keitaipost4mt/</a></p>
+<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><p>DataAPIでのQuickPostはつくったけど、スマホじゃないと使えない気がするけど、どうなんだろうな。<br>まだメールの方が使い慣れてる（頻度が多い）からメールをツールに選んだ。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -723,104 +775,34 @@ $ npm -v
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-24T06:30:39.000Z"><a href="/article/s3.html">2014-04-24</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/s3.html">S3をつかってみたメモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>某ブログサービスが連日落ちてて大変だったのでサービスを移すことにした。<br>そのために、エクスポートしてインポートさせようとおもったのだけど、画像ファイル類が容量オーバー。<br>データ類を落としてきて、それをS3へおくことに。</p>
-<h2 id="Bucketの作り方"><a href="#Bucketの作り方" class="headerlink" title="Bucketの作り方"></a>Bucketの作り方</h2><p>Bucketの作り方はこの辺を読んでおけば問題なさそう。</p>
-<blockquote>
-<p>Amazon Web Services ブログ: 月額10円〜 - Amazon S3でウェブサイトをホスティングする方法<br><a href="http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html" target="_blank" rel="external">http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html</a></p>
-</blockquote>
-<h3 id="Bucket-Policy参照"><a href="#Bucket-Policy参照" class="headerlink" title="Bucket Policy参照"></a>Bucket Policy参照</h3><pre><code>{
-  &quot;Version&quot;:&quot;2008-10-17&quot;,
-  &quot;Statement&quot;:[{
-       &quot;Sid&quot;:&quot;PublicReadForGetBucketObjects&quot;,
-     &quot;Effect&quot;:&quot;Allow&quot;,
-       &quot;Principal&quot;: {
-            &quot;AWS&quot;: &quot;*&quot;
-         },
-      &quot;Action&quot;:[&quot;s3:GetObject&quot;],
-      &quot;Resource&quot;:[&quot;arn:aws:s3:::&lt;$BucketName$&gt;/*&quot;
-      ]
-    }
-  ]
-}
-</code></pre><h2 id="リファラ制限"><a href="#リファラ制限" class="headerlink" title="リファラ制限"></a>リファラ制限</h2><p>諸事情でリファラ制限を掛けたかったので以下を参考にして設定。</p>
-<blockquote>
-<p>インフラ構築手順書 AWS S3をWEBホスティングとして利用【アクセス制限】<br><a href="http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" target="_blank" rel="external">http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC</a></p>
-</blockquote>
-<p>versionとかはそのままコピペする。勝手に変えたらダメ</p>
-<h2 id="naked-domain"><a href="#naked-domain" class="headerlink" title="naked domain"></a>naked domain</h2><p>Route53 でnaked domain でS3のbucketを設定するには、AレコードでAliasをYesにすると、bucketを選択できる。</p>
-<p>bucketはドメインと同じようにしておく必要がある。</p>
-<blockquote>
-<p>Amazon S3のルートドメインでのWebホスティング機能を試してみた - プログラマになりたい<br><a href="http://blog.takuros.net/entry/20130107/1357520635" target="_blank" rel="external">http://blog.takuros.net/entry/20130107/1357520635</a></p>
-</blockquote>
-<p>Route53の設定</p>
-<blockquote>
-<p>はじめてのRoute 53 - Dondari memo<br><a href="http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53" target="_blank" rel="external">http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53</a></p>
-</blockquote>
-<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><ul>
-<li>CSSが反映されたりされなかったり。Transmit経由で送ったらなんか読めなかった。そんな感じのエントリーを見た気がするのでいつか調べる</li>
-<li>日本語ファイル名。長すぎるとアウトみたいな様子</li>
-<li>転送が遅い。</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/5/" class="alignleft prev">Anterior</a>
+    <a href="/page/5/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/7/" class="alignright next">Siguiente</a>
+    <a href="/page/7/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categorías</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
     <li><a href="/categories/Blog/">Blog</a><small>12</small></li>
   
-    <li><a href="/categories/Book/">Book</a><small>7</small></li>
+    <li><a href="/categories/Book/">Book</a><small>8</small></li>
   
     <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
   
@@ -890,7 +872,7 @@ $ npm -v
 
   
 <div class="widget tag">
-  <h3 class="title">Etiquetas</h3>
+  <h3 class="title">Tags</h3>
   <ul class="entry">
   
     <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
@@ -919,11 +901,17 @@ $ npm -v
   
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
     <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
   
     <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
   
@@ -955,8 +943,12 @@ $ npm -v
 
   
 <div class="widget tag">
-  <h3 class="title">Entradas Recientes</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/book-work-halfyear.html">【読了】 半年だけ働く。</a>
+      </li>
     
       <li>
         <a href="/article/blog-readkit.html">結局RSSリーダーはReadKitにしました</a>
@@ -974,24 +966,20 @@ $ npm -v
         <a href="/article/use-sketch.html">Sketch を使ってみる</a>
       </li>
     
-      <li>
-        <a href="/article/blog-task-management-tool.html">ツールを使ったから進捗が滞りなく進む訳ではないという話</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archivo</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
       <li><a href="/categories/Blog/">Blog</a><small>12</small></li>
     
-      <li><a href="/categories/Book/">Book</a><small>7</small></li>
+      <li><a href="/categories/Book/">Book</a><small>8</small></li>
     
       <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
     

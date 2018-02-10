@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Página 5 | mersy note</title>
+  <title>Page 5 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,71 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-04-20T11:35:10.000Z"><a href="/article/craft-cache.html">2017-04-20</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/craft-cache.html">craft cache memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Craft CMS のキャッシュ周りがよくわからなかったのでメモ</p>
+<p>公式ドキュメント<br><a href="https://craftcms.com/docs/templating/cache" target="_blank" rel="external">https://craftcms.com/docs/templating/cache</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div><div class="line">    &#123;% for block in entry.myMatrixField %&#125;</div><div class="line">        &lt;p&gt;&#123;&#123; block.text &#125;&#125;&lt;/p&gt;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">&#123;% endcache %&#125;</div></pre></td></tr></table></figure>
+<h2 id="キャッシュの削除"><a href="#キャッシュの削除" class="headerlink" title="キャッシュの削除"></a>キャッシュの削除</h2><p>管理画面からキャッシュの削除ができる</p>
+<p><a href="https://craftcms.com/classreference/tools/ClearCachesTool" target="_blank" rel="external">https://craftcms.com/classreference/tools/ClearCachesTool</a></p>
+<ul>
+<li>全て<ul>
+<li>全てのキャッシュを削除</li>
+</ul>
+</li>
+<li>データキャッシュ（Data caches）<br>-</li>
+<li>RSSキャッシュ（RSS caches）<br>-</li>
+<li>アセットキャッシュ（Asset caches）<br>-</li>
+<li>コンパイル済のテンプレート（Compiled templates）<br>-</li>
+<li>一時的なファイル（Temp files）<br>-</li>
+<li>アセット変換インデックス（Asset transform index）<br>-</li>
+<li>アセットのインデックス化データ（Asset indexing data）<br>-</li>
+<li>テンプレートキャッシュ（Template caches）<br>-</li>
+</ul>
+<h2 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h2><p>山本さんに教えてもらった効率がよいという方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">処理時間のかかるループ処理などのブロックごとにcacheタグで囲む</div><div class="line">それぞれ &#123;% cache using key &quot;&lt;cachekey&gt;&quot; %&#125; の形式でキーを指定する</div><div class="line">同一のキーでも、呼び出されるURLが異なればキャッシュは区別される</div></pre></td></tr></table></figure>
+<p>キャッシュキーがあればそのキャッシュだけを削除しやすいみたい  </p>
+<h2 id="cacheDuration"><a href="#cacheDuration" class="headerlink" title="cacheDuration"></a>cacheDuration</h2><p><a href="https://craftcms.com/docs/config-settings#cacheDuration" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheDuration</a></p>
+<p>テンプレートで<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% cache %&#125;</div></pre></td></tr></table></figure></p>
+<p>で囲われているところはキャッシュされる。</p>
+<p>初期値は ‘P1D’ （1日）。</p>
+<pre><code>&apos;cacheDuration&apos; =&gt; &apos;P1W&apos;,
+</code></pre><h2 id="cacheElementQueries"><a href="#cacheElementQueries" class="headerlink" title="cacheElementQueries"></a>cacheElementQueries</h2><p><a href="https://craftcms.com/docs/config-settings#cacheElementQueries" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheElementQueries</a></p>
+<p>デフォルトではエントリ更新時にテンプレートキャッシュ削除されるが、それを無効にする設定。初期値は ‘true’ 。</p>
+<pre><code>&apos;cacheElementQueries&apos; =&gt; false,
+</code></pre><p>更新が多いがアクセスも多い場合は、 ‘false’ にしたうえでキャッシュをコントロールしたほうが良さそう。</p>
+<hr>
+<p>キャッシュ削除をcronジョブと連携できそう？？<br><a href="https://github.com/themccallister/craft.cache-clear" target="_blank" rel="external">https://github.com/themccallister/craft.cache-clear</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -505,86 +570,34 @@ layout: false
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-08T21:21:56.000Z"><a href="/article/mtbymail.html">2014-05-09</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/mtbymail.html">MTにメールで投稿する</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>先日、S3に移したりしたときに、MTも候補にいれたのだけど、メールでの投稿が期待できなさそうだったので、今回は除外した。<br>スマホのアプリは今回除外。</p>
-<ul>
-<li>Post Office</li>
-<li>Moober / MovaMotion</li>
-<li>MailPack</li>
-<li>ケータイポスト for MT</li>
-</ul>
-<p>たまたま、MT関係のプラグインを見つけたのでとりあえずそれを試してみた。</p>
-<p>環境：Xserver, MT 6.0.3</p>
-<h2 id="Post-Office-a-plugin-for-Movable-Type"><a href="#Post-Office-a-plugin-for-Movable-Type" class="headerlink" title="Post Office, a plugin for Movable Type"></a>Post Office, a plugin for Movable Type</h2><p>movabletype/mt-plugin-post-office<br><a href="https://github.com/movabletype/mt-plugin-post-office" target="_blank" rel="external">https://github.com/movabletype/mt-plugin-post-office</a></p>
-<p>設定してみた感じでは問題なく動いていたが、いくつか気になるところがあるので実用には至らず。<br>送信元がiPhoneのGmailというのも影響してる可能性はあるけど。</p>
-<ul>
-<li>添付した画像の表示がオカシイ。縦100%みたいな感じに延び延びになった。cssとの兼ね合いかも知れない。</li>
-<li>2byte文字の処理が怪しい。管理画面の一覧ではちゃんと表示されてたけどオモテ側では化けてた。</li>
-<li>テキストだけおくっても、1つのpostに二重に表示されてた。これもメーラーの原因ポイけど。</li>
-</ul>
-<h2 id="Moober-MovaMotion"><a href="#Moober-MovaMotion" class="headerlink" title="Moober / MovaMotion"></a>Moober / MovaMotion</h2><p>携帯電話から使うMTベースのTwitter風マイクロブログ(3)。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2009/05/post_209.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2009/05/post_209.html</a><br>携帯からMTにメールで投稿するMoblogプラグイン「Moober」。 - Junnama Online<br><a href="http://junnama.alfasado.net/online/2007/12/post_155.html" target="_blank" rel="external">http://junnama.alfasado.net/online/2007/12/post_155.html</a></p>
-<h2 id="MailPack"><a href="#MailPack" class="headerlink" title="MailPack"></a>MailPack</h2><p>Movable Typeで簡単携帯投稿！メール投稿プラグイン:MailPack - Movable Type技術ブログ<br><a href="http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html" target="_blank" rel="external">http://www.mtcms.jp/movabletype-blog/plugins/mailpack/200807231968.html</a></p>
-<h2 id="ケータイポスト-for-MT"><a href="#ケータイポスト-for-MT" class="headerlink" title="ケータイポスト for MT"></a>ケータイポスト for MT</h2><p>ケータイポスト for MT｜ソフトウェア製品・無料ツール｜アイデアマンズ株式会社(ideaman’s Inc.)<br><a href="http://www.ideamans.com/products/keitaipost4mt/" target="_blank" rel="external">http://www.ideamans.com/products/keitaipost4mt/</a></p>
-<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><p>DataAPIでのQuickPostはつくったけど、スマホじゃないと使えない気がするけど、どうなんだろうな。<br>まだメールの方が使い慣れてる（頻度が多い）からメールをツールに選んだ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/4/" class="alignleft prev">Anterior</a>
+    <a href="/page/4/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/6/" class="alignright next">Siguiente</a>
+    <a href="/page/6/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categorías</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
     <li><a href="/categories/Blog/">Blog</a><small>12</small></li>
   
-    <li><a href="/categories/Book/">Book</a><small>7</small></li>
+    <li><a href="/categories/Book/">Book</a><small>8</small></li>
   
     <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
   
@@ -654,7 +667,7 @@ layout: false
 
   
 <div class="widget tag">
-  <h3 class="title">Etiquetas</h3>
+  <h3 class="title">Tags</h3>
   <ul class="entry">
   
     <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
@@ -683,11 +696,17 @@ layout: false
   
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
     <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
   
     <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
   
@@ -719,8 +738,12 @@ layout: false
 
   
 <div class="widget tag">
-  <h3 class="title">Entradas Recientes</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/book-work-halfyear.html">【読了】 半年だけ働く。</a>
+      </li>
     
       <li>
         <a href="/article/blog-readkit.html">結局RSSリーダーはReadKitにしました</a>
@@ -738,24 +761,20 @@ layout: false
         <a href="/article/use-sketch.html">Sketch を使ってみる</a>
       </li>
     
-      <li>
-        <a href="/article/blog-task-management-tool.html">ツールを使ったから進捗が滞りなく進む訳ではないという話</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archivo</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
       <li><a href="/categories/Blog/">Blog</a><small>12</small></li>
     
-      <li><a href="/categories/Book/">Book</a><small>7</small></li>
+      <li><a href="/categories/Book/">Book</a><small>8</small></li>
     
       <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
     

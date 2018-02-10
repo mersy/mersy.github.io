@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ドメインの移管 | mersy note</title>
+  <title>【読了】 半年だけ働く。 | mersy note</title>
   <meta name="author" content="mersy">
   
-  <meta name="description" content="ドメインをvalue domain から Route53 へ移管する。
-メール関係周りの設定そのドメインのメールを1つ作ってgmailに転送している。普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。転送しつつ、自動返信と">
+  <meta name="description" content="Amazon.co.jp： 半年だけ働く。 eBook: 村上　アシシ: Kindleストアhttps://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim
+を読んだ。
+厳密にはフリーランスではないけど、多分、端から見た">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="ドメインの移管"/>
+  <meta property="og:title" content="【読了】 半年だけ働く。"/>
   <meta property="og:site_name" content="mersy note"/>
 
   
@@ -63,66 +64,41 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-12-24T08:05:41.000Z"><a href="/article/server201712.html">2017-12-24</a></time>
+        <time datetime="2018-02-10T12:00:00.000Z"><a href="/article/book-work-halfyear.html">2018-02-10</a></time>
       
       
   
-    <h1 class="title">ドメインの移管</h1>
+    <h1 class="title">【読了】 半年だけ働く。</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>ドメインをvalue domain から Route53 へ移管する。</p>
-<h2 id="メール関係周りの設定"><a href="#メール関係周りの設定" class="headerlink" title="メール関係周りの設定"></a>メール関係周りの設定</h2><p>そのドメインのメールを1つ作ってgmailに転送している。<br>普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。<br>転送しつつ、自動返信とかできるようにしておきたい。</p>
-<p>とりあえずさくらのメールボックスを契約。</p>
+        <p>Amazon.co.jp： 半年だけ働く。 eBook: 村上　アシシ: Kindleストア<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim</a></p>
+<p>を読んだ。</p>
+<p>厳密にはフリーランスではないけど、多分、端から見たらそんな風に見えてるような気もするが。。。</p>
+<p>とりあえず、一緒に仕事させてもらってる方々に恵まれてるので、その人たちといい感じに仕事しつつ、普段からスキルアップなりアウトプットなりしている姿を目にしているので、それに少しでもついて行くようにすることが必要なんだろうな、と。</p>
+<p>言問の仕事をするようになって変わる部分もあったけれども、色々といい方向には動いているのかなぁと思ってはいる。忙しいけど。<br>この本の半年働いて、半年休むではないけど、今はがむしゃらにやるタイミングかな、とは思っているのでそれをやりつつ、将来に向けての足場作りかな、とは思っているところ。</p>
 <blockquote>
-<p>セキュリティ対策を強化したメールサーバー専用プラン【メールボックス】<br><a href="https://www.sakura.ne.jp/mail/" target="_blank" rel="external">https://www.sakura.ne.jp/mail/</a></p>
+<p>企画業務に特化したスペシャリストであれば、新事業の企画策定の支援メンバーとして、単価の高い案件が多くあります。 　ちなみに私の場合は、コンサルティング業務におけるＰＭＯのプロフェッショナルです。ＰＭＯとはプロジェクト・マネジメント・オフィスの略で、プロジェクトマネージャーの意思決定や業務を支援し、プロジェクトを円滑に進行させるための、専門のサポート部隊のことです</p>
+<p>これらの職種に共通するのは、「問題解決のプロフェッショナル」として対価が支払われる点です。どんな企業でも自社内で問題を解決できればそれに越したことはありませんが、プロジェクトを組成する際に適した人材が社内に存在しないケースが多々あります。</p>
 </blockquote>
-<p>年額1029円なのでまぁこれで問題ないかな、と。<br>→ ロリポップの契約があったのでそちらですすめる</p>
-<p>ロリポップに独自ドメインを追加しておき、今回用のメールアドレスを作成しておく。<br>転送設定まで完了。</p>
-<h2 id="AWSまわり"><a href="#AWSまわり" class="headerlink" title="AWSまわり"></a>AWSまわり</h2><p>この辺を参考にDNSをまずRoute53にうつす。</p>
-<blockquote>
-<p>Route53にドメインを移管する – blog.10rane.com<br><a href="http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/" target="_blank" rel="external">http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/</a><br>お名前.comからAmazon Route 53へドメインを移管する ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/aws/onamae-to-route53/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/aws/onamae-to-route53/</a><br>既存ドメインの DNS サービスを Amazon Route 53 に移行する - Amazon Route 53<br><a href="http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html" target="_blank" rel="external">http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html</a></p>
-</blockquote>
-<p>そのうえでドメイン移管。</p>
-<p>2017.12.24 ドメイン移管も完了</p>
-<h2 id="メール設定"><a href="#メール設定" class="headerlink" title="メール設定"></a>メール設定</h2><p>ロリポップのメールサーバへのレコード情報はサイトに掲載されてないみたいなので、</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nslookup hogehoge.main.jp</div></pre></td></tr></table></figure>
-<p>とか契約してあるロリポップドメインのIPを調べる。</p>
-<p>MXレコードは <code>10 mx01.lolipop.jp.</code> らしい。</p>
-<h3 id="Route53の設定"><a href="#Route53の設定" class="headerlink" title="Route53の設定"></a>Route53の設定</h3><p>Route53の「Hosted Zones」からドメインを選ぶ。</p>
-<p><img src="../asset/20171224_aws_hostzone01.png" alt=""></p>
-<p>メール用に mail. のサブドメインでAレコードを追加。</p>
-<p><img src="../asset/20171224_aws_hostzone02.png" alt=""></p>
-<p>これはいらなかったのかも？？<br>IPは先ほどしらべたロリポップのもの。</p>
-<p>MXレコードを追加する。</p>
-<p><img src="../asset/20171224_aws_hostzone03.png" alt=""></p>
-<p>こっちはサブドメインではないからそのままで追加。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ dig mersy418.com</div><div class="line">$ dig mail.mersy418.com</div></pre></td></tr></table></figure>
-<p>で確認。</p>
-<p>テストメールを送ったところ、ロリポップのWebメールにもメールがあり、転送先にも転送されていた。</p>
-<blockquote>
-<p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
-</blockquote>
-<h2 id="サブドメインの設定"><a href="#サブドメインの設定" class="headerlink" title="サブドメインの設定"></a>サブドメインの設定</h2><p>Route53に移せたので、</p>
-<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html" target="_blank" rel="external">http://mersy.github.io/article/drupal-lightsail.html</a></p>
-<p>で作成したサイトにサブドメインでアクセス出来るように設定してみる。</p>
-<p><code>Crate Record Set</code> で <code>d8.</code> のサブドメインに対して <code>Aレコード</code> で Lightsailの Public IP を登録。</p>
-<p><a href="http://d8.mersy418.com/" target="_blank" rel="external">http://d8.mersy418.com/</a></p>
-<p>でアクセス出来た。</p>
+<p>プロジェクトを進めるっていう仕事が多いので、その辺のスキルというかできることを伸ばしつつ、ここのところの反省として最低限やっておかないと色々と面倒になることも見えてきたので、単価というラインではないけれども、そこは線引きとしてキープしておかないと、個人としてもチームとしてもいい結果、いい仕事には繋がらないな、ということが見えてきた気がする。</p>
+<p>実戦で解決できることもあるので、その辺ちゃんとやらないとだなぁ。あとは学びなんだろうな。</p>
+<p>ちょうど今日、短歌の話は少しだけチームで話題になったりしたのがなかなか熱い（笑<br>繁忙期とかもあるしなー。</p>
+<p>とりあえず、写真のバックアップ先に Google Photos も追加した。</p>
 
       
     </div>
     <footer>
       
         
-        
   
-  <div class="tags">
-    <a href="/tags/AWS-Route53/">AWS, Route53</a>
+  <div class="categories">
+    <a href="/categories/Book/">Book</a>
   </div>
 
+        
         
   <div class="addthis addthis_toolbox addthis_default_style">
     
