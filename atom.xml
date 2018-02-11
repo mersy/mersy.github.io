@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-10T12:27:17.000Z</updated>
+  <updated>2018-02-11T12:54:00.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写真をどうやって保存しておくか</title>
+    <link href="https://note.mersy418.com/article/blog-keep-photos.html"/>
+    <id>https://note.mersy418.com/article/blog-keep-photos.html</id>
+    <published>2018-02-11T12:40:00.000Z</published>
+    <updated>2018-02-11T12:54:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>橋本さんのブログを読みつつ、、、</p>
+<blockquote>
+<p>PowerPhotosを使ってMacの写真アプリのライブラリを分割バックアップする | BridgeBook.JP<br><a href="https://bridgebook.jp/powerphotos-mac" target="_blank" rel="external">https://bridgebook.jp/powerphotos-mac</a></p>
+</blockquote>
+<p>橋本さんはデジイチとかでとったりされてるからこういう管理方法をされてるんだと思うのだけど。</p>
+<p>コンデジすら使わなくなってしまったこの頃。ほんと、スマホでしか写真も撮らないのが僕も妻もそんな感じで。</p>
+<p>その写真をどこへ保存するか、と言うところで。<br>妻は、iPhoneを買い換える時もデータ引き継いでるらしく、いまの iPhone にそこそこ残ってるらしい。その先として Amazon Prime には保存してるけど。</p>
+<p>僕は、そもそも買い換えるタイミングでまっさらなところからスタートなので、どこかにあげてないとなかったことになってるなぁ。。。<br>と言うか、 マシン自体を短周期で変えてしまうコスパの悪さなので、マシンに保存しておくと言う発想がなかった。<br>とりあえず、 flickr にはあげてあるはずで、 S3あたりにも保存したよなー、、、と言う気がしつつつ。S3落ち着いたら見直してみよ。。。</p>
+<p>あとは、 Amazon Prime を始めてから Amazon Prime Photos にもバックアップとしておいてあるんだけど、昨日本を読んで、　Google Photos にもおくようにした。</p>
+<p>この写真たちを見返すのか？？と言うと、甚だ疑問ではあるのだけど、見返す可能性もあると思って、とりあえず複数環境においておくのがいいんだろうな、、、と。。。</p>
+<p>この写真たちはいつ捨てられることになるんだろうな。。。。</p>
+<hr>
+<p>妻の手元には、出力した写真も大量にあって。<br>これらをデジタルデータにして、ポンと Amazon Prime なり Google Photos においてくれれば楽だろうな、、、と。<br>サービス自体ありそうだけど。。。<br>本を自炊するサービスみたいなもんだろうしねぇ。。。</p>
+<p>この辺って、まだとった写真を次どう使うか？？と言う局面に出会ってないからあまり問題が顕在化してないんだけど、そう言う場面になった時にどうするのがいいんだろうな。探せるか？と言うと、探せる自信はないかもな。<br>写真を日常的に撮っていて仕事にしてる人からしたら既に当たり前の話なのかもしれないけど。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;橋本さんのブログを読みつつ、、、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PowerPhotosを使ってMacの写真アプリのライブラリを分割バックアップする | BridgeBook.JP&lt;br&gt;&lt;a href=&quot;https://bridgebook.jp/powerpho
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Photo" scheme="https://note.mersy418.com/tags/Photo/"/>
+    
+  </entry>
   
   <entry>
     <title>【読了】 半年だけ働く。</title>
@@ -694,41 +732,6 @@
     <summary type="html">
     
       &lt;p&gt;アウトライン・プロセッシング入門&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;htt
-    
-    </summary>
-    
-      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>カンバン仕事術</title>
-    <link href="https://note.mersy418.com/article/book-kanban-in-action.html"/>
-    <id>https://note.mersy418.com/article/book-kanban-in-action.html</id>
-    <published>2018-01-03T07:17:13.000Z</published>
-    <updated>2018-01-03T20:14:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>「カンバン仕事術」を読んだ。<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/487311764X/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/487311764X/mersys-22/ref=nosim</a></p>
-<p>WIPとリードタイムの話はなるほど、とは思った。<br>継続的なプロダクト開発とかだとフィットしやすいんだろうなぁと言う気がしつつ。<br>複数の受託案件のようなプロジェクトが並行して動いていて、メンバーアサインも複数プロジェクトにまたがる場合どうするのがいいのか悩ましいところだなぁ、と。</p>
-<p>プロジェクト単位のボードがありつつ？ユーザー単位のボードがあり、全社ボードがある感じになるのがいいのか？<br>プロジェクトによっては分類の方法もかわるだろうから、そういうわけにもいかないだろうしなぁ。</p>
-<p>いろんな案件に携わっていて、日々Backlogのチケットをあちこち返しているのは、コインを次の人に1つずつまわすような作業になっているんだろうか？？</p>
-<hr>
-<p>サービスクラス＝プロジェクト？、という風に考えられなくもないけど、クラス＝優先度的な発想、というかんじで、緊急とかがあるんだろうな。<br>緊急、確定納期、欠陥、無形、通常項目、が例としては出ていたけど。<br>backlogでいうところだとタスクの種別みたいなものか？</p>
-<p>リモートでコアタイム的なものがない場合、振り返りをどのように行うか？スタンドアップをどのように行うか？<br>振り返りの準備を継続して用意しておきつつ、適当なタイミングで行えるか？</p>
-<hr>
-<p>予定通りにすすめられない・進まない、のは計画の立て方含めて開発着手前の前提とかスケジュール立てる時点で間違ってるところが大いにありそうな気がしている。<br>根本的に考え直さないといけないんだろうな。<br>ツールの使い方どうこうでは解決しなささそうな気がするし、まずは自身の行動を見直さないといけない気がする。</p>
-<p>現状はBacklogを使っているがこれにカンバンの見える化的なわかりやすさをどうにか出来ないかは考えてみても良さそう。<br>あとは、例としてあげられていたようなステップをへるものの場合であれば使い方を工夫すれば調整が出来そうな気もするから何かしら考えてみたい。</p>
-<p>リモートだとリアルホワイトボードは難しいからホワイトボードっぽいことが出来るWebサービスを使うか、Trelloみたいなカンバン系のサービスを使うか、とかでも良いのかもしれない。</p>
-<hr>
-<p>アサインされてるものを、未着手なのか、着手したのか、一旦ペンディングにしているのかを見えるようにするだけでも少しはかわるだろうし、複数あるチケットについて、担当ごとに優先順位を付けられるだけでも変わるのかもしれない。<br>各工程におかれるWIPにアサインされた人をアバターでわかるようにする話はあるけど、その人はそれ以外のプロジェクトもあるからどのようにして串刺ししてみれるかが肝になりそうな気もする。</p>
-<p>そもそも、複数プロジェクトにまたがらないようにする、というのも手ではあるのかもしれないが。<br>ツールに使われないようにしつつ、ツールの見直しも含めて、ツールの制約の中で出来ることを模索していきたいところ。</p>
-<p>WIPの制限によるリードタイム短縮の話は、成果としては大きいものかと思うので、それに当たるような改善はしていかないとだ。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;「カンバン仕事術」を読んだ。&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/487311764X/mersys-22/ref=nosim&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https
     
     </summary>
     
