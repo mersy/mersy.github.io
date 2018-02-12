@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-12T10:15:21.000Z</updated>
+  <updated>2018-02-12T23:33:42.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1Password Families を使ってみる</title>
+    <link href="https://note.mersy418.com/article/blog-1password-family.html"/>
+    <id>https://note.mersy418.com/article/blog-1password-family.html</id>
+    <published>2018-02-12T20:00:00.000Z</published>
+    <updated>2018-02-12T23:33:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>1Password Families を使ってみる</p>
+<blockquote>
+<p>Families - 1Password<br><a href="https://1password.com/families/" target="_blank" rel="external">https://1password.com/families/</a></p>
+</blockquote>
+<p>すでに 1Password では複数の vault を使っていて、共有したりしていて、その辺の扱いがどうなるのかなー、とよくわからないところもあったのだけど、 BUN さんに聞いて大体の不明点は解決。</p>
+<p>1Password は重要なアプリだけに色々慎重になってしまうな。</p>
+<p>なんか、移行があるみたいな記述も見たのだけど、特にそういうのは出てこなかったな、、<br>ということで普通にアイテムをcopyしておいた。</p>
+<hr>
+<p>妻と共有してみた。</p>
+<p>普段、メインが Mac なのであまり気にしてなかったのだけど、 iPhone しかないような状況だと、1pass の手順が若干変わると言うか、意外と面倒そうだなぁ、、、とレクチャーしながら思った。</p>
+<p>これだったら、 iCloud か Chrome に預けてしまうかもしれないよなぁ、、、と。<br>あくまで、複数環境あって、 iPhone に限定されてないからこそ、　1Password が便利ではあるんだろうけど。</p>
+<p>iPhone しか使わないのであれば、 iCloud にロックオンされてもいいだろうけど、 Chrome（Google）に依存するとかその辺はまだあるんだろうなぁ、、と思った。<br>と言うか、PCとSPを使うのが当たり前だと気づかなかったのだけど、SPだけだと色々不便なところもあるのねぇ、、、と今更ながらに。</p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>1Passwordアカウントのつくりかた （個人および家族アカウント） – Lifehacking.jp<br><a href="http://lifehacking.jp/2017/03/creating-a-1password-account/" target="_blank" rel="external">http://lifehacking.jp/2017/03/creating-a-1password-account/</a></li>
+<li>1Password Families契約してみた - Qiita<br><a href="https://qiita.com/pechefamille/items/45179098bb3c4b8e6a09" target="_blank" rel="external">https://qiita.com/pechefamille/items/45179098bb3c4b8e6a09</a></li>
+<li>1Password サブスクリプション版でおしゃれに家族を守る - おしゃれな気分でプログラミング<br><a href="http://neko-mac.blogspot.com/2017/05/1password.html" target="_blank" rel="external">http://neko-mac.blogspot.com/2017/05/1password.html</a></li>
+<li>1Passwordを買い切り版からライセンス版に移行しました<br><a href="https://blog.lorentzca.me/move-existing-1password-to-license-version/" target="_blank" rel="external">https://blog.lorentzca.me/move-existing-1password-to-license-version/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1Password Families を使ってみる&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Families - 1Password&lt;br&gt;&lt;a href=&quot;https://1password.com/families/&quot; target=&quot;_blank&quot; rel=&quot;exte
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>タスクの確認をメール通知からAsanaに変更してみた</title>
@@ -706,37 +749,6 @@
     </summary>
     
       <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>立ち戻るメモツール</title>
-    <link href="https://note.mersy418.com/article/dailymemo.html"/>
-    <id>https://note.mersy418.com/article/dailymemo.html</id>
-    <published>2018-01-04T13:06:58.000Z</published>
-    <updated>2018-01-04T13:16:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>使い捨てのアウトラインというので、そこに一纏めにするというのがあったのだけど。<br>とりあえず、似たようなことを、mac, iOS 標準のmemoアプリで試してみたりしてる。<br>確認しようと思ってることや、今日やらないといけないことを忘れないようにするメモ、とか。</p>
-<p>Milanote なんかも良さそうな気はしている。</p>
-<p>The notes app for creative work - Milanote<br><a href="https://www.milanote.com/" target="_blank" rel="external">https://www.milanote.com/</a></p>
-<p>ただ、結構リッチなかんじだから、スマホだとどうなんだろうな、とかが気になる。<br>テキストメモ中心なら scrapbox とかもいいんだろうか。。</p>
-<p>Scrapbox - A workspace that organizes for you<br><a href="https://scrapbox.io/" target="_blank" rel="external">https://scrapbox.io/</a></p>
-<p>どちらかというとたくさん書いて整理する、という感じなんだろうな。</p>
-<p>昔は紙のノートというページ数も幅も制限があるなかで整理してまとめるとかしていた気がする。<br>書くのもタイピングよりは手書きの方が遅い訳だし。<br>（なんか、最近変換がばかになったのか、自分の日本語がおかしいのかtypoなり誤変換が多い気もするのだけど・・・）</p>
-<p>デジタルなメモとしてのノートを手に入れて、コレまでの制限が取っ払われてハッピーになった気もする。<br>が、その制限のないなかで逆にとっちらかったり、よくわからなくなってしまったりしてる気もする。</p>
-<p>ツールを使う側が追いつけていない、成長できていないんだろうな。</p>
-<p>とりあえずその母艦というか、スタート的なメモとして、Workflowy をまた試してみるかな。</p>
-<p>WorkFlowy - Organize your brain.<br><a href="https://workflowy.com/" target="_blank" rel="external">https://workflowy.com/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使い捨てのアウトラインというので、そこに一纏めにするというのがあったのだけど。&lt;br&gt;とりあえず、似たようなことを、mac, iOS 標準のmemoアプリで試してみたりしてる。&lt;br&gt;確認しようと思ってることや、今日やらないといけないことを忘れないようにするメモ、とか。&lt;/
-    
-    </summary>
-    
-      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
   </entry>
