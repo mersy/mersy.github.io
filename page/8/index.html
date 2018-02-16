@@ -61,6 +61,45 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-22T19:00:00.000Z"><a href="/article/labelOnTask.html">2013-10-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/labelOnTask.html">Taskにつけるラベルの考え方</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Github Issuesを使うが故のラベリングというところはあるんだろうけど、この分類も参考にしたいところ。</p>
+<blockquote><br>Github Issues を利用したリリースマネージャのお仕事 - hakobera’s blog<br><a href="http://hakobera.hatenablog.com/entry/2013/10/22/133014" target="_blank" rel="external">http://hakobera.hatenablog.com/entry/2013/10/22/133014</a><br><br>  <table><br>  <tbody><tr><br>    <th>from-customer<br>    </th><td>クライアントからの問い合わせをトリガーに作成された Issue。この時点ではバグかどうかはわからないが、取りこぼさないようにとりあえず Issue として作成する</td><br>  </tr><br>  <tr><br>    <th>bug</th><br>    <td>社内で気が付いた Issue、もしくは from-customer の Issue がバグだった場合につける</td><br>  </tr><br>  <tr><br>    <th>critical</th><br>    <td>bugの中でも特に緊急性の高い Issue につける</td><br>  </tr><br>  <tr><br>    <th>confirm-spec</th><br>    <td>仕様確認が必要な Issue につける</td><br>  </tr><br>  <tr><br>    <th>final-check</th><br>    <td>修正が完了し、ビジネス側、クラアントに最終チェックして欲しい Issue につける</td><br>  </tr><br>  </tbody></table><br></blockquote>
+
+<p>ラベルでありながらいくつかの属性を持ってそうな感じ。</p>
+<p>from-customer、bug はどちらかというとメモ的要素も大きそうだけれども、これが優先度にもつながるから会った方がよさそう。</p>
+<p>critical は優先度高い物を目立たせるため。</p>
+<p>confirm-spec、final-check はステータスってかんじか？</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-17T23:00:00.000Z"><a href="/article/flexibleSearchOnJekyll.html">2013-10-18</a></time>
       
       
@@ -599,52 +638,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-11T02:15:00.000Z"><a href="/article/DataAPIforCategoryArchive.html">2013-10-11</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/DataAPIforCategoryArchive.html">カテゴリアーカイブをData APIで出力</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>カテゴリアーカイブをData APIで出す用にしてみた。これまでのセッションの物を参考に（コピペ）して。</p>
-<blockquote>
-<p>travel カテゴリアーカイブ<br><a href="http://www.mersy418.com/category.html?label=travel" target="_blank" rel="external">http://www.mersy418.com/category.html?label=travel</a></p>
-</blockquote>
-<p>カテゴリでlistentryすることはできない？みたいなので、プラグインで拡張。<br>プラグインの話はMTDDC Tokyo 2013 の時のセッション資料が役立った。</p>
-<p><iframe src="http://www.slideshare.net/slideshow/embed_code/24921437" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/bitpart/mtddc-2013" title="Data API と flexibleSearch、MTAppjQuery で広がるMT6の使い方" target="_blank">Data API と flexibleSearch、MTAppjQuery で広がるMT6の使い方</a> </strong> from <strong><a href="http://www.slideshare.net/bitpart" target="_blank">bitpart</a></strong> </div></p>
-<p>大枠はこんなところなのかしら。</p>
-<script src="//gist.github.com/7023856.js"></script>
-<p>Data API の仕組みもだけど、JavaScriptだなー。。。</p>
-<ul>
-<li>Quick reference · movabletype/Documentation Wiki<br><a href="https://github.com/movabletype/Documentation/wiki/Quick-reference" target="_blank" rel="external">https://github.com/movabletype/Documentation/wiki/Quick-reference</a></li>
-<li>DataAPI SDK english MT.DataAPI Endpoint method listEntries · movabletype/mt-data-api-sdk-js Wiki<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-listEntries" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-listEntries</a></li>
-</ul>
-<p>まぁ、Dynamicでやりゃイイだろ、という話。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -670,7 +663,7 @@
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>15</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>16</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>8</small></li>
   
@@ -823,6 +816,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-ecobuy.html">近所のスーパーで EcoBuy の実証実験が行われていた</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-1password-family.html">1Password Families を使ってみる</a>
       </li>
     
@@ -838,10 +835,6 @@
         <a href="/article/book-work-halfyear.html">【読了】 半年だけ働く。</a>
       </li>
     
-      <li>
-        <a href="/article/blog-readkit.html">結局RSSリーダーはReadKitにしました</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -853,7 +846,7 @@
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>15</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>16</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>8</small></li>
     

@@ -61,6 +61,91 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-05T01:53:31.000Z"><a href="/article/casperjs.html">2014-05-05</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/casperjs.html">CasperJSメモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>CasperJS</p>
+<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
+<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
+<pre><code>$ brew update
+$ brew install casperjs --devel
+$ casperjs --version
+1.1.0-beta3
+</code></pre><p>インストールできた</p>
+<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
+<blockquote>
+<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html" target="_blank" rel="external">http://mersy.github.io/homebrew.html</a></p>
+</blockquote>
+<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
+<pre><code>// sample01.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net/&apos;,function(){
+  this.echo(this.getTitle());
+});
+
+casper.run();
+</code></pre><p>sample01.jsを作成</p>
+<pre><code>$ casperjs sample01.js
+bit part 合同会社
+</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
+<pre><code>// sample2.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;,function(){
+  this.capture(&apos;sample02.png&apos;);
+});
+
+casper.run();
+</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
+<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
+var casper = require(&apos;casper&apos;).create();
+
+casper.start(&apos;http://bit-part.net&apos;);
+
+casper.viewport(1024, 768).then(function() {
+    this.capture(&apos;sample03.png&apos;);
+});
+
+casper.run();
+</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
+<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
+<blockquote>
+<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
+<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-05-02T07:06:37.000Z"><a href="/article/publish.html">2014-05-02</a></time>
       
       
@@ -720,45 +805,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-22T19:00:00.000Z"><a href="/article/labelOnTask.html">2013-10-23</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/labelOnTask.html">Taskにつけるラベルの考え方</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Github Issuesを使うが故のラベリングというところはあるんだろうけど、この分類も参考にしたいところ。</p>
-<blockquote><br>Github Issues を利用したリリースマネージャのお仕事 - hakobera’s blog<br><a href="http://hakobera.hatenablog.com/entry/2013/10/22/133014" target="_blank" rel="external">http://hakobera.hatenablog.com/entry/2013/10/22/133014</a><br><br>  <table><br>  <tbody><tr><br>    <th>from-customer<br>    </th><td>クライアントからの問い合わせをトリガーに作成された Issue。この時点ではバグかどうかはわからないが、取りこぼさないようにとりあえず Issue として作成する</td><br>  </tr><br>  <tr><br>    <th>bug</th><br>    <td>社内で気が付いた Issue、もしくは from-customer の Issue がバグだった場合につける</td><br>  </tr><br>  <tr><br>    <th>critical</th><br>    <td>bugの中でも特に緊急性の高い Issue につける</td><br>  </tr><br>  <tr><br>    <th>confirm-spec</th><br>    <td>仕様確認が必要な Issue につける</td><br>  </tr><br>  <tr><br>    <th>final-check</th><br>    <td>修正が完了し、ビジネス側、クラアントに最終チェックして欲しい Issue につける</td><br>  </tr><br>  </tbody></table><br></blockquote>
-
-<p>ラベルでありながらいくつかの属性を持ってそうな感じ。</p>
-<p>from-customer、bug はどちらかというとメモ的要素も大きそうだけれども、これが優先度にもつながるから会った方がよさそう。</p>
-<p>critical は優先度高い物を目立たせるため。</p>
-<p>confirm-spec、final-check はステータスってかんじか？</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -784,7 +830,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>15</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>16</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>8</small></li>
   
@@ -937,6 +983,10 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-ecobuy.html">近所のスーパーで EcoBuy の実証実験が行われていた</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-1password-family.html">1Password Families を使ってみる</a>
       </li>
     
@@ -952,10 +1002,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/book-work-halfyear.html">【読了】 半年だけ働く。</a>
       </li>
     
-      <li>
-        <a href="/article/blog-readkit.html">結局RSSリーダーはReadKitにしました</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -967,7 +1013,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>15</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>16</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>8</small></li>
     
