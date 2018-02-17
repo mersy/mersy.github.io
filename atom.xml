@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-16T22:16:19.000Z</updated>
+  <updated>2018-02-17T11:27:00.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【読了】明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</title>
+    <link href="https://note.mersy418.com/article/book-healthybody.html"/>
+    <id>https://note.mersy418.com/article/book-healthybody.html</id>
+    <published>2018-02-17T11:12:08.000Z</published>
+    <updated>2018-02-17T11:27:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ<br><a href="https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title" target="_blank" rel="external">https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title</a></p>
+</blockquote>
+<p>を読んだ</p>
+<div class="mm-middle" style="margin-bottom:0px;"><div class="mm-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRCY188/mersys-22/ref=nosim" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/518M4ke7ScL._SL160_.jpg" alt="明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ" title="明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ" width="111" height="160" border="0"></a></div><div class="mm-content" style="float:left;margin-left:15px;line-height:120%"><div class="mm-title" style="line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRCY188/mersys-22/ref=nosim" target="_blank">明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</a></div><div class="mm-detail" style="margin-top:10px;">渡部卓<br>クロスメディア・パブリッシング（インプレス） ( 2016-06-20 )<br><div style="margin:7px 0px"><a href="http://mediamarker.net/u/mersy/?asin=B01JRCY188" target="_blank">mersy’s bookshelfで詳細を見る</a></div></div></div><div style="clear:left"></div></div>
+
+<p>仮眠できるときは仮眠しよう。</p>
+<p>んで僕の場合は酒が問題だな。それがパフォーマンスを落とす原因であることも明らかであるはずなので、いい感じにバランスを取らないとだなぁ<br>、、、</p>
+<p>普段からそこまでストレスは感じない性格だけど。<br>匂いってのは考えてみていいのかもなー。</p>
+<p>ストレスを感じないためにできることはあるはずなので、その辺は参考にしておきたい。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title&quot; target=
+    
+    </summary>
+    
+      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</title>
@@ -41,9 +72,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
     
   </entry>
   
@@ -703,44 +734,6 @@
     
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>memo netlify cms</title>
-    <link href="https://note.mersy418.com/article/netlify.html"/>
-    <id>https://note.mersy418.com/article/netlify.html</id>
-    <published>2018-01-14T11:41:44.000Z</published>
-    <updated>2018-01-14T11:55:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Netlify CMS | Open-Source Content Management System<br><a href="https://www.netlifycms.org/docs/start-with-a-template/" target="_blank" rel="external">https://www.netlifycms.org/docs/start-with-a-template/</a></p>
-<p>CMSっぽいものがあるみたいなので試してみた。</p>
-<p>githubのリポジトリと連携。</p>
-<p><img src="../asset/20180114_netlify01.png" alt=""></p>
-<p>Static Site Generator については GatsbyJS を選択してみた。Hugoも選択可能。</p>
-<p>GatsbyJS<br><a href="https://www.gatsbyjs.org/" target="_blank" rel="external">https://www.gatsbyjs.org/</a></p>
-<p>ボタンをポチるだけで問題なくdeployまでできてすげー、と。</p>
-<p><code>/admin/</code> で管理画面ぽいのもあるのでコレは便利そう。</p>
-<p><img src="../asset/20180114_netlify02.png" alt=""></p>
-<p>最初、管理画面から記事を投稿した際にpathの指定を <code>/</code> からはじめなかったからコンパイルエラーになっていた。</p>
-<p>原稿のmdファイルもmasterにコミットすれば反映された。<br>これは結構理想に近いかもしれない。</p>
-<p>アイテム周りの置き場所がいまいちわかっていないのでその辺は整理してみる。</p>
-<p>Home | Gatsby + Netlify CMS<br><a href="https://mersy.netlify.com/" target="_blank" rel="external">https://mersy.netlify.com/</a></p>
-<p>できれば見た目の選択が簡単にできて、あとは原稿とアイテムを管理画面、ローカルからのコミットの両方が出来れば結構いい感じかも。</p>
-<p>下書きっていう概念がないのかな。その辺はもう少しドキュメントを読んでみようと思う。</p>
-<p>もし問題なく使えるようであれば、サブドメインを設定しつつ、githubpagesにおいてるものを持って行ってもいいのかもしれない。<br>pathの追加が必要ってことだろうなー。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Netlify CMS | Open-Source Content Management System&lt;br&gt;&lt;a href=&quot;https://www.netlifycms.org/docs/start-with-a-template/&quot; target=&quot;_blank&quot; r
-    
-    </summary>
-    
-      <category term="CMS" scheme="https://note.mersy418.com/categories/CMS/"/>
-    
-    
-      <category term="Netlify" scheme="https://note.mersy418.com/tags/Netlify/"/>
     
   </entry>
   
