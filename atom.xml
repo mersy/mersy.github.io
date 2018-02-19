@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-17T11:42:00.000Z</updated>
+  <updated>2018-02-19T11:40:07.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>セミナーとかでiPadを使っていこう思った</title>
+    <link href="https://note.mersy418.com/article/blog-use-ipad.html"/>
+    <id>https://note.mersy418.com/article/blog-use-ipad.html</id>
+    <published>2018-02-19T11:00:00.000Z</published>
+    <updated>2018-02-19T11:40:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>日曜日、 BacklogWorld に参加してきた。Sim Free の iPad Pro でメモをとったりしてたけど意外と便利だった。<br>1日中のセミナーでも電源が持つのでありがたい。<br>Macbook は3時間ちょっとしか持たないし。そもそも充電しないと iPhone のバッテリも怪しいし。<br>テキストのメモだけであれば PC 使うよりもいいのかもしれない。テザリングもできるし、手書きもできるな。</p>
+<p>先日、電車移動中に音声会議する時に画面共有しながら話すと画面が大きいのでそのまま話せて便利。<br>トンネルだったり、回線が4Gから3Gになってしまうのはちょっと辛かったけど、、、、<br>新幹線でやった時はPCにテザリングでやったけど、 iPad でやってみてもいいのかも？？<br>まぁ、オンライン会議はできるだけ家にいる時がいいけど。</p>
+<p>iPad は Kindle 専用くらいで考えていたから小さい方にしたけど大きい方でもよかったかもなー</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;日曜日、 BacklogWorld に参加してきた。Sim Free の iPad Pro でメモをとったりしてたけど意外と便利だった。&lt;br&gt;1日中のセミナーでも電源が持つのでありがたい。&lt;br&gt;Macbook は3時間ちょっとしか持たないし。そもそも充電しないと iPh
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="iPad" scheme="https://note.mersy418.com/tags/iPad/"/>
+    
+  </entry>
   
   <entry>
     <title>【読了】明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</title>
@@ -72,9 +97,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
       <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
@@ -700,40 +725,6 @@
       <category term="backlog" scheme="https://note.mersy418.com/tags/backlog/"/>
     
       <category term="jira" scheme="https://note.mersy418.com/tags/jira/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>memo blogsync</title>
-    <link href="https://note.mersy418.com/article/blogsync-hatena.html"/>
-    <id>https://note.mersy418.com/article/blogsync-hatena.html</id>
-    <published>2018-01-20T00:41:18.000Z</published>
-    <updated>2018-01-20T00:52:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ブログ書くツールを探してるというか考えているのだけど。<br>MTでもWPでもFlat File系でもいいといえばよい。</p>
-<p>なんとなく、Githubとかにmdファイルと画像とかをcommitしたら反映されるようになってほしいな、というのがありつつ。<br>そのうえで管理画面的なのもあって、そこから更新すると同じようにGitに反映されるのがいいなぁ、と。</p>
-<p>前者はPCとかで作業してるときはその方が楽そうだし、後者はブラウザからやるときは楽そうだな、と。<br>netlify cms は iPad で日本語入力が出来なかった。。。それだけが残念すぎる。</p>
-<p>mdファイルで考えてるのはデータの持ち運びやすさが大きいかな、と。</p>
-<p>サーバに静的ジェネレータおいといてそこで生成させるとかでも出来そうな気がするけど。<br>MTとDataAPIでもいいわけだし。</p>
-<p>contentfulとかnetlify cmsとかみてて大体よさそうなのだけど最後なんかちょっとたりないな、、と。<br>ないなら作ればいいのかもしれないけど。</p>
-<p>はてなブログと同期するツールがあったのだけどこれがなかなかよさそうなかんじではあるけど、鬼門はやはり画像か。</p>
-<ul>
-<li>motemen/blogsync: Push and pull blog entries from/to local filesystem<br><a href="https://github.com/motemen/blogsync" target="_blank" rel="external">https://github.com/motemen/blogsync</a></li>
-<li>Markdownドキュメントをgithubで管理して、はてなブログでホストする ~ Mackerelの場合 - Hatena Developer Blog<br><a href="http://developer.hatenastaff.com/entry/developers-advent-calendar-2015/day7" target="_blank" rel="external">http://developer.hatenastaff.com/entry/developers-advent-calendar-2015/day7</a></li>
-</ul>
-<p>この辺なんかいいツールがないかなー、といってブログを書こうとおもって、ツールを探すという本末転倒なことは変わらない。</p>
-<p>API提供してるものを間にかませつつ、SPA的なフレームワークみたいなのがあれば良さそうな気がする。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ブログ書くツールを探してるというか考えているのだけど。&lt;br&gt;MTでもWPでもFlat File系でもいいといえばよい。&lt;/p&gt;
-&lt;p&gt;なんとなく、Githubとかにmdファイルと画像とかをcommitしたら反映されるようになってほしいな、というのがありつつ。&lt;br&gt;そのう
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
     
   </entry>
   
