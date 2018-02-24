@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-19T11:40:07.000Z</updated>
+  <updated>2018-02-24T13:06:15.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ライブ変換に変えてみてから一ヶ月たった</title>
+    <link href="https://note.mersy418.com/article/blog-live-input-1month.html"/>
+    <id>https://note.mersy418.com/article/blog-live-input-1month.html</id>
+    <published>2018-02-24T12:00:00.000Z</published>
+    <updated>2018-02-24T13:06:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>なんか気づいたら今週が終わっていて一週間があっという間に終わってしまった感。<br>今日は今日で帳簿処理して半日終了。計画的に過ごさないとですねー。</p>
+<hr>
+<p>ライブ変換を試してみて一ヶ月がたった。</p>
+<blockquote>
+<p>今更だけどMacのライブ変換に戻してみる | mersy note<br><a href="https://note.mersy418.com/article/mac-live-input.html">https://note.mersy418.com/article/mac-live-input.html</a></p>
+</blockquote>
+<p>とりあえず使ってみてはいるが、確かに変換というか、スペースを押す数は減った気はする。<br>便利なような気はするけども、時々バグったりするからその辺は気になるといえば気になる。<br>まだ、そこまでクリティカルではないけど。</p>
+<p>PCだといいのだけど、iPad でも同じようにできるといいなぁという感じで思うことが多い気がする。</p>
+<p>あとは、ATOKだといい感じに変換してくれるのがなくなるだけに、その辺はどうするかなぁ、、と。<br>typoを減らせばいいんだけどね、、、</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;なんか気づいたら今週が終わっていて一週間があっという間に終わってしまった感。&lt;br&gt;今日は今日で帳簿処理して半日終了。計画的に過ごさないとですねー。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ライブ変換を試してみて一ヶ月がたった。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今更だけどMacのラ
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>セミナーとかでiPadを使っていこう思った</title>
@@ -682,49 +717,6 @@
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
       <category term="ATOK" scheme="https://note.mersy418.com/tags/ATOK/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>どのプロジェクト（タスク）管理ツールを使うか問題2017</title>
-    <link href="https://note.mersy418.com/article/blog-20180120project.html"/>
-    <id>https://note.mersy418.com/article/blog-20180120project.html</id>
-    <published>2018-01-20T02:16:24.000Z</published>
-    <updated>2018-01-20T02:50:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ちょうど昨年後半 bit part でもredmineからの乗り換えを考えてた。</p>
-<p>FablicにJIRAを導入をしようとしたけど諦めた話 - inFablic | Fablic, inc. Developer’s Blog.<br><a href="http://in.fablic.co.jp/entry/jira-not-adopted" target="_blank" rel="external">http://in.fablic.co.jp/entry/jira-not-adopted</a></p>
-<ul>
-<li>gitlab</li>
-<li>wrike</li>
-<li>taskworld</li>
-<li>backlog</li>
-</ul>
-<p>あたりをベースに検討して、費用ともろもろ考えて結局backlogにおちついた。</p>
-<p>taskworldがリポジトリ周りのサービスとしっかり連携できればもしかしたらtaskworldになったかもしれない。</p>
-<p>んで、最近、複数のspaceのbacklogにいて、それらを串刺ししてみれないか、というのがあったりもする。<br>結局それぞれを見に行かないといけなくなるし。</p>
-<p>この辺サービスとしてつくってみてもいいのかなぁ。</p>
-<p>Backlog ショーケース｜開発者向け｜Backlog [バックログ]<br><a href="https://www.backlog.jp/developer/showcase/" target="_blank" rel="external">https://www.backlog.jp/developer/showcase/</a></p>
-<p>で紹介されてる <code>Backlog Milestones</code> が近いのかな。<br>ちょっと試してみよう。</p>
-<hr>
-<p>追記20180120-1150</p>
-<p>Githubを対象にした ZenHub や Waffle.io みたいなもんとかんがえるといいのかなー。</p>
-<p>ZenHub<br><a href="https://www.zenhub.com/" target="_blank" rel="external">https://www.zenhub.com/</a><br>Waffle.io<br><a href="https://waffle.io/" target="_blank" rel="external">https://waffle.io/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ちょうど昨年後半 bit part でもredmineからの乗り換えを考えてた。&lt;/p&gt;
-&lt;p&gt;FablicにJIRAを導入をしようとしたけど諦めた話 - inFablic | Fablic, inc. Developer’s Blog.&lt;br&gt;&lt;a href=&quot;http:
-    
-    </summary>
-    
-      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
-    
-    
-      <category term="backlog" scheme="https://note.mersy418.com/tags/backlog/"/>
-    
-      <category term="jira" scheme="https://note.mersy418.com/tags/jira/"/>
     
   </entry>
   
