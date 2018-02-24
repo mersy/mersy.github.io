@@ -61,6 +61,67 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-04-22T21:31:34.000Z"><a href="/article/mtfor.html">2014-04-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtfor.html">mtForであれこれ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>MTForで1ずつ減らす方法（from=”12” to=”1” の感じ） | かたつむりくんのWWW<br><a href="http://www.tinybeans.net/blog/2014/04/23-054120.html" target="_blank" rel="external">http://www.tinybeans.net/blog/2014/04/23-054120.html</a></p>
+</blockquote>
+<p>をみて、確かに1ずつ減ってるなーとおもいつつ、reverseがあるmt:loopだとできないのかしら？と言うことで試してみた</p>
+<pre><code>&lt;mt:SetVar name=&quot;from&quot; value=&quot;1&quot;&gt;
+&lt;mt:SetVar name=&quot;to&quot; value=&quot;12&quot;&gt;
+&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
+&lt;mt:SetVarBlock name=&quot;hoge&quot; function=&quot;push&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;&lt;/mt:SetVarBlock&gt;
+&lt;/mt:For&gt;
+&lt;mt:loop name=&quot;hoge&quot; glue=&quot; / &quot; sort_by=&quot;reverse&quot;&gt;
+&lt;mt:Var name=&quot;__value__&quot;&gt;月
+&lt;/mt:loop&gt;
+</code></pre><p>こんな感じでかけばいけますね。</p>
+<p>mt:For,mt:Loopはまだまだ使いこなせてる気がしないので、 @tinybeans を見習ってがんばりたいところです。</p>
+<h3 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h3><p>そもそも、reverse なんか使わずにいけますね。</p>
+<pre><code>&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
+&lt;mt:SetVarBlock name=&quot;fuga&quot; function=&quot;unshift&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;&lt;/mt:SetVarBlock&gt;
+&lt;/mt:For&gt;
+&lt;mt:loop name=&quot;fuga&quot; glue=&quot; / &quot;&gt;
+&lt;mt:Var name=&quot;__value__&quot;&gt;月
+&lt;/mt:loop&gt;
+</code></pre><h3 id="追記2"><a href="#追記2" class="headerlink" title="追記2"></a>追記2</h3><p>汎用性低そうだけど、prependでもいけますね。</p>
+<pre><code>&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
+&lt;mt:SetVarBlock name=&quot;hogehoge&quot; prepend=&quot;1&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;月&lt;mt:Unless name=&quot;__first__&quot;&gt; / &lt;/mt:Unless&gt;&lt;/mt:SetVarBlock&gt;
+&lt;/mt:For&gt;
+&lt;mt:Var name=&quot;hogehoge&quot;&gt;
+</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>MTSetVar | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/setvar.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/setvar.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-03T10:00:44.000Z"><a href="/article/powercms.html">2014-04-03</a></time>
       
       
@@ -615,62 +676,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-13T22:30:00.000Z"><a href="/article/pullrequestMtml.html">2013-10-14</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/pullrequestMtml.html">Pull Request でMTMLのレビュー？</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>MTMLのバージョン管理<br><a href="http://mersy.github.io/mtmlVersionControl.html" target="_blank" rel="external">http://mersy.github.io/mtmlVersionControl.html</a></p>
-<p>この話に通じるところがあるのかもしれないけれども、Pull Request ベースの開発とかのスライドを見ながら。</p>
-<script async class="speakerdeck-embed" data-id="bb1c0a10f1bc0130062a02c06ebb4dee" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-<script async class="speakerdeck-embed" data-id="e259eab004af0131fe7d62fc9b040ffd" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
-
-<blockquote>
-<p>「GitHubでつくる、たのしい開発現場」YAPC:ASIA Tokyo2013 | Act as Professional - hiroki.jp<br><a href="http://hiroki.jp/yapcasia-2013-github" target="_blank" rel="external">http://hiroki.jp/yapcasia-2013-github</a></p>
-</blockquote>
-<script async class="speakerdeck-embed" data-id="51b4379004a301319a7f5a401ba27687" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-<p>プロジェクトに使うMTMLをGithubとかで管理はしてて、それのレビューとかをpull requestすることはできそうなきがする。</p>
-<p>できそうなきはするんだけど、一度MTに入れて動くかどうかを試さないといけないというのが難しいところなきもする。</p>
-<p>プログラム書かれてる方々はテストとかそういうのをまわしてるんだろうけど、MTMLを書くことをコードを書く、というのと大体同義に扱うと、テストと同じあたりの位置づけになるんだろうなぁ。<br>MTの環境がサーバーに1つしかないとかなると当ててテストなんて出来ないし。<br>んじゃ案件ごとにローカルに環境をおければいいんだろうか。。それが現実的なのかなぁ、、、、</p>
-<p>プログラムを書くか、テンプレートを書くかということで根本的に違う話で、そのまま当てはめることが出来ない、ってのもあるんだろうな。</p>
-<blockquote>
-<p>非開発者もGitHub Flowに巻き込んでみんなハッピーになった話 - Masatomo Nakano Blog<br><a href="http://blog.madoro.org/mn/93" target="_blank" rel="external">http://blog.madoro.org/mn/93</a></p>
-<p>具体的には、N個(N=アクティブな開発者の数くらいが良さそう)のfeature branchのテスト用のHeroku appを予め作っておいて、feature branchにpushされるたびに、Jenkinsからその中の一つへデプロイされる感じにした。</p>
-</blockquote>
-<p>こういう環境が用意できれば、branch on MT 的なイメージはだいぶ進められるんじゃないかなぁ。1つの検証環境に紐尽く複数の開発環境。開発環境でOKの物がどんどん検証環境にpushされていくイメージ。<br>開発も確認もダイナミックに進められれば問題はなさそう。</p>
-<blockquote>
-<p>また、開発者も、それまでは、merge後、非開発者に指摘されると「めんどくせーなー」という意識が生まれがちで、かつ、その場合mergeから時間が経っていることも多く、その変更に対するフレッシュさが減り、再度作業を始めるまでの心理的な負担(実際、実装を思い出すための脳のコストも高そう)も高かった。それが、pull-request中に非開発者からフィードバックが貰えることで、そのpull-requestにcommitを追加することだけでさくっと修正できて、全体のスピード感がとてもあがったし、開発者の負担も減った。</p>
-</blockquote>
-<p>2つも3つも進んだと思ったら、またスタートへ戻るというのはやっぱり負担が大きいよな。。。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -696,7 +701,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>19</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>20</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -787,6 +792,8 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
   
+    <li><a href="/tags/Direction/">Direction</a><small>1</small></li>
+  
     <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
   
     <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
@@ -810,6 +817,8 @@ $ knife solo prepare test_vagrant5
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
     <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Team/">Team</a><small>1</small></li>
   
     <li><a href="/tags/Todo/">Todo</a><small>1</small></li>
   
@@ -853,6 +862,10 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-ux-for-member.html">一応個人的に気をつけてる（つもりな）こと</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-live-input-1month.html">ライブ変換に変えてみてから一ヶ月たった</a>
       </li>
     
@@ -868,10 +881,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/alfred-workflow-regex.html">AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</a>
       </li>
     
-      <li>
-        <a href="/article/blog-ecobuy.html">近所のスーパーで EcoBuy の実証実験が行われていた</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -883,7 +892,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>19</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>20</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
