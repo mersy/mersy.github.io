@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-24T22:50:04.000Z</updated>
+  <updated>2018-02-25T04:49:08.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacBook のキーボードを掃除してみる</title>
+    <link href="https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html"/>
+    <id>https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html</id>
+    <published>2018-02-25T04:00:00.000Z</published>
+    <updated>2018-02-25T04:49:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>なんか MacBook のキーボードがダブルクリックというか、連打される感じになってしまって困ってた。<br>常に発生するわけではないからなんなんだろうな、、、</p>
+<p>修理とかに出す余裕はないので、エアダスターとやらを買ってみて掃除してみた。</p>
+<blockquote>
+<p>MacBook や MacBook Pro のキーボードのお手入れ方法 - Apple サポート<br><a href="https://support.apple.com/ja-jp/HT205662" target="_blank" rel="external">https://support.apple.com/ja-jp/HT205662</a></p>
+</blockquote>
+<p>果たしてこれで改善するのだろうか。。。<br>そういや、時々returnキーが反応しない時もあるし、それも改善するといいな。</p>
+<p>と、書いてる今は特に問題なさそうな気がする。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;なんか MacBook のキーボードがダブルクリックというか、連打される感じになってしまって困ってた。&lt;br&gt;常に発生するわけではないからなんなんだろうな、、、&lt;/p&gt;
+&lt;p&gt;修理とかに出す余裕はないので、エアダスターとやらを買ってみて掃除してみた。&lt;/p&gt;
+&lt;blockq
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>一応個人的に気をつけてる（つもりな）こと</title>
@@ -689,45 +720,6 @@
     
     
       <category term="Sketch" scheme="https://note.mersy418.com/tags/Sketch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ramboxを使い始めてみた</title>
-    <link href="https://note.mersy418.com/article/use-rambox.html"/>
-    <id>https://note.mersy418.com/article/use-rambox.html</id>
-    <published>2018-01-27T05:32:47.000Z</published>
-    <updated>2018-01-28T08:21:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ちょっと必要があってRamboxを使い始めてみた。</p>
-<blockquote>
-<p>Rambox<br><a href="http://rambox.pro/" target="_blank" rel="external">http://rambox.pro/</a></p>
-</blockquote>
-<p>似たようなツールはいくつかあって知ってはいたけど、使ったことはなかった。</p>
-<p>これまでメールとカレンダーはGoogle関係のみだったので、MailPlane をずっと使い続けていた。<br>単にこれはなれでしかなくて、他のツールでもいいんだけど。</p>
-<p>今回Googleではなく、Office 365 のアカウント？アウトルックのアカウントのメールを受け取る必要があり、Webメールを常に見るのはちょっと面倒だな、と思ったので常時開いているメール関係のアプリに集約したかったというのがあり。</p>
-<p>常時開いているアプリなので見落としも減るだろうな、と。<br>Rambox に Slack も入れてみたけど、Cmd + F で検索が動かないとか基本的なところがきになるので、 Slack はこれまで通り標準のアプリで動かしておくことにする。</p>
-<p>Rambox メールアプリだとリンクのコピーができないのがちょっと使いづらい。<br>フォント周りはなんか太いのか少しきになるけどそのへんはいずれ慣れるかもしれないからとりあえずスルー。</p>
-<p>探してみたら Shift も対応してそうなので次はそれを試してみてもいいのかもしれないな。</p>
-<blockquote>
-<p>Shift - The Best Desktop Email Client for Gmail and Outlook.com<br><a href="https://tryshift.com/" target="_blank" rel="external">https://tryshift.com/</a></p>
-</blockquote>
-<p>軽いといいんだけどなー。</p>
-<p>【追記20180127-1650】<br>Shift を試して見た。<br>今回発行されている Outlook アカウントだとアクセスできる権限が付与されていないようで使えなかった。<br>残念。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ちょっと必要があってRamboxを使い始めてみた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Rambox&lt;br&gt;&lt;a href=&quot;http://rambox.pro/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://rambox.pro/&lt;/a
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mail" scheme="https://note.mersy418.com/tags/Mail/"/>
     
   </entry>
   

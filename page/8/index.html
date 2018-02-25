@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 8 | mersy note</title>
+  <title>Page 8 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,76 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-04-24T06:30:39.000Z"><a href="/article/s3.html">2014-04-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/s3.html">S3をつかってみたメモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>某ブログサービスが連日落ちてて大変だったのでサービスを移すことにした。<br>そのために、エクスポートしてインポートさせようとおもったのだけど、画像ファイル類が容量オーバー。<br>データ類を落としてきて、それをS3へおくことに。</p>
+<h2 id="Bucketの作り方"><a href="#Bucketの作り方" class="headerlink" title="Bucketの作り方"></a>Bucketの作り方</h2><p>Bucketの作り方はこの辺を読んでおけば問題なさそう。</p>
+<blockquote>
+<p>Amazon Web Services ブログ: 月額10円〜 - Amazon S3でウェブサイトをホスティングする方法<br><a href="http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html" target="_blank" rel="external">http://aws.typepad.com/aws_japan/2012/08/hosting-website-on-s3.html</a></p>
+</blockquote>
+<h3 id="Bucket-Policy参照"><a href="#Bucket-Policy参照" class="headerlink" title="Bucket Policy参照"></a>Bucket Policy参照</h3><pre><code>{
+  &quot;Version&quot;:&quot;2008-10-17&quot;,
+  &quot;Statement&quot;:[{
+       &quot;Sid&quot;:&quot;PublicReadForGetBucketObjects&quot;,
+     &quot;Effect&quot;:&quot;Allow&quot;,
+       &quot;Principal&quot;: {
+            &quot;AWS&quot;: &quot;*&quot;
+         },
+      &quot;Action&quot;:[&quot;s3:GetObject&quot;],
+      &quot;Resource&quot;:[&quot;arn:aws:s3:::&lt;$BucketName$&gt;/*&quot;
+      ]
+    }
+  ]
+}
+</code></pre><h2 id="リファラ制限"><a href="#リファラ制限" class="headerlink" title="リファラ制限"></a>リファラ制限</h2><p>諸事情でリファラ制限を掛けたかったので以下を参考にして設定。</p>
+<blockquote>
+<p>インフラ構築手順書 AWS S3をWEBホスティングとして利用【アクセス制限】<br><a href="http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" target="_blank" rel="external">http://infra.blog.shinobi.jp/Entry/50/#%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC%E3%81%A7%E5%88%B6%E9%99%90%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC</a></p>
+</blockquote>
+<p>versionとかはそのままコピペする。勝手に変えたらダメ</p>
+<h2 id="naked-domain"><a href="#naked-domain" class="headerlink" title="naked domain"></a>naked domain</h2><p>Route53 でnaked domain でS3のbucketを設定するには、AレコードでAliasをYesにすると、bucketを選択できる。</p>
+<p>bucketはドメインと同じようにしておく必要がある。</p>
+<blockquote>
+<p>Amazon S3のルートドメインでのWebホスティング機能を試してみた - プログラマになりたい<br><a href="http://blog.takuros.net/entry/20130107/1357520635" target="_blank" rel="external">http://blog.takuros.net/entry/20130107/1357520635</a></p>
+</blockquote>
+<p>Route53の設定</p>
+<blockquote>
+<p>はじめてのRoute 53 - Dondari memo<br><a href="http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53" target="_blank" rel="external">http://www.dondari.com/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AERoute_53</a></p>
+</blockquote>
+<h2 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h2><ul>
+<li>CSSが反映されたりされなかったり。Transmit経由で送ったらなんか読めなかった。そんな感じのエントリーを見た気がするのでいつか調べる</li>
+<li>日本語ファイル名。長すぎるとアウトみたいな様子</li>
+<li>転送が遅い。</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -634,74 +704,32 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-13T23:30:00.000Z"><a href="/article/dataapimemo.html">2013-10-14</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/dataapimemo.html">Data API memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="外部サイトから許可する-DataAPICORSAllowOrigin"><a href="#外部サイトから許可する-DataAPICORSAllowOrigin" class="headerlink" title="外部サイトから許可する DataAPICORSAllowOrigin"></a>外部サイトから許可する DataAPICORSAllowOrigin</h2><p>外部サイトからDataAPIをたたけるようにするためには、「DataAPICORSAllowOrigin」の指定がmt-configに必要</p>
-<blockquote>
-<p>DataAPICORSAllowOrigin<br><a href="http://www.movabletype.jp/beta/60/dataapicorsalloworigin.html" target="_blank" rel="external">http://www.movabletype.jp/beta/60/dataapicorsalloworigin.html</a></p>
-</blockquote>
-<p>書き方はこんな感じ。</p>
-<pre><code>DataAPICORSAllowOrigin  http://www.example.com, http://beta.example.com
-</code></pre><p>こんな感じでサイドバーに出せた。</p>
-<blockquote>
-<p>mersy memo<br><a href="http://mersy.github.io/" target="_blank" rel="external">http://mersy.github.io/</a></p>
-</blockquote>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/7/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/7/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/9/" class="alignright next">Nächste Seite</a>
+    <a href="/page/9/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>20</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>21</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -802,9 +830,11 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>6</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>0</small></li>
   
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
@@ -858,8 +888,12 @@ $ knife solo prepare test_vagrant5
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-mac-keyboard-cleaning.html">MacBook のキーボードを掃除してみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-ux-for-member.html">一応個人的に気をつけてる（つもりな）こと</a>
@@ -877,22 +911,18 @@ $ knife solo prepare test_vagrant5
         <a href="/article/book-healthybody.html">【読了】明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</a>
       </li>
     
-      <li>
-        <a href="/article/alfred-workflow-regex.html">AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>20</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>21</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
