@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-25T22:27:01.000Z</updated>
+  <updated>2018-02-26T05:47:59.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「モジュール一覧」でイメージが伝わっているんだろうか？</title>
+    <link href="https://note.mersy418.com/article/blog-word-module.html"/>
+    <id>https://note.mersy418.com/article/blog-word-module.html</id>
+    <published>2018-02-26T07:00:00.000Z</published>
+    <updated>2018-02-26T05:47:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>スタイルガイド的なものも作りつつ、モジュール一覧を作ってワイヤーを決めて必要なページのデザインを起こして実装を進めます。という感じで話をすることがあるのだけれども。</p>
+<p>それのイメージはお客さんに伝わっているのか？というのが時々気になることがある。<br>少し想像力を働かせないと、、、というところがあるし、そもそも制作会社とかによっても伝えたいと思ってる内容が違う気もするし。</p>
+<p>まぁ、そういったものもプロトタイプツールを使うことでもう少しイメージ伝わりやすくなるんだろうとは思うのだけど。<br>紙に出力したワイヤーだけだと伝わってない可能性はあるんだろうなぁ。</p>
+<p>この辺はディレクションする側だけでなく、チームとしての制作の流れも関係してきそうだから普段からどうやったらよく進められるかとか議論して改善したり、新しいことを取り込んでいけるようになるといいんだろうな。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;スタイルガイド的なものも作りつつ、モジュール一覧を作ってワイヤーを決めて必要なページのデザインを起こして実装を進めます。という感じで話をすることがあるのだけれども。&lt;/p&gt;
+&lt;p&gt;それのイメージはお客さんに伝わっているのか？というのが時々気になることがある。&lt;br&gt;少し想像
+    
+    </summary>
+    
+      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
+    
+    
+      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
+    
+  </entry>
   
   <entry>
     <title>Backlog World に参加してきた</title>
@@ -739,42 +766,6 @@
       <category term="ipad" scheme="https://note.mersy418.com/tags/ipad/"/>
     
       <category term="markdown" scheme="https://note.mersy418.com/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Pages のこのサイトをSSL対応した</title>
-    <link href="https://note.mersy418.com/article/blog-githubpage-https.html"/>
-    <id>https://note.mersy418.com/article/blog-githubpage-https.html</id>
-    <published>2018-01-28T08:10:16.000Z</published>
-    <updated>2018-01-28T08:18:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今更だけれども。</p>
-<ul>
-<li>CloudFrontを利用して独自ドメインのGitHub PagesをHTTPS化する - Qiita<br><a href="https://qiita.com/iogi/items/82618c1d56abba6b9337" target="_blank" rel="external">https://qiita.com/iogi/items/82618c1d56abba6b9337</a></li>
-<li>Github Pagesでホスティングしつつ、CloudFrontを使ってサイトをSSL対応の独自ドメインにする - Qiita<br><a href="https://qiita.com/kechol/items/9609e1ab4a673e05b613" target="_blank" rel="external">https://qiita.com/kechol/items/9609e1ab4a673e05b613</a></li>
-</ul>
-<p>この辺の記事を参考にさせてもらってこのサイトをHTTPSにした。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今更だけれども。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CloudFrontを利用して独自ドメインのGitHub PagesをHTTPS化する - Qiita&lt;br&gt;&lt;a href=&quot;https://qiita.com/iogi/items/82618c1d56abba6b9337&quot; 
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="githubpages" scheme="https://note.mersy418.com/tags/githubpages/"/>
-    
-      <category term="SSL" scheme="https://note.mersy418.com/tags/SSL/"/>
-    
-      <category term="CloudFront" scheme="https://note.mersy418.com/tags/CloudFront/"/>
-    
-      <category term="AWS" scheme="https://note.mersy418.com/tags/AWS/"/>
     
   </entry>
   

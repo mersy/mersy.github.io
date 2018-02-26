@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 8 | mersy note</title>
+  <title>Seite 8 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,70 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-05-02T02:06:33.000Z"><a href="/article/mtmakdownoptions.html">2014-05-02</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtmakdownoptions.html">MTMarkdownOptions</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
+<blockquote>
+<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
+</blockquote>
+<p>知らなかった！</p>
+<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
+# &lt;mt:EntryTitle&gt;
+---
+&lt;mt:EntryBody&gt;
+&lt;/MTMarkdownOptions&gt;
+</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
+<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
+<blockquote>
+<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
+</blockquote>
+<p>とりあえず、指定の仕方がよくわからん。</p>
+<p>filtersについてのコードはこの辺。</p>
+<blockquote>
+<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
+</blockquote>
+<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
+<blockquote>
+<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
+</blockquote>
+<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
+<hr>
+<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
+<p>使えそうなモジュールはこの辺？</p>
+<blockquote>
+<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
+</blockquote>
+<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -662,65 +726,27 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-16T19:00:00.000Z"><a href="/article/sitemapByjekyll.html">2013-10-17</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/sitemapByjekyll.html">Jekyll でGoogle Sitemap</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Jekyll でGoogle Sitemap を作るにはどうするんだろう？？と。</p>
-<blockquote>
-<p>Generating a Sitemap in Jekyll without a Plugin – Development, design, and more by David Ensinger<br><a href="http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/" target="_blank" rel="external">http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/</a></p>
-</blockquote>
-<p>を参考にして。</p>
-<p>こんな感じのをsitemap.xmlとして追加した。</p>
-<script src="//gist.github.com/7013158.js"></script>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/7/" class="alignleft prev">Prev</a>
+    <a href="/page/7/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/9/" class="alignright next">Next</a>
+    <a href="/page/9/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -779,6 +805,8 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
+    <li><a href="/categories/Work/">Work</a><small>1</small></li>
+  
     <li><a href="/categories/blog/">blog</a><small>3</small></li>
   
     <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
@@ -816,7 +844,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
   
-    <li><a href="/tags/Direction/">Direction</a><small>1</small></li>
+    <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
   
     <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
   
@@ -884,8 +912,12 @@ $ knife solo prepare test_vagrant5
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-word-module.html">「モジュール一覧」でイメージが伝わっているんだろうか？</a>
+      </li>
     
       <li>
         <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
@@ -903,17 +935,13 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-live-input-1month.html">ライブ変換に変えてみてから一ヶ月たった</a>
       </li>
     
-      <li>
-        <a href="/article/blog-use-ipad.html">セミナーとかでiPadを使っていこう思った</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -971,6 +999,8 @@ $ knife solo prepare test_vagrant5
       <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
     
       <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+    
+      <li><a href="/categories/Work/">Work</a><small>1</small></li>
     
       <li><a href="/categories/blog/">blog</a><small>3</small></li>
     
