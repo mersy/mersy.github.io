@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 8 | mersy note</title>
+  <title>Seite 8 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,103 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-05-02T07:06:37.000Z"><a href="/article/publish.html">2014-05-02</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/publish.html">VMWare上でMarkdownをePubなどに変換</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ドキュメントなどの作成をできるだけ自動化したいので、まずは手動でできる環境を整えるところから。<br>MTでドキュメント書きつつ、そこから各種ファイルを作るところまでが目標。</p>
+<h2 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h2><h3 id="VMWare-上の-CentOS-に-Pandocをインストールする"><a href="#VMWare-上の-CentOS-に-Pandocをインストールする" class="headerlink" title="VMWare 上の CentOS に Pandocをインストールする"></a>VMWare 上の CentOS に Pandocをインストールする</h3><p>MacにPandocを入れるのはインストーラがあるからだいぶ簡単だけど、CentOSにいれるのはなかなか大変。</p>
+<blockquote>
+<p>Pandoc - Installing<br><a href="http://johnmacfarlane.net/pandoc/installing.html" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/installing.html</a></p>
+</blockquote>
+<p>よくわかってなかったけど、必要そうなモノ</p>
+<ul>
+<li>haskell-platform</li>
+<li>cabal</li>
+<li>ghc</li>
+</ul>
+<p>以下のサイトをみながら、色々試行錯誤してHaskell環境を整えた。</p>
+<ul>
+<li>CentOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+</ul>
+<p>./configure<br>して<br>make<br>make install<br>が走って良かった・・・・</p>
+<p>pandocをインストール</p>
+<pre><code>cabal update
+cabal install pandoc
+</code></pre><p>インストールされた後、pathが通ってなかったりはしてましたが。。。</p>
+<pre><code>PATH=$HOME/applications/haskell/ghc-7.6.3/bin:$PATH
+PATH=$HOME/applications/haskell/haskell-platform-2013.2.0.0/bin:$PATH
+PATH=$HOME/.cabal/bin:$PATH
+</code></pre><p>を.bash_profileに追加</p>
+<p>CentOS6.4へhaskell(ghc-7.6.3), haskell-platform-2013.2.0.0, pandocインストール | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/15052.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/15052.html</a></p>
+<p>で、インストール用のスクリプトが紹介されてるから、次はコレを使ってみてもいいのかもしれない。</p>
+<pre><code>pandoc -f markdown -t html sample.md -s -o sample.html
+</code></pre><p>で、mdからhtmlが作成されたのを確認。</p>
+<h3 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h3><ul>
+<li>Pandocでテキストデータ変換 | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12512.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12512.html</a></li>
+<li>entOSでHaskell開発環境を整える - Parsley, sage, rosemary and thyme<br><a href="http://d.hatena.ne.jp/cariandrum22/20101025" target="_blank" rel="external">http://d.hatena.ne.jp/cariandrum22/20101025</a></li>
+<li>Haskellをソースコードからインストールするのは大変そう… | hiro345<br><a href="http://www.sssg.org/blogs/hiro345/archives/12364.html" target="_blank" rel="external">http://www.sssg.org/blogs/hiro345/archives/12364.html</a></li>
+<li>Haskell Platform for Linux<br><a href="http://www.haskell.org/platform/linux.html" target="_blank" rel="external">http://www.haskell.org/platform/linux.html</a></li>
+<li>CentOSにソースからHaskell Platformを入れる - yunomuのブログ<br><a href="http://yunomu.hatenablog.jp/entry/2012/01/28/005823" target="_blank" rel="external">http://yunomu.hatenablog.jp/entry/2012/01/28/005823</a></li>
+</ul>
+<h2 id="GitBook"><a href="#GitBook" class="headerlink" title="GitBook"></a>GitBook</h2><p>GitBookを試してみる</p>
+<blockquote>
+<p>GitBook<br><a href="http://www.gitbook.io/" target="_blank" rel="external">http://www.gitbook.io/</a></p>
+</blockquote>
+<h3 id="CentOSにnode-jsをインストールする"><a href="#CentOSにnode-jsをインストールする" class="headerlink" title="CentOSにnode.jsをインストールする"></a>CentOSにnode.jsをインストールする</h3><p>以下のリンクを参考にして、nodeを入れる</p>
+<ul>
+<li>CentOS5.5 に node.js をインストールする - xykの日記<br><a href="http://d.hatena.ne.jp/xyk/20120131/1327998901" target="_blank" rel="external">http://d.hatena.ne.jp/xyk/20120131/1327998901</a></li>
+<li>creationix/nvm<br><a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></li>
+</ul>
+<p>メモ</p>
+<pre><code># yum -y install openssl-devel
+
+$ vi .bashrc
+</code></pre><p>以下を追記</p>
+<pre><code>. ~/.nvm/nvm.sh
+nvm use v0.10.28
+</code></pre><p>versionを確認</p>
+<pre><code>$ node -v
+$ npm -v
+</code></pre><h3 id="GitBookをインストール"><a href="#GitBookをインストール" class="headerlink" title="GitBookをインストール"></a>GitBookをインストール</h3><p>とりあえずローカル環境で動作を試す。</p>
+<pre><code>npm install gitbook -g
+</code></pre><ul>
+<li>GitbookIO/gitbook<br><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">https://github.com/GitbookIO/gitbook</a></li>
+<li>Node.js - gitbook試してみた - Qiita<br><a href="http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0" target="_blank" rel="external">http://qiita.com/nekogeruge_987/items/46dfb552b33aac4ef9b0</a></li>
+</ul>
+<h2 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h2><p>Gruntでやる方法</p>
+<p>MarkdownからEPUB データを生成する「grunt-mdeb」を書いてみた – Mach3.laBlog<br><a href="http://blog.mach3.jp/2014/02/13/grunt-mdeb.html" target="_blank" rel="external">http://blog.mach3.jp/2014/02/13/grunt-mdeb.html</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -662,91 +759,27 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-17T23:00:00.000Z"><a href="/article/flexibleSearchOnJekyll.html">2013-10-18</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/flexibleSearchOnJekyll.html">flexibleSearchをJekyll（Github Pages）で使う</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Github Pagesだと動的なことができないから、flexibleSearchをJekyllで使ってみる方法で検索部分を実装してみた</p>
-<blockquote>
-<p>tinybeans/jq-plugin-flexibleSearch<br><a href="https://github.com/tinybeans/jq-plugin-flexibleSearch" target="_blank" rel="external">https://github.com/tinybeans/jq-plugin-flexibleSearch</a></p>
-</blockquote>
-<p>flexibleSearchはJSONベースの検索システム。</p>
-<h2 id="JSONの生成"><a href="#JSONの生成" class="headerlink" title="JSONの生成"></a>JSONの生成</h2><p>JSONをどうやってだすんだろう？？というところでかなり時間がかかった。</p>
-<script src="//gist.github.com/7033839.js"></script>
-<p>こんなかんじで、一応エラーが出ないJSONを生成することが出来た。<br>flexibleSearchの次期バージョンからitemではなくitemsになってるので要注意。</p>
-<p>最新版はGithubのdevelopブランチに入っている。</p>
-<h2 id="flexibleSearch"><a href="#flexibleSearch" class="headerlink" title="flexibleSearch"></a>flexibleSearch</h2><p>js部分はこんな感じで。</p>
-<script src="//gist.github.com/7035259.js"></script>
-<p>最新版ではjQueryの他に mustache.jsも必須になってます。</p>
-<blockquote>
-<p>mustache<br><a href="http://mustache.github.io/" target="_blank" rel="external">http://mustache.github.io/</a></p>
-</blockquote>
-<p>JavaScriptのをおとしておきます。</p>
-<blockquote>
-<p>janl/mustache.js<br><a href="https://github.com/janl/mustache.js" target="_blank" rel="external">https://github.com/janl/mustache.js</a></p>
-</blockquote>
-<h3 id="検索結果ページ"><a href="#検索結果ページ" class="headerlink" title="検索結果ページ"></a>検索結果ページ</h3><p>検索結果のページは</p>
-<pre><code>&lt;div id=&quot;fs-result&quot;&gt;&lt;/div&gt;
-</code></pre><p>を埋め込むだけ。</p>
-<script src="//gist.github.com/7049726.js"></script>
-<p>結果表示部分はこんな感じでflexibleSearch.jsを書き換えておいた。</p>
-<script src="//gist.github.com/7049773.js"></script>
-<p>ここは近いうちにオプション側で指定出来るようになるとのこと。</p>
-<h3 id="検索フォーム"><a href="#検索フォーム" class="headerlink" title="検索フォーム"></a>検索フォーム</h3><p>検索フォーム部分も同様にflexibleSearch.jsを書き換え。</p>
-<script src="//gist.github.com/7049781.js"></script>
-<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブをflexibleSearchで作成した</p>
-<p>JSONにcategoriesとしてcategoryを出すように修正。</p>
-<script src="//gist.github.com/7056249.js"></script>
-<p>サイドバーのカテゴリリスト部分は以下の様な感じで修正。</p>
-<script src="//gist.github.com/7056240.js"></script>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/7/" class="alignleft prev">Prev</a>
+    <a href="/page/7/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/9/" class="alignright next">Next</a>
+    <a href="/page/9/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -765,7 +798,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
   
-    <li><a href="/categories/Direction/">Direction</a><small>2</small></li>
+    <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
   
     <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
   
@@ -860,7 +893,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
-    <li><a href="/tags/Markdown/">Markdown</a><small>0</small></li>
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
   
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
@@ -918,8 +951,12 @@ $ knife solo prepare test_vagrant5
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/markdown-driven.html">Markdownなドキュメントベースで開発するフローを考える</a>
+      </li>
     
       <li>
         <a href="/article/blog-word-module.html">「モジュール一覧」でイメージが伝わっているんだろうか？</a>
@@ -937,17 +974,13 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-ux-for-member.html">一応個人的に気をつけてる（つもりな）こと</a>
       </li>
     
-      <li>
-        <a href="/article/blog-live-input-1month.html">ライブ変換に変えてみてから一ヶ月たった</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -966,7 +999,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
     
-      <li><a href="/categories/Direction/">Direction</a><small>2</small></li>
+      <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
     
       <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
     

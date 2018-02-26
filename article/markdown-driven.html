@@ -1,0 +1,474 @@
+<!DOCTYPE HTML>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Markdownなドキュメントベースで開発するフローを考える | mersy note</title>
+  <meta name="author" content="mersy">
+  
+  <meta name="description" content="設計や仕様を Markdown ファイルで書いてgitに入れるか、wikiに入れるか。最近の webservice だと mdファイル自体はそこそこ読みやすくしてくれる気がしつつ。
+mdファイルを開発側だけで触るのであればgit管理でもいいかもしれないけれども。。。お客さんとかも触るのであれば Dr">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Markdownなドキュメントベースで開発するフローを考える"/>
+  <meta property="og:site_name" content="mersy note"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">mersy note</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="//">Home</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/atom.xml">RSS</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-02-26T21:00:00.000Z"><a href="/article/markdown-driven.html">2018-02-27</a></time>
+      
+      
+  
+    <h1 class="title">Markdownなドキュメントベースで開発するフローを考える</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>設計や仕様を Markdown ファイルで書いてgitに入れるか、wikiに入れるか。<br>最近の webservice だと mdファイル自体はそこそこ読みやすくしてくれる気がしつつ。</p>
+<p>mdファイルを開発側だけで触るのであればgit管理でもいいかもしれないけれども。。。<br>お客さんとかも触るのであれば Dropbox Paper とかオンラインの方に寄せてもいいのかもしれない。<br>まぁ、これもbitbucket上で編集してもらう、とかでもいいかもだけど、wiki とかの方が楽といえば楽だろうしな。<br>最近 Backlog の Git を使うようにしたけど、 Backlog 上では編集できないしなぁ。</p>
+<p>やっぱりリポジトリは外部サービスの方が使い勝手がいい気もしてくるな。</p>
+<hr>
+<p>Git管理しつつ、特定のフォルダのmdファイルの内容については API 経由で wiki を更新するとかもありなのかなぁ。。<br>管理画面から編集した時が面倒か。。。。<br>と調べてたらなんか面白そうなものを見つけた。</p>
+<blockquote>
+<p>ドキュメント管理の将来設計 - Qiita<br><a href="https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0" target="_blank" rel="external">https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0</a></p>
+</blockquote>
+<p>Git で管理してコミットもしておきつつ、 wiki に投げられるならありかなー。</p>
+<p>あとは検索の問題があるか。<br>Bitbucket だと一応リポジトリ内の検索はできる。コードも一緒に検索されてくるからそれがいいのか悪いのかはありそう。<br>Dropbox Paper だとフォルダ内検索っぽい機能はないのかな、、、見た感じ。<br>スマホとかでも見れるとかも判断材料にはなりそう。</p>
+<hr>
+<p>仕様を設計書などに書きつつ、それを見ればすべてわかるようにしておく<br>そこを起点に開発し、テストをする。</p>
+<p>開発中に変更が入れば、設計書を変更してそれをプルリク先に作ってチケット起票して依頼するような進め方にすれば、仕様の変更箇所と開発のチケット＆コミットまで結びつけられるんじゃなかろうか？<br>先にテスト書いて開発する感じや、先に機能単位のプルリク作ってから開発するような。</p>
+<p>実装中に常にドキュメント類をアップデートしていけばそういった問題は発生しないのだけど、どうしても後手になってしまって最後に差分が出る、という話になりがち。</p>
+<p>コードからドキュメント作るっていう方法もあるけど、それは少し別の話になるかな、、、という気もしつつ。<br>その場合は内容的にプログラムを解説する解説書に近いものが出来上がる気はしているので。<br>とはいえ、初めてコード見る人にはあってもいいとおもうので、それはそれとして自動生成できるようにしておくと強い気はする。</p>
+<p>バグは仕方ないにしても、仕様変更や修正などはドキュメントのアップデートを忘れないように、アップデート自体も1タスクくらいのつもりでいてもいいのかもしれないなー</p>
+<hr>
+<p>Adobe XDデザインスペックの使い方と、開発者と効率的に連携するヒント – Adobe Creative Station<br><a href="https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity" target="_blank" rel="external">https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity</a></p>
+<p>やりたいのは結局 XD が考えてる方向と近そうな気はするのだけど。<br>どこに重きをおくかと、 XD はワイヤ〜デザイン〜フロントエンド、くらいまでは良さそうな気がするのだけど、CMSを使うときにどの情報を使うかを持たせられないのが若干辛いかな、と。</p>
+<p>CMSのデータの持ち方自体はビジュアルとかあまり関係ないから別資料になるわけなので、そのデータをどこにどう見せるか？を必要になるのは、HTMLとCMS のテンプレートを作るタイミングになる訳なので、どちらかというとフロント側の設計書に寄せたいところではある。</p>
+<hr>
+<p>結局は Markdown じゃなくてもよくて、チーム内でストレスなくわかりやすい形で共有できる何かができてスムーズに開発できればOKってことで。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Direction/">Direction</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Markdown/">Markdown</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:note.mersy418.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+  
+    <li><a href="/categories/Blog/">Blog</a><small>22</small></li>
+  
+    <li><a href="/categories/Book/">Book</a><small>9</small></li>
+  
+    <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+  
+    <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+  
+    <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+  
+    <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+  
+    <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+  
+    <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+  
+    <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+  
+    <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+  
+    <li><a href="/categories/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+  
+    <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+  
+    <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+  
+    <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+  
+    <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+  
+    <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+  
+    <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+  
+    <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+  
+    <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+  
+    <li><a href="/categories/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+  
+    <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+  
+    <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+  
+    <li><a href="/categories/Work/">Work</a><small>1</small></li>
+  
+    <li><a href="/categories/blog/">blog</a><small>3</small></li>
+  
+    <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+  
+    <li><a href="/categories/chef/">chef</a><small>1</small></li>
+  
+    <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/categories/memo/">memo</a><small>1</small></li>
+  
+    <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+  
+    <li><a href="/tags/AWS/">AWS</a><small>2</small></li>
+  
+    <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
+  
+    <li><a href="/tags/Alfred/">Alfred</a><small>1</small></li>
+  
+    <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
+  
+    <li><a href="/tags/Business/">Business</a><small>0</small></li>
+  
+    <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
+  
+    <li><a href="/tags/CloudFront/">CloudFront</a><small>1</small></li>
+  
+    <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
+  
+    <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
+  
+    <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
+  
+    <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
+  
+    <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
+  
+    <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
+    <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
+  
+    <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
+  
+    <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
+  
+    <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Team/">Team</a><small>1</small></li>
+  
+    <li><a href="/tags/Todo/">Todo</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
+  
+    <li><a href="/tags/Webservice/">Webservice</a><small>0</small></li>
+  
+    <li><a href="/tags/Website/">Website</a><small>0</small></li>
+  
+    <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
+  
+    <li><a href="/tags/cache/">cache</a><small>1</small></li>
+  
+    <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/tags/deploy/">deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a><small>1</small></li>
+  
+    <li><a href="/tags/githubpages/">githubpages</a><small>1</small></li>
+  
+    <li><a href="/tags/html-css-styleguide/">html, css, styleguide</a><small>1</small></li>
+  
+    <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
+  
+    <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
+  
+    <li><a href="/tags/jira/">jira</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
+  
+    <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/article/markdown-driven.html">Markdownなドキュメントベースで開発するフローを考える</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-word-module.html">「モジュール一覧」でイメージが伝わっているんだろうか？</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-mac-keyboard-cleaning.html">MacBook のキーボードを掃除してみる</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-ux-for-member.html">一応個人的に気をつけてる（つもりな）こと</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">Archiv</h3>
+    <ul class="entry">
+    
+      <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+    
+      <li><a href="/categories/Blog/">Blog</a><small>22</small></li>
+    
+      <li><a href="/categories/Book/">Book</a><small>9</small></li>
+    
+      <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+    
+      <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+    
+      <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+    
+      <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+    
+      <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+    
+      <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+    
+      <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+    
+      <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+    
+      <li><a href="/categories/Git/">Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+    
+      <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+    
+      <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+    
+      <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+    
+      <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+    
+      <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+    
+      <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+    
+      <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+    
+      <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+    
+      <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+    
+      <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+    
+      <li><a href="/categories/Task/">Task</a><small>1</small></li>
+    
+      <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+    
+      <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+    
+      <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+    
+      <li><a href="/categories/Work/">Work</a><small>1</small></li>
+    
+      <li><a href="/categories/blog/">blog</a><small>3</small></li>
+    
+      <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+    
+      <li><a href="/categories/chef/">chef</a><small>1</small></li>
+    
+      <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+    
+      <li><a href="/categories/memo/">memo</a><small>1</small></li>
+    
+      <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+    
+  </div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 mersy
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'mersymemogithubpage';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
