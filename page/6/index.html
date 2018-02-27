@@ -61,6 +61,66 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-09-28T19:28:15.000Z"><a href="/article/fastly.html">2017-09-29</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/fastly.html">Fastly memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
+<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
+<p>VCL（Varnish Configuration Language）というのに記載する。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">sub vcl_recv &#123;</div><div class="line"></div><div class="line">  /* unset state tracking header to avoid client sending it */</div><div class="line">  if (req.restarts == 0) &#123;</div><div class="line">    unset req.http.X-Authed;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (!req.http.X-Authed) &#123;</div><div class="line">    /* stash the original URL and Host for later */</div><div class="line">    set req.http.X-Orig-URL = req.url;</div><div class="line"></div><div class="line">    /* set the URL to what the auth backend expects */</div><div class="line">    set req.url = &quot;/authenticate&quot;;</div><div class="line"></div><div class="line">    /* Auth requests won&apos;t be cached, so pass */</div><div class="line">    return(pass);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (req.http.X-Authed == &quot;true&quot;) &#123;</div><div class="line">    /* were authed, so proceed with the request */</div><div class="line">    /* reset the URL */</div><div class="line">    set req.url = req.http.X-Orig-URL;</div><div class="line"></div><div class="line">  &#125; else &#123;</div><div class="line">    /* the auth backend refused the request, so 403 the client */</div><div class="line">    error 403;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<blockquote>
+<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
+</blockquote>
+<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
+<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
+<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
+<blockquote>
+<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
+</blockquote>
+<p>そのほか Response headers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
+<p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
+<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
+<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-09-25T11:17:11.000Z"><a href="/article/mac-excel-font.html">2017-09-25</a></time>
       
       
@@ -478,62 +538,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-07-11T07:15:32.000Z"><a href="/article/atom.html">2014-07-11</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/atom.html">Atom memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
-<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
-<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
-</blockquote>
-<p>Cmd + Shift + H でコマンド選択</p>
-<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
-<blockquote>
-<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
-</blockquote>
-<p>Snippetなのか、Packageなのか？？</p>
-<p>autocomplete-snippets にリストを追加する感じ？？</p>
-<blockquote>
-<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
-</blockquote>
-<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
-<blockquote>
-<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
-</blockquote>
-<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
-<p>このあたりの設定が影響してる様子。</p>
-<blockquote>
-<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
-</blockquote>
-<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -559,7 +563,7 @@
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>22</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -690,7 +694,7 @@
   
     <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
   
-    <li><a href="/tags/Webservice/">Webservice</a><small>0</small></li>
+    <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
   
     <li><a href="/tags/Website/">Website</a><small>0</small></li>
   
@@ -730,6 +734,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
+      </li>
+    
+      <li>
         <a href="/article/markdown-driven.html">Markdownなドキュメントベースで開発するフローを考える</a>
       </li>
     
@@ -745,10 +753,6 @@
         <a href="/article/blog-mac-keyboard-cleaning.html">MacBook のキーボードを掃除してみる</a>
       </li>
     
-      <li>
-        <a href="/article/blog-ux-for-member.html">一応個人的に気をつけてる（つもりな）こと</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -760,7 +764,7 @@
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>22</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

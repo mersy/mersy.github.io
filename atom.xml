@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-26T21:07:34.000Z</updated>
+  <updated>2018-02-27T21:51:42.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pageprooferというフィードバックサービス</title>
+    <link href="https://note.mersy418.com/article/webservice-pageproofer.html"/>
+    <id>https://note.mersy418.com/article/webservice-pageproofer.html</id>
+    <published>2018-02-27T22:00:00.000Z</published>
+    <updated>2018-02-27T21:51:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>そうそう、こういうサービス作ってみたいなと思ってたんだよねー、というのをたまたま見つけた。</p>
+<blockquote>
+<p>【すべてのWeb制作者に伝えたい】Webサイトのフィードバック・チェックツール Pageproofer | GrowGroup株式会社 名古屋・東京を拠点とするDTP・Webサイト(ホームページ)の制作会社<br><a href="https://grow-group.jp/archives/2498/" target="_blank" rel="external">https://grow-group.jp/archives/2498/</a></p>
+<p>Pageproofer - Visual Bug Tracker &amp; Visual Feedback Tool<br><a href="https://pageproofer.com/" target="_blank" rel="external">https://pageproofer.com/</a></p>
+</blockquote>
+<p>どっちかというと製作者とお客さんで利用するのが主目的になっていそうではあるけど。</p>
+<p>サイトに埋め込んでおいて、データが溜まってサイトホルダーが見たければお金払う、みたいな流れを考えてた。<br>どうでもいいコメントとか、嫌がらせがたまりそうだけど。。。</p>
+<p>1ユーザとしてサイトを見ていて、これがあればなー、とかを簡単にFBしたり、要望を投げたり。<br>そういうことでいい感じでサイトが便利になってくれればいいなぁという思いで。<br>まぁ、そう簡単にはいかないんだろうけどね。</p>
+<p>いやー、普段の視野が狭かったなぁと反省。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;そうそう、こういうサービス作ってみたいなと思ってたんだよねー、というのをたまたま見つけた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【すべてのWeb制作者に伝えたい】Webサイトのフィードバック・チェックツール Pageproofer | GrowGroup株式会社 名古屋
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Webservice" scheme="https://note.mersy418.com/tags/Webservice/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdownなドキュメントベースで開発するフローを考える</title>
@@ -729,36 +762,6 @@
     
     
       <category term="Backlog" scheme="https://note.mersy418.com/tags/Backlog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yummy FTP Pro を FTP ソフトとして使い始めてみた</title>
-    <link href="https://note.mersy418.com/article/yummyftppro.html"/>
-    <id>https://note.mersy418.com/article/yummyftppro.html</id>
-    <published>2018-02-03T21:00:00.000Z</published>
-    <updated>2018-02-04T00:23:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Keychain がぶっ壊れたのか、繋がらないサイトがあったので、 BUN さんに教えてもらったこちらのFTPソフトを試してみた。</p>
-<blockquote>
-<p>Yummy FTP Pro - Mac FTP + SFTP + WebDAV client software at its best<br><a href="https://www.yummysoftware.com/" target="_blank" rel="external">https://www.yummysoftware.com/</a></p>
-</blockquote>
-<p>とりあえず繋がらなかったサイトにもサクッと繋がった。</p>
-<p>その上、Backlog の WebDAV も問題なく繋がった。</p>
-<p>Transmit だと繋がらなかったのでこの辺ラッキー。使うかどうかは置いといて。。。。</p>
-<p>Transmit の最新版を試してみるという手もあったわけだけど。。。<br>S3とか使えるしなー。あれが結構便利なんだよな。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Keychain がぶっ壊れたのか、繋がらないサイトがあったので、 BUN さんに教えてもらったこちらのFTPソフトを試してみた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Yummy FTP Pro - Mac FTP + SFTP + WebDAV client soft
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
     
   </entry>
   
