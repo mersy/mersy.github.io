@@ -61,6 +61,45 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-07-22T22:50:24.000Z"><a href="/article/node.html">2014-07-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/node.html">Node.js memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><h3 id="npmをsudoなしで実行"><a href="#npmをsudoなしで実行" class="headerlink" title="npmをsudoなしで実行"></a>npmをsudoなしで実行</h3><blockquote>
+<p>$ sudo chown -R <code>whoami</code>  /home/<code>whoami</code>/tmp</p>
+</blockquote>
+<p>参考</p>
+<blockquote>
+<p>Node.js - npmがsudoでしか実行出来ない時の対処方 - Qiita<br><a href="http://qiita.com/htano/items/f107cf0921a5127cb02f" target="_blank" rel="external">http://qiita.com/htano/items/f107cf0921a5127cb02f</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-07-11T07:15:32.000Z"><a href="/article/atom.html">2014-07-11</a></time>
       
       
@@ -642,51 +681,6 @@ $ sudo service jenkins start
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-05T02:01:37.000Z"><a href="/article/homebrew.html">2014-05-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/homebrew.html">Homebrewメモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="homebrew-のアップデートでエラー"><a href="#homebrew-のアップデートでエラー" class="headerlink" title="homebrew のアップデートでエラー"></a>homebrew のアップデートでエラー</h2><p>アップデートしようとしたらエラーになった</p>
-<pre><code>$ brew update
-</code></pre><p>とりあえず、以下の記事を参考にして修正</p>
-<pre><code>$ cd $(brew --prefix)
-$ git fetch origin
-$ git reset —hard origin/master
-</code></pre><blockquote>
-<p>ヾ(oﾟωﾟo)ﾉﾞbrew updateでエラーでたった[Homebrew] - Qiita<br><a href="http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2" target="_blank" rel="external">http://qiita.com/harapeko_wktk/items/f4f44ddb5d3912e15ea2</a></p>
-</blockquote>
-<p>それでもconflictしてるかんじだったので、とりあえずREADME.mdをリネーム</p>
-<pre><code>$ cd $(brew --prefix)
-$ mv README.md README.md.org
-</code></pre><p>そこでupdateかけなおしたら問題なくなった。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -712,7 +706,7 @@ $ mv README.md README.md.org
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -799,7 +793,7 @@ $ mv README.md README.md.org
   
     <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
   
-    <li><a href="/tags/Business/">Business</a><small>0</small></li>
+    <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
     <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
   
@@ -845,7 +839,7 @@ $ mv README.md README.md.org
   
     <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
   
-    <li><a href="/tags/Website/">Website</a><small>0</small></li>
+    <li><a href="/tags/Website/">Website</a><small>1</small></li>
   
     <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
   
@@ -883,6 +877,10 @@ $ mv README.md README.md.org
   <ul class="entry">
     
       <li>
+        <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
+      </li>
+    
+      <li>
         <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
       </li>
     
@@ -898,10 +896,6 @@ $ mv README.md README.md.org
         <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
       </li>
     
-      <li>
-        <a href="/article/blog-mac-keyboard-cleaning.html">MacBook のキーボードを掃除してみる</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -913,7 +907,7 @@ $ mv README.md README.md.org
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

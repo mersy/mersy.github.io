@@ -61,6 +61,108 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-11T08:00:00.000Z"><a href="/article/mtmlVersionControl.html">2013-10-11</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtmlVersionControl.html">MTMLのバージョン管理</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>MTMLをローカルで編集して、MTに当てる作業を出来るだけ自動化する方法を考える。<br>アップする先が開発環境以外もある場合があるだろうから、それらにも対応出来る仕組みを検討。<br>管理画面から直接編集する場合もあるからそれにも対応出来るようにする。</p>
+<h2 id="ローカルと開発サーバーで同期させる"><a href="#ローカルと開発サーバーで同期させる" class="headerlink" title="ローカルと開発サーバーで同期させる"></a>ローカルと開発サーバーで同期させる</h2><p>MTMLを結びつける方法</p>
+<ul>
+<li>ファイルリンク</li>
+<li>テーマ</li>
+</ul>
+<h2 id="theme-と-filelink"><a href="#theme-と-filelink" class="headerlink" title="theme と filelink"></a>theme と filelink</h2><h3 id="theme-のメリット"><a href="#theme-のメリット" class="headerlink" title="theme のメリット"></a>theme のメリット</h3><ul>
+<li>テンプレートの追加／削除を気にせず反映させられる</li>
+</ul>
+<h3 id="theme-のデメリット"><a href="#theme-のデメリット" class="headerlink" title="theme のデメリット"></a>theme のデメリット</h3><ul>
+<li>再適用をする際にテンプレートIDが変わる</li>
+</ul>
+<h3 id="theme"><a href="#theme" class="headerlink" title="theme ?"></a>theme ?</h3><ul>
+<li>templateにつけられたカスタムフィールドがある場合、その内容はどうなるか？</li>
+</ul>
+<h3 id="filelink-のメリット"><a href="#filelink-のメリット" class="headerlink" title="filelink のメリット"></a>filelink のメリット</h3><ul>
+<li>管理画面での編集内容も反映される</li>
+</ul>
+<h3 id="filelink-のデメリット"><a href="#filelink-のデメリット" class="headerlink" title="filelink のデメリット"></a>filelink のデメリット</h3><ul>
+<li>各テンプレートでfilelinkを設定しないと使えない。</li>
+<li>テンプレートが追加／削除された場合に対応しにくい。</li>
+</ul>
+<h3 id="filelink"><a href="#filelink" class="headerlink" title="filelink ?"></a>filelink ?</h3><ul>
+<li>identifierって重複するとエラーになる？</li>
+</ul>
+<p>テーマを再適用するとtemplateのIDが変わってしまう。<br>templateのIDがかわってしまうので、idが変わるのがまずい場合は再適用を出来ないようにした方がよさそう？<br>→ 同じ名前？のテーマを当て直すときに、idが変わらないようにプラグインを作成できるか？</p>
+<p>ファイルリンクをした場合、管理画面から変更があっても、ファイルリンクされているファイルの内容も書き換えられる。  </p>
+<blockquote>
+<p>ファイルへのリンク : Movable Type 5 ドキュメント<br><a href="http://www.movabletype.jp/documentation/mt5/design/templates/linktofile.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/mt5/design/templates/linktofile.html</a></p>
+</blockquote>
+<p>どれが変更されたかはタイムスタンプくらいしか知る術がなさそう。<br>また、そこから自動、もしくはまとめてダウンロードするとなるとFTP的な物でやるしかない？<br>ローカルに落として、ローカルのファイルに上書きするということになるか？</p>
+<p>最初はMT側でテンプレートを作成、ファイルリンクをセットする？</p>
+<ul>
+<li>ファイルリンクだけ設定して、ファイルがない場合にファイルが作成されるか？</li>
+</ul>
+<h2 id="開発サーバーとそれ以外の環境で同期させる"><a href="#開発サーバーとそれ以外の環境で同期させる" class="headerlink" title="開発サーバーとそれ以外の環境で同期させる"></a>開発サーバーとそれ以外の環境で同期させる</h2><ul>
+<li>それぞれの環境でもファイルリンクを有効にしておく？</li>
+<li>テンプレートが追加になる場合は手作業</li>
+</ul>
+<p>管理画面でテーマとしてthemeフォルダにエクスポートしておく。各テンプレートにファイルリンクをセットする。セットする先はtheme内のファイルにすれば内容が常に同期される。<br>themeの内容を外部から編集して差し替えても管理画面に反映される</p>
+<p>Themeをローカルに落としてGit管理する。</p>
+<p>ローカルからリモートにPushした際に、Webhookでthemesの内容を差し替えられれば、管理画面でリロード、再構築とするだけで修正は反映させることが可能になりそう。</p>
+<ul>
+<li>MTは１つしかないため、いくつかの機能を複数人で開発してる際にbranchという発想が出来ない</li>
+</ul>
+<p>ローカルでbranchとかtagでなにかやるしかないか？？</p>
+<p>開発サーバーに当てた修正でOKの物を本番なり検証環境へ当てる方法が難しい。<br>どのように切り出すか？</p>
+<p>管理画面でテンプレートを追加した場合は、テーマのエクスポートでよさそう</p>
+<p>ローカルでテンプレートを追加した場合はconfig.yamlにも追記が必要だと思われる。pushして再適用？というながれになるか？<br>再適用したらtemplate idが変わってしまうが。</p>
+<p>テーマとして書き出す際に、identifierを指定出来ないと、ファイル名がわかりにくくなるので、identifierの編集も必要そう。<br>MTAppjQueryの拡張プラグインかなにかでidentifier周りも出来るようにした方がいいか？</p>
+<h2 id="課題"><a href="#課題" class="headerlink" title="課題"></a>課題</h2><ul>
+<li>いくつかの開発項目が同じ開発環境で動いているときに、確認が取れた物だけを抜き出す方法があるか？</li>
+<li>検証／本番など開発環境とは別環境がある場合、そちらで更新されていた内容を反映させる（更新時に知る）方法は？</li>
+<li>いくつかのWebsite / Blog にまたがって修正を反映させる場合、システム一括でthemeを書き出せるか？</li>
+<li>identifierを指定しておかないとthemeのファイル名がわかりにくい。template名をidentifierに使うことはできないか？</li>
+<li>ローカルからPushしたものを開発環境で受け取るのはwebhookかPull/Pushか？<ul>
+<li>webhook：管理画面からの変更を拾いにくい</li>
+<li>pull/push：Gitをインストールできるか？</li>
+</ul>
+</li>
+</ul>
+<h2 id="プラグイン関係"><a href="#プラグイン関係" class="headerlink" title="プラグイン関係"></a>プラグイン関係</h2><h3 id="ファイルリンク"><a href="#ファイルリンク" class="headerlink" title="ファイルリンク"></a>ファイルリンク</h3><ul>
+<li>MovableType プラグイン SetTemplateLink テンプレートファイルリンク一括設定 - WEBデザイン　BLOG<br><a href="http://weblibrary.s224.xrea.com/weblog/mt/templatetag/movabletype_set.html" target="_blank" rel="external">http://weblibrary.s224.xrea.com/weblog/mt/templatetag/movabletype_set.html</a></li>
+<li>Movable Type：MTテンプレートの「ファイルへのリンク」のパスを一括設定するプラグイン - TemplateLinedFileManager : アークウェブのブログ<br><a href="http://www.ark-web.jp/blog/archives/2009/07/movable_type-template_lined_file_manager.html" target="_blank" rel="external">http://www.ark-web.jp/blog/archives/2009/07/movable_type-template_lined_file_manager.html</a></li>
+<li>テンプレートのリンクファイル欄でテンプレートタグを使えるようにするプラグイン:TemplateTagInLinkedFile - エンジニアブログ - スカイアーク<br><a href="http://www.skyarc.co.jp/engineerblog/entry/templatetaginlinkedfile.html" target="_blank" rel="external">http://www.skyarc.co.jp/engineerblog/entry/templatetaginlinkedfile.html</a></li>
+</ul>
+<h3 id="identifier"><a href="#identifier" class="headerlink" title="identifier"></a>identifier</h3><ul>
+<li>Movable Typeで作成したインデックステンプレートに識別子を設定できる「IndexTemplateIdentifierプラグイン」: 小粋空間<br><a href="http://www.koikikukan.com/archives/2012/03/22-000300.php" target="_blank" rel="external">http://www.koikikukan.com/archives/2012/03/22-000300.php</a></li>
+<li>identifierをどうにかしたい訳だが - WolaWola<br><a href="http://www.zelazny.mydns.jp/archives/001058.php" target="_blank" rel="external">http://www.zelazny.mydns.jp/archives/001058.php</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-11T02:15:00.000Z"><a href="/article/DataAPIforCategoryArchive.html">2013-10-11</a></time>
       
       
@@ -181,7 +283,7 @@ url: http://mersy.github.io/
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -268,7 +370,7 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
   
-    <li><a href="/tags/Business/">Business</a><small>0</small></li>
+    <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
     <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
   
@@ -314,7 +416,7 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
   
-    <li><a href="/tags/Website/">Website</a><small>0</small></li>
+    <li><a href="/tags/Website/">Website</a><small>1</small></li>
   
     <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
   
@@ -352,6 +454,10 @@ url: http://mersy.github.io/
   <ul class="entry">
     
       <li>
+        <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
+      </li>
+    
+      <li>
         <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
       </li>
     
@@ -367,10 +473,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
       </li>
     
-      <li>
-        <a href="/article/blog-mac-keyboard-cleaning.html">MacBook のキーボードを掃除してみる</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -382,7 +484,7 @@ url: http://mersy.github.io/
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>23</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
