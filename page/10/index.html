@@ -61,6 +61,57 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-12T03:00:00.000Z"><a href="/article/openTerminalonST2Sidebar.html">2013-10-12</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/openTerminalonST2Sidebar.html">Sublime Text のsidebarからTerminalを開く</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Sublime Text のサイドバーを使いやすくするパッケージの SideBarEnhancements。</p>
+<p>サイドバーからrenameとかできて便利。Jekyllとか使っててプロジェクトのフォルダはサイドバーに開いてるんだけど、該当のフォルダをTerminalで開いてコマンド書くのがてまだったのでとりあえずTerminalが開くようにだけした。</p>
+<p>サイドバーで</p>
+<p>Open With &gt; Edit Applications</p>
+<p>と行くと設定ファイルが出てくるから</p>
+<pre><code>//Terminal
+{
+  &quot;caption&quot;: &quot;Terminal&quot;,
+  &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
+
+  &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
+  &quot;args&quot;: {
+            &quot;paths&quot;: [],
+            &quot;application&quot;: &quot;Terminal&quot;, // OSX
+            &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
+          }
+},
+</code></pre><p>こんな感じで追加してあげればOKだった。</p>
+<p>Jekyllを立ち上げるとかもありそうな気がするなぁ。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-11T08:00:00.000Z"><a href="/article/mtmlVersionControl.html">2013-10-11</a></time>
       
       
@@ -283,7 +334,7 @@ url: http://mersy.github.io/
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>25</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -394,6 +445,8 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
   
+    <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
+  
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
     <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
@@ -454,6 +507,10 @@ url: http://mersy.github.io/
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-mt7-beta.html">Movable Type 7 のベータが出ました</a>
+      </li>
+    
+      <li>
         <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
       </li>
     
@@ -469,10 +526,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-word-module.html">「モジュール一覧」でイメージが伝わっているんだろうか？</a>
       </li>
     
-      <li>
-        <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -484,7 +537,7 @@ url: http://mersy.github.io/
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>25</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

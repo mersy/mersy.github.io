@@ -61,6 +61,70 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-05T06:28:43.000Z"><a href="/article/jenkins.html">2014-05-05</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/jenkins.html">Jenkins memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Welcome to Jenkins CI! | Jenkins CI<br><a href="http://jenkins-ci.org/" target="_blank" rel="external">http://jenkins-ci.org/</a></p>
+<h2 id="VMware-のCentOSにインストール"><a href="#VMware-のCentOSにインストール" class="headerlink" title="VMware のCentOSにインストール"></a>VMware のCentOSにインストール</h2><p>以下の記事を参考に設定</p>
+<blockquote>
+<p>Jenkinsを使ってみよう（Mac OS X＆Linux）［Ruby、Rails］ - Build Insider<br><a href="http://www.buildinsider.net/enterprise/jenkins/01" target="_blank" rel="external">http://www.buildinsider.net/enterprise/jenkins/01</a></p>
+</blockquote>
+<h3 id="repositoryの追加とインストール"><a href="#repositoryの追加とインストール" class="headerlink" title="repositoryの追加とインストール"></a>repositoryの追加とインストール</h3><p>repositoryを追加してインストールしてみる</p>
+<pre><code>$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+$ sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+$ sudo yum install jenkins
+</code></pre><h3 id="Jenkinsを起動する"><a href="#Jenkinsを起動する" class="headerlink" title="Jenkinsを起動する"></a>Jenkinsを起動する</h3><p>起動してみる</p>
+<pre><code>$ sudo service jenkins start
+</code></pre><p>エラーがでたので、javaをインストール</p>
+<pre><code>$ yum install java-1.6.0-openjdk
+
+$ java -version
+java version &quot;1.6.0_30&quot;
+</code></pre><p>再度起動してみる</p>
+<pre><code>$ sudo service jenkins start
+Starting Jenkins                                           [  OK  ]
+</code></pre><p><a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> にアクセスする</p>
+<p>8080があいてないみたいなので修正</p>
+<pre><code>$ sudo vi /etc/sysconfig/iptables
+</code></pre><p>以下をCOMMITの上に追加。</p>
+<pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+</code></pre><p>再起動</p>
+<pre><code>$ sudo service iptables restart
+
+$ sudo service jenkins start
+</code></pre><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li>Installing Jenkins on RedHat distributions - Jenkins - Jenkins Wiki<br><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions" target="_blank" rel="external">https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions</a></li>
+<li>CentOS に Jenkinsをインストール・ポートとURLの変更・ユーザ設定・プラグイン追加まで | 田舎に住みたいエンジニアの日記　　<br><a href="http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/" target="_blank" rel="external">http://blog.ybbo.net/2014/01/11/centos-%E3%81%AB-jenkins%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A8url%E3%81%AE%E5%A4%89%E6%9B%B4%E3%83%BB%E3%83%A6%E3%83%BC%E3%82%B6/</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-05-05T02:01:37.000Z"><a href="/article/homebrew.html">2014-05-05</a></time>
       
       
@@ -636,80 +700,6 @@ $ npm -v
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-03-13T12:44:31.000Z"><a href="/article/getuser.html">2014-03-13</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/getuser.html">Data API で認証後にユーザー情報を取得する</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>DataAPI で記事投稿のときとかは認証をはさみます。<br>認証が通った後にユーザーの情報を使いたい場合があるでしょう。</p>
-<p>ライブラリでユーザー情報を使う部分は getUser ぽいのはなんとなく分かります。</p>
-<blockquote>
-<p>getUser<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser</a></p>
-</blockquote>
-<p>これをみるとこんな感じのようなので、userIdのところにidを渡してあげます。</p>
-<pre><code>api.getUser(userId, function(response) {
-  if (response.error) {
-    // Handle error
-    return;
-  }
-
-  // Do stuff
-});
-</code></pre><p>さて、idってどこに保存されてるんだろう？？とおもうわけですが。</p>
-<pre><code>api.getToken(function(response) {
-  if (response.error) {
-    // Handle error
-    return;
-  }
-  console.log(response);
-  // Do stuff
-});
-</code></pre><p>ってやってもそんな情報返ってきてないです。</p>
-<p>ということでさっきのライブラリの方のドキュメントから Endpoint Users の get のドキュメントを見てみます。</p>
-<blockquote>
-<p>Data api users get<br><a href="https://github.com/movabletype/Documentation/wiki/data-api-users-get" target="_blank" rel="external">https://github.com/movabletype/Documentation/wiki/data-api-users-get</a></p>
-</blockquote>
-<p>さっきのと大してかわらないことしかかいてないですが、よくよくみてみるとパラメータの項目に以下の様なことが書いてありますね。</p>
-<blockquote>
-<p>user_id  unsigned integer  The user ID or the word ‘me’.</p>
-</blockquote>
-<p>‘me’でもいけるんだそうです。</p>
-<pre><code>api.getUser(&apos;me&apos;, function(response) {
-  console.log(response);
-});
-</code></pre><p>こんなかんじでかくとユーザー情報が返ってきてるのが確認できますね。</p>
-<p>このことはDocumentの基本的な使い方の所にもバッチリ書いてありますね。</p>
-<blockquote>
-<p>DataAPI SDK english MT.DataAPI Basic usage · movabletype/mt-data-api-sdk-js Wiki<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage</a></p>
-</blockquote>
-<p>基本的なところはちゃんと読まないといけませんね。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -735,7 +725,7 @@ $ npm -v
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>25</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -846,6 +836,8 @@ $ npm -v
   
     <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
   
+    <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
+  
     <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
   
     <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
@@ -906,6 +898,10 @@ $ npm -v
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-mt7-beta.html">Movable Type 7 のベータが出ました</a>
+      </li>
+    
+      <li>
         <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
       </li>
     
@@ -921,10 +917,6 @@ $ npm -v
         <a href="/article/blog-word-module.html">「モジュール一覧」でイメージが伝わっているんだろうか？</a>
       </li>
     
-      <li>
-        <a href="/article/blog-backlog-world.html">Backlog World に参加してきた</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -936,7 +928,7 @@ $ npm -v
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>24</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>25</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

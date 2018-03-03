@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-02-28T23:39:16.000Z</updated>
+  <updated>2018-03-03T08:40:32.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Movable Type 7 のベータが出ました</title>
+    <link href="https://note.mersy418.com/article/blog-mt7-beta.html"/>
+    <id>https://note.mersy418.com/article/blog-mt7-beta.html</id>
+    <published>2018-03-03T08:30:00.000Z</published>
+    <updated>2018-03-03T08:40:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Movable Type 7 のベータが出ましたね。</p>
+<blockquote>
+<p>Movable Type 7 ベータ版 リリースノート - Movable Type リリースノート<br><a href="https://movabletype.jp/release-notes/70beta.html" target="_blank" rel="external">https://movabletype.jp/release-notes/70beta.html</a></p>
+</blockquote>
+<p>コンテンツタイプが大きいところで楽しみなところではありますね。<br>DataAPI 周りも機能追加されてるみたいだし。</p>
+<p>さて、これに MTAppjQuery ではどんなことやっていきますかね。</p>
+<blockquote>
+<p>MT7 スタイルガイド : MT7 Styleguide<br><a href="https://movabletype.github.io/mt7-style-guide/" target="_blank" rel="external">https://movabletype.github.io/mt7-style-guide/</a></p>
+</blockquote>
+<p>とりあえずはスタイルガイドをざっと眺めて、どんなものになるかをイメージしつつ、こんなのできたらいいかなぁとか考えてるとワクワクしてきますね。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Movable Type 7 のベータが出ましたね。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Movable Type 7 ベータ版 リリースノート - Movable Type リリースノート&lt;br&gt;&lt;a href=&quot;https://movabletype.jp/rele
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Movable Type" scheme="https://note.mersy418.com/tags/Movable-Type/"/>
+    
+  </entry>
   
   <entry>
     <title>スモールスタートで運用しながら調整・成長していく</title>
@@ -714,50 +748,6 @@
     
     
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sketch を使ってみる</title>
-    <link href="https://note.mersy418.com/article/use-sketch.html"/>
-    <id>https://note.mersy418.com/article/use-sketch.html</id>
-    <published>2018-02-05T22:00:00.000Z</published>
-    <updated>2018-02-05T23:41:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Sketch<br><a href="https://www.sketchapp.com/" target="_blank" rel="external">https://www.sketchapp.com/</a></p>
-<p>持ってはいたけど、今まで特に使うことがなかった。。。</p>
-<p>ひとまず、このプラグインを使ってみたかったというところが大きいので触ってみている。</p>
-<blockquote>
-<p>Sketch Notebook Plugin: document designs and wireframes easier. By Marcos Vidal<br><a href="https://marcosvid.al/sketch-notebook/" target="_blank" rel="external">https://marcosvid.al/sketch-notebook/</a></p>
-</blockquote>
-<p><img src="../asset/20180205_sketch.png" alt=""></p>
-<p>ワイヤー、デザイン、仕様書はできるだけ1つにまとめたほうがいいと思ってるので。。。<br>自分のためというより、チームで仕事してくならマストかなぁと。<br>デザインはデザイナさん次第ではあるから、場合にもよるか、、<br>ワイヤーと仕様書くらいであれば、パワポでも他のツールでもいいんだけど。。。</p>
-<p>別途 md ファイルにしておくことは可能だけれどもできる限りその辺は一箇所にしておいた方が、CMSの実装までがやりやすくなる気がする。</p>
-<p>もちろん、ファイルリスト（URL一覧）、コンテンツタイプ設計書、フィールド設計書、などは必要だし、それらは SpreadSheet の方がいいんだろうな、という気はする。</p>
-<h2 id="Sketch-Cloud-が使えない。。"><a href="#Sketch-Cloud-が使えない。。" class="headerlink" title="Sketch Cloud が使えない。。"></a>Sketch Cloud が使えない。。</h2><p>Notebook プラグインだけで Sketch を使うのでいい気がするのだけれども、 Sketch Cloud のサインインして戻ってくると認証されてるはずなのにuploadにいけなくてなんだろうな。。。</p>
-<p>ライセンス買って登録して見たけどダメだった。マシンの問題かなぁ。</p>
-<h2 id="Invision-で連携"><a href="#Invision-で連携" class="headerlink" title="Invision で連携"></a>Invision で連携</h2><p>連携してコメントはできる。<br>テキストの編集とかはできないけど。</p>
-<hr>
-<p>これから試して見ること</p>
-<ul>
-<li>バージョン管理</li>
-<li>Zeplinとの連携</li>
-<li>ワイヤーの作成</li>
-<li>Sketch Cloud</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Sketch&lt;br&gt;&lt;a href=&quot;https://www.sketchapp.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.sketchapp.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;持ってはいたけど、今まで特に使うことがなか
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="sketch" scheme="https://note.mersy418.com/tags/sketch/"/>
     
   </entry>
   
