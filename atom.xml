@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-03T08:40:32.000Z</updated>
+  <updated>2018-03-05T14:56:04.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>何がバグ？それをどういう風に伝えると色々ハッピーなんだろう？？</title>
+    <link href="https://note.mersy418.com/article/blog-what-bug.html"/>
+    <id>https://note.mersy418.com/article/blog-what-bug.html</id>
+    <published>2018-03-04T22:00:00.000Z</published>
+    <updated>2018-03-05T14:56:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>提案：エンジニアに気軽に「バグ」というのはやめませんか？ - worker experienceの日記<br><a href="http://workerexperience.hatenablog.com/entry/2018/02/28/205329" target="_blank" rel="external">http://workerexperience.hatenablog.com/entry/2018/02/28/205329</a></p>
+</blockquote>
+<p>個人的には意識して言わないようにはしてるつもりではあるけども。。。どうだろうな。。。</p>
+<p>バグの前として、チーム内だと仕様をちゃんと伝え切れたかどうか？といったことも影響するだろうし。</p>
+<p>結構クライアントからは不具合とか言われることがあるのでそこは許容しつつ、、、<br>お客さんも意識して言ってるというより、他の言葉を知らない可能性もあるだろうし、クライアントからしたら期待したものになっていない、というからそう言ってしまうこともあるわけで。</p>
+<p>何か言い方のルールとか考えた方がいいんだろうなー。</p>
+<p>不具合報告とかも、不具合です！とか言われるだけでは特に意味のある報告でもないからそこから不具合を解消するためには、確認とか色々増えてくるわけであって。<br>どこで何がどう不具合を思ったのか？<br>これも双方でのコミュニケーションだったり信頼感とかの話な感じですね。</p>
+<p>結局、信頼感が築けてなければ、バグ、瑕疵と言われ続けるだけな気もするし。</p>
+<p>そもそも、勘違いでバグとか言ってる人はこの先変わらないだろうから、それは勝手に置換するように考えないと精神的には持たないだろうな、とは思うな。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;提案：エンジニアに気軽に「バグ」というのはやめませんか？ - worker experienceの日記&lt;br&gt;&lt;a href=&quot;http://workerexperience.hatenablog.com/entry/2018/02/28/2053
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Communication" scheme="https://note.mersy418.com/tags/Communication/"/>
+    
+  </entry>
   
   <entry>
     <title>Movable Type 7 のベータが出ました</title>
@@ -706,41 +739,6 @@
       &lt;p&gt;昔は Karabiner 使ってて、どっかから「⌘英かな」を使ってきてたのだけど、なんか調子悪いなー、って書いたら BUN さんに最近の Karabiner で問題ないと教えてもらったので再度インストールしてみた。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Karabiner
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bearのタグリストにカスタムアイコンがついていた</title>
-    <link href="https://note.mersy418.com/article/blog-bear-custom-icons.html"/>
-    <id>https://note.mersy418.com/article/blog-bear-custom-icons.html</id>
-    <published>2018-02-06T20:00:00.000Z</published>
-    <updated>2018-02-06T20:10:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>メモ系は <a href="http://www.bear-writer.com/" target="_blank" rel="external">Bear</a> を使ってるんですが最近なんか一つのタグだけ表示が違うなー、、、と。</p>
-<p><img src="../asset/20180207_bear_tag.png" alt=""></p>
-<p>気になるから色々調べたりしてたのですが、よくわからず、何だろうなー状態。ファイルが壊れてたりしたら嫌だな、と。</p>
-<p>そんなことを slack に書いてたら BUN さんが教えてくれたんですが、 1.4 からタグにカスタムアイコンが出てたらしい。</p>
-<blockquote>
-<p>List of Custom Icons for Tags in Bear app – DJ Chuang – Medium<br><a href="https://medium.com/@djchuang/i-would-love-to-see-a-list-of-the-100-tagcons-in-the-bear-app-so-far-ive-only-discovered-these-b45a5980e979" target="_blank" rel="external">https://medium.com/@djchuang/i-would-love-to-see-a-list-of-the-100-tagcons-in-the-bear-app-so-far-ive-only-discovered-these-b45a5980e979</a></p>
-</blockquote>
-<p>んで、これは <code>#beauty</code> のタグに着くアイコンなんだそうな。。。</p>
-<p>確かに他もでた。</p>
-<p><img src="../asset/20180207_bear_icons.png" alt=""></p>
-<p>ということで、この設定はOFF!!!</p>
-<p>BUNさんの検索力素晴らしい。。。自分の検索力の無さよ。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;メモ系は &lt;a href=&quot;http://www.bear-writer.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bear&lt;/a&gt; を使ってるんですが最近なんか一つのタグだけ表示が違うなー、、、と。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;../
     
     </summary>
     
