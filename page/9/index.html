@@ -61,6 +61,60 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-04-03T10:00:44.000Z"><a href="/article/powercms.html">2014-04-03</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/powercms.html">PowerCMS 相談会</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>PowerCMS設計・構築相談会というのがあるというので、参加させてもらった。</p>
+<blockquote>
+<p>[セミナー情報]【東京開催】PowerCMS設計・構築相談会を開催します。 (アルファサード - アクセシビリティ, CMS, Movable Type サイト構築のリーディングカンパニー)<br><a href="http://alfasado.net/contents/news/201403281538.html" target="_blank" rel="external">http://alfasado.net/contents/news/201403281538.html</a></p>
+</blockquote>
+<p>なにか相談したいことがあったわけじゃなかったのだけど申し込みさせてもらって、聞いてきた。<br>結果としては進行中案件で気になってることとか色々おしえてもらっていってほんとよかった！</p>
+<p>PowerCMSを使った案件をやらせてもらうことはあるけど、大体決まった機能しかつかってなくても，その中でもまだまだ知らないことたくさん・・・<br>勉強せにゃ。</p>
+<h3 id="import-をtoolsで"><a href="#import-をtoolsで" class="headerlink" title="import をtoolsで"></a>import をtoolsで</h3><p>管理画面から記事とかのimportをしようとするときにエラーになる場合はjobをつかってやってみる。</p>
+<p>方法不明なので調べる。</p>
+<h3 id="RequestCaches"><a href="#RequestCaches" class="headerlink" title="RequestCaches"></a>RequestCaches</h3><p>書き方はこんな感じ</p>
+<pre><code>&lt;MTRequestCache key=&quot;foo&quot;&gt;
+~~
+&lt;/MTRequestCache&gt;
+</code></pre><p>囲まれたところを、fooとしてキャッシュしてくれる。<br>場所によってかえるならkeyを変える様にする。</p>
+<h4 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h4><p>「キャッシュする」はパラメータを一緒にする<br>「ビルド結果をキャッシュする」はパラメータを別に扱う</p>
+<p>再構築、キャッシュ、あたりがちょっと普段から弱いとおもってるので、これはちゃんと理解しないとだなぁ。</p>
+<p>DynamicMTMLもだな、、、仕組みも、、、PHPも・・・。</p>
+<p>他の参加者の方の質問とかもとても勉強になった。</p>
+<ul>
+<li>再構築トリガーを自在にコントロールする(2) | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html" target="_blank" rel="external">http://www.powercms.jp/blog/2012/10/rebuild_trigger2.html</a></li>
+<li>一定ルールにマッチする場合にHTTPS⇄HTTPを指定してリダイレクトさせる | PowerCMS ブログ | PowerCMS - カスタマイズする CMS。Movable Type ベースの多機能 CMS<br><a href="http://www.powercms.jp/blog/2014/04/httpshttp.html" target="_blank" rel="external">http://www.powercms.jp/blog/2014/04/httpshttp.html</a></li>
+<li>Movable Type用画像アップロード機能補助プラグイン　ImageUploadUtility｜SKELETON CART<br><a href="http://skeleton.juxtaposition.jp/image-upload-utility/" target="_blank" rel="external">http://skeleton.juxtaposition.jp/image-upload-utility/</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-02T00:15:39.000Z"><a href="/article/quickpost.html">2014-04-02</a></time>
       
       
@@ -617,107 +671,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-12T09:30:00.000Z"><a href="/article/tocOnOmniMarkupPreviewer.html">2013-10-12</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/tocOnOmniMarkupPreviewer.html">OmniMarkupPreviewer で目次を表示する</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Markdown の原稿で目次が出せたらいいなとおもって調べてたら以下の記事に出会った。</p>
-<blockquote>
-<p>SublimeText2でMarkdownにTOCを挿入する<br><a href="http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/" target="_blank" rel="external">http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/</a></p>
-</blockquote>
-<p>SublimeTextで使ってたのは OmniMarkupPreviewer だったからこれでも拡張できるのかも？？とおもったので設定ファイルを眺めてみた。</p>
-<p>Preferences &gt; Package Settings &gt; OmniMarkupPreviewer &gt; Setting - Default</p>
-<p>で開く設定ファイルのなかに</p>
-<pre><code>// MarkdownRenderer options
-&quot;renderer_options-MarkdownRenderer&quot;: {
-    // Valid extensions:
-    // - OFFICIAL (Python Markdown) -
-    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
-    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
-    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
-    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
-    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
-    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
-    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
-    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
-    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
-    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
-    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
-    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
-    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
-    // - 3RD PARTY -
-    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
-    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
-    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
-    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
-    //                   typographically nicer (&quot;curly&quot;) quotes, proper
-    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
-    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
-    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;]
-</code></pre><p>っていう部分があって</p>
-<pre><code>// MarkdownRenderer options
-&quot;renderer_options-MarkdownRenderer&quot;: {
-    // Valid extensions:
-    // - OFFICIAL (Python Markdown) -
-    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
-    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
-    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
-    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
-    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
-    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
-    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
-    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
-    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
-    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
-    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
-    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
-    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
-    // - 3RD PARTY -
-    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
-    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
-    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
-    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
-    //                   typographically nicer (&quot;curly&quot;) quotes, proper
-    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
-    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
-    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;,&quot;toc&quot;]
-</code></pre><p>ってかんじで、「,”toc”」を追加してみた。</p>
-<blockquote>
-<p>Table of Contents Extension — Python Markdown<br><a href="http://pythonhosted.org/Markdown/extensions/toc.html" target="_blank" rel="external">http://pythonhosted.org/Markdown/extensions/toc.html</a></p>
-</blockquote>
-<p>をみてみると、</p>
-<pre><code>[TOC]
-</code></pre><p>と記述すると目次が出来るみたいなので、それを .md のファイルに入れてみたら目次が出た。<br>なんと便利なんでしょ。</p>
-<p>目次を出す階層を指定出来たりするといいんだろうけど、これでひとまず十分。</p>
-<p>仕様書とか、テキストだけだとキツイかもしれないけど、1箇所に集中してまとめとくとかするときはこれでもいいなぁ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -743,7 +696,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>26</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -850,7 +803,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>7</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>8</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
@@ -918,6 +871,10 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-macbook-keyboard.html">MacBookのキーボードが調子悪め</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-what-bug.html">何がバグ？それをどういう風に伝えると色々ハッピーなんだろう？？</a>
       </li>
     
@@ -933,10 +890,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
       </li>
     
-      <li>
-        <a href="/article/markdown-driven.html">Markdownなドキュメントベースで開発するフローを考える</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -948,7 +901,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>26</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-05T14:56:04.000Z</updated>
+  <updated>2018-03-05T23:22:48.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacBookのキーボードが調子悪め</title>
+    <link href="https://note.mersy418.com/article/blog-macbook-keyboard.html"/>
+    <id>https://note.mersy418.com/article/blog-macbook-keyboard.html</id>
+    <published>2018-03-05T23:00:00.000Z</published>
+    <updated>2018-03-05T23:22:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>MacBook のキーボードがなんか連打される感じになってて非常に辛い感じだったので、以下のを試してみた。</p>
+<blockquote>
+<p>MacBook Pro 2016のキーボードが不調だったけどAppleサポートに電話したら直りました！ - 理系男子のぐうの音<br><a href="http://www.gu-none.com/entry/MacbookPro/17/support" target="_blank" rel="external">http://www.gu-none.com/entry/MacbookPro/17/support</a><br>Mac の SMC (システム管理コントローラ) をリセットする方法 - Apple サポート<br><a href="https://support.apple.com/ja-jp/HT201295" target="_blank" rel="external">https://support.apple.com/ja-jp/HT201295</a></p>
+</blockquote>
+<p>これで快適になってくれるといいのだけど、、、、<br>あまり期待できないかなー。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MacBook のキーボードがなんか連打される感じになってて非常に辛い感じだったので、以下のを試してみた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MacBook Pro 2016のキーボードが不調だったけどAppleサポートに電話したら直りました！ - 理系男子のぐうの音
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>何がバグ？それをどういう風に伝えると色々ハッピーなんだろう？？</title>
@@ -716,36 +745,6 @@
     
     
       <category term="RSS" scheme="https://note.mersy418.com/tags/RSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日英の切り替えをKarabinerに戻してみた</title>
-    <link href="https://note.mersy418.com/article/blog-karabiner.html"/>
-    <id>https://note.mersy418.com/article/blog-karabiner.html</id>
-    <published>2018-02-07T22:00:00.000Z</published>
-    <updated>2018-02-08T13:03:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昔は Karabiner 使ってて、どっかから「⌘英かな」を使ってきてたのだけど、なんか調子悪いなー、って書いたら BUN さんに最近の Karabiner で問題ないと教えてもらったので再度インストールしてみた。</p>
-<blockquote>
-<p>Karabiner - Software for macOS<br><a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="external">https://pqrs.org/osx/karabiner/</a><br>本家 Karabiner-Elements が USキーボードの左右 Commandキーによる「英数 / かな」の切り替えに対応！ | R<br><a href="https://beadored.com/the-original-karabiner-elements-command-switching-eisuu-kana/" target="_blank" rel="external">https://beadored.com/the-original-karabiner-elements-command-switching-eisuu-kana/</a></p>
-</blockquote>
-<p>問題なく使えている様子。</p>
-<p>ただ、Mac の設定で caps lock を control に変更してるのを上書きして無効にする？みたいなので <code>simple modications</code> で <code>caps_lock</code> を <code>left_control</code> に設定した。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昔は Karabiner 使ってて、どっかから「⌘英かな」を使ってきてたのだけど、なんか調子悪いなー、って書いたら BUN さんに最近の Karabiner で問題ないと教えてもらったので再度インストールしてみた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Karabiner
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
