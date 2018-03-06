@@ -61,6 +61,89 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-03-26T03:00:00.000Z"><a href="/article/hexo.html">2017-03-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/hexo.html">Hexo memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ul>
+<li>mdファイルで書きたい</li>
+<li>できればgithubpage使いたい</li>
+</ul>
+<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
+<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
+<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>config_yamlに設定を書く<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:mersy/mersy.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
+<p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
+<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
+<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
+<blockquote>
+<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
+</blockquote>
+<p>コマンド（cmd-shift-P）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- hexo new          # Create a new post</div><div class="line">- hexo publish      # Publish a draft post</div><div class="line">- hexo generate     # Generate static files</div><div class="line">- hexo deploy       # Generate static files and deploy</div><div class="line">- hexo clean        # Clean the cache file and generated files</div></pre></td></tr></table></figure>
+<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new</div></pre></td></tr></table></figure>
+<p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
+<p>でローカルで下書きが確認できる</p>
+<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
+<li>/scaffolds<ul>
+<li>draft.md : ドラフト投稿用のテンプレート</li>
+<li>post.md : 投稿用のテンプレート</li>
+<li>page.md : 固定ページ用のテンプレート</li>
+</ul>
+</li>
+</ul>
+<h2 id="JSONを作成する"><a href="#JSONを作成する" class="headerlink" title="JSONを作成する"></a>JSONを作成する</h2><p>このへんのプラグインがありそう。</p>
+<ul>
+<li>alexbruno/hexo-generator-json-feed<br><a href="https://github.com/alexbruno/hexo-generator-json-feed" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-feed</a></li>
+<li>leviwheatcroft/hexo-generator-recent<br><a href="https://github.com/leviwheatcroft/hexo-generator-recent" target="_blank" rel="external">https://github.com/leviwheatcroft/hexo-generator-recent</a></li>
+<li>HeskeyBaozi/hexo-generator-to-json<br><a href="https://github.com/HeskeyBaozi/hexo-generator-to-json" target="_blank" rel="external">https://github.com/HeskeyBaozi/hexo-generator-to-json</a></li>
+<li>alexbruno/hexo-generator-json-content<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-content</a></li>
+</ul>
+<p>ひとまずは <code>hexo-generator-json-feed</code> を試してみている</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>カテゴリの設定</li>
+<li>検索（flexibeSearch）</li>
+<li><del>引用のデザイン</del></li>
+</ul>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
+<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
+<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
+<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-03-26T02:55:12.000Z"><a href="/article/hello-world.html">2017-03-26</a></time>
       
       
@@ -474,134 +557,6 @@ layout: false
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-08T10:07:27.000Z"><a href="/article/mtmemo.html">2014-05-08</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/mtmemo.html">MTのメモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="タグの情報を調べる"><a href="#タグの情報を調べる" class="headerlink" title="タグの情報を調べる"></a>タグの情報を調べる</h2><p>movabletype/lib/MT/Template/ContextHandlers.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm</a></p>
-<h2 id="コールバック"><a href="#コールバック" class="headerlink" title="コールバック"></a>コールバック</h2><h3 id="ユーザー関係"><a href="#ユーザー関係" class="headerlink" title="ユーザー関係"></a>ユーザー関係</h3><ul>
-<li>cms_edit.author</li>
-<li>cms_view_permission_filter.author</li>
-<li>cms_save_permission_filter.author</li>
-<li>cms_delete_permission_filter.author</li>
-<li>cms_save_filter.author</li>
-<li>cms_pre_save.author</li>
-<li>cms_post_save.author</li>
-<li>cms_post_delete.author</li>
-</ul>
-<h3 id="ブログ関係"><a href="#ブログ関係" class="headerlink" title="ブログ関係"></a>ブログ関係</h3><ul>
-<li>cms_edit.blog</li>
-<li>cms_view_permission_filter.blog</li>
-<li>cms_save_permission_filter.blog</li>
-<li>cms_delete_permission_filter.blog</li>
-<li>cms_pre_save.blog</li>
-<li>cms_post_save.blog</li>
-<li>cms_save_filter.blog</li>
-<li>cms_post_delete.blog</li>
-</ul>
-<h3 id="フォルダ関係"><a href="#フォルダ関係" class="headerlink" title="フォルダ関係"></a>フォルダ関係</h3><ul>
-<li>cms_edit.folder</li>
-<li>cms_view_permission_filter.folder</li>
-<li>cms_save_permission_filter.folder</li>
-<li>cms_delete_permission_filter.folder</li>
-<li>cms_pre_save.folder</li>
-<li>cms_post_save.folder</li>
-<li>cms_save_filter.folder</li>
-<li>cms_post_delete.folder</li>
-</ul>
-<h3 id="カテゴリ関係"><a href="#カテゴリ関係" class="headerlink" title="カテゴリ関係"></a>カテゴリ関係</h3><ul>
-<li>cms_edit.category</li>
-<li>cms_view_permission_filter.category</li>
-<li>cms_save_permission_filter.category</li>
-<li>cms_delete_permission_filter.category</li>
-<li>cms_pre_save.category</li>
-<li>cms_post_save.category</li>
-<li>cms_save_filter.category</li>
-<li>cms_post_delete.category</li>
-</ul>
-<h3 id="コメント関係"><a href="#コメント関係" class="headerlink" title="コメント関係"></a>コメント関係</h3><ul>
-<li>cms_edit.comment</li>
-<li>cms_view_permission_filter.comment</li>
-<li>cms_save_permission_filter.comment</li>
-<li>cms_delete_permission_filter.comment</li>
-<li>cms_pre_save.comment</li>
-<li>cms_post_save.comment</li>
-<li>cms_post_delete.comment</li>
-</ul>
-<h3 id="コメント投稿者関係"><a href="#コメント投稿者関係" class="headerlink" title="コメント投稿者関係"></a>コメント投稿者関係</h3><ul>
-<li>cms_edit.commenter</li>
-<li>cms_view_permission_filter.commenter</li>
-<li>cms_delete_permission_filter.commenter</li>
-</ul>
-<h3 id="ブログ記事関係"><a href="#ブログ記事関係" class="headerlink" title="ブログ記事関係"></a>ブログ記事関係</h3><ul>
-<li>cms_edit.entry</li>
-<li>cms_view_permission_filter.entry</li>
-<li>cms_delete_permission_filter.entry</li>
-<li>cms_pre_save.entry</li>
-<li>cms_post_save.entry</li>
-<li>cms_post_delete.entry</li>
-</ul>
-<h3 id="ウェブページ関係"><a href="#ウェブページ関係" class="headerlink" title="ウェブページ関係"></a>ウェブページ関係</h3><ul>
-<li>cms_edit.page</li>
-<li>cms_view_permission_filter.page</li>
-<li>cms_delete_permission_filter.page</li>
-<li>cms_pre_save.page</li>
-<li>cms_post_save.page</li>
-<li>cms_post_delete.page</li>
-</ul>
-<h3 id="トラックバック関係"><a href="#トラックバック関係" class="headerlink" title="トラックバック関係"></a>トラックバック関係</h3><ul>
-<li>cms_edit.ping</li>
-<li>cms_view_permission_filter.ping</li>
-<li>cms_save_permission_filter.ping</li>
-<li>cms_delete_permission_filter.ping</li>
-<li>cms_pre_save.ping</li>
-<li>cms_post_save.ping</li>
-<li>cms_post_delete.ping</li>
-</ul>
-<h2 id="mt-staticを独立させる"><a href="#mt-staticを独立させる" class="headerlink" title="mt-staticを独立させる"></a>mt-staticを独立させる</h2><p>mt-staticディレクトリを新しく作成する</p>
-<pre><code>/var/www/html/mt/plugins/mt-static/
-</code></pre><p>.htaccessを作成して、mt-staticにおく</p>
-<pre><code>&lt;IfModule mod_rewite.c&gt;
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
-&lt;/IfModule&gt;
-</code></pre><p>まだ理解不足。よくわかってない。</p>
-<p>mt-config</p>
-<pre><code>StaticWebPath /mt/plugins/mt-static/
-</code></pre><blockquote>
-<p>MovableTypeプラグインのコードを書く準備を40秒で済ませる - blog.aklaswad.com<br><a href="http://blog.aklaswad.com/2007/000191.html" target="_blank" rel="external">http://blog.aklaswad.com/2007/000191.html</a><br>Amazon.co.jp： Movable Type 5 プロフェッショナルガイド: 荒木勇次郎: 本<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim</a></p>
-</blockquote>
-<h1 id="MultiBlog"><a href="#MultiBlog" class="headerlink" title="MultiBlog"></a>MultiBlog</h1><p>MultiBlog経由の再構築はおもいところがあるので、RebuildTriggerとかで対応する様にする。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -627,7 +582,7 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>28</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -730,11 +685,13 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
   
     <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
   
+    <li><a href="/tags/Firefox/">Firefox</a><small>1</small></li>
+  
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>8</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>9</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
@@ -802,6 +759,10 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-firefox-tabsuspend.html">Tab Suspender を使ってみる</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-macbook-keyboard.html">MacBookのキーボードが調子悪め</a>
       </li>
     
@@ -817,10 +778,6 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
         <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
       </li>
     
-      <li>
-        <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -832,7 +789,7 @@ RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>28</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

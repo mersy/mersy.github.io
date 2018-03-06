@@ -61,6 +61,46 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-16T23:32:18.000Z"><a href="/article/localfile-googleanalytics.html">2017-11-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
+<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
+<p>この辺を見る限り</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ga(&apos;create&apos;, &apos;UA-xxxxxxxx-x&apos;,&#123;&apos;cookieDomain&apos;: &apos;none&apos;&#125;);</div><div class="line">ga(&apos;set&apos;, &apos;checkProtocolTask&apos;, null);</div><div class="line">ga(&apos;set&apos;, &apos;checkStorageTask&apos;,  null);</div><div class="line">ga(&apos;set&apos;, &apos;historyImportTask&apos;,  null);</div><div class="line">ga(&apos;send&apos;, &apos;pageview&apos;);</div></pre></td></tr></table></figure>
+<p>という感じで書けば良さそう。</p>
+<p>あと、ページ開いたこと自体を計測する場合は</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ga(&apos;set&apos;, &apos;page&apos;, &apos;/dummy/index.html&apos;);</div></pre></td></tr></table></figure>
+<p>のようにURLもセットしておく必要があるっぽい。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-04T23:30:19.000Z"><a href="/article/staticfiles-craftcms.html">2017-11-05</a></time>
       
       
@@ -443,89 +483,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-03-26T03:00:00.000Z"><a href="/article/hexo.html">2017-03-26</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/hexo.html">Hexo memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>mdファイルで書きたい</li>
-<li>できればgithubpage使いたい</li>
-</ul>
-<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
-<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
-<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>config_yamlに設定を書く<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:mersy/mersy.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
-<p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
-<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
-<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
-<blockquote>
-<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
-</blockquote>
-<p>コマンド（cmd-shift-P）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- hexo new          # Create a new post</div><div class="line">- hexo publish      # Publish a draft post</div><div class="line">- hexo generate     # Generate static files</div><div class="line">- hexo deploy       # Generate static files and deploy</div><div class="line">- hexo clean        # Clean the cache file and generated files</div></pre></td></tr></table></figure>
-<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new</div></pre></td></tr></table></figure>
-<p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
-<p>でローカルで下書きが確認できる</p>
-<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
-<li>/scaffolds<ul>
-<li>draft.md : ドラフト投稿用のテンプレート</li>
-<li>post.md : 投稿用のテンプレート</li>
-<li>page.md : 固定ページ用のテンプレート</li>
-</ul>
-</li>
-</ul>
-<h2 id="JSONを作成する"><a href="#JSONを作成する" class="headerlink" title="JSONを作成する"></a>JSONを作成する</h2><p>このへんのプラグインがありそう。</p>
-<ul>
-<li>alexbruno/hexo-generator-json-feed<br><a href="https://github.com/alexbruno/hexo-generator-json-feed" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-feed</a></li>
-<li>leviwheatcroft/hexo-generator-recent<br><a href="https://github.com/leviwheatcroft/hexo-generator-recent" target="_blank" rel="external">https://github.com/leviwheatcroft/hexo-generator-recent</a></li>
-<li>HeskeyBaozi/hexo-generator-to-json<br><a href="https://github.com/HeskeyBaozi/hexo-generator-to-json" target="_blank" rel="external">https://github.com/HeskeyBaozi/hexo-generator-to-json</a></li>
-<li>alexbruno/hexo-generator-json-content<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-content</a></li>
-</ul>
-<p>ひとまずは <code>hexo-generator-json-feed</code> を試してみている</p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>カテゴリの設定</li>
-<li>検索（flexibeSearch）</li>
-<li><del>引用のデザイン</del></li>
-</ul>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
-<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
-<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
-<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -551,7 +508,7 @@
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>28</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -654,11 +611,13 @@
   
     <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
   
+    <li><a href="/tags/Firefox/">Firefox</a><small>1</small></li>
+  
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>8</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>9</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
@@ -726,6 +685,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-firefox-tabsuspend.html">Tab Suspender を使ってみる</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-macbook-keyboard.html">MacBookのキーボードが調子悪め</a>
       </li>
     
@@ -741,10 +704,6 @@
         <a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a>
       </li>
     
-      <li>
-        <a href="/article/webservice-pageproofer.html">Pageprooferというフィードバックサービス</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -756,7 +715,7 @@
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>27</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>28</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

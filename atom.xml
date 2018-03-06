@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-05T23:22:48.000Z</updated>
+  <updated>2018-03-06T20:27:22.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tab Suspender を使ってみる</title>
+    <link href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html"/>
+    <id>https://note.mersy418.com/article/blog-firefox-tabsuspend.html</id>
+    <published>2018-03-06T22:00:00.000Z</published>
+    <updated>2018-03-06T20:27:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Firefox Developer Edition をメインブラウザにしてみてます。</p>
+<blockquote>
+<p>Firefox Developer Edition<br><a href="https://www.mozilla.org/ja/firefox/developer/" target="_blank" rel="external">https://www.mozilla.org/ja/firefox/developer/</a></p>
+</blockquote>
+<p>ブラウザのせいというよりは使い方なのかもしれないけれども、そこまで早いと感じることはなかったりもしつつ、Addon とかのせいなのかなぁということも考えたりしつつ、使ってます。<br>チーム内はChromeが多いし、ブラウザ変えておけば勝手にブラウザチェック的にもなるかな、とか。。。</p>
+<p>さすがにタブ開きすぎたり、開いて放置してると重いなぁ、、、と。<br>Mac自体がかなり重くなるので、ちょっと検討してみるかということで、Slack に投げたら @tinybeans は Chrome で <code>Great Suspender</code> というのを使っているということで似たようなのを探してみたら <code>Tab Suspender</code> というのがあった。</p>
+<blockquote>
+<p>Tab Suspender<br><a href="https://addons.mozilla.org/ja/firefox/addon/tab-suspender-tab-unloader/" target="_blank" rel="external">https://addons.mozilla.org/ja/firefox/addon/tab-suspender-tab-unloader/</a></p>
+</blockquote>
+<p>ってことで、入れて本日で2日目。<br>昨日はあまり気にならなかったなー、、、という気がしてます。<br>あまり仕事をしなかったのか・・・？？もしれないので今日明日また様子見です。</p>
+<p>Suspend されるとこんな感じの画面になって、どこかクリックすればまた復旧します。</p>
+<p><img src="../asset/20180307_tabsuspendar.png" alt=""></p>
+<p>最初この画面が人の顔に見えてたんですが、よくみるとコーヒーとかそんな感じっぽいですね。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Firefox Developer Edition をメインブラウザにしてみてます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Firefox Developer Edition&lt;br&gt;&lt;a href=&quot;https://www.mozilla.org/ja/firefox/d
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
+    
+  </entry>
   
   <entry>
     <title>MacBookのキーボードが調子悪め</title>
@@ -719,32 +758,6 @@
     
       <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>結局RSSリーダーはReadKitにしました</title>
-    <link href="https://note.mersy418.com/article/blog-readkit.html"/>
-    <id>https://note.mersy418.com/article/blog-readkit.html</id>
-    <published>2018-02-08T20:00:00.000Z</published>
-    <updated>2018-02-08T20:25:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>結局、RSSリーダーは ReadKit に戻ってきた。</p>
-<p>Inoreader（ <a href="https://www.inoreader.com/?lang=ja_JP" target="_blank" rel="external">https://www.inoreader.com/?lang=ja_JP</a> ） は良いんだけどちょっと待つのが何となくつっかかる感じで馴染めず。。。</p>
-<p>もう少し待てば問題ないのかもしれないけどなー。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;結局、RSSリーダーは ReadKit に戻ってきた。&lt;/p&gt;
-&lt;p&gt;Inoreader（ &lt;a href=&quot;https://www.inoreader.com/?lang=ja_JP&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="RSS" scheme="https://note.mersy418.com/tags/RSS/"/>
     
   </entry>
   
