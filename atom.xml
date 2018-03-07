@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-06T20:27:22.000Z</updated>
+  <updated>2018-03-07T22:12:10.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacBookのキーボードが調子悪め〜その後20180308</title>
+    <link href="https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html"/>
+    <id>https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html</id>
+    <published>2018-03-07T22:00:00.000Z</published>
+    <updated>2018-03-07T22:12:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Macbook のキーボードの調子が悪いって話は先日かきまして。</p>
+<blockquote>
+<p>MacBookのキーボードが調子悪め | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard.html">https://note.mersy418.com/article/blog-macbook-keyboard.html</a></p>
+</blockquote>
+<p>この時試して調子良くなったかなー、と思ったりしてますが、さっきも少しダブったりしてた。<br>うむむ。。。</p>
+<p>とはいえ、頻度は減った気がする。</p>
+<blockquote>
+<p>Tab Suspender を使ってみる | mersy note<br><a href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html">https://note.mersy418.com/article/blog-firefox-tabsuspend.html</a></p>
+</blockquote>
+<p>のおかげで Mac がそこまで重くなってないからなのかな。。。</p>
+<p>そういうのに関係はあるんだろうか？？<br>また少し様子見してみるか。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Macbook のキーボードの調子が悪いって話は先日かきまして。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MacBookのキーボードが調子悪め | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-m
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="MacBook" scheme="https://note.mersy418.com/tags/MacBook/"/>
+    
+  </entry>
   
   <entry>
     <title>Tab Suspender を使ってみる</title>
@@ -578,9 +615,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
     
   </entry>
   
@@ -723,41 +760,6 @@
     
     
       <category term="Photo" scheme="https://note.mersy418.com/tags/Photo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【読了】 半年だけ働く。</title>
-    <link href="https://note.mersy418.com/article/book-work-halfyear.html"/>
-    <id>https://note.mersy418.com/article/book-work-halfyear.html</id>
-    <published>2018-02-10T12:00:00.000Z</published>
-    <updated>2018-02-10T12:27:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Amazon.co.jp： 半年だけ働く。 eBook: 村上　アシシ: Kindleストア<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim</a></p>
-<p>を読んだ。</p>
-<div class="mm-middle" style="margin-bottom:0px;"><div class="mm-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/41BxXkQkOvL._SL160_.jpg" alt="半年だけ働く。" title="半年だけ働く。" width="109" height="160" border="0"></a></div><div class="mm-content" style="float:left;margin-left:15px;line-height:120%"><div class="mm-title" style="line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank">半年だけ働く。</a></div><div class="mm-detail" style="margin-top:10px;">村上　アシシ<br>朝日新聞出版 ( 2017-12-20 )<br><div style="margin:7px 0px"><a href="http://mediamarker.net/u/mersy/?asin=B078GP6MP9" target="_blank">mersy’s bookshelfで詳細を見る</a></div></div></div><div style="clear:left"></div></div>
-
-<p>厳密にはフリーランスではないけど、多分、端から見たらそんな風に見えてるような気もするが。。。</p>
-<p>とりあえず、一緒に仕事させてもらってる方々に恵まれてるので、その人たちといい感じに仕事しつつ、普段からスキルアップなりアウトプットなりしている姿を目にしているので、それに少しでもついて行くようにすることが必要なんだろうな、と。</p>
-<p>言問の仕事をするようになって変わる部分もあったけれども、色々といい方向には動いているのかなぁと思ってはいる。忙しいけど。<br>この本の半年働いて、半年休むではないけど、今はがむしゃらにやるタイミングかな、とは思っているのでそれをやりつつ、将来に向けての足場作りかな、とは思っているところ。</p>
-<blockquote>
-<p>企画業務に特化したスペシャリストであれば、新事業の企画策定の支援メンバーとして、単価の高い案件が多くあります。 　ちなみに私の場合は、コンサルティング業務におけるＰＭＯのプロフェッショナルです。ＰＭＯとはプロジェクト・マネジメント・オフィスの略で、プロジェクトマネージャーの意思決定や業務を支援し、プロジェクトを円滑に進行させるための、専門のサポート部隊のことです</p>
-<p>これらの職種に共通するのは、「問題解決のプロフェッショナル」として対価が支払われる点です。どんな企業でも自社内で問題を解決できればそれに越したことはありませんが、プロジェクトを組成する際に適した人材が社内に存在しないケースが多々あります。</p>
-</blockquote>
-<p>プロジェクトを進めるっていう仕事が多いので、その辺のスキルというかできることを伸ばしつつ、ここのところの反省として最低限やっておかないと色々と面倒になることも見えてきたので、単価というラインではないけれども、そこは線引きとしてキープしておかないと、個人としてもチームとしてもいい結果、いい仕事には繋がらないな、ということが見えてきた気がする。</p>
-<p>実戦で解決できることもあるので、その辺ちゃんとやらないとだなぁ。あとは学びなんだろうな。</p>
-<p>ちょうど今日、短歌の話は少しだけチームで話題になったりしたのがなかなか熱い（笑<br>繁忙期とかもあるしなー。</p>
-<p>とりあえず、写真のバックアップ先に Google Photos も追加した。</p>
-<div class="mm-middle" style="margin-bottom:0px;"><div class="mm-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/41BxXkQkOvL._SL160_.jpg" alt="半年だけ働く。" title="半年だけ働く。" width="109" height="160" border="0"></a></div><div class="mm-content" style="float:left;margin-left:15px;line-height:120%"><div class="mm-title" style="line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim" target="_blank">半年だけ働く。</a></div><div class="mm-detail" style="margin-top:10px;">村上　アシシ<br>朝日新聞出版 ( 2017-12-20 )<br><div style="margin:7px 0px"><a href="http://mediamarker.net/u/mersy/?asin=B078GP6MP9" target="_blank">mersy’s bookshelfで詳細を見る</a></div></div></div><div style="clear:left"></div></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Amazon.co.jp： 半年だけ働く。 eBook: 村上　アシシ: Kindleストア&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/exec/obidos/ASIN/B078GP6MP9/mersys-22/ref=nosim&quot; targ
-    
-    </summary>
-    
-      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
-    
     
   </entry>
   
