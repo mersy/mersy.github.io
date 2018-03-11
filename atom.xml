@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-07T22:12:10.000Z</updated>
+  <updated>2018-03-11T21:34:30.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>お持ち帰りで一枚無料になるドミノピザ</title>
+    <link href="https://note.mersy418.com/article/blog-domino-pizza.html"/>
+    <id>https://note.mersy418.com/article/blog-domino-pizza.html</id>
+    <published>2018-03-11T20:00:00.000Z</published>
+    <updated>2018-03-11T21:34:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ドミノピザの店舗受け取り、もう一枚半額というのを使ってみた。</p>
+<blockquote>
+<p>知らないアナタは損してるかも？ お持ち帰りで２つのスペシャルオファー！｜ドミノ・ピザ<br><a href="https://pizza.dominos.jp/ja/takeout/" target="_blank" rel="external">https://pizza.dominos.jp/ja/takeout/</a></p>
+</blockquote>
+<p>近所にドミノピザがあるのは知ってたけど、初めて使ってみた。</p>
+<blockquote>
+<p>ご来店日時　2018年03月10日 19時17分<br>受付日時　　2018年03月10日 19時05分</p>
+</blockquote>
+<p>ネットで注文して、準備して、取りに行くとできてる、くらいの勢い。<br>最初何時に取りに行ったらいいのかわからず家を出たんだけど、メール見たら受け取り時間も書いてあってこれは安心。</p>
+<p>これで、1枚はただとか大丈夫なのか心配にはなるけど。<br>ピザには限定されるけど、外食しにいくより全然いいかも。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ドミノピザの店舗受け取り、もう一枚半額というのを使ってみた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;知らないアナタは損してるかも？ お持ち帰りで２つのスペシャルオファー！｜ドミノ・ピザ&lt;br&gt;&lt;a href=&quot;https://pizza.dominos.jp/ja/tak
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>MacBookのキーボードが調子悪め〜その後20180308</title>
@@ -615,9 +647,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
       <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
@@ -722,44 +754,6 @@
     
     
       <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写真をどうやって保存しておくか</title>
-    <link href="https://note.mersy418.com/article/blog-keep-photos.html"/>
-    <id>https://note.mersy418.com/article/blog-keep-photos.html</id>
-    <published>2018-02-11T12:40:00.000Z</published>
-    <updated>2018-02-11T12:54:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>橋本さんのブログを読みつつ、、、</p>
-<blockquote>
-<p>PowerPhotosを使ってMacの写真アプリのライブラリを分割バックアップする | BridgeBook.JP<br><a href="https://bridgebook.jp/powerphotos-mac" target="_blank" rel="external">https://bridgebook.jp/powerphotos-mac</a></p>
-</blockquote>
-<p>橋本さんはデジイチとかでとったりされてるからこういう管理方法をされてるんだと思うのだけど。</p>
-<p>コンデジすら使わなくなってしまったこの頃。ほんと、スマホでしか写真も撮らないのが僕も妻もそんな感じで。</p>
-<p>その写真をどこへ保存するか、と言うところで。<br>妻は、iPhoneを買い換える時もデータ引き継いでるらしく、いまの iPhone にそこそこ残ってるらしい。その先として Amazon Prime には保存してるけど。</p>
-<p>僕は、そもそも買い換えるタイミングでまっさらなところからスタートなので、どこかにあげてないとなかったことになってるなぁ。。。<br>と言うか、 マシン自体を短周期で変えてしまうコスパの悪さなので、マシンに保存しておくと言う発想がなかった。<br>とりあえず、 flickr にはあげてあるはずで、 S3あたりにも保存したよなー、、、と言う気がしつつつ。S3落ち着いたら見直してみよ。。。</p>
-<p>あとは、 Amazon Prime を始めてから Amazon Prime Photos にもバックアップとしておいてあるんだけど、昨日本を読んで、　Google Photos にもおくようにした。</p>
-<p>この写真たちを見返すのか？？と言うと、甚だ疑問ではあるのだけど、見返す可能性もあると思って、とりあえず複数環境においておくのがいいんだろうな、、、と。。。</p>
-<p>この写真たちはいつ捨てられることになるんだろうな。。。。</p>
-<hr>
-<p>妻の手元には、出力した写真も大量にあって。<br>これらをデジタルデータにして、ポンと Amazon Prime なり Google Photos においてくれれば楽だろうな、、、と。<br>サービス自体ありそうだけど。。。<br>本を自炊するサービスみたいなもんだろうしねぇ。。。</p>
-<p>この辺って、まだとった写真を次どう使うか？？と言う局面に出会ってないからあまり問題が顕在化してないんだけど、そう言う場面になった時にどうするのがいいんだろうな。探せるか？と言うと、探せる自信はないかもな。<br>写真を日常的に撮っていて仕事にしてる人からしたら既に当たり前の話なのかもしれないけど。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;橋本さんのブログを読みつつ、、、&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;PowerPhotosを使ってMacの写真アプリのライブラリを分割バックアップする | BridgeBook.JP&lt;br&gt;&lt;a href=&quot;https://bridgebook.jp/powerpho
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Photo" scheme="https://note.mersy418.com/tags/Photo/"/>
     
   </entry>
   

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 5 | mersy note</title>
+  <title>Seite 5 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,53 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-03T07:17:13.000Z"><a href="/article/book-kanban-in-action.html">2018-01-03</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/book-kanban-in-action.html">カンバン仕事術</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>「カンバン仕事術」を読んだ。<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/487311764X/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/487311764X/mersys-22/ref=nosim</a></p>
+<p>WIPとリードタイムの話はなるほど、とは思った。<br>継続的なプロダクト開発とかだとフィットしやすいんだろうなぁと言う気がしつつ。<br>複数の受託案件のようなプロジェクトが並行して動いていて、メンバーアサインも複数プロジェクトにまたがる場合どうするのがいいのか悩ましいところだなぁ、と。</p>
+<p>プロジェクト単位のボードがありつつ？ユーザー単位のボードがあり、全社ボードがある感じになるのがいいのか？<br>プロジェクトによっては分類の方法もかわるだろうから、そういうわけにもいかないだろうしなぁ。</p>
+<p>いろんな案件に携わっていて、日々Backlogのチケットをあちこち返しているのは、コインを次の人に1つずつまわすような作業になっているんだろうか？？</p>
+<hr>
+<p>サービスクラス＝プロジェクト？、という風に考えられなくもないけど、クラス＝優先度的な発想、というかんじで、緊急とかがあるんだろうな。<br>緊急、確定納期、欠陥、無形、通常項目、が例としては出ていたけど。<br>backlogでいうところだとタスクの種別みたいなものか？</p>
+<p>リモートでコアタイム的なものがない場合、振り返りをどのように行うか？スタンドアップをどのように行うか？<br>振り返りの準備を継続して用意しておきつつ、適当なタイミングで行えるか？</p>
+<hr>
+<p>予定通りにすすめられない・進まない、のは計画の立て方含めて開発着手前の前提とかスケジュール立てる時点で間違ってるところが大いにありそうな気がしている。<br>根本的に考え直さないといけないんだろうな。<br>ツールの使い方どうこうでは解決しなささそうな気がするし、まずは自身の行動を見直さないといけない気がする。</p>
+<p>現状はBacklogを使っているがこれにカンバンの見える化的なわかりやすさをどうにか出来ないかは考えてみても良さそう。<br>あとは、例としてあげられていたようなステップをへるものの場合であれば使い方を工夫すれば調整が出来そうな気もするから何かしら考えてみたい。</p>
+<p>リモートだとリアルホワイトボードは難しいからホワイトボードっぽいことが出来るWebサービスを使うか、Trelloみたいなカンバン系のサービスを使うか、とかでも良いのかもしれない。</p>
+<hr>
+<p>アサインされてるものを、未着手なのか、着手したのか、一旦ペンディングにしているのかを見えるようにするだけでも少しはかわるだろうし、複数あるチケットについて、担当ごとに優先順位を付けられるだけでも変わるのかもしれない。<br>各工程におかれるWIPにアサインされた人をアバターでわかるようにする話はあるけど、その人はそれ以外のプロジェクトもあるからどのようにして串刺ししてみれるかが肝になりそうな気もする。</p>
+<p>そもそも、複数プロジェクトにまたがらないようにする、というのも手ではあるのかもしれないが。<br>ツールに使われないようにしつつ、ツールの見直しも含めて、ツールの制約の中で出来ることを模索していきたいところ。</p>
+<p>WIPの制限によるリードタイム短縮の話は、成果としては大きいものかと思うので、それに当たるような改善はしていかないとだ。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -551,87 +598,32 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-26T07:06:41.000Z"><a href="/article/change-dns-email.html">2017-11-26</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
-<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
-<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
-<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
-<blockquote>
-<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
-</blockquote>
-<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
-<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
-<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
-<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
-</ul>
-<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
-<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
-</ul>
-<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
-<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
-<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
-<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
-<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/4/" class="alignleft prev">Prev</a>
+    <a href="/page/4/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/6/" class="alignright next">Next</a>
+    <a href="/page/6/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>29</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>30</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -816,8 +808,12 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
+      </li>
     
       <li>
         <a href="/article/blog-macbook-keyboard-20180308.html">MacBookのキーボードが調子悪め〜その後20180308</a>
@@ -835,22 +831,18 @@
         <a href="/article/blog-what-bug.html">何がバグ？それをどういう風に伝えると色々ハッピーなんだろう？？</a>
       </li>
     
-      <li>
-        <a href="/article/blog-mt7-beta.html">Movable Type 7 のベータが出ました</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>29</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>30</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
