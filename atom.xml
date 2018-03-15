@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-11T21:34:30.000Z</updated>
+  <updated>2018-03-15T21:54:17.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>コンビニでスマホアプリからプリントしてみた</title>
+    <link href="https://note.mersy418.com/article/blog-print-at-convenience.html"/>
+    <id>https://note.mersy418.com/article/blog-print-at-convenience.html</id>
+    <published>2018-03-15T20:00:00.000Z</published>
+    <updated>2018-03-15T21:54:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>引っ越したらルータとプリンタが遠くなったせいか、プリンタがうまいこと繋がらないのでコンビニプリントを試してみた。<br>以前も一度オンライン経由のを試したことがある気がするけど。今回はスマホアプリ経由で試してみた。</p>
+<p>うちの近所は ファミマなので、それ用のアプリをインストール。</p>
+<blockquote>
+<p>コンビニでPrintSmash(プリントスマッシュ)/SHARP<br><a href="http://www.sharp.co.jp/multicopy/prsm/" target="_blank" rel="external">http://www.sharp.co.jp/multicopy/prsm/</a></p>
+</blockquote>
+<p>メールに添付されていたPDFをアプリに送る。請求書は忘れる前に払わないと。。。</p>
+<p>コンビニに着いたらコピー機が指定しているwifiに接続する。<br>ここが一番時間かかったくらいで。</p>
+<p>GmailのアプリからPDFファイルを PrintSmash へ送る。</p>
+<p><img src="../asset/20180315-2100.png" alt=""></p>
+<p>プリント。<br>終了。白黒で10円。</p>
+<p>こりゃ楽だな。。。</p>
+<p>あとは家から外へ出るめんどくささを乗り越えられれば、、、プリンタは捨ててもいいのかも？？しれない。今日はたまたま外出からの帰りだったし。<br>というか繋がらないなら、一旦はプリンタはお別れかな。。。<br>いやー、でも月末処理がめんどいんだよなー。。。悩ましい。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;引っ越したらルータとプリンタが遠くなったせいか、プリンタがうまいこと繋がらないのでコンビニプリントを試してみた。&lt;br&gt;以前も一度オンライン経由のを試したことがある気がするけど。今回はスマホアプリ経由で試してみた。&lt;/p&gt;
+&lt;p&gt;うちの近所は ファミマなので、それ用のアプリ
+    
+    </summary>
+    
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>お持ち帰りで一枚無料になるドミノピザ</title>
@@ -722,38 +755,6 @@
     
     
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>タスクの確認をメール通知からAsanaに変更してみた</title>
-    <link href="https://note.mersy418.com/article/blog-todo-asana.html"/>
-    <id>https://note.mersy418.com/article/blog-todo-asana.html</id>
-    <published>2018-02-11T22:00:00.000Z</published>
-    <updated>2018-02-12T10:15:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今まで、意外とメーラー（Gmail）がTodoの肝になってたところがある。 Backlogでタスクの確認もしてはいたけど。</p>
-<p>いろんな案件のやりとりが集中してくるのは、あくまでメール通知なので、 backlog とかの通知含めて、未回答なものが全てmailに残る感じにしていた。</p>
-<p>ただ、それはそれでいいのだけど、来た日はまだしも、来てから日付が経ってしまうと見落としがちだし、対応の優先度が下がってしまうな、、と。</p>
-<p>メールへの返事がすぐできるなら、チケットを別の担当にアサインするなり、コメント返すなり、それをしてしまう。<br>それが2分とかすぐ終わらないなら、とりあえず Asana のタスクに登録しておく、と言うことをはじめてみた。</p>
-<p>Asana じゃなくて、 bit part の backlogでもいいのだけど、その辺は検証も兼ねて、ひとまず Asana にしてみた。</p>
-<p>backlog １つで完了できればいいのだけど、 space をまたいだ時点でその方法が使えないので、とりあえず別ツールの　Asana を母艦にすることにした。<br>アプリを切り替えることでやることを切り替える、ということもできるかなと。。。。</p>
-<p>個人的にそこを確認すればいいようにしておくようにしつつ、各担当もそこを見れば、他の案件なりプロジェクトも串刺しで読めると便利なのかなぁ、、と。。。<br>全員のタスクを集約するのはちょっと大変なんだろうけどな。。。</p>
-<p>あとは、 Asana に集約できれば、他の人にもメリットがあるのかなぁ、、、と言う期待がある。</p>
-<p>Asana へはページ開いて、タスク登録してるけど、この辺はメール登録の方が早いのかなぁ。。。試してみよう。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今まで、意外とメーラー（Gmail）がTodoの肝になってたところがある。 Backlogでタスクの確認もしてはいたけど。&lt;/p&gt;
-&lt;p&gt;いろんな案件のやりとりが集中してくるのは、あくまでメール通知なので、 backlog とかの通知含めて、未回答なものが全てmailに残る
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
     
   </entry>
   

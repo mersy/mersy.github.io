@@ -61,6 +61,70 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-02T02:06:33.000Z"><a href="/article/mtmakdownoptions.html">2014-05-02</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtmakdownoptions.html">MTMarkdownOptions</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
+<blockquote>
+<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
+</blockquote>
+<p>知らなかった！</p>
+<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
+# &lt;mt:EntryTitle&gt;
+---
+&lt;mt:EntryBody&gt;
+&lt;/MTMarkdownOptions&gt;
+</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
+<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
+<blockquote>
+<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
+</blockquote>
+<p>とりあえず、指定の仕方がよくわからん。</p>
+<p>filtersについてのコードはこの辺。</p>
+<blockquote>
+<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
+</blockquote>
+<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
+<blockquote>
+<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
+</blockquote>
+<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
+<hr>
+<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
+<p>使えそうなモジュールはこの辺？</p>
+<blockquote>
+<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
+</blockquote>
+<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-28T05:07:31.000Z"><a href="/article/StaticPress.html">2014-04-28</a></time>
       
       
@@ -662,44 +726,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-16T19:00:00.000Z"><a href="/article/sitemapByjekyll.html">2013-10-17</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/sitemapByjekyll.html">Jekyll でGoogle Sitemap</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Jekyll でGoogle Sitemap を作るにはどうするんだろう？？と。</p>
-<blockquote>
-<p>Generating a Sitemap in Jekyll without a Plugin – Development, design, and more by David Ensinger<br><a href="http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/" target="_blank" rel="external">http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/</a></p>
-</blockquote>
-<p>を参考にして。</p>
-<p>こんな感じのをsitemap.xmlとして追加した。</p>
-<script src="//gist.github.com/7013158.js"></script>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -781,7 +807,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/Work/">Work</a><small>1</small></li>
   
-    <li><a href="/categories/blog/">blog</a><small>3</small></li>
+    <li><a href="/categories/blog/">blog</a><small>4</small></li>
   
     <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
   
@@ -914,6 +940,10 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-print-at-convenience.html">コンビニでスマホアプリからプリントしてみた</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
       </li>
     
@@ -927,10 +957,6 @@ $ knife solo prepare test_vagrant5
     
       <li>
         <a href="/article/blog-macbook-keyboard.html">MacBookのキーボードが調子悪め</a>
-      </li>
-    
-      <li>
-        <a href="/article/blog-what-bug.html">何がバグ？それをどういう風に伝えると色々ハッピーなんだろう？？</a>
       </li>
     
   </ul>
@@ -1000,7 +1026,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/Work/">Work</a><small>1</small></li>
     
-      <li><a href="/categories/blog/">blog</a><small>3</small></li>
+      <li><a href="/categories/blog/">blog</a><small>4</small></li>
     
       <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
     
