@@ -9,7 +9,9 @@
   <meta name="description" content="Fastlyhttps://www.fastly.com/
 キャッシュの設定がそれぞれ変更される都度version管理されている
 VCL（Varnish Configuration Language）というのに記載する。
-123456789101112131415161718192021222324">
+sub vcl_recv {
+
+  /* unset state tracki">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -78,25 +80,56 @@ VCL（Varnish Configuration Language）というのに記載する。
         <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
 <p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
 <p>VCL（Varnish Configuration Language）というのに記載する。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">sub vcl_recv &#123;</div><div class="line"></div><div class="line">  /* unset state tracking header to avoid client sending it */</div><div class="line">  if (req.restarts == 0) &#123;</div><div class="line">    unset req.http.X-Authed;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (!req.http.X-Authed) &#123;</div><div class="line">    /* stash the original URL and Host for later */</div><div class="line">    set req.http.X-Orig-URL = req.url;</div><div class="line"></div><div class="line">    /* set the URL to what the auth backend expects */</div><div class="line">    set req.url = &quot;/authenticate&quot;;</div><div class="line"></div><div class="line">    /* Auth requests won&apos;t be cached, so pass */</div><div class="line">    return(pass);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  if (req.http.X-Authed == &quot;true&quot;) &#123;</div><div class="line">    /* were authed, so proceed with the request */</div><div class="line">    /* reset the URL */</div><div class="line">    set req.url = req.http.X-Orig-URL;</div><div class="line"></div><div class="line">  &#125; else &#123;</div><div class="line">    /* the auth backend refused the request, so 403 the client */</div><div class="line">    error 403;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<blockquote>
+<pre><code>sub vcl_recv {
+
+  /* unset state tracking header to avoid client sending it */
+  if (req.restarts == 0) {
+    unset req.http.X-Authed;
+  }
+
+  if (!req.http.X-Authed) {
+    /* stash the original URL and Host for later */
+    set req.http.X-Orig-URL = req.url;
+
+    /* set the URL to what the auth backend expects */
+    set req.url = &quot;/authenticate&quot;;
+
+    /* Auth requests won&#39;t be cached, so pass */
+    return(pass);
+  }
+
+  if (req.http.X-Authed == &quot;true&quot;) {
+    /* were authed, so proceed with the request */
+    /* reset the URL */
+    set req.url = req.http.X-Orig-URL;
+
+  } else {
+    /* the auth backend refused the request, so 403 the client */
+    error 403;
+  }
+</code></pre><blockquote>
 <p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Pass through all requests for /login/* and /admin/*</div><div class="line">if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) &#123;</div><div class="line">  return(pass);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<pre><code># Pass through all requests for /login/* and /admin/*
+if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) {
+  return(pass);
+}
+</code></pre><p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
 <blockquote>
 <p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
 </blockquote>
 <h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
 <p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
 <p>キャッシュヒットしてるとこの辺で返ってくる。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">X-Cache-Hits : 1</div><div class="line">X-Cache	: HIT</div></pre></td></tr></table></figure>
-<blockquote>
+<pre><code>X-Cache-Hits : 1
+X-Cache    : HIT
+</code></pre><blockquote>
 <p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
 </blockquote>
 <p>そのほか Response headers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cache-Control	: no-store, no-cache, must-revalidate</div><div class="line">Pragma : no-cache</div></pre></td></tr></table></figure>
-<p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<pre><code>Cache-Control    : no-store, no-cache, must-revalidate
+Pragma : no-cache
+</code></pre><p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
 <hr>
 <h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
 <li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>

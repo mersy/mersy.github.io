@@ -479,8 +479,10 @@
         <p>メールとかチャットとかでテキストをコピペして引用する時に行頭に <code>&gt;</code> とかつけて貼り付けたりすることがあるんですが。</p>
 <p>これまではテキストコピーしたら CotEditor 開いて貼り付けて置換して、コピペという流れでやっていたのだけれど。。。</p>
 <p>ちょっと面倒だし、貼り付けるときにそういう形式にできないかなぁ、、、 Alfred あたりでできそうな気もしそうだけど、どうかなぁ、、と Slack に書いてたら早速 BUN さんが作ってくれた。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$query = &quot;&#123;query&#125;&quot;;</div><div class="line"></div><div class="line">echo preg_replace(&apos;/^/m&apos;, &apos;&gt; &apos;, $query);</div></pre></td></tr></table></figure>
-<p><img src="../asset/20180217_alfred.png" alt=""></p>
+<pre><code>$query = &quot;{query}&quot;;
+
+echo preg_replace(&#39;/^/m&#39;, &#39;&gt; &#39;, $query);
+</code></pre><p><img src="../asset/20180217_alfred.png" alt=""></p>
 <p>とりあえずこれにHotkeyわりあてたら希望通りになって最高！！</p>
 <p>もっと早く呟けばよかったと思いました（笑</p>
 

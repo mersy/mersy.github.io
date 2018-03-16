@@ -84,8 +84,8 @@ Drupal が用意されているのでそれを使うだけで良さそうなの�
 <p>みたいな感じに。</p>
 <p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
 <p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat bitnami_application_password</div></pre></td></tr></table></figure>
-<blockquote>
+<pre><code>$ cat bitnami_application_password
+</code></pre><blockquote>
 <p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
 </blockquote>
 <p>ということで、調べたパスワードで</p>
@@ -104,15 +104,15 @@ Drupal が用意されているのでそれを使うだけで良さそうなの�
 <blockquote>
 <p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush</div></pre></td></tr></table></figure>
-<p>で Drush が入っているのを確認。</p>
+<pre><code>$ drush
+</code></pre><p>で Drush が入っているのを確認。</p>
 <p>Drush については以下を参考にさせてもらった。</p>
 <blockquote>
 <p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
 </blockquote>
 <p>このテーマをダウンロード</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush dl bootstrap_business</div></pre></td></tr></table></figure>
-<p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
+<pre><code>$ drush dl bootstrap_business
+</code></pre><p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
 <p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
 <h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
 <li>ドメイン割り当て</li>

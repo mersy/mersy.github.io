@@ -435,8 +435,8 @@
 <p>そのうえでドメイン移管。</p>
 <p>2017.12.24 ドメイン移管も完了</p>
 <h2 id="メール設定"><a href="#メール設定" class="headerlink" title="メール設定"></a>メール設定</h2><p>ロリポップのメールサーバへのレコード情報はサイトに掲載されてないみたいなので、</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nslookup hogehoge.main.jp</div></pre></td></tr></table></figure>
-<p>とか契約してあるロリポップドメインのIPを調べる。</p>
+<pre><code>$ nslookup hogehoge.main.jp
+</code></pre><p>とか契約してあるロリポップドメインのIPを調べる。</p>
 <p>MXレコードは <code>10 mx01.lolipop.jp.</code> らしい。</p>
 <h3 id="Route53の設定"><a href="#Route53の設定" class="headerlink" title="Route53の設定"></a>Route53の設定</h3><p>Route53の「Hosted Zones」からドメインを選ぶ。</p>
 <p><img src="../asset/20171224_aws_hostzone01.png" alt=""></p>
@@ -446,8 +446,9 @@
 <p>MXレコードを追加する。</p>
 <p><img src="../asset/20171224_aws_hostzone03.png" alt=""></p>
 <p>こっちはサブドメインではないからそのままで追加。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ dig mersy418.com</div><div class="line">$ dig mail.mersy418.com</div></pre></td></tr></table></figure>
-<p>で確認。</p>
+<pre><code>$ dig mersy418.com
+$ dig mail.mersy418.com
+</code></pre><p>で確認。</p>
 <p>テストメールを送ったところ、ロリポップのWebメールにもメールがあり、転送先にも転送されていた。</p>
 <blockquote>
 <p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
@@ -500,8 +501,8 @@
 <p>みたいな感じに。</p>
 <p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
 <p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat bitnami_application_password</div></pre></td></tr></table></figure>
-<blockquote>
+<pre><code>$ cat bitnami_application_password
+</code></pre><blockquote>
 <p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
 </blockquote>
 <p>ということで、調べたパスワードで</p>
@@ -520,15 +521,15 @@
 <blockquote>
 <p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush</div></pre></td></tr></table></figure>
-<p>で Drush が入っているのを確認。</p>
+<pre><code>$ drush
+</code></pre><p>で Drush が入っているのを確認。</p>
 <p>Drush については以下を参考にさせてもらった。</p>
 <blockquote>
 <p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
 </blockquote>
 <p>このテーマをダウンロード</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ drush dl bootstrap_business</div></pre></td></tr></table></figure>
-<p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
+<pre><code>$ drush dl bootstrap_business
+</code></pre><p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
 <p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
 <h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
 <li>ドメイン割り当て</li>

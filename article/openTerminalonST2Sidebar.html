@@ -78,18 +78,18 @@
 <p>サイドバーで</p>
 <p>Open With &gt; Edit Applications</p>
 <p>と行くと設定ファイルが出てくるから</p>
-<pre><code>//Terminal
-{
-  &quot;caption&quot;: &quot;Terminal&quot;,
-  &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
+<pre><code>  //Terminal
+  {
+    &quot;caption&quot;: &quot;Terminal&quot;,
+    &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
 
-  &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-  &quot;args&quot;: {
-            &quot;paths&quot;: [],
-            &quot;application&quot;: &quot;Terminal&quot;, // OSX
-            &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
-          }
-},
+    &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
+    &quot;args&quot;: {
+              &quot;paths&quot;: [],
+              &quot;application&quot;: &quot;Terminal&quot;, // OSX
+              &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
+            }
+  },
 </code></pre><p>こんな感じで追加してあげればOKだった。</p>
 <p>Jekyllを立ち上げるとかもありそうな気がするなぁ。</p>
 

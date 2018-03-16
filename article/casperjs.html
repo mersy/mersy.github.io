@@ -90,9 +90,9 @@ $ casperjs --version
 </blockquote>
 <h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
 <pre><code>// sample01.js
-var casper = require(&apos;casper&apos;).create();
+var casper = require(&#39;casper&#39;).create();
 
-casper.start(&apos;http://bit-part.net/&apos;,function(){
+casper.start(&#39;http://bit-part.net/&#39;,function(){
   this.echo(this.getTitle());
 });
 
@@ -102,21 +102,21 @@ casper.run();
 bit part 合同会社
 </code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
 <pre><code>// sample2.js
-var casper = require(&apos;casper&apos;).create();
+var casper = require(&#39;casper&#39;).create();
 
-casper.start(&apos;http://bit-part.net&apos;,function(){
-  this.capture(&apos;sample02.png&apos;);
+casper.start(&#39;http://bit-part.net&#39;,function(){
+  this.capture(&#39;sample02.png&#39;);
 });
 
 casper.run();
 </code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
 <h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
-var casper = require(&apos;casper&apos;).create();
+var casper = require(&#39;casper&#39;).create();
 
-casper.start(&apos;http://bit-part.net&apos;);
+casper.start(&#39;http://bit-part.net&#39;);
 
 casper.viewport(1024, 768).then(function() {
-    this.capture(&apos;sample03.png&apos;);
+    this.capture(&#39;sample03.png&#39;);
 });
 
 casper.run();
