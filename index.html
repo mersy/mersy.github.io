@@ -81,10 +81,10 @@
 <p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
 </blockquote>
 <p>やることは書かれてる通りっちゃ通りなのだけど</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ ./toggl2slack init</div><div class="line">$ vi config.json</div><div class="line">$ ./toggl2slack start</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ ./toggl2slack init</div><div class="line">$ vi config.json</div><div class="line">$ ./toggl2slack start</div></pre></td></tr></table></figure>
 <p>config.json に設定する値とかはこんな感じで。</p>
 <p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;users&quot;: &#123;</div><div class="line">    &quot;xxxxxx&quot;: &#123;</div><div class="line">        &quot;channel&quot;: &quot;#times_mersy&quot;,</div><div class="line">        &quot;username&quot;: &quot;mersy&quot;</div><div class="line">    &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">"users": &#123;</div><div class="line">    "xxxxxx": &#123;</div><div class="line">        "channel": "#times_mersy",</div><div class="line">        "username": "mersy"</div><div class="line">    &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
 <p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
 <p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
@@ -504,21 +504,21 @@
 <nav id="pagination">
   
   
-    <a href="/page/2/" class="alignright next">Nächste Seite</a>
+    <a href="/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -712,7 +712,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
     
       <li>
@@ -741,7 +741,7 @@
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>

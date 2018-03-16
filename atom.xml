@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-16T20:00:32.000Z</updated>
+  <updated>2018-03-16T20:09:56.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://note.mersy418.com/article/toggl2slack.html"/>
     <id>https://note.mersy418.com/article/toggl2slack.html</id>
     <published>2018-03-16T20:00:00.000Z</published>
-    <updated>2018-03-16T20:00:32.000Z</updated>
+    <updated>2018-03-16T20:09:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。<br>ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。</p>
 <blockquote>
@@ -32,10 +32,10 @@
 <p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
 </blockquote>
 <p>やることは書かれてる通りっちゃ通りなのだけど</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ ./toggl2slack init</div><div class="line">$ vi config.json</div><div class="line">$ ./toggl2slack start</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ ./toggl2slack init</div><div class="line">$ vi config.json</div><div class="line">$ ./toggl2slack start</div></pre></td></tr></table></figure>
 <p>config.json に設定する値とかはこんな感じで。</p>
 <p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;users&quot;: &#123;</div><div class="line">    &quot;xxxxxx&quot;: &#123;</div><div class="line">        &quot;channel&quot;: &quot;#times_mersy&quot;,</div><div class="line">        &quot;username&quot;: &quot;mersy&quot;</div><div class="line">    &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">"users": &#123;</div><div class="line">    "xxxxxx": &#123;</div><div class="line">        "channel": "#times_mersy",</div><div class="line">        "username": "mersy"</div><div class="line">    &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
 <p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
 <p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
