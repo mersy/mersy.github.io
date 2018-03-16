@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Seite 11 | mersy note</title>
+  <meta name="author" content="mersy">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="mersy note"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">mersy note</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="//">Home</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/atom.xml">RSS</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-10-10T05:30:00.000Z"><a href="/article/jekyllmemo.html">2013-10-10</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/jekyllmemo.html">Jekyll memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="ドキュメント"><a href="#ドキュメント" class="headerlink" title="ドキュメント"></a>ドキュメント</h2><p><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="external">http://jekyllrb.com/docs/home/</a></p>
+<h2 id="たちあげ"><a href="#たちあげ" class="headerlink" title="たちあげ"></a>たちあげ</h2><pre><code>$ jekyll serve --watch
+</code></pre><h2 id="確認URL"><a href="#確認URL" class="headerlink" title="確認URL"></a>確認URL</h2><blockquote>
+<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+</blockquote>
+<h2 id="Permalink"><a href="#Permalink" class="headerlink" title="Permalink"></a>Permalink</h2><p>_config.yml に</p>
+<pre><code>permalink: /:title.html
+</code></pre><p>なかんじで記載</p>
+<p><a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="external">http://jekyllrb.com/docs/permalinks/</a></p>
+<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><p>_draft フォルダにいれる</p>
+<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブはflexibleSearchをつかって実装</p>
+<blockquote>
+<p><a href="/flexibleSearchOnJekyll.html">flexibleSearchをJekyllで使う</a></p>
+</blockquote>
+<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><p>以下のテンプレートをatom.xmlやfeed.xmlとかで追加する。</p>
+<script src="https://gist.github.com/mersy/6933219.js"></script>
+
+<p>_config.ymlに以下の項目がなければ入れておく。</p>
+<pre><code>name: mersy memo
+description: いろいろメモ
+url: http://mersy.github.io/
+</code></pre><p>head にrssへのリンクも入れておく</p>
+<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;{{ site.name }}&quot; href=&quot;/atom.xml&quot; /&gt;
+</code></pre><h2 id="デザイン"><a href="#デザイン" class="headerlink" title="デザイン"></a>デザイン</h2><p>Start Bootstrap - Free HTML Templates for Bootstrap 3<br><a href="http://startbootstrap.com/" target="_blank" rel="external">http://startbootstrap.com/</a></p>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>Gistも直接埋め込めるらしい</p>
+<script src="//gist.github.com/mersy/59bf604a8929a8f7acf6.js"></script>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/page/10/" class="alignleft prev">Vorherige Seite</a>
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:note.mersy418.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+  
+    <li><a href="/categories/Blog/">Blog</a><small>31</small></li>
+  
+    <li><a href="/categories/Book/">Book</a><small>9</small></li>
+  
+    <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+  
+    <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+  
+    <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+  
+    <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+  
+    <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+  
+    <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+  
+    <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+  
+    <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+  
+    <li><a href="/categories/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+  
+    <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+  
+    <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+  
+    <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+  
+    <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+  
+    <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+  
+    <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+  
+    <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+  
+    <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+  
+    <li><a href="/categories/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+  
+    <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+  
+    <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+  
+    <li><a href="/categories/Work/">Work</a><small>1</small></li>
+  
+    <li><a href="/categories/blog/">blog</a><small>4</small></li>
+  
+    <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+  
+    <li><a href="/categories/chef/">chef</a><small>1</small></li>
+  
+    <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/categories/memo/">memo</a><small>1</small></li>
+  
+    <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+  
+    <li><a href="/tags/AWS/">AWS</a><small>2</small></li>
+  
+    <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
+  
+    <li><a href="/tags/Alfred/">Alfred</a><small>1</small></li>
+  
+    <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
+  
+    <li><a href="/tags/Business/">Business</a><small>1</small></li>
+  
+    <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
+  
+    <li><a href="/tags/CloudFront/">CloudFront</a><small>1</small></li>
+  
+    <li><a href="/tags/Communication/">Communication</a><small>1</small></li>
+  
+    <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
+  
+    <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
+  
+    <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
+  
+    <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
+  
+    <li><a href="/tags/Firefox/">Firefox</a><small>1</small></li>
+  
+    <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a><small>10</small></li>
+  
+    <li><a href="/tags/MacBook/">MacBook</a><small>1</small></li>
+  
+    <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
+  
+    <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
+    <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
+  
+    <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
+  
+    <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
+  
+    <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Slack/">Slack</a><small>1</small></li>
+  
+    <li><a href="/tags/Team/">Team</a><small>1</small></li>
+  
+    <li><a href="/tags/Todo/">Todo</a><small>1</small></li>
+  
+    <li><a href="/tags/Toggl/">Toggl</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
+  
+    <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
+  
+    <li><a href="/tags/Website/">Website</a><small>1</small></li>
+  
+    <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
+  
+    <li><a href="/tags/cache/">cache</a><small>1</small></li>
+  
+    <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/tags/deploy/">deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a><small>1</small></li>
+  
+    <li><a href="/tags/githubpages/">githubpages</a><small>1</small></li>
+  
+    <li><a href="/tags/html-css-styleguide/">html, css, styleguide</a><small>1</small></li>
+  
+    <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
+  
+    <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
+  
+    <li><a href="/tags/jira/">jira</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
+  
+    <li><a href="/tags/project-management/">project management</a><small>0</small></li>
+  
+    <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
+  
+    <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/task/">task</a><small>0</small></li>
+  
+    <li><a href="/tags/team/">team</a><small>0</small></li>
+  
+    <li><a href="/tags/todo/">todo</a><small>0</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/article/toggl2slack.html">Togglの計測をSlackに通知してやってることを共有してみる</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-print-at-convenience.html">コンビニでスマホアプリからプリントしてみた</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-macbook-keyboard-20180308.html">MacBookのキーボードが調子悪め〜その後20180308</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-firefox-tabsuspend.html">Tab Suspender を使ってみる</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">Archiv</h3>
+    <ul class="entry">
+    
+      <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+    
+      <li><a href="/categories/Blog/">Blog</a><small>31</small></li>
+    
+      <li><a href="/categories/Book/">Book</a><small>9</small></li>
+    
+      <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+    
+      <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+    
+      <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+    
+      <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+    
+      <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+    
+      <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+    
+      <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+    
+      <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+    
+      <li><a href="/categories/Git/">Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+    
+      <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+    
+      <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+    
+      <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+    
+      <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+    
+      <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+    
+      <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+    
+      <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+    
+      <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+    
+      <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+    
+      <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+    
+      <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+    
+      <li><a href="/categories/Task/">Task</a><small>1</small></li>
+    
+      <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+    
+      <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+    
+      <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+    
+      <li><a href="/categories/Work/">Work</a><small>1</small></li>
+    
+      <li><a href="/categories/blog/">blog</a><small>4</small></li>
+    
+      <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+    
+      <li><a href="/categories/chef/">chef</a><small>1</small></li>
+    
+      <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+    
+      <li><a href="/categories/memo/">memo</a><small>1</small></li>
+    
+      <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+    
+  </div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 mersy
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'mersymemogithubpage';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

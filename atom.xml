@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-15T21:54:17.000Z</updated>
+  <updated>2018-03-16T20:00:32.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Togglの計測をSlackに通知してやってることを共有してみる</title>
+    <link href="https://note.mersy418.com/article/toggl2slack.html"/>
+    <id>https://note.mersy418.com/article/toggl2slack.html</id>
+    <published>2018-03-16T20:00:00.000Z</published>
+    <updated>2018-03-16T20:00:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。<br>ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。</p>
+<blockquote>
+<p>Toggl - Time Tracker &amp; Employee Timesheet Software<br><a href="https://toggl.com/" target="_blank" rel="external">https://toggl.com/</a></p>
+</blockquote>
+<p>連絡とか確認が多いと対応する issue も多いからその辺は Toggl で計測してる方がひとまとめになっていいかな、、、と。</p>
+<h2 id="toggl2slack-を使ってみる"><a href="#toggl2slack-を使ってみる" class="headerlink" title="toggl2slack を使ってみる"></a>toggl2slack を使ってみる</h2><p>ってことで調べてて、こちらを参考にさせてもらって動かしてみた。</p>
+<blockquote>
+<p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
+</blockquote>
+<p>やることは書かれてる通りっちゃ通りなのだけど</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz</div><div class="line">$ ./toggl2slack init</div><div class="line">$ vi config.json</div><div class="line">$ ./toggl2slack start</div></pre></td></tr></table></figure>
+<p>config.json に設定する値とかはこんな感じで。</p>
+<p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;users&quot;: &#123;</div><div class="line">    &quot;xxxxxx&quot;: &#123;</div><div class="line">        &quot;channel&quot;: &quot;#times_mersy&quot;,</div><div class="line">        &quot;username&quot;: &quot;mersy&quot;</div><div class="line">    &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
+<p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
+<p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
+<p>Terminal 閉じちゃうと終了しちゃうから</p>
+<blockquote>
+<p>ターミナルを閉じてもプロセスを終了させないnohupコマンド | 三度の飯とエレクトロン<br><a href="http://blog.katty.in/1434" target="_blank" rel="external">http://blog.katty.in/1434</a></p>
+</blockquote>
+<p>を読んで</p>
+<p><code>$ nohup ./toggl2slack start</code></p>
+<p>こんな感じで動かしてみた。</p>
+<p>Slack にも通知が来てるみたいで、これで晴れて仕事してるアピールができるようになりました。<br>Toggl に WorkSpace が複数あると情報が別っぽいので、そこは別物とする必要がありそう。</p>
+<p>サーバで動かせるようになるまでに @tinybeans と @bun に色々教えてもらいつつ、、、<br>別の WorkSpace のを動かしてみたら今回はサクッといけました。感謝感謝。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><h3 id="Toggl"><a href="#Toggl" class="headerlink" title="Toggl"></a>Toggl</h3><ul>
+<li>toggl_api_docs/toggl_api.md at master · toggl/toggl_api_docs<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md</a></li>
+<li>toririn/toggl_slacker<br><a href="https://github.com/toririn/toggl_slacker" target="_blank" rel="external">https://github.com/toririn/toggl_slacker</a></li>
+<li>Togglを使って時間を意識した仕事をしようぜ！ - 大阪・兵庫・加古川 ホームページ制作のAWESOME | WEB・ホームページ制作、WEBマーケティング・SEO対策<br><a href="https://awe-some.net/2016/10/how-to-use-toggl/" target="_blank" rel="external">https://awe-some.net/2016/10/how-to-use-toggl/</a></li>
+<li>時間管理にTogglを使ってみたら想像以上によかった - dackdive’s blog<br><a href="http://dackdive.hateblo.jp/entry/2015/01/22/100000" target="_blank" rel="external">http://dackdive.hateblo.jp/entry/2015/01/22/100000</a></li>
+</ul>
+<h3 id="Alfred-to-slack"><a href="#Alfred-to-slack" class="headerlink" title="Alfred to slack"></a>Alfred to slack</h3><ul>
+<li>Alfred で作業時間を記録する workflow を作ってみた - たまに書くかも<br><a href="http://mame-neko.hatenablog.com/entry/2015/12/07/063407" target="_blank" rel="external">http://mame-neko.hatenablog.com/entry/2015/12/07/063407</a></li>
+<li>fspinillo/slackfred: Interact with Slack via Alfred<br><a href="https://github.com/fspinillo/slackfred" target="_blank" rel="external">https://github.com/fspinillo/slackfred</a></li>
+<li>jason0x43/alfred-toggl: Alfred Workflow for interacting with the Toggl time tracking service<br><a href="https://github.com/jason0x43/alfred-toggl" target="_blank" rel="external">https://github.com/jason0x43/alfred-toggl</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。&lt;br&gt;ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。&lt;
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
+    
+      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
+    
+  </entry>
   
   <entry>
     <title>コンビニでスマホアプリからプリントしてみた</title>
@@ -712,49 +773,6 @@
     
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>1Password Families を使ってみる</title>
-    <link href="https://note.mersy418.com/article/blog-1password-family.html"/>
-    <id>https://note.mersy418.com/article/blog-1password-family.html</id>
-    <published>2018-02-12T20:00:00.000Z</published>
-    <updated>2018-02-12T23:33:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1Password Families を使ってみる</p>
-<blockquote>
-<p>Families - 1Password<br><a href="https://1password.com/families/" target="_blank" rel="external">https://1password.com/families/</a></p>
-</blockquote>
-<p>すでに 1Password では複数の vault を使っていて、共有したりしていて、その辺の扱いがどうなるのかなー、とよくわからないところもあったのだけど、 BUN さんに聞いて大体の不明点は解決。</p>
-<p>1Password は重要なアプリだけに色々慎重になってしまうな。</p>
-<p>なんか、移行があるみたいな記述も見たのだけど、特にそういうのは出てこなかったな、、<br>ということで普通にアイテムをcopyしておいた。</p>
-<hr>
-<p>妻と共有してみた。</p>
-<p>普段、メインが Mac なのであまり気にしてなかったのだけど、 iPhone しかないような状況だと、1pass の手順が若干変わると言うか、意外と面倒そうだなぁ、、、とレクチャーしながら思った。</p>
-<p>これだったら、 iCloud か Chrome に預けてしまうかもしれないよなぁ、、、と。<br>あくまで、複数環境あって、 iPhone に限定されてないからこそ、　1Password が便利ではあるんだろうけど。</p>
-<p>iPhone しか使わないのであれば、 iCloud にロックオンされてもいいだろうけど、 Chrome（Google）に依存するとかその辺はまだあるんだろうなぁ、、と思った。<br>と言うか、PCとSPを使うのが当たり前だと気づかなかったのだけど、SPだけだと色々不便なところもあるのねぇ、、、と今更ながらに。</p>
-<hr>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>1Passwordアカウントのつくりかた （個人および家族アカウント） – Lifehacking.jp<br><a href="http://lifehacking.jp/2017/03/creating-a-1password-account/" target="_blank" rel="external">http://lifehacking.jp/2017/03/creating-a-1password-account/</a></li>
-<li>1Password Families契約してみた - Qiita<br><a href="https://qiita.com/pechefamille/items/45179098bb3c4b8e6a09" target="_blank" rel="external">https://qiita.com/pechefamille/items/45179098bb3c4b8e6a09</a></li>
-<li>1Password サブスクリプション版でおしゃれに家族を守る - おしゃれな気分でプログラミング<br><a href="http://neko-mac.blogspot.com/2017/05/1password.html" target="_blank" rel="external">http://neko-mac.blogspot.com/2017/05/1password.html</a></li>
-<li>1Passwordを買い切り版からライセンス版に移行しました<br><a href="https://blog.lorentzca.me/move-existing-1password-to-license-version/" target="_blank" rel="external">https://blog.lorentzca.me/move-existing-1password-to-license-version/</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1Password Families を使ってみる&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Families - 1Password&lt;br&gt;&lt;a href=&quot;https://1password.com/families/&quot; target=&quot;_blank&quot; rel=&quot;exte
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
