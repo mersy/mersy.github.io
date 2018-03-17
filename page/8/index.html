@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 8 | mersy note</title>
+  <title>Page 8 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,62 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-07-11T07:15:32.000Z"><a href="/article/atom.html">2014-07-11</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/atom.html">Atom memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
+<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
+<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
+</blockquote>
+<p>Cmd + Shift + H でコマンド選択</p>
+<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
+<blockquote>
+<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
+</blockquote>
+<p>Snippetなのか、Packageなのか？？</p>
+<p>autocomplete-snippets にリストを追加する感じ？？</p>
+<blockquote>
+<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
+</blockquote>
+<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
+<blockquote>
+<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
+</blockquote>
+<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
+<p>このあたりの設定が影響してる様子。</p>
+<blockquote>
+<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
+</blockquote>
+<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -631,117 +687,32 @@ $ mv README.md README.md.org
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-05T01:53:31.000Z"><a href="/article/casperjs.html">2014-05-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/casperjs.html">CasperJSメモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>CasperJS</p>
-<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
-<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
-<pre><code>$ brew update
-$ brew install casperjs --devel
-$ casperjs --version
-1.1.0-beta3
-</code></pre><p>インストールできた</p>
-<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
-<blockquote>
-<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html" target="_blank" rel="external">http://mersy.github.io/homebrew.html</a></p>
-</blockquote>
-<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
-<pre><code>// sample01.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net/&#39;,function(){
-  this.echo(this.getTitle());
-});
-
-casper.run();
-</code></pre><p>sample01.jsを作成</p>
-<pre><code>$ casperjs sample01.js
-bit part 合同会社
-</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
-<pre><code>// sample2.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net&#39;,function(){
-  this.capture(&#39;sample02.png&#39;);
-});
-
-casper.run();
-</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
-<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net&#39;);
-
-casper.viewport(1024, 768).then(function() {
-    this.capture(&#39;sample03.png&#39;);
-});
-
-casper.run();
-</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
-<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
-<blockquote>
-<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
-</blockquote>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
-<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/7/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/7/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/9/" class="alignright next">Nächste Seite</a>
+    <a href="/page/9/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>31</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -904,6 +875,8 @@ casper.run();
   
     <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
   
+    <li><a href="/tags/iPhone/">iPhone</a><small>1</small></li>
+  
     <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
   
     <li><a href="/tags/jira/">jira</a><small>1</small></li>
@@ -930,8 +903,12 @@ casper.run();
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-iphone-screencover.html">iPhoneのガラスフィルムを貼り直したら新品みたいになった</a>
+      </li>
     
       <li>
         <a href="/article/toggl2slack.html">Togglの計測をSlackに通知してやってることを共有してみる</a>
@@ -949,22 +926,18 @@ casper.run();
         <a href="/article/blog-macbook-keyboard-20180308.html">MacBookのキーボードが調子悪め〜その後20180308</a>
       </li>
     
-      <li>
-        <a href="/article/blog-firefox-tabsuspend.html">Tab Suspender を使ってみる</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archiv</h3>
+    <h3 class="title">Archives</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>31</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

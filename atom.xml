@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-16T20:39:31.000Z</updated>
+  <updated>2018-03-17T21:40:52.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iPhoneのガラスフィルムを貼り直したら新品みたいになった</title>
+    <link href="https://note.mersy418.com/article/blog-iphone-screencover.html"/>
+    <id>https://note.mersy418.com/article/blog-iphone-screencover.html</id>
+    <published>2018-03-17T21:00:00.000Z</published>
+    <updated>2018-03-17T21:40:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../asset/20180318_screencover.JPG" alt=""></p>
+<p>新しいのが出ても特に買い換えることなく iPhone SE を使ってますが。<br>何回か落としたりして、ガラスフィルムの端から少しずつ欠け始めてきたり。<br>それが少し指に引っかかったり刺さったりし始めてきて痛いのでまた同じのに買い換えた。</p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mersys-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01CFX07LQ&linkId=1cf6564017d32a059069fdd742722d43"></iframe>
+
+<hr>
+<p>そもそも、ガラスフィルムはがしたことないな、、、ということでネットで見てみる。</p>
+<blockquote>
+<p>ガラスフィルムは貼り方より「はがし方」が重要！ | 聴ききれない量の音楽と過ごす日々<br><a href="http://moremoremusic.net/how-to-taking-off-glass-film/" target="_blank" rel="external">http://moremoremusic.net/how-to-taking-off-glass-film/</a></p>
+</blockquote>
+<p>カッターがいるのね、、、と引越しの荷物に入れてしまっていて、しばらくはずせなかったり。</p>
+<p>カッターで端っこからはがしていき、薄い紙の定期券を差し込んでいきながら少しずつはがしていった。<br>途中ピキッてヒビが入る感じになったりしたけどゆっくりやっていってひとまず剥がすのは完了。</p>
+<p>一応画面を綺麗に拭き直して貼り直し完了。</p>
+<p>まるで新品みたい！</p>
+<hr>
+<p>ちょうど橋本さんのブログでも似たような話が出てて。</p>
+<blockquote>
+<p>iPhone8 Plusにつけていたゴリラガラスのフィルムが割れた！ | BridgeBook.JP<br><a href="https://bridgebook.jp/iphone8plus-glassfilm" target="_blank" rel="external">https://bridgebook.jp/iphone8plus-glassfilm</a></p>
+</blockquote>
+<p>今度はこっちでもいいかもなー。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../asset/20180318_screencover.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;新しいのが出ても特に買い換えることなく iPhone SE を使ってますが。&lt;br&gt;何回か落としたりして、ガラスフィルムの端から少しずつ欠け始めてきたり。
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="iPhone" scheme="https://note.mersy418.com/tags/iPhone/"/>
+    
+  </entry>
   
   <entry>
     <title>Togglの計測をSlackに通知してやってることを共有してみる</title>
@@ -757,35 +799,6 @@ echo preg_replace(&#39;/^/m&#39;, &#39;&gt; &#39;, $query);
       <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
     
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>近所のスーパーで EcoBuy の実証実験が行われていた</title>
-    <link href="https://note.mersy418.com/article/blog-ecobuy.html"/>
-    <id>https://note.mersy418.com/article/blog-ecobuy.html</id>
-    <published>2018-02-15T15:00:00.000Z</published>
-    <updated>2018-02-16T22:03:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>たまたま八丁堀最寄りのピアゴに行ったら EcoBuy の実証実験やってた、というかその店舗でやってるわけか。</p>
-<p>EcoBuyとは｜EcoBuy<br><a href="https://www.ecobuy.jp/" target="_blank" rel="external">https://www.ecobuy.jp/</a></p>
-<ul>
-<li>“食品ロス”を減らせ　期限が近い商品を買うと「dポイント」　NTTドコモが実験 - ITmedia NEWS<br><a href="http://www.itmedia.co.jp/news/articles/1801/15/news094.html" target="_blank" rel="external">http://www.itmedia.co.jp/news/articles/1801/15/news094.html</a></li>
-<li>スーパーの食品廃棄を半減できるか、東京都×ドコモの実験開始 - ケータイ Watch<br><a href="https://k-tai.watch.impress.co.jp/docs/news/1102029.html" target="_blank" rel="external">https://k-tai.watch.impress.co.jp/docs/news/1102029.html</a></li>
-</ul>
-<p>買ったレシートから登録とか手間が若干めんどくさいなー、という気がするが、これは慣れれば問題ないものなのかなぁ。</p>
-<p>取り組み自体の方向性は賛同できるから、このサービスじゃなくても、なんかいい感じで広まっていってほしいなぁ。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;たまたま八丁堀最寄りのピアゴに行ったら EcoBuy の実証実験やってた、というかその店舗でやってるわけか。&lt;/p&gt;
-&lt;p&gt;EcoBuyとは｜EcoBuy&lt;br&gt;&lt;a href=&quot;https://www.ecobuy.jp/&quot; target=&quot;_blank&quot; rel=&quot;ex
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
     
   </entry>
   
