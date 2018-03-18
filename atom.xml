@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-17T21:40:52.000Z</updated>
+  <updated>2018-03-18T21:39:50.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Alfredで乱数を取得できるようにしてみた</title>
+    <link href="https://note.mersy418.com/article/blog-alfred-random.html"/>
+    <id>https://note.mersy418.com/article/blog-alfred-random.html</id>
+    <published>2018-03-18T21:00:00.000Z</published>
+    <updated>2018-03-18T21:39:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>時々乱数がチャチャッと欲しくなる時があって。<br>普段は 1password の password 生成を使ったりもしてるんですが、 1password をブラウザの拡張から開くときとかに若干時間がかかったりして、サクッといかなかったりしてた。</p>
+<p>Slack でちょっと聞いてみたけど特にこれというのがなさそうだったので、試しに Alfred で作ってみた。<br>作ってみた、といってもサンプルで用意されているものをカスタマイズしたり、 @tinybeans や @bun に作ってもらったものを参考にしたりした。</p>
+<p>デフォルトで入ってる Snippet Tiggers あたりを参考にして。</p>
+<p>コマンドは</p>
+<blockquote>
+<p>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></p>
+</blockquote>
+<p>を参考にして10文字でとりあえず作ってみた。</p>
+<pre><code>cat /dev/urandom | LC_CTYPE=C tr -dc &#39;[:alnum:]&#39; | head -c 10
+</code></pre><p>これで snippet とかで使える感じでいいかも。</p>
+<hr>
+<p>登録後はこんな感じ。</p>
+<p><img src="../asset/20180319-alfred.png" alt=""></p>
+<p>スニペットの設定</p>
+<p><img src="../asset/20180319-snippet.png" alt=""></p>
+<p>キーワードの設定</p>
+<p><img src="../asset/20180319-keyword.png" alt=""></p>
+<p>スクリプトの設定</p>
+<p><img src="../asset/20180319-script.png" alt=""></p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></li>
+<li>Random String Generator | Packal<br><a href="http://www.packal.org/workflow/random-string-generator" target="_blank" rel="external">http://www.packal.org/workflow/random-string-generator</a></li>
+<li>静的サイトジェネレータで重複しないURLを生成するにはハッシュ関数を使えばよかった | 豆腐メンタルは崩れない<br><a href="https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/" target="_blank" rel="external">https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;時々乱数がチャチャッと欲しくなる時があって。&lt;br&gt;普段は 1password の password 生成を使ったりもしてるんですが、 1password をブラウザの拡張から開くときとかに若干時間がかかったりして、サクッといかなかったりしてた。&lt;/p&gt;
+&lt;p&gt;Slack 
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>iPhoneのガラスフィルムを貼り直したら新品みたいになった</title>
@@ -671,9 +720,9 @@ $ ./toggl2slack start
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
-    
       <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
+    
+      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
     
   </entry>
   
@@ -765,40 +814,6 @@ $ ./toggl2slack start
     
       <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</title>
-    <link href="https://note.mersy418.com/article/alfred-workflow-regex.html"/>
-    <id>https://note.mersy418.com/article/alfred-workflow-regex.html</id>
-    <published>2018-02-16T22:00:00.000Z</published>
-    <updated>2018-02-16T22:16:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>メールとかチャットとかでテキストをコピペして引用する時に行頭に <code>&gt;</code> とかつけて貼り付けたりすることがあるんですが。</p>
-<p>これまではテキストコピーしたら CotEditor 開いて貼り付けて置換して、コピペという流れでやっていたのだけれど。。。</p>
-<p>ちょっと面倒だし、貼り付けるときにそういう形式にできないかなぁ、、、 Alfred あたりでできそうな気もしそうだけど、どうかなぁ、、と Slack に書いてたら早速 BUN さんが作ってくれた。</p>
-<pre><code>$query = &quot;{query}&quot;;
-
-echo preg_replace(&#39;/^/m&#39;, &#39;&gt; &#39;, $query);
-</code></pre><p><img src="../asset/20180217_alfred.png" alt=""></p>
-<p>とりあえずこれにHotkeyわりあてたら希望通りになって最高！！</p>
-<p>もっと早く呟けばよかったと思いました（笑</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;メールとかチャットとかでテキストをコピペして引用する時に行頭に &lt;code&gt;&amp;gt;&lt;/code&gt; とかつけて貼り付けたりすることがあるんですが。&lt;/p&gt;
-&lt;p&gt;これまではテキストコピーしたら CotEditor 開いて貼り付けて置換して、コピペという流れでやっていたのだけ
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   

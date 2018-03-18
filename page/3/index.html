@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 3 | mersy note</title>
+  <title>Seite 3 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,47 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-02-16T22:00:00.000Z"><a href="/article/alfred-workflow-regex.html">2018-02-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/alfred-workflow-regex.html">AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>メールとかチャットとかでテキストをコピペして引用する時に行頭に <code>&gt;</code> とかつけて貼り付けたりすることがあるんですが。</p>
+<p>これまではテキストコピーしたら CotEditor 開いて貼り付けて置換して、コピペという流れでやっていたのだけれど。。。</p>
+<p>ちょっと面倒だし、貼り付けるときにそういう形式にできないかなぁ、、、 Alfred あたりでできそうな気もしそうだけど、どうかなぁ、、と Slack に書いてたら早速 BUN さんが作ってくれた。</p>
+<pre><code>$query = &quot;{query}&quot;;
+
+echo preg_replace(&#39;/^/m&#39;, &#39;&gt; &#39;, $query);
+</code></pre><p><img src="../asset/20180217_alfred.png" alt=""></p>
+<p>とりあえずこれにHotkeyわりあてたら希望通りになって最高！！</p>
+<p>もっと早く呟けばよかったと思いました（笑</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -450,79 +491,32 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-02-04T22:00:00.000Z"><a href="/article/blog-task-management-tool.html">2018-02-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/blog-task-management-tool.html">ツールを使ったから進捗が滞りなく進む訳ではないという話</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>以前、妻とタスクの消化、締切の話をしたことがあって、妻のところではExcelで管理してるという話をしていて。<br>そのExcel自体は共有のフォルダっぽいところで管理してるから、そこで進捗がわかるから問題ない、んだけど、終わらないことがあったり漏れてることがある、みたいな話をしていた。<br>（妻はWEB系ではないです）</p>
-<p>そもそも、一覧系のツールで管理してるのは一覧で見たい管理者のような人向けにはいいだろうけど、実際にやる人たちからしたらやりにくいんじゃない？という思いがあるので、そういう話を聞くと Backlog とか Redmine とかそういったツールでやるのがいいんじゃないの？と思ってしまう自分がいる。</p>
-<p>が、んじゃBacklogを入れてるから自分のところが問題ないか？というとそんなことはなくて、オンスケで問題なく動くことの方が稀な気がしている。</p>
-<p>期日より前倒しで終わらせてくれることもあるし、時には終わらないこともあるし。<br>その辺は人による場合もあれば外部要因だったりもするだろうし、依頼する側の問題だったりもする訳で。</p>
-<p>目安がないといけないので、何かしら日時的な管理をしやすいツールを使うのは必要だと思うのだけど、それを使った上でオンスケで進ませるためには何かまた別なものが必要なんだろうな、と。</p>
-<blockquote>
-<p>Web制作会社の危機感から模索する新しいプロジェクト管理の方法とは〜独自のプロジェクト開発スタイル | TeamHackers<br><a href="https://teamhackers.io/h2o-space-web" target="_blank" rel="external">https://teamhackers.io/h2o-space-web</a></p>
-</blockquote>
-<p>で、たにぐちさんが書いてたけど、</p>
-<blockquote>
-<p>Backlogの場合だと、タスクの整理や分類にどうしても使いづらさやわかりにくさが目立つなと感じます。期限を過ぎて、アラートが出ててもそれを無視し続けることになっていく、なんのためかわからないアラートって、Backlogのあるあるじゃないかな。</p>
-<p>当社でも、自分を含め２名のディレクターがBacklogの「そうじ」をきめ細かく行なうことでその解決を図るようにしています。ツールによる自動化とはまだまだ距離がある話です。もちろん、タスク登録のルールや管理上の約束事は決めていますし、新規タスク登録もそれぞれの担当者に任せられるようにしていますが、ディレクターが管理してないと、ツールだけではうまく回っていかないことは何度も実証済みですね。うまく回らないということは、そもそもツールを使う意味が無いという逆転現象も発生します。</p>
-</blockquote>
-<p>この辺の話にも繋がってくるんだよなぁ、、、という気がしている。</p>
-<p>このあるあるに陥る原因は、チームにより原因もそれぞれだと思うのでその辺は少し立ち止まって考えて見ないといけないんだろうな、と思っているところ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/2/" class="alignleft prev">Prev</a>
+    <a href="/page/2/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/4/" class="alignright next">Next</a>
+    <a href="/page/4/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -605,7 +599,7 @@
   
     <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
   
-    <li><a href="/tags/Alfred/">Alfred</a><small>1</small></li>
+    <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
   
     <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
   
@@ -631,7 +625,7 @@
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>10</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>1</small></li>
   
@@ -707,14 +701,20 @@
   
     <li><a href="/tags/todo/">todo</a><small>0</small></li>
   
+    <li><a href="/tags/website/">website</a><small>0</small></li>
+  
   </ul>
 </div>
 
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a>
+      </li>
     
       <li>
         <a href="/article/blog-iphone-screencover.html">iPhoneのガラスフィルムを貼り直したら新品みたいになった</a>
@@ -732,22 +732,18 @@
         <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
       </li>
     
-      <li>
-        <a href="/article/blog-macbook-keyboard-20180308.html">MacBookのキーボードが調子悪め〜その後20180308</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

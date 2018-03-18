@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 6 | mersy note</title>
+  <title>Seite 6 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,77 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-12-24T08:05:41.000Z"><a href="/article/server201712.html">2017-12-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/server201712.html">ドメインの移管</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ドメインをvalue domain から Route53 へ移管する。</p>
+<h2 id="メール関係周りの設定"><a href="#メール関係周りの設定" class="headerlink" title="メール関係周りの設定"></a>メール関係周りの設定</h2><p>そのドメインのメールを1つ作ってgmailに転送している。<br>普段あまり使っていないので、今後はそのgmailアドレスに集約したいので、1年間は予備としてアドレスを受け取っておこうかな、と。<br>転送しつつ、自動返信とかできるようにしておきたい。</p>
+<p>とりあえずさくらのメールボックスを契約。</p>
+<blockquote>
+<p>セキュリティ対策を強化したメールサーバー専用プラン【メールボックス】<br><a href="https://www.sakura.ne.jp/mail/" target="_blank" rel="external">https://www.sakura.ne.jp/mail/</a></p>
+</blockquote>
+<p>年額1029円なのでまぁこれで問題ないかな、と。<br>→ ロリポップの契約があったのでそちらですすめる</p>
+<p>ロリポップに独自ドメインを追加しておき、今回用のメールアドレスを作成しておく。<br>転送設定まで完了。</p>
+<h2 id="AWSまわり"><a href="#AWSまわり" class="headerlink" title="AWSまわり"></a>AWSまわり</h2><p>この辺を参考にDNSをまずRoute53にうつす。</p>
+<blockquote>
+<p>Route53にドメインを移管する – blog.10rane.com<br><a href="http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/" target="_blank" rel="external">http://blog.10rane.com/2014/09/16/transferred-a-domain-to-route53/</a><br>お名前.comからAmazon Route 53へドメインを移管する ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/aws/onamae-to-route53/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/aws/onamae-to-route53/</a><br>既存ドメインの DNS サービスを Amazon Route 53 に移行する - Amazon Route 53<br><a href="http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html" target="_blank" rel="external">http://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/MigratingDNS.html</a></p>
+</blockquote>
+<p>そのうえでドメイン移管。</p>
+<p>2017.12.24 ドメイン移管も完了</p>
+<h2 id="メール設定"><a href="#メール設定" class="headerlink" title="メール設定"></a>メール設定</h2><p>ロリポップのメールサーバへのレコード情報はサイトに掲載されてないみたいなので、</p>
+<pre><code>$ nslookup hogehoge.main.jp
+</code></pre><p>とか契約してあるロリポップドメインのIPを調べる。</p>
+<p>MXレコードは <code>10 mx01.lolipop.jp.</code> らしい。</p>
+<h3 id="Route53の設定"><a href="#Route53の設定" class="headerlink" title="Route53の設定"></a>Route53の設定</h3><p>Route53の「Hosted Zones」からドメインを選ぶ。</p>
+<p><img src="../asset/20171224_aws_hostzone01.png" alt=""></p>
+<p>メール用に mail. のサブドメインでAレコードを追加。</p>
+<p><img src="../asset/20171224_aws_hostzone02.png" alt=""></p>
+<p>これはいらなかったのかも？？<br>IPは先ほどしらべたロリポップのもの。</p>
+<p>MXレコードを追加する。</p>
+<p><img src="../asset/20171224_aws_hostzone03.png" alt=""></p>
+<p>こっちはサブドメインではないからそのままで追加。</p>
+<pre><code>$ dig mersy418.com
+$ dig mail.mersy418.com
+</code></pre><p>で確認。</p>
+<p>テストメールを送ったところ、ロリポップのWebメールにもメールがあり、転送先にも転送されていた。</p>
+<blockquote>
+<p>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a><br>【ロリポップ】「Aレコードの変更をお願いいたします」の対処法 – ysklog<br><a href="http://ysklog.net/server/4230.html" target="_blank" rel="external">http://ysklog.net/server/4230.html</a><br>独自ドメイン取得後ロリポップをメールサーバーだけに使いたい - Qiita<br><a href="https://qiita.com/okamu_/items/01b6afeeae464bdee482" target="_blank" rel="external">https://qiita.com/okamu_/items/01b6afeeae464bdee482</a></p>
+</blockquote>
+<h2 id="サブドメインの設定"><a href="#サブドメインの設定" class="headerlink" title="サブドメインの設定"></a>サブドメインの設定</h2><p>Route53に移せたので、</p>
+<p>LightsailでDrupalを立ち上げる | mersy note<br><a href="http://mersy.github.io/article/drupal-lightsail.html" target="_blank" rel="external">http://mersy.github.io/article/drupal-lightsail.html</a></p>
+<p>で作成したサイトにサブドメインでアクセス出来るように設定してみる。</p>
+<p><code>Crate Record Set</code> で <code>d8.</code> のサブドメインに対して <code>Aレコード</code> で Lightsailの Public IP を登録。</p>
+<p><a href="http://d8.mersy418.com/" target="_blank" rel="external">http://d8.mersy418.com/</a></p>
+<p>でアクセス出来た。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -512,75 +583,32 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-10-03T12:57:13.000Z"><a href="/article/deployhq-user.html">2017-10-03</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/deployhq-user.html">DeployHQ のユーザの種類メモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>DeployHQ のユーザの種類メモ</p>
-<blockquote>
-<p>Account administration - access to all aspects of the account including billing<br>User management - access to all projects and user management<br>All projects - access to all projects with the ability to make all changes including deleting a project<br>Specific projects - access to a certain project with restricted abilities, i.e. a user cannot delete a project</p>
-<p>Getting Started - DeployHQ<br><a href="https://www.deployhq.com/academy/manual/getting-started" target="_blank" rel="external">https://www.deployhq.com/academy/manual/getting-started</a></p>
-</blockquote>
-<ul>
-<li>Account administration - とりあえずアドミン</li>
-<li>User management - 全部のプロジェクトの操作とユーザー管理</li>
-<li>All projects - 全部のプロジェクトにアクセスできて、削除も可能</li>
-<li>Specific projects - 特定のプロジェクトのみ</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/5/" class="alignleft prev">Prev</a>
+    <a href="/page/5/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/7/" class="alignright next">Next</a>
+    <a href="/page/7/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -663,7 +691,7 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
   
     <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
   
-    <li><a href="/tags/Alfred/">Alfred</a><small>1</small></li>
+    <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
   
     <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
   
@@ -689,7 +717,7 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
   
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>10</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>1</small></li>
   
@@ -765,14 +793,20 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
   
     <li><a href="/tags/todo/">todo</a><small>0</small></li>
   
+    <li><a href="/tags/website/">website</a><small>0</small></li>
+  
   </ul>
 </div>
 
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a>
+      </li>
     
       <li>
         <a href="/article/blog-iphone-screencover.html">iPhoneのガラスフィルムを貼り直したら新品みたいになった</a>
@@ -790,22 +824,18 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
         <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
       </li>
     
-      <li>
-        <a href="/article/blog-macbook-keyboard-20180308.html">MacBookのキーボードが調子悪め〜その後20180308</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>32</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
