@@ -61,6 +61,80 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-03-13T12:44:31.000Z"><a href="/article/getuser.html">2014-03-13</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/getuser.html">Data API で認証後にユーザー情報を取得する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>DataAPI で記事投稿のときとかは認証をはさみます。<br>認証が通った後にユーザーの情報を使いたい場合があるでしょう。</p>
+<p>ライブラリでユーザー情報を使う部分は getUser ぽいのはなんとなく分かります。</p>
+<blockquote>
+<p>getUser<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser</a></p>
+</blockquote>
+<p>これをみるとこんな感じのようなので、userIdのところにidを渡してあげます。</p>
+<pre><code>api.getUser(userId, function(response) {
+  if (response.error) {
+    // Handle error
+    return;
+  }
+
+  // Do stuff
+});
+</code></pre><p>さて、idってどこに保存されてるんだろう？？とおもうわけですが。</p>
+<pre><code>api.getToken(function(response) {
+  if (response.error) {
+    // Handle error
+    return;
+  }
+  console.log(response);
+  // Do stuff
+});
+</code></pre><p>ってやってもそんな情報返ってきてないです。</p>
+<p>ということでさっきのライブラリの方のドキュメントから Endpoint Users の get のドキュメントを見てみます。</p>
+<blockquote>
+<p>Data api users get<br><a href="https://github.com/movabletype/Documentation/wiki/data-api-users-get" target="_blank" rel="external">https://github.com/movabletype/Documentation/wiki/data-api-users-get</a></p>
+</blockquote>
+<p>さっきのと大してかわらないことしかかいてないですが、よくよくみてみるとパラメータの項目に以下の様なことが書いてありますね。</p>
+<blockquote>
+<p>user_id  unsigned integer  The user ID or the word ‘me’.</p>
+</blockquote>
+<p>‘me’でもいけるんだそうです。</p>
+<pre><code>api.getUser(&#39;me&#39;, function(response) {
+  console.log(response);
+});
+</code></pre><p>こんなかんじでかくとユーザー情報が返ってきてるのが確認できますね。</p>
+<p>このことはDocumentの基本的な使い方の所にもバッチリ書いてありますね。</p>
+<blockquote>
+<p>DataAPI SDK english MT.DataAPI Basic usage · movabletype/mt-data-api-sdk-js Wiki<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage</a></p>
+</blockquote>
+<p>基本的なところはちゃんと読まないといけませんね。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-12-15T05:30:00.000Z"><a href="/article/chef.html">2013-12-15</a></time>
       
       
@@ -625,57 +699,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-12T03:00:00.000Z"><a href="/article/openTerminalonST2Sidebar.html">2013-10-12</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/openTerminalonST2Sidebar.html">Sublime Text のsidebarからTerminalを開く</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Sublime Text のサイドバーを使いやすくするパッケージの SideBarEnhancements。</p>
-<p>サイドバーからrenameとかできて便利。Jekyllとか使っててプロジェクトのフォルダはサイドバーに開いてるんだけど、該当のフォルダをTerminalで開いてコマンド書くのがてまだったのでとりあえずTerminalが開くようにだけした。</p>
-<p>サイドバーで</p>
-<p>Open With &gt; Edit Applications</p>
-<p>と行くと設定ファイルが出てくるから</p>
-<pre><code>  //Terminal
-  {
-    &quot;caption&quot;: &quot;Terminal&quot;,
-    &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
-
-    &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-    &quot;args&quot;: {
-              &quot;paths&quot;: [],
-              &quot;application&quot;: &quot;Terminal&quot;, // OSX
-              &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
-            }
-  },
-</code></pre><p>こんな感じで追加してあげればOKだった。</p>
-<p>Jekyllを立ち上げるとかもありそうな気がするなぁ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -701,7 +724,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>34</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -874,17 +897,17 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
   
-    <li><a href="/tags/project-management/">project management</a><small>0</small></li>
+    <li><a href="/tags/project-management/">project management</a><small>1</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
     <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
   
-    <li><a href="/tags/task/">task</a><small>0</small></li>
+    <li><a href="/tags/task/">task</a><small>1</small></li>
   
-    <li><a href="/tags/team/">team</a><small>0</small></li>
+    <li><a href="/tags/team/">team</a><small>1</small></li>
   
-    <li><a href="/tags/todo/">todo</a><small>0</small></li>
+    <li><a href="/tags/todo/">todo</a><small>1</small></li>
   
     <li><a href="/tags/website/">website</a><small>0</small></li>
   
@@ -896,6 +919,10 @@ $ knife solo prepare test_vagrant5
 <div class="widget tag">
   <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-tools.html">ツールを使ったら解決すると思うのが間違い</a>
+      </li>
     
       <li>
         <a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a>
@@ -913,10 +940,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-print-at-convenience.html">コンビニでスマホアプリからプリントしてみた</a>
       </li>
     
-      <li>
-        <a href="/article/blog-domino-pizza.html">お持ち帰りで一枚無料になるドミノピザ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -928,7 +951,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>33</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>34</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-18T21:39:50.000Z</updated>
+  <updated>2018-03-19T21:41:14.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ツールを使ったら解決すると思うのが間違い</title>
+    <link href="https://note.mersy418.com/article/blog-tools.html"/>
+    <id>https://note.mersy418.com/article/blog-tools.html</id>
+    <published>2018-03-19T22:00:00.000Z</published>
+    <updated>2018-03-19T21:41:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ツールは便利で課題を解決してくれる可能性はあると思う。<br>が、必ず解決してくれるわけでもないだろうし、あくまで道しるべの可能性もある。</p>
+<p>またそのツールをどう使うか？でもぜんぜん変わる可能性もある。</p>
+<p>ツールを使ったら万事解決といった思考停止状態で使っていては元々の課題解決も目的も達成できないんじゃないかな？</p>
+<blockquote>
+<p>もう納期遅れからおさらば！プロジェクト管理ツールを厳選して10個紹介します | creive<br><a href="https://creive.me/archives/11931/" target="_blank" rel="external">https://creive.me/archives/11931/</a></p>
+</blockquote>
+<p>Backlog 使っているけど、xxxがきになるとかどうにかならないか？とか。<br>そもそも期日に終わらなかったとか、仕様が変わった時に update をしにくくてどうする？とか全体が見通せない、とか。<br>そこってツールが悪いんじゃなくて、使う人、運用する人の問題であるわけであって。</p>
+<p>と言いつつ、他のツールとかなんかいいのないかなー、とかうろうろしつつ、Jira とか Wrike とかを使ったら解決するんじゃないか？ディレクターも楽になりつつ、メンバーもやりやすくなるんじゃないか？とかを考えることが多いこのごろ。<br>単に、xxx を解決できてそうなツールという感じで見てるところはあるのだけど。<br>そもそもツールじゃなくて、漏れなく共有できたり、わかりやすい方が重要だとは思うし。</p>
+<p>あとは、依頼タスクをまとめるとかしたりも色々してみたり。<br>試行錯誤でこの辺はチームの文化にもよるところがあると思うので、あったものを見つけられて、チームとして使っていけることをいとわないのが一番なのかなぁという気がしている。</p>
+<p>と、なんだかんだ言って、ここのところなんとなく自分自身の管理方法とか進め方が上手いこといってない感があってどうしたものか？と悶々としてるわけです。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ツールは便利で課題を解決してくれる可能性はあると思う。&lt;br&gt;が、必ず解決してくれるわけでもないだろうし、あくまで道しるべの可能性もある。&lt;/p&gt;
+&lt;p&gt;またそのツールをどう使うか？でもぜんぜん変わる可能性もある。&lt;/p&gt;
+&lt;p&gt;ツールを使ったら万事解決といった思考停止状態
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="team" scheme="https://note.mersy418.com/tags/team/"/>
+    
+      <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
+    
+      <category term="task" scheme="https://note.mersy418.com/tags/task/"/>
+    
+      <category term="todo" scheme="https://note.mersy418.com/tags/todo/"/>
+    
+  </entry>
   
   <entry>
     <title>Alfredで乱数を取得できるようにしてみた</title>
@@ -783,37 +823,6 @@ $ ./toggl2slack start
     
     
       <category term="iPad" scheme="https://note.mersy418.com/tags/iPad/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【読了】明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</title>
-    <link href="https://note.mersy418.com/article/book-healthybody.html"/>
-    <id>https://note.mersy418.com/article/book-healthybody.html</id>
-    <published>2018-02-17T11:12:08.000Z</published>
-    <updated>2018-02-17T11:42:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ<br><a href="https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title" target="_blank" rel="external">https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title</a></p>
-</blockquote>
-<p>を読んだ</p>
-<div class="mm-middle" style="margin-bottom:0px;"><div class="mm-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRCY188/mersys-22/ref=nosim" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/518M4ke7ScL._SL160_.jpg" alt="明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ" title="明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ" width="111" height="160" border="0"></a></div><div class="mm-content" style="float:left;margin-left:15px;line-height:120%"><div class="mm-title" style="line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRCY188/mersys-22/ref=nosim" target="_blank">明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ</a></div><div class="mm-detail" style="margin-top:10px;">渡部卓<br>クロスメディア・パブリッシング（インプレス） ( 2016-06-20 )<br><div style="margin:7px 0px"><a href="http://mediamarker.net/u/mersy/?asin=B01JRCY188" target="_blank">mersy’s bookshelfで詳細を見る</a></div></div></div><div style="clear:left"></div></div>
-
-<p>仮眠できるときは仮眠しよう。</p>
-<p>んで僕の場合は酒が問題だな。それがパフォーマンスを落とす原因であることも明らかであるはずなので、いい感じにバランスを取らないとだなぁ。。。</p>
-<p>普段からそこまでストレスは感じない性格だけど。<br>匂いってのは考えてみていいのかもなー。</p>
-<p>ストレスを感じないためにできることはあるはずなので、その辺は参考にしておきたい。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;明日に疲れを持ち越さない プロフェッショナルの仕事術 ビジネスライフ&lt;br&gt;&lt;a href=&quot;https://www.amazon.co.jp/gp/product/B01JRCY188/ref=kinw_myk_ro_title&quot; target=
-    
-    </summary>
-    
-      <category term="Book" scheme="https://note.mersy418.com/categories/Book/"/>
-    
     
   </entry>
   
