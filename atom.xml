@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-19T21:41:14.000Z</updated>
+  <updated>2018-03-20T13:03:20.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小さなことでも変化を楽しむ</title>
+    <link href="https://note.mersy418.com/article/blog-change-workspace.html"/>
+    <id>https://note.mersy418.com/article/blog-change-workspace.html</id>
+    <published>2018-03-20T22:00:00.000Z</published>
+    <updated>2018-03-20T13:03:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>先日、同じマンション内で引越しをした。<br>ちょっとだけ広い部屋に。</p>
+<p>仕事用のテーブルが、仕事用テーブルからダイニングテーブルに格上げ？になった。<br>これに伴い、食事のたびにちゃんと片付ける必要が出てきた。</p>
+<p>はてさて。<br>慣れるまでが大変だけどどうなることやら。</p>
+<p>とはいえ、些細なことでも変化は楽しむべきですね。<br>ちょっとしたことでも習慣化できると色々変えていけますしね。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;先日、同じマンション内で引越しをした。&lt;br&gt;ちょっとだけ広い部屋に。&lt;/p&gt;
+&lt;p&gt;仕事用のテーブルが、仕事用テーブルからダイニングテーブルに格上げ？になった。&lt;br&gt;これに伴い、食事のたびにちゃんと片付ける必要が出てきた。&lt;/p&gt;
+&lt;p&gt;はてさて。&lt;br&gt;慣れるまでが大
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ツールを使ったら解決すると思うのが間違い</title>
@@ -798,31 +824,6 @@ $ ./toggl2slack start
     
     
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>セミナーとかでiPadを使っていこう思った</title>
-    <link href="https://note.mersy418.com/article/blog-use-ipad.html"/>
-    <id>https://note.mersy418.com/article/blog-use-ipad.html</id>
-    <published>2018-02-19T11:00:00.000Z</published>
-    <updated>2018-02-19T11:40:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>日曜日、 BacklogWorld に参加してきた。Sim Free の iPad Pro でメモをとったりしてたけど意外と便利だった。<br>1日中のセミナーでも電源が持つのでありがたい。<br>Macbook は3時間ちょっとしか持たないし。そもそも充電しないと iPhone のバッテリも怪しいし。<br>テキストのメモだけであれば PC 使うよりもいいのかもしれない。テザリングもできるし、手書きもできるな。</p>
-<p>先日、電車移動中に音声会議する時に画面共有しながら話すと画面が大きいのでそのまま話せて便利。<br>トンネルだったり、回線が4Gから3Gになってしまうのはちょっと辛かったけど、、、、<br>新幹線でやった時はPCにテザリングでやったけど、 iPad でやってみてもいいのかも？？<br>まぁ、オンライン会議はできるだけ家にいる時がいいけど。</p>
-<p>iPad は Kindle 専用くらいで考えていたから小さい方にしたけど大きい方でもよかったかもなー</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;日曜日、 BacklogWorld に参加してきた。Sim Free の iPad Pro でメモをとったりしてたけど意外と便利だった。&lt;br&gt;1日中のセミナーでも電源が持つのでありがたい。&lt;br&gt;Macbook は3時間ちょっとしか持たないし。そもそも充電しないと iPh
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="iPad" scheme="https://note.mersy418.com/tags/iPad/"/>
     
   </entry>
   
