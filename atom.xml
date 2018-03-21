@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-20T13:03:20.000Z</updated>
+  <updated>2018-03-21T22:06:00.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Webサイトを作ったなら保守・運用もセットで考えたいところ</title>
+    <link href="https://note.mersy418.com/article/blog-operations.html"/>
+    <id>https://note.mersy418.com/article/blog-operations.html</id>
+    <published>2018-03-21T22:00:00.000Z</published>
+    <updated>2018-03-21T22:06:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>日本郵便がハード保守契約を全面見直し、ITベンダーの反発は必至 | 日経 xTECH（クロステック）<br><a href="http://tech.nikkeibp.co.jp/it/atcl/column/14/346926/012701285/" target="_blank" rel="external">http://tech.nikkeibp.co.jp/it/atcl/column/14/346926/012701285/</a></p>
+</blockquote>
+<p>保守にレベルがある話が書かれてあるのだけれども。<br>これってウェブサイトにも似たような話があるような気がしていて。</p>
+<p>落ちたら困るようなサイトであれば落ちてないかを 24/365 で監視した方がいいだろうし、何かあった時にそれに備える必要があるとは思う。</p>
+<p>優先順位もつける必要はあるだろうけど、どこまでがサービスとして許容できる範囲で、どこからがNGなのか、を明確にした上で、どこまでを監視しして、保守する、そのための体制を作るのか？ということを考えておかないといけないんじゃないのかしら？</p>
+<p>検収ってなんだろう？っていう話にもなってくるところではあるが、そういうサイトを運用するつもりなのであれば、納品とかそんなこと言ってられない気もするし、そこからがスタートなわけで。</p>
+<p>そこを踏まえて、開発から運用までを考えて構築していくのか？運用していくのか？<br>制作をするにしても、もう少し広い目で見ていく必要があるんだろうなー。</p>
+<p>と、以前からこのエントリをメモ的に書いておいて、今日公開しようとしてたところ、昨晩はそんな感じで障害対応があったりなんだり。。。<br>そんなもんですよね。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;日本郵便がハード保守契約を全面見直し、ITベンダーの反発は必至 | 日経 xTECH（クロステック）&lt;br&gt;&lt;a href=&quot;http://tech.nikkeibp.co.jp/it/atcl/column/14/346926/012701285
+    
+    </summary>
+    
+      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
+    
+    
+      <category term="website" scheme="https://note.mersy418.com/tags/website/"/>
+    
+  </entry>
   
   <entry>
     <title>小さなことでも変化を楽しむ</title>
@@ -774,54 +806,6 @@ $ ./toggl2slack start
     
     
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一応個人的に気をつけてる（つもりな）こと</title>
-    <link href="https://note.mersy418.com/article/blog-ux-for-member.html"/>
-    <id>https://note.mersy418.com/article/blog-ux-for-member.html</id>
-    <published>2018-02-24T22:00:00.000Z</published>
-    <updated>2018-02-24T22:50:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>UXの社内勉強会で私が伝えたかった2つのこと｜Tsutomu Sogitani｜note<br><a href="https://note.mu/sogitani/n/na77e71d288cd" target="_blank" rel="external">https://note.mu/sogitani/n/na77e71d288cd</a></p>
-<p>を読んでいて、サンプルとして、以下のような話が出ていた。</p>
-<blockquote>
-<p>Backlogを使っているあるプロジェクトでは、BacklogにPDF化した議事録をアップして連絡していたが、受け手の体験を考えるとこれは適切なやり方だろうか。</p>
-<p>BacklogにPDF化した議事録をアップすると、</p>
-<ol>
-<li>Backlogからメールが来る</li>
-<li>Backlogにアクセスする</li>
-<li>PDFをダウンロードする</li>
-<li>Adobe Readerを立ち上げる</li>
-<li>議事録の内容が見れる</li>
-</ol>
-<p>という5つのプロセスが発生する。しかし、PDF化せずにテキストでそのままアップすればどうだろうか。</p>
-<ol>
-<li>Backlogからのメールが来る</li>
-<li>議事録の内容が見れる（メールに全文転載されるので）</li>
-</ol>
-<p>とプロセスが大幅に短縮される。見る側の手間が削減されるわけである。さらにBacklogで議事録を見る人の状況を具体的に想像してみよう。</p>
-<p>仕事の中では対面、電話、メール、ツールと様々なチャネルが乱立している。これらに掲載された多種多様な情報にさらされ、上司、部下、同僚、顧客から常になんらかの判断を要求されている。行動を起こす必要がある場合、適切なタイミングでの実行が求められている。時間がかかる仕事は、集中する時間を確保しなければならない。そんな彼らのデスクトップ上には、ファイルやフォルダが多数散乱し、複数のアプリケーションが立ち上がっており、ブラウザには常時5つくらいのタブが開いている。そんな中で、何かに追われて忙しく仕事をしている。これが議事録を見る人たちの情景である。</p>
-</blockquote>
-<p>一緒に仕事してるメンバーには伝わってはいないのかもしれないけど、個人的には意識しているところだったりして。</p>
-<p>チームで仕事をする以上、コミュニケーションが負担になるとか、検索できないとかをいかに減らせるかは重要課題かな、、、と。<br>場所と形式は重要なんだろうなぁ、、、と。<br>そう言いつつ、いつも情報をありかを教えたりしてるのでまだまだ全然ですが。。。。</p>
-<p>全員がリモートだからこそ、自発的な共有は重要になるはずなんだけど、それの前段階として、探しやすいとか、そういった場づくりをするのはすごく必要なんじゃないのかなぁと思っているところ。</p>
-<p>Backlog の wiki が満点ではないけど、形式に問題がないなら今の所はそこに寄せておくのがいいのかなぁと思っているところではある。<br>とりあえず Markdown を使えるところに寄せておくのが正解なんだろうな、と。あとは検索ですね。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;UXの社内勉強会で私が伝えたかった2つのこと｜Tsutomu Sogitani｜note&lt;br&gt;&lt;a href=&quot;https://note.mu/sogitani/n/na77e71d288cd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https:/
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
-    
-      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
     
   </entry>
   

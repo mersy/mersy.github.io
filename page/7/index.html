@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 7 | mersy note</title>
+  <title>Seite 7 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,50 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-16T23:32:18.000Z"><a href="/article/localfile-googleanalytics.html">2017-11-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
+<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
+<p>この辺を見る限り</p>
+<pre><code>ga(&#39;create&#39;, &#39;UA-xxxxxxxx-x&#39;,{&#39;cookieDomain&#39;: &#39;none&#39;});
+ga(&#39;set&#39;, &#39;checkProtocolTask&#39;, null);
+ga(&#39;set&#39;, &#39;checkStorageTask&#39;,  null);
+ga(&#39;set&#39;, &#39;historyImportTask&#39;,  null);
+ga(&#39;send&#39;, &#39;pageview&#39;);
+</code></pre><p>という感じで書けば良さそう。</p>
+<p>あと、ページ開いたこと自体を計測する場合は</p>
+<pre><code>ga(&#39;set&#39;, &#39;page&#39;, &#39;/dummy/index.html&#39;);
+</code></pre><p>のようにURLもセットしておく必要があるっぽい。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -481,127 +525,27 @@ Pragma : no-cache
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-03-26T03:00:00.000Z"><a href="/article/hexo.html">2017-03-26</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/hexo.html">Hexo memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>mdファイルで書きたい</li>
-<li>できればgithubpage使いたい</li>
-</ul>
-<p>Hexo<br><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
-<p>Documentation | Hexo<br><a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a></p>
-<pre><code>$ npm install hexo-cli -g
-$ hexo init blog
-$ cd blog
-$ npm install
-$ hexo server
-</code></pre><p>これまでのjekyllのと違ってpermalinkがファイル名を使ってたのでファイル名を<br>yyyy-mm-dd-title.md<br>から<br>title.md<br>に変更した</p>
-<pre><code>$ hexo server
-</code></pre><p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>で確認できる。</p>
-<h2 id="GithubPagesへデプロイ"><a href="#GithubPagesへデプロイ" class="headerlink" title="GithubPagesへデプロイ"></a>GithubPagesへデプロイ</h2><p>Gitでデプロイするためにインストール</p>
-<pre><code>$ npm install hexo-deployer-git --save
-</code></pre><p>config_yamlに設定を書く</p>
-<pre><code>deploy:
-  type: git
-  repo: git@github.com:mersy/mersy.github.io.git
-  branch: master
-  message: [message]
-</code></pre><p>他のデプロイ先も選べるみたいでこれはなかなか便利かも。</p>
-<p>Deployment | Hexo<br><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></p>
-<h2 id="Atom用の拡張"><a href="#Atom用の拡張" class="headerlink" title="Atom用の拡張"></a>Atom用の拡張</h2><p>MarkdownファイルはAtomで書くと思うのでひとまずインストール</p>
-<blockquote>
-<p>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></p>
-</blockquote>
-<p>コマンド（cmd-shift-P）</p>
-<pre><code>- hexo new          # Create a new post
-- hexo publish      # Publish a draft post
-- hexo generate     # Generate static files
-- hexo deploy       # Generate static files and deploy
-- hexo clean        # Clean the cache file and generated files
-</code></pre><h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><pre><code>$ hexo new
-</code></pre><p>でdraftを作成する<br><code>_draft</code> 以下に生成される。</p>
-<pre><code>$ hexo server --draft
-</code></pre><p>でローカルで下書きが確認できる</p>
-<h2 id="新規作成時のテンプレート"><a href="#新規作成時のテンプレート" class="headerlink" title="新規作成時のテンプレート"></a>新規作成時のテンプレート</h2><ul>
-<li>/scaffolds<ul>
-<li>draft.md : ドラフト投稿用のテンプレート</li>
-<li>post.md : 投稿用のテンプレート</li>
-<li>page.md : 固定ページ用のテンプレート</li>
-</ul>
-</li>
-</ul>
-<h2 id="JSONを作成する"><a href="#JSONを作成する" class="headerlink" title="JSONを作成する"></a>JSONを作成する</h2><p>このへんのプラグインがありそう。</p>
-<ul>
-<li>alexbruno/hexo-generator-json-feed<br><a href="https://github.com/alexbruno/hexo-generator-json-feed" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-feed</a></li>
-<li>leviwheatcroft/hexo-generator-recent<br><a href="https://github.com/leviwheatcroft/hexo-generator-recent" target="_blank" rel="external">https://github.com/leviwheatcroft/hexo-generator-recent</a></li>
-<li>HeskeyBaozi/hexo-generator-to-json<br><a href="https://github.com/HeskeyBaozi/hexo-generator-to-json" target="_blank" rel="external">https://github.com/HeskeyBaozi/hexo-generator-to-json</a></li>
-<li>alexbruno/hexo-generator-json-content<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="external">https://github.com/alexbruno/hexo-generator-json-content</a></li>
-</ul>
-<p>ひとまずは <code>hexo-generator-json-feed</code> を試してみている</p>
-<h2 id="highlightの無効化"><a href="#highlightの無効化" class="headerlink" title="highlightの無効化"></a>highlightの無効化</h2><p>コードを含む時にcode部分はシンプルにしたかったのでhighlightを無効にする</p>
-<pre><code>highlight:
-  enable: false
-</code></pre><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>カテゴリの設定</li>
-<li>検索（flexibeSearch）</li>
-<li><del>引用のデザイン</del></li>
-</ul>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>atom-hexo<br><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">https://atom.io/packages/atom-hexo</a></li>
-<li>Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita<br><a href="http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b" target="_blank" rel="external">http://qiita.com/bird_tummy/items/5988a1efe47e0d47132b</a></li>
-<li>Hexoで始めるお手軽な静的ブログ　-画像投稿とプラグインの追加- - Qiita<br><a href="http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250" target="_blank" rel="external">http://qiita.com/in_silico_/items/31c2c0bc1cf061c86250</a></li>
-<li>Hexo の 新規投稿テンプレート を カスタマイズ | 験なきものを思はずは<br><a href="https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" target="_blank" rel="external">https://azriton.github.io/2016/11/04/Hexo%E3%81%AE%E6%96%B0%E8%A6%8F%E6%8A%95%E7%A8%BF%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/6/" class="alignleft prev">Prev</a>
+    <a href="/page/6/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/8/" class="alignright next">Next</a>
+    <a href="/page/8/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -660,7 +604,7 @@ $ hexo server
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>1</small></li>
+    <li><a href="/categories/Work/">Work</a><small>2</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>4</small></li>
   
@@ -791,7 +735,7 @@ $ hexo server
   
     <li><a href="/tags/todo/">todo</a><small>1</small></li>
   
-    <li><a href="/tags/website/">website</a><small>0</small></li>
+    <li><a href="/tags/website/">website</a><small>1</small></li>
   
   </ul>
 </div>
@@ -799,8 +743,12 @@ $ hexo server
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
+      </li>
     
       <li>
         <a href="/article/blog-change-workspace.html">小さなことでも変化を楽しむ</a>
@@ -818,17 +766,13 @@ $ hexo server
         <a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a>
       </li>
     
-      <li>
-        <a href="/article/blog-iphone-screencover.html">iPhoneのガラスフィルムを貼り直したら新品みたいになった</a>
-      </li>
-    
   </ul>
 </div>
 
 
   
   <div class="widget tag">
-    <h3 class="title">Archives</h3>
+    <h3 class="title">Archiv</h3>
     <ul class="entry">
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
@@ -887,7 +831,7 @@ $ hexo server
     
       <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
     
-      <li><a href="/categories/Work/">Work</a><small>1</small></li>
+      <li><a href="/categories/Work/">Work</a><small>2</small></li>
     
       <li><a href="/categories/blog/">blog</a><small>4</small></li>
     
