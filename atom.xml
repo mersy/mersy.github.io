@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-21T22:06:00.000Z</updated>
+  <updated>2018-03-22T23:44:23.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>なぜそれを使うのか？みんなが使っているから</title>
+    <link href="https://note.mersy418.com/article/blog-why-use-because-you-use.html"/>
+    <id>https://note.mersy418.com/article/blog-why-use-because-you-use.html</id>
+    <published>2018-03-22T22:00:00.000Z</published>
+    <updated>2018-03-22T23:44:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>理由としては弱いだろうけど、みんなが使ってるのに揃えておくとメリットがあるという話。</p>
+<p>わからなければ質問できる。<br>何か引っかかったことがあれば共有できる。</p>
+<p>タッチパネルの方が便利そうだからWindowsの方がいい気がするけど、みんなMacだからMacの方が楽そう。<br>別にOSにそこまでこだわりはないし。<br>Webサービスである程度賄えるだろうし。</p>
+<p>とはいえ、Macにしかないソフトもあるしなー。逆もしかり。。。</p>
+<p>そんなことを時々思うことはありますね。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;理由としては弱いだろうけど、みんなが使ってるのに揃えておくとメリットがあるという話。&lt;/p&gt;
+&lt;p&gt;わからなければ質問できる。&lt;br&gt;何か引っかかったことがあれば共有できる。&lt;/p&gt;
+&lt;p&gt;タッチパネルの方が便利そうだからWindowsの方がいい気がするけど、みんなMacだ
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
+    
+  </entry>
   
   <entry>
     <title>Webサイトを作ったなら保守・運用もセットで考えたいところ</title>
@@ -775,37 +804,6 @@ $ ./toggl2slack start
     
     
       <category term="Backlog" scheme="https://note.mersy418.com/tags/Backlog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacBook のキーボードを掃除してみる</title>
-    <link href="https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html"/>
-    <id>https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html</id>
-    <published>2018-02-25T04:00:00.000Z</published>
-    <updated>2018-02-25T04:49:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>なんか MacBook のキーボードがダブルクリックというか、連打される感じになってしまって困ってた。<br>常に発生するわけではないからなんなんだろうな、、、</p>
-<p>修理とかに出す余裕はないので、エアダスターとやらを買ってみて掃除してみた。</p>
-<blockquote>
-<p>MacBook や MacBook Pro のキーボードのお手入れ方法 - Apple サポート<br><a href="https://support.apple.com/ja-jp/HT205662" target="_blank" rel="external">https://support.apple.com/ja-jp/HT205662</a></p>
-</blockquote>
-<p>果たしてこれで改善するのだろうか。。。<br>そういや、時々returnキーが反応しない時もあるし、それも改善するといいな。</p>
-<p>と、書いてる今は特に問題なさそうな気がする。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;なんか MacBook のキーボードがダブルクリックというか、連打される感じになってしまって困ってた。&lt;br&gt;常に発生するわけではないからなんなんだろうな、、、&lt;/p&gt;
-&lt;p&gt;修理とかに出す余裕はないので、エアダスターとやらを買ってみて掃除してみた。&lt;/p&gt;
-&lt;blockq
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   

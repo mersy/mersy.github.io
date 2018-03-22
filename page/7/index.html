@@ -61,6 +61,41 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-16T23:36:28.000Z"><a href="/article/dashboard-devto.html">2017-11-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/dashboard-devto.html">DEVの投稿画面</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
+<p><img src="../asset/20171117_devto.png" alt=""></p>
+<p>なかなかシンプル。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-16T23:32:18.000Z"><a href="/article/localfile-googleanalytics.html">2017-11-17</a></time>
       
       
@@ -453,78 +488,6 @@ Pragma : no-cache
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-04-20T11:35:10.000Z"><a href="/article/craft-cache.html">2017-04-20</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/craft-cache.html">craft cache memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Craft CMS のキャッシュ周りがよくわからなかったのでメモ</p>
-<p>公式ドキュメント<br><a href="https://craftcms.com/docs/templating/cache" target="_blank" rel="external">https://craftcms.com/docs/templating/cache</a></p>
-<pre><code>{% cache %}
-    {% for block in entry.myMatrixField %}
-        <p>{{ block.text }}</p>
-    {% endfor %}
-{% endcache %}
-</code></pre><h2 id="キャッシュの削除"><a href="#キャッシュの削除" class="headerlink" title="キャッシュの削除"></a>キャッシュの削除</h2><p>管理画面からキャッシュの削除ができる</p>
-<p><a href="https://craftcms.com/classreference/tools/ClearCachesTool" target="_blank" rel="external">https://craftcms.com/classreference/tools/ClearCachesTool</a></p>
-<ul>
-<li>全て<ul>
-<li>全てのキャッシュを削除</li>
-</ul>
-</li>
-<li>データキャッシュ（Data caches）<br>-</li>
-<li>RSSキャッシュ（RSS caches）<br>-</li>
-<li>アセットキャッシュ（Asset caches）<br>-</li>
-<li>コンパイル済のテンプレート（Compiled templates）<br>-</li>
-<li>一時的なファイル（Temp files）<br>-</li>
-<li>アセット変換インデックス（Asset transform index）<br>-</li>
-<li>アセットのインデックス化データ（Asset indexing data）<br>-</li>
-<li>テンプレートキャッシュ（Template caches）<br>-</li>
-</ul>
-<h2 id="キャッシュの設定"><a href="#キャッシュの設定" class="headerlink" title="キャッシュの設定"></a>キャッシュの設定</h2><p>山本さんに教えてもらった効率がよいという方法</p>
-<pre><code>処理時間のかかるループ処理などのブロックごとにcacheタグで囲む
-それぞれ {% cache using key "<cachekey>" %} の形式でキーを指定する
-同一のキーでも、呼び出されるURLが異なればキャッシュは区別される
-</cachekey></code></pre><p>キャッシュキーがあればそのキャッシュだけを削除しやすいみたい  </p>
-<h2 id="cacheDuration"><a href="#cacheDuration" class="headerlink" title="cacheDuration"></a>cacheDuration</h2><p><a href="https://craftcms.com/docs/config-settings#cacheDuration" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheDuration</a></p>
-<p>テンプレートで</p>
-<pre><code>{% cache %}
-</code></pre><p>で囲われているところはキャッシュされる。</p>
-<p>初期値は ‘P1D’ （1日）。</p>
-<pre><code>&#39;cacheDuration&#39; =&gt; &#39;P1W&#39;,
-</code></pre><h2 id="cacheElementQueries"><a href="#cacheElementQueries" class="headerlink" title="cacheElementQueries"></a>cacheElementQueries</h2><p><a href="https://craftcms.com/docs/config-settings#cacheElementQueries" target="_blank" rel="external">https://craftcms.com/docs/config-settings#cacheElementQueries</a></p>
-<p>デフォルトではエントリ更新時にテンプレートキャッシュ削除されるが、それを無効にする設定。初期値は ‘true’ 。</p>
-<pre><code>&#39;cacheElementQueries&#39; =&gt; false,
-</code></pre><p>更新が多いがアクセスも多い場合は、 ‘false’ にしたうえでキャッシュをコントロールしたほうが良さそう。</p>
-<hr>
-<p>キャッシュ削除をcronジョブと連携できそう？？<br><a href="https://github.com/themccallister/craft.cache-clear" target="_blank" rel="external">https://github.com/themccallister/craft.cache-clear</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -550,7 +513,7 @@ Pragma : no-cache
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>36</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -683,7 +646,7 @@ Pragma : no-cache
   
     <li><a href="/tags/Slack/">Slack</a><small>1</small></li>
   
-    <li><a href="/tags/Team/">Team</a><small>1</small></li>
+    <li><a href="/tags/Team/">Team</a><small>2</small></li>
   
     <li><a href="/tags/Todo/">Todo</a><small>1</small></li>
   
@@ -747,6 +710,10 @@ Pragma : no-cache
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
       </li>
     
@@ -762,10 +729,6 @@ Pragma : no-cache
         <a href="/article/blog-tools.html">ツールを使ったら解決すると思うのが間違い</a>
       </li>
     
-      <li>
-        <a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -777,7 +740,7 @@ Pragma : no-cache
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>36</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
