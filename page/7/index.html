@@ -61,6 +61,61 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-26T07:06:41.000Z"><a href="/article/change-dns-email.html">2017-11-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
+<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
+<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
+<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
+<blockquote>
+<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
+</blockquote>
+<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
+<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
+<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
+<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
+</ul>
+<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
+<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
+</ul>
+<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
+<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
+<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
+<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
+<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-16T23:36:28.000Z"><a href="/article/dashboard-devto.html">2017-11-17</a></time>
       
       
@@ -451,43 +506,6 @@ Pragma : no-cache
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-01T12:30:00.000Z"><a href="/article/craft-systememail.html">2017-09-01</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/craft-systememail.html">Craft CMS のシステムEmailの設定</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>知ってしまえば簡単なことなのですが。</p>
-<p>パスワードリマインダなどのメールアドレスの設定はどこでするのだろう、、、と設定の全般ばかりをみていたのですが、メールの所に <code>システムのメールアドレス</code> があります。</p>
-<p><img src="../asset/craft-systemaddress.png" alt=""></p>
-<p>こちらにセットしましょう。</p>
-<p>デフォルトは初期ユーザーのシステム管理者のアドレスが入る？みたいです。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -513,7 +531,7 @@ Pragma : no-cache
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>38</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -684,9 +702,11 @@ Pragma : no-cache
   
     <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
   
-    <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
   
     <li><a href="/tags/project-management/">project management</a><small>1</small></li>
+  
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
@@ -710,6 +730,10 @@ Pragma : no-cache
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-online-meeting-sound.html">オンラインの音声会議をストレスなくやりたい</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
       </li>
     
@@ -725,10 +749,6 @@ Pragma : no-cache
         <a href="/article/blog-cant-use-credit.html">特定のクレジットカードしか使えなかった近所のスーパー＞＞結局使えるようになりました</a>
       </li>
     
-      <li>
-        <a href="/article/blog-tools.html">ツールを使ったら解決すると思うのが間違い</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -740,7 +760,7 @@ Pragma : no-cache
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>38</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     

@@ -61,6 +61,47 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-04-28T05:07:31.000Z"><a href="/article/StaticPress.html">2014-04-28</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/StaticPress.html">StaticPressのメモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。</p>
+<blockquote>
+<p>StaticPress<br><a href="http://ja.staticpress.net/" target="_blank" rel="external">http://ja.staticpress.net/</a></p>
+</blockquote>
+<p>とりあえず、StaticPressを使うためには、Permalinkをそれに対応出来る様に .html 的な感じになるようにしておかないとNG。<br>考えたらあたりまえだけど、 hogehoge?p=xxx みたいなのだと、スタティックにできるわけないです。</p>
+<p>スマホの切り替えとかは不要になるから、関係なさそうなプラグインは削除した。</p>
+<p>テーマも拘ってないから、デフォルトのに変更した。</p>
+<h2 id="空ファイル"><a href="#空ファイル" class="headerlink" title="空ファイル"></a>空ファイル</h2><p>ファイルが生成されてるんだけど、空っぽというのがちらほらあるので色々調整してみた。</p>
+<p>テーマをデフォルト系のものにしても変化無し。<br>プラグインをほとんど無効にして作成し直したら解決。<br>多分、テーマではなくてプラグインだと思う。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-24T06:30:39.000Z"><a href="/article/s3.html">2014-04-24</a></time>
       
       
@@ -659,51 +700,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-15T08:00:00.000Z"><a href="/article/pullrequestbybranch.html">2013-10-15</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/pullrequestbybranch.html">リポジトリ共有式のPull Request をBitbucketで</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>以下のエントリで紹介されてた方法（リポジトリ共有式）がBitbucketでもできるか試した。</p>
-<blockquote>
-<p>GitHub初心者はForkしない方のPull Requestから入門しよう - QNYP Blog<br><a href="http://blog.qnyp.com/2013/05/28/pull-request-for-github-beginners/" target="_blank" rel="external">http://blog.qnyp.com/2013/05/28/pull-request-for-github-beginners/</a></p>
-</blockquote>
-<p>ローカルでbranch増やして、修正してremoteにpush。</p>
-<p>BitBucketの管理画面上でcompareというメニューがあるからそこでmasterとかとcompareしてみると差分が表示される。表示されると、pull request送るか？的なメニューがあるからそこから送れる。</p>
-<p>ひとまずここまで。</p>
-<p>承認、マージはこれから。</p>
-<p>以下は、先のエントリでいうところのfork式の話。</p>
-<ul>
-<li>Bitbucket、プルリクエストを新しく強力に | Atlassian Japan<br><a href="http://japan.blogs.atlassian.com/2011/06/powerful_new_pull_request_on_bitbucket/" target="_blank" rel="external">http://japan.blogs.atlassian.com/2011/06/powerful_new_pull_request_on_bitbucket/</a></li>
-<li>駄猫の備忘録: bitbucketで一人pullrequestとかしてた<br><a href="http://3a3k.blogspot.jp/2012/05/bitbucketpullrequest.html" target="_blank" rel="external">http://3a3k.blogspot.jp/2012/05/bitbucketpullrequest.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -729,7 +725,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
   
-    <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>38</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -900,9 +896,11 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
   
-    <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
   
     <li><a href="/tags/project-management/">project management</a><small>1</small></li>
+  
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
@@ -926,6 +924,10 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-online-meeting-sound.html">オンラインの音声会議をストレスなくやりたい</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
       </li>
     
@@ -941,10 +943,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-cant-use-credit.html">特定のクレジットカードしか使えなかった近所のスーパー＞＞結局使えるようになりました</a>
       </li>
     
-      <li>
-        <a href="/article/blog-tools.html">ツールを使ったら解決すると思うのが間違い</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -956,7 +954,7 @@ $ knife solo prepare test_vagrant5
     
       <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
     
-      <li><a href="/categories/Blog/">Blog</a><small>37</small></li>
+      <li><a href="/categories/Blog/">Blog</a><small>38</small></li>
     
       <li><a href="/categories/Book/">Book</a><small>9</small></li>
     
