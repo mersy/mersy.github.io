@@ -1,0 +1,801 @@
+<!DOCTYPE HTML>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Página 7 | mersy note</title>
+  <meta name="author" content="mersy">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="mersy note"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">mersy note</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="//">Home</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/atom.xml">RSS</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-26T07:06:41.000Z"><a href="/article/change-dns-email.html">2017-11-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
+<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
+<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
+<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
+<blockquote>
+<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
+</blockquote>
+<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
+<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
+<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
+<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
+</ul>
+<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
+<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
+</ul>
+<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
+<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
+<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
+<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
+<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-16T23:36:28.000Z"><a href="/article/dashboard-devto.html">2017-11-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/dashboard-devto.html">DEVの投稿画面</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>高速と話題の DEV <a href="https://dev.to/" target="_blank" rel="external">https://dev.to/</a> のダッシュボード</p>
+<p><img src="../asset/20171117_devto.png" alt=""></p>
+<p>なかなかシンプル。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-16T23:32:18.000Z"><a href="/article/localfile-googleanalytics.html">2017-11-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/localfile-googleanalytics.html">ローカルに保存したHTMLファイルのPVをGoogle Analyticsで計測するための設定</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>HTMLファイルをローカルに保存してもらい、それをひらいたあとのイベント等を計測しようと思って色々調べたときのメモ。</p>
+<p><a href="https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url" target="_blank" rel="external">https://stackoverflow.com/questions/3591847/google-analytics-from-a-file-url</a><br><a href="https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost" target="_blank" rel="external">https://stackoverflow.com/questions/22761200/using-google-analytics-without-a-sever-or-localhost</a></p>
+<p>この辺を見る限り</p>
+<pre><code>ga(&#39;create&#39;, &#39;UA-xxxxxxxx-x&#39;,{&#39;cookieDomain&#39;: &#39;none&#39;});
+ga(&#39;set&#39;, &#39;checkProtocolTask&#39;, null);
+ga(&#39;set&#39;, &#39;checkStorageTask&#39;,  null);
+ga(&#39;set&#39;, &#39;historyImportTask&#39;,  null);
+ga(&#39;send&#39;, &#39;pageview&#39;);
+</code></pre><p>という感じで書けば良さそう。</p>
+<p>あと、ページ開いたこと自体を計測する場合は</p>
+<pre><code>ga(&#39;set&#39;, &#39;page&#39;, &#39;/dummy/index.html&#39;);
+</code></pre><p>のようにURLもセットしておく必要があるっぽい。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-04T23:30:19.000Z"><a href="/article/staticfiles-craftcms.html">2017-11-05</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><code>example.com/</code> を Craft で管理していて、 <code>/book/</code> など下層含めて出力している。</p>
+<p>このときに <code>/book/magazine/</code> のような Craft 管理内の階層で静的ファイルを置きたい場合。</p>
+<p>とりあえず、 <code>templates/book/magazine/</code> のような感じでおいてしまえば静的ファイルの内容がそのまま表示される。</p>
+<hr>
+<p>ドキュメントルートが <code>public</code> になるのでそちらでも良さそうなかんじではあるのだけれども。<br>以下はとりあえず調べず思いつきでやってみたことメモ。</p>
+<p>何も意識せず <code>/book/magazine/</code> をおくだけだと <code>/book/</code> は403になる。 <code>/book/magazine/</code> は見れる。</p>
+<p><code>index.php</code> を <code>/book/</code> 以下に置くと <code>/book/</code> がトップページと同じ挙動になる。ここはなんかrouteとか指定すればうまくいくのかも？</p>
+<p><code>.htaccess</code> を <code>/book/</code> においても特段変わらず。ま、そうかも。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-03T08:43:22.000Z"><a href="/article/remotework.html">2017-11-03</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/remotework.html">リモートワーク</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>社員の在宅勤務は一般化するのか。自分の例で説明してみる<br><a href="http://blogos.com/article/254439/" target="_blank" rel="external">http://blogos.com/article/254439/</a></p>
+</blockquote>
+<p>作業を把握しづらいというのはなんとなくわかるかなー。<br>把握しようとはしないけど、なんとなく知っておきたいときとかに。</p>
+<p>なんかこう通知やらなんかで報告確認しやすい自動ななにかでやれればという気がする。</p>
+<p>んで、リモートでやってるのだけど、一緒の場で面と向かって作業した方が早い場合もあるのが事実なので、リモートでその状態にどこまでちかづけられるのかが重要だと思ってるこの頃。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-10-15T06:50:31.000Z"><a href="/article/drupal-url-alias.html">2017-10-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/drupal-url-alias.html">DrupalのURLが新しいものにならないときはURLエイリアスを削除する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Drupal ですでに登録してあるコンテンツのURLエイリアスを変更しても、元のもののままだったりしてしまう場合は</p>
+<p><code>環境設定　&gt; 検索とメタデータ &gt; URL エイリアス</code></p>
+<p>といくと、 URLエイリアスの一覧がでてくるので、そこで古いものを削除すると、新しいものになる</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-10-03T12:57:13.000Z"><a href="/article/deployhq-user.html">2017-10-03</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/deployhq-user.html">DeployHQ のユーザの種類メモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>DeployHQ のユーザの種類メモ</p>
+<blockquote>
+<p>Account administration - access to all aspects of the account including billing<br>User management - access to all projects and user management<br>All projects - access to all projects with the ability to make all changes including deleting a project<br>Specific projects - access to a certain project with restricted abilities, i.e. a user cannot delete a project</p>
+<p>Getting Started - DeployHQ<br><a href="https://www.deployhq.com/academy/manual/getting-started" target="_blank" rel="external">https://www.deployhq.com/academy/manual/getting-started</a></p>
+</blockquote>
+<ul>
+<li>Account administration - とりあえずアドミン</li>
+<li>User management - 全部のプロジェクトの操作とユーザー管理</li>
+<li>All projects - 全部のプロジェクトにアクセスできて、削除も可能</li>
+<li>Specific projects - 特定のプロジェクトのみ</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-28T19:28:15.000Z"><a href="/article/fastly.html">2017-09-29</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/fastly.html">Fastly memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
+<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
+<p>VCL（Varnish Configuration Language）というのに記載する。</p>
+<pre><code>sub vcl_recv {
+
+  /* unset state tracking header to avoid client sending it */
+  if (req.restarts == 0) {
+    unset req.http.X-Authed;
+  }
+
+  if (!req.http.X-Authed) {
+    /* stash the original URL and Host for later */
+    set req.http.X-Orig-URL = req.url;
+
+    /* set the URL to what the auth backend expects */
+    set req.url = &quot;/authenticate&quot;;
+
+    /* Auth requests won&#39;t be cached, so pass */
+    return(pass);
+  }
+
+  if (req.http.X-Authed == &quot;true&quot;) {
+    /* were authed, so proceed with the request */
+    /* reset the URL */
+    set req.url = req.http.X-Orig-URL;
+
+  } else {
+    /* the auth backend refused the request, so 403 the client */
+    error 403;
+  }
+</code></pre><blockquote>
+<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
+</blockquote>
+<pre><code># Pass through all requests for /login/* and /admin/*
+if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) {
+  return(pass);
+}
+</code></pre><p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<blockquote>
+<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
+</blockquote>
+<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
+<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
+<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
+<pre><code>X-Cache-Hits : 1
+X-Cache    : HIT
+</code></pre><blockquote>
+<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
+</blockquote>
+<p>そのほか Response headers</p>
+<pre><code>Cache-Control    : no-store, no-cache, must-revalidate
+Pragma : no-cache
+</code></pre><p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
+<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
+<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-25T11:17:11.000Z"><a href="/article/mac-excel-font.html">2017-09-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mac-excel-font.html">Mac の Excel で挙動が重いときはフォントを変えてみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Excelの資料を開いていて、セルを動かそうとしても重い。<br>スクロールが発生するタイミングがすごく重そうな感じだった。<br>マシンを再起動しても、重いということでしらべていたら、フォントの関係があるかも？とのことで。</p>
+<blockquote>
+<p>Excel for Mac 2016が起動しないまたはすぐに落ちる - Qiita<br><a href="https://qiita.com/foursue/items/81606a831863499fe3f8" target="_blank" rel="external">https://qiita.com/foursue/items/81606a831863499fe3f8</a></p>
+</blockquote>
+<p>開いたファイルは確かにあまり普段みないフォントになっていた。<br>セル全部選択して、ヒラギノとか適当なのにしたら直った。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-22T23:22:19.000Z"><a href="/article/writeblog.html">2017-09-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/writeblog.html">ブログかいてみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>とりあえず、ブログとしてサクッといけるかテスト。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/page/6/" class="alignleft prev">Anterior</a>
+  
+  
+    <a href="/page/8/" class="alignright next">Siguiente</a>
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:note.mersy418.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Categorías</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/AWS-S3-Route53/">AWS S3 Route53</a><small>1</small></li>
+  
+    <li><a href="/categories/Blog/">Blog</a><small>38</small></li>
+  
+    <li><a href="/categories/Book/">Book</a><small>9</small></li>
+  
+    <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+  
+    <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+  
+    <li><a href="/categories/Chrome-MovableType/">Chrome MovableType</a><small>2</small></li>
+  
+    <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+  
+    <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+  
+    <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+  
+    <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+  
+    <li><a href="/categories/Editor-Atom/">Editor Atom</a><small>1</small></li>
+  
+    <li><a href="/categories/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+  
+    <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+  
+    <li><a href="/categories/Jekyll-flexibleSearch/">Jekyll,flexibleSearch</a><small>1</small></li>
+  
+    <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+  
+    <li><a href="/categories/MovableType/">MovableType</a><small>5</small></li>
+  
+    <li><a href="/categories/MovableType-DataAPI/">MovableType DataAPI</a><small>4</small></li>
+  
+    <li><a href="/categories/MovableType-Git/">MovableType Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/categories/Pandoc-ePub/">Pandoc ePub</a><small>1</small></li>
+  
+    <li><a href="/categories/PowerCMS-MovableType/">PowerCMS MovableType</a><small>1</small></li>
+  
+    <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+  
+    <li><a href="/categories/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+  
+    <li><a href="/categories/Vagrant-CentOS/">Vagrant,CentOS,</a><small>1</small></li>
+  
+    <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+  
+    <li><a href="/categories/Work/">Work</a><small>2</small></li>
+  
+    <li><a href="/categories/blog/">blog</a><small>4</small></li>
+  
+    <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+  
+    <li><a href="/categories/chef/">chef</a><small>1</small></li>
+  
+    <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/categories/memo/">memo</a><small>1</small></li>
+  
+    <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+  
+    <li><a href="/tags/AWS/">AWS</a><small>2</small></li>
+  
+    <li><a href="/tags/AWS-Route53/">AWS, Route53</a><small>1</small></li>
+  
+    <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
+  
+    <li><a href="/tags/Backlog/">Backlog</a><small>2</small></li>
+  
+    <li><a href="/tags/Business/">Business</a><small>1</small></li>
+  
+    <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
+  
+    <li><a href="/tags/CloudFront/">CloudFront</a><small>1</small></li>
+  
+    <li><a href="/tags/Communication/">Communication</a><small>1</small></li>
+  
+    <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
+  
+    <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
+  
+    <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
+  
+    <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
+  
+    <li><a href="/tags/Firefox/">Firefox</a><small>1</small></li>
+  
+    <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
+  
+    <li><a href="/tags/MacBook/">MacBook</a><small>1</small></li>
+  
+    <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
+  
+    <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
+    <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
+  
+    <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
+  
+    <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
+  
+    <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/Slack/">Slack</a><small>1</small></li>
+  
+    <li><a href="/tags/Team/">Team</a><small>2</small></li>
+  
+    <li><a href="/tags/Todo/">Todo</a><small>1</small></li>
+  
+    <li><a href="/tags/Toggl/">Toggl</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
+  
+    <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
+  
+    <li><a href="/tags/Website/">Website</a><small>1</small></li>
+  
+    <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
+  
+    <li><a href="/tags/cache/">cache</a><small>1</small></li>
+  
+    <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/tags/deploy/">deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/git-markdown-backlog-redmine/">git, markdown, backlog, redmine</a><small>1</small></li>
+  
+    <li><a href="/tags/githubpages/">githubpages</a><small>1</small></li>
+  
+    <li><a href="/tags/html-css-styleguide/">html, css, styleguide</a><small>1</small></li>
+  
+    <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
+  
+    <li><a href="/tags/iPhone/">iPhone</a><small>1</small></li>
+  
+    <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
+  
+    <li><a href="/tags/jira/">jira</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/tags/project-management/">project management</a><small>1</small></li>
+  
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
+  
+    <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
+  
+    <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
+  
+    <li><a href="/tags/task/">task</a><small>1</small></li>
+  
+    <li><a href="/tags/team/">team</a><small>1</small></li>
+  
+    <li><a href="/tags/todo/">todo</a><small>1</small></li>
+  
+    <li><a href="/tags/website/">website</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-online-meeting-sound.html">オンラインの音声会議をストレスなくやりたい</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-change-workspace.html">小さなことでも変化を楽しむ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-cant-use-credit.html">特定のクレジットカードしか使えなかった近所のスーパー＞＞結局使えるようになりました</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+    <div class="widget">
+        <h3 class="title">Monthly Archives</h3>
+        <ul class="entry">
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        </ul>
+    </div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 mersy
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'mersymemogithubpage';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
