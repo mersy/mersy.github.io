@@ -337,9 +337,10 @@ article .entry pre {
 article .entry hr {
   border: 0;
   height: 0;
-  margin: 20px 0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+  margin: 30px auto;
+  width: 70%;
+  border-top: 1px dotted rgba(0,0,0,0.3);
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
 }
 article .entry code {
   background: #eee;
@@ -609,6 +610,15 @@ article footer .addthis iframe {
 #sidebar .widget dl dl {
   list-style: disc;
   margin-left: 20px;
+}
+#sidebar .widget .archive-list-count {
+  padding-left: 5px;
+}
+#sidebar .widget .archive-list-count:before {
+  content: "(";
+}
+#sidebar .widget .archive-list-count:after {
+  content: ")";
 }
 #sidebar .search {
   margin-bottom: 30px;
