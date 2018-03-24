@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-23T22:36:18.000Z</updated>
+  <updated>2018-03-24T21:29:20.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>テレビ会議に有効なTipsについての記事を読んだ</title>
+    <link href="https://note.mersy418.com/article/blog-tips-online-tvmeeting.html"/>
+    <id>https://note.mersy418.com/article/blog-tips-online-tvmeeting.html</id>
+    <published>2018-03-24T22:00:00.000Z</published>
+    <updated>2018-03-24T21:29:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>オンラインの音声会議をストレスなくやりたい | mersy note<br><a href="https://note.mersy418.com/article/blog-online-meeting-sound.html">https://note.mersy418.com/article/blog-online-meeting-sound.html</a></p>
+</blockquote>
+<p>昨日こんなことを書いてたら、参考になるテレビ会議のブログ記事を見つけた。</p>
+<blockquote>
+<p>テレビ会議を劇的に円滑にする簡単なノウハウ | Social Change!<br><a href="https://kuranuki.sonicgarden.jp/2018/03/tv-meeting.html" target="_blank" rel="external">https://kuranuki.sonicgarden.jp/2018/03/tv-meeting.html</a></p>
+</blockquote>
+<p>普段やるときはあまり映像まで繋いでやってないんだけど、顔が見えてる方が伝わることもあるわけだしなぁ。</p>
+<p>んで、</p>
+<blockquote>
+<p>マイク付きイヤホンを使うこと</p>
+</blockquote>
+<p>これは確かにそうだなと思うから、できる限りそういうのを各自用意してやるようにしてもいいんだろうな。<br>自分自身も直接 Mac のマイクとスピーカーだけだったので、今後は使うようにしてみようかな。</p>
+<hr>
+<blockquote>
+<p>声に出して相槌をうつこと</p>
+</blockquote>
+<p>これなんかも確かにそうで、気をつけてないと自分も相槌打つの忘れるので、意識していかないとだなー。</p>
+<p>オンラインドキュメントを共有しながらっていうのはやれてないから、そこは少しずつやるようにしていきたい気はする。<br>これはオンラインMTGだけじゃなくて、実際のMTGとかでも当てはまる話だろうから、当たり前にやれるようにトライしていきたいなぁ。</p>
+<hr>
+<blockquote>
+<p>ラジオ参加するときはフェイスをオフに</p>
+</blockquote>
+<p>耳だけ参加してる時なんかは時々あったりするな。<br>実際のMTGは全員が集まってやってるんだけど、リモートで耳だけ参加させてもらうような感じで。</p>
+<p>MTGのあとで、全部共有してもらうよりも早い場合があったりするので、参考程度に耳だけ聞いてる、みたいな。</p>
+<p>まぁ、このときは MTG してる側がそういったオンラインでの参加を想定していないので、マイクがなかったりとかでよく聞こえないことが多くてあまり参考にならなかったりすることもあるんだけどね。</p>
+<hr>
+<p>オンライン会議、ビデオの方がいいかどうかとか今度みんなに聞いてみよう。<br>テザリングとかだときついかなー？？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;オンラインの音声会議をストレスなくやりたい | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-online-meeting-sound.html&quot;&gt;https://not
+    
+    </summary>
+    
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
+    
+    
+      <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+    
+      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
+    
+  </entry>
   
   <entry>
     <title>オンラインの音声会議をストレスなくやりたい</title>
@@ -735,33 +788,6 @@ $ ./toggl2slack start
     
     
       <category term="Markdown" scheme="https://note.mersy418.com/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「モジュール一覧」でイメージが伝わっているんだろうか？</title>
-    <link href="https://note.mersy418.com/article/blog-word-module.html"/>
-    <id>https://note.mersy418.com/article/blog-word-module.html</id>
-    <published>2018-02-26T07:00:00.000Z</published>
-    <updated>2018-02-26T05:47:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>スタイルガイド的なものも作りつつ、モジュール一覧を作ってワイヤーを決めて必要なページのデザインを起こして実装を進めます。という感じで話をすることがあるのだけれども。</p>
-<p>それのイメージはお客さんに伝わっているのか？というのが時々気になることがある。<br>少し想像力を働かせないと、、、というところがあるし、そもそも制作会社とかによっても伝えたいと思ってる内容が違う気もするし。</p>
-<p>まぁ、そういったものもプロトタイプツールを使うことでもう少しイメージ伝わりやすくなるんだろうとは思うのだけど。<br>紙に出力したワイヤーだけだと伝わってない可能性はあるんだろうなぁ。</p>
-<p>この辺はディレクションする側だけでなく、チームとしての制作の流れも関係してきそうだから普段からどうやったらよく進められるかとか議論して改善したり、新しいことを取り込んでいけるようになるといいんだろうな。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;スタイルガイド的なものも作りつつ、モジュール一覧を作ってワイヤーを決めて必要なページのデザインを起こして実装を進めます。という感じで話をすることがあるのだけれども。&lt;/p&gt;
-&lt;p&gt;それのイメージはお客さんに伝わっているのか？というのが時々気になることがある。&lt;br&gt;少し想像
-    
-    </summary>
-    
-      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
-    
-    
-      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
     
   </entry>
   
