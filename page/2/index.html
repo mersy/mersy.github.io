@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 2 | mersy note</title>
+  <title>Page 2 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,86 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-03-16T20:00:00.000Z"><a href="/article/toggl2slack.html">2018-03-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/toggl2slack.html">Togglの計測をSlackに通知してやってることを共有してみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。<br>ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。</p>
+<blockquote>
+<p>Toggl - Time Tracker &amp; Employee Timesheet Software<br><a href="https://toggl.com/" target="_blank" rel="external">https://toggl.com/</a></p>
+</blockquote>
+<p>連絡とか確認が多いと対応する issue も多いからその辺は Toggl で計測してる方がひとまとめになっていいかな、、、と。</p>
+<h2 id="toggl2slack-を使ってみる"><a href="#toggl2slack-を使ってみる" class="headerlink" title="toggl2slack を使ってみる"></a>toggl2slack を使ってみる</h2><p>ってことで調べてて、こちらを参考にさせてもらって動かしてみた。</p>
+<blockquote>
+<p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
+</blockquote>
+<p>やることは書かれてる通りっちゃ通りなのだけど</p>
+<pre><code class="bash">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz
+$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz
+$ ./toggl2slack init
+$ vi config.json
+$ ./toggl2slack start
+</code></pre>
+<p>config.json に設定する値とかはこんな感じで。</p>
+<p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
+<pre><code class="javascript">&quot;users&quot;: {
+    &quot;xxxxxx&quot;: {
+        &quot;channel&quot;: &quot;#times_mersy&quot;,
+        &quot;username&quot;: &quot;mersy&quot;
+    }
+},
+</code></pre>
+<p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
+<p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
+<p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
+<p>Terminal 閉じちゃうと終了しちゃうから</p>
+<blockquote>
+<p>ターミナルを閉じてもプロセスを終了させないnohupコマンド | 三度の飯とエレクトロン<br><a href="http://blog.katty.in/1434" target="_blank" rel="external">http://blog.katty.in/1434</a></p>
+</blockquote>
+<p>を読んで</p>
+<p><code>$ nohup ./toggl2slack start</code></p>
+<p>こんな感じで動かしてみた。</p>
+<p>Slack にも通知が来てるみたいで、これで晴れて仕事してるアピールができるようになりました。<br>Toggl に WorkSpace が複数あると情報が別っぽいので、そこは別物とする必要がありそう。</p>
+<p>サーバで動かせるようになるまでに @tinybeans と @bun に色々教えてもらいつつ、、、<br>別の WorkSpace のを動かしてみたら今回はサクッといけました。感謝感謝。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><h3 id="Toggl"><a href="#Toggl" class="headerlink" title="Toggl"></a>Toggl</h3><ul>
+<li>toggl_api_docs/toggl_api.md at master · toggl/toggl_api_docs<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md</a></li>
+<li>toririn/toggl_slacker<br><a href="https://github.com/toririn/toggl_slacker" target="_blank" rel="external">https://github.com/toririn/toggl_slacker</a></li>
+<li>Togglを使って時間を意識した仕事をしようぜ！ - 大阪・兵庫・加古川 ホームページ制作のAWESOME | WEB・ホームページ制作、WEBマーケティング・SEO対策<br><a href="https://awe-some.net/2016/10/how-to-use-toggl/" target="_blank" rel="external">https://awe-some.net/2016/10/how-to-use-toggl/</a></li>
+<li>時間管理にTogglを使ってみたら想像以上によかった - dackdive’s blog<br><a href="http://dackdive.hateblo.jp/entry/2015/01/22/100000" target="_blank" rel="external">http://dackdive.hateblo.jp/entry/2015/01/22/100000</a></li>
+</ul>
+<h3 id="Alfred-to-slack"><a href="#Alfred-to-slack" class="headerlink" title="Alfred to slack"></a>Alfred to slack</h3><ul>
+<li>Alfred で作業時間を記録する workflow を作ってみた - たまに書くかも<br><a href="http://mame-neko.hatenablog.com/entry/2015/12/07/063407" target="_blank" rel="external">http://mame-neko.hatenablog.com/entry/2015/12/07/063407</a></li>
+<li>fspinillo/slackfred: Interact with Slack via Alfred<br><a href="https://github.com/fspinillo/slackfred" target="_blank" rel="external">https://github.com/fspinillo/slackfred</a></li>
+<li>jason0x43/alfred-toggl: Alfred Workflow for interacting with the Toggl time tracking service<br><a href="https://github.com/jason0x43/alfred-toggl" target="_blank" rel="external">https://github.com/jason0x43/alfred-toggl</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -431,84 +511,30 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-02-26T21:00:00.000Z"><a href="/article/markdown-driven.html">2018-02-27</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/markdown-driven.html">Markdownなドキュメントベースで開発するフローを考える</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>設計や仕様を Markdown ファイルで書いてgitに入れるか、wikiに入れるか。<br>最近の webservice だと mdファイル自体はそこそこ読みやすくしてくれる気がしつつ。</p>
-<p>mdファイルを開発側だけで触るのであればgit管理でもいいかもしれないけれども。。。<br>お客さんとかも触るのであれば Dropbox Paper とかオンラインの方に寄せてもいいのかもしれない。<br>まぁ、これもbitbucket上で編集してもらう、とかでもいいかもだけど、wiki とかの方が楽といえば楽だろうしな。<br>最近 Backlog の Git を使うようにしたけど、 Backlog 上では編集できないしなぁ。</p>
-<p>やっぱりリポジトリは外部サービスの方が使い勝手がいい気もしてくるな。</p>
-<hr>
-<p>Git管理しつつ、特定のフォルダのmdファイルの内容については API 経由で wiki を更新するとかもありなのかなぁ。。<br>管理画面から編集した時が面倒か。。。。<br>と調べてたらなんか面白そうなものを見つけた。</p>
-<blockquote>
-<p>ドキュメント管理の将来設計 - Qiita<br><a href="https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0" target="_blank" rel="external">https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0</a></p>
-</blockquote>
-<p>Git で管理してコミットもしておきつつ、 wiki に投げられるならありかなー。</p>
-<p>あとは検索の問題があるか。<br>Bitbucket だと一応リポジトリ内の検索はできる。コードも一緒に検索されてくるからそれがいいのか悪いのかはありそう。<br>Dropbox Paper だとフォルダ内検索っぽい機能はないのかな、、、見た感じ。<br>スマホとかでも見れるとかも判断材料にはなりそう。</p>
-<hr>
-<p>仕様を設計書などに書きつつ、それを見ればすべてわかるようにしておく<br>そこを起点に開発し、テストをする。</p>
-<p>開発中に変更が入れば、設計書を変更してそれをプルリク先に作ってチケット起票して依頼するような進め方にすれば、仕様の変更箇所と開発のチケット＆コミットまで結びつけられるんじゃなかろうか？<br>先にテスト書いて開発する感じや、先に機能単位のプルリク作ってから開発するような。</p>
-<p>実装中に常にドキュメント類をアップデートしていけばそういった問題は発生しないのだけど、どうしても後手になってしまって最後に差分が出る、という話になりがち。</p>
-<p>コードからドキュメント作るっていう方法もあるけど、それは少し別の話になるかな、、、という気もしつつ。<br>その場合は内容的にプログラムを解説する解説書に近いものが出来上がる気はしているので。<br>とはいえ、初めてコード見る人にはあってもいいとおもうので、それはそれとして自動生成できるようにしておくと強い気はする。</p>
-<p>バグは仕方ないにしても、仕様変更や修正などはドキュメントのアップデートを忘れないように、アップデート自体も1タスクくらいのつもりでいてもいいのかもしれないなー</p>
-<hr>
-<p>Adobe XDデザインスペックの使い方と、開発者と効率的に連携するヒント – Adobe Creative Station<br><a href="https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity" target="_blank" rel="external">https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity</a></p>
-<p>やりたいのは結局 XD が考えてる方向と近そうな気はするのだけど。<br>どこに重きをおくかと、 XD はワイヤ〜デザイン〜フロントエンド、くらいまでは良さそうな気がするのだけど、CMSを使うときにどの情報を使うかを持たせられないのが若干辛いかな、と。</p>
-<p>CMSのデータの持ち方自体はビジュアルとかあまり関係ないから別資料になるわけなので、そのデータをどこにどう見せるか？を必要になるのは、HTMLとCMS のテンプレートを作るタイミングになる訳なので、どちらかというとフロント側の設計書に寄せたいところではある。</p>
-<hr>
-<p>結局は Markdown じゃなくてもよくて、チーム内でストレスなくわかりやすい形で共有できる何かができてスムーズに開発できればOKってことで。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/" class="alignleft prev">Prev</a>
   
   
-    <a href="/page/3/" class="alignright next">Nächste Seite</a>
+    <a href="/page/3/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categories</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>43</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>44</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -577,11 +603,15 @@
   
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
-    <li><a href="/tags/Backlog/">Backlog</a><small>3</small></li>
+    <li><a href="/tags/Backlog/">Backlog</a><small>4</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
     <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
+  
+    <li><a href="/tags/CSS/">CSS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cache/">Cache</a><small>1</small></li>
   
     <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
   
@@ -597,6 +627,8 @@
   
     <li><a href="/tags/DataAPI/">DataAPI</a><small>4</small></li>
   
+    <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
+  
     <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
   
     <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
@@ -605,15 +637,19 @@
   
     <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
   
-    <li><a href="/tags/Firefox/">Firefox</a><small>1</small></li>
+    <li><a href="/tags/Firefox/">Firefox</a><small>2</small></li>
   
     <li><a href="/tags/Git/">Git</a><small>1</small></li>
   
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
+    <li><a href="/tags/HTML/">HTML</a><small>1</small></li>
+  
     <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
   
     <li><a href="/tags/Jekyll/">Jekyll</a><small>1</small></li>
+  
+    <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
     <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
   
@@ -622,6 +658,8 @@
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
     <li><a href="/tags/Markdown/">Markdown</a><small>2</small></li>
+  
+    <li><a href="/tags/Meeting/">Meeting</a><small>2</small></li>
   
     <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
   
@@ -643,17 +681,21 @@
   
     <li><a href="/tags/Redmine/">Redmine</a><small>1</small></li>
   
+    <li><a href="/tags/Remote/">Remote</a><small>2</small></li>
+  
     <li><a href="/tags/Route53/">Route53</a><small>2</small></li>
   
     <li><a href="/tags/S3/">S3</a><small>1</small></li>
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
-    <li><a href="/tags/Safari/">Safari</a><small>0</small></li>
+    <li><a href="/tags/Safari/">Safari</a><small>1</small></li>
   
-    <li><a href="/tags/Sketch/">Sketch</a><small>1</small></li>
+    <li><a href="/tags/Sketch/">Sketch</a><small>2</small></li>
   
-    <li><a href="/tags/Slack/">Slack</a><small>1</small></li>
+    <li><a href="/tags/Slack/">Slack</a><small>2</small></li>
+  
+    <li><a href="/tags/Styleguide/">Styleguide</a><small>1</small></li>
   
     <li><a href="/tags/Task/">Task</a><small>1</small></li>
   
@@ -675,17 +717,9 @@
   
     <li><a href="/tags/Website/">Website</a><small>1</small></li>
   
-    <li><a href="/tags/backlog/">backlog</a><small>1</small></li>
-  
-    <li><a href="/tags/browser/">browser</a><small>0</small></li>
-  
-    <li><a href="/tags/cache/">cache</a><small>1</small></li>
-  
-    <li><a href="/tags/css/">css</a><small>1</small></li>
+    <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
     <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
-  
-    <li><a href="/tags/deploy/">deploy</a><small>1</small></li>
   
     <li><a href="/tags/ePub/">ePub</a><small>1</small></li>
   
@@ -695,31 +729,23 @@
   
     <li><a href="/tags/githubpages/">githubpages</a><small>1</small></li>
   
-    <li><a href="/tags/html/">html</a><small>1</small></li>
-  
     <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
   
     <li><a href="/tags/iPhone/">iPhone</a><small>1</small></li>
   
     <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
   
-    <li><a href="/tags/jira/">jira</a><small>1</small></li>
-  
     <li><a href="/tags/lifehack/">lifehack</a><small>0</small></li>
   
     <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
   
-    <li><a href="/tags/meeting/">meeting</a><small>2</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
   
     <li><a href="/tags/project-management/">project management</a><small>1</small></li>
   
-    <li><a href="/tags/remote/">remote</a><small>2</small></li>
+    <li><a href="/tags/remote/">remote</a><small>0</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
-  
-    <li><a href="/tags/sketch/">sketch</a><small>1</small></li>
-  
-    <li><a href="/tags/styleguide/">styleguide</a><small>1</small></li>
   
     <li><a href="/tags/website/">website</a><small>1</small></li>
   
@@ -729,8 +755,12 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-tips-online-tvmeeting.html">テレビ会議に有効なTipsについての記事を読んだ</a>
@@ -748,10 +778,6 @@
         <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
       </li>
     
-      <li>
-        <a href="/article/blog-change-workspace.html">小さなことでも変化を楽しむ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -760,7 +786,7 @@
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

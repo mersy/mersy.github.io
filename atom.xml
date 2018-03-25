@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-24T21:29:20.000Z</updated>
+  <updated>2018-03-25T23:20:09.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -16,11 +16,62 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</title>
+    <link href="https://note.mersy418.com/article/blog-which-browser.html"/>
+    <id>https://note.mersy418.com/article/blog-which-browser.html</id>
+    <published>2018-03-25T22:00:00.000Z</published>
+    <updated>2018-03-25T23:20:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ここ最近の取り組みとして、起動するアプリを減らして、なるべくブラウザに寄せるようにして PC が重くならないように、、、というのを試してみたりしてる。</p>
+<p>使い方が悪いのかもしれないけど、すぐ Mac が重くなってしまうんだよなぁ。。。</p>
+<p>メール周りは諸般の事情で、 Google アカウント以外も管理する必要があったので、 MailPlane から Rambox に変更して使ってきていた。</p>
+<blockquote>
+<p>Ramboxを使い始めてみた<br><a href="https://note.mersy418.com/article/use-rambox.html">https://note.mersy418.com/article/use-rambox.html</a></p>
+</blockquote>
+<hr>
+<p>ただ、若干メモリ食ってる感があったので、メインブラウザ（Firefox Developer Edition）に Gmail とかを開くようにしてピン留して試したりしていた。<br>Firefox が軽くて早いと思っていたけど、タブを開きすぎたり、開いたタブをずっと放置してるとそれはそれで重くなるので、その辺は拡張入れて対応したりしていた。</p>
+<blockquote>
+<p>Tab Suspender を使ってみる<br><a href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html">https://note.mersy418.com/article/blog-firefox-tabsuspend.html</a></p>
+</blockquote>
+<hr>
+<p>とはいえ Firefox だけにしててもなんか重いなー、という感じなので、ちょっとブラウザを Safari にしてみることにする。</p>
+<p>Firefox にする前も Chrome から Safari に乗り換えたりしてたんだけど、なんでだったっけな。。。</p>
+<p>週末触ってる感じだと、タブとかそこまで開いていないのも関係あるかもしれないけど、メモリ使ってる割にはサクサク開いてる気がする。</p>
+<p>Safari もタブのピン留できるから Gmail, Google Calendar を複数アカウント開いてピン留しておいた。<br>Safari はウィンドウ共通でピン留したタブが出るのね、なるほど。これは個人的にはちょっと余計かな。。。</p>
+<p>Slack のアプリも重めだからこの辺もブラウザに持ってっても良いのかもなー。<br>検索のショートカットがバッティングするところだけをどうにかしたい。</p>
+<hr>
+<p>少し触った感じだとこれまでのことは問題なくできてるけど、できなさそうなことがあったりしてるので、その辺は調べつつなところもありそう。</p>
+<p>とりあえず今週触ってみながらどうなるかを様子見かな。</p>
+<p>普段全然気にしてなかったのだけど、自分の道具をメンテしてるような気が今更だけどしてきた（遅</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ここ最近の取り組みとして、起動するアプリを減らして、なるべくブラウザに寄せるようにして PC が重くならないように、、、というのを試してみたりしてる。&lt;/p&gt;
+&lt;p&gt;使い方が悪いのかもしれないけど、すぐ Mac が重くなってしまうんだよなぁ。。。&lt;/p&gt;
+&lt;p&gt;メール周りは
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
+    
+      <category term="browser" scheme="https://note.mersy418.com/tags/browser/"/>
+    
+      <category term="Safari" scheme="https://note.mersy418.com/tags/Safari/"/>
+    
+      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>テレビ会議に有効なTipsについての記事を読んだ</title>
     <link href="https://note.mersy418.com/article/blog-tips-online-tvmeeting.html"/>
     <id>https://note.mersy418.com/article/blog-tips-online-tvmeeting.html</id>
     <published>2018-03-24T22:00:00.000Z</published>
-    <updated>2018-03-24T21:29:20.000Z</updated>
+    <updated>2018-03-25T11:36:55.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>オンラインの音声会議をストレスなくやりたい | mersy note<br><a href="https://note.mersy418.com/article/blog-online-meeting-sound.html">https://note.mersy418.com/article/blog-online-meeting-sound.html</a></p>
@@ -62,9 +113,9 @@
       <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+      <category term="Remote" scheme="https://note.mersy418.com/tags/Remote/"/>
     
-      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
+      <category term="Meeting" scheme="https://note.mersy418.com/tags/Meeting/"/>
     
   </entry>
   
@@ -73,7 +124,7 @@
     <link href="https://note.mersy418.com/article/blog-online-meeting-sound.html"/>
     <id>https://note.mersy418.com/article/blog-online-meeting-sound.html</id>
     <published>2018-03-23T22:00:00.000Z</published>
-    <updated>2018-03-23T22:36:18.000Z</updated>
+    <updated>2018-03-25T11:36:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>オンラインで会議をする時の音声が聞こえにくかったり、途切れたりする問題。<br>ビデオ繋ぐと重くなるだろうから、基本は音声に誰かの画面共有を共有するくらいでとりあえずはいいんだけど。</p>
 <p>顔が見えた方が色々伝わるものもあったりはしそう。</p>
@@ -114,9 +165,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+      <category term="Remote" scheme="https://note.mersy418.com/tags/Remote/"/>
     
-      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
+      <category term="Meeting" scheme="https://note.mersy418.com/tags/Meeting/"/>
     
   </entry>
   
@@ -437,9 +488,9 @@ $ ./toggl2slack start
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
-    
       <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
+    
+      <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
     
   </entry>
   
@@ -743,51 +794,6 @@ $ ./toggl2slack start
     
     
       <category term="Webservice" scheme="https://note.mersy418.com/tags/Webservice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdownなドキュメントベースで開発するフローを考える</title>
-    <link href="https://note.mersy418.com/article/markdown-driven.html"/>
-    <id>https://note.mersy418.com/article/markdown-driven.html</id>
-    <published>2018-02-26T21:00:00.000Z</published>
-    <updated>2018-02-26T21:07:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>設計や仕様を Markdown ファイルで書いてgitに入れるか、wikiに入れるか。<br>最近の webservice だと mdファイル自体はそこそこ読みやすくしてくれる気がしつつ。</p>
-<p>mdファイルを開発側だけで触るのであればgit管理でもいいかもしれないけれども。。。<br>お客さんとかも触るのであれば Dropbox Paper とかオンラインの方に寄せてもいいのかもしれない。<br>まぁ、これもbitbucket上で編集してもらう、とかでもいいかもだけど、wiki とかの方が楽といえば楽だろうしな。<br>最近 Backlog の Git を使うようにしたけど、 Backlog 上では編集できないしなぁ。</p>
-<p>やっぱりリポジトリは外部サービスの方が使い勝手がいい気もしてくるな。</p>
-<hr>
-<p>Git管理しつつ、特定のフォルダのmdファイルの内容については API 経由で wiki を更新するとかもありなのかなぁ。。<br>管理画面から編集した時が面倒か。。。。<br>と調べてたらなんか面白そうなものを見つけた。</p>
-<blockquote>
-<p>ドキュメント管理の将来設計 - Qiita<br><a href="https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0" target="_blank" rel="external">https://qiita.com/tearoom6/items/9518195fcd92bb87b9d0</a></p>
-</blockquote>
-<p>Git で管理してコミットもしておきつつ、 wiki に投げられるならありかなー。</p>
-<p>あとは検索の問題があるか。<br>Bitbucket だと一応リポジトリ内の検索はできる。コードも一緒に検索されてくるからそれがいいのか悪いのかはありそう。<br>Dropbox Paper だとフォルダ内検索っぽい機能はないのかな、、、見た感じ。<br>スマホとかでも見れるとかも判断材料にはなりそう。</p>
-<hr>
-<p>仕様を設計書などに書きつつ、それを見ればすべてわかるようにしておく<br>そこを起点に開発し、テストをする。</p>
-<p>開発中に変更が入れば、設計書を変更してそれをプルリク先に作ってチケット起票して依頼するような進め方にすれば、仕様の変更箇所と開発のチケット＆コミットまで結びつけられるんじゃなかろうか？<br>先にテスト書いて開発する感じや、先に機能単位のプルリク作ってから開発するような。</p>
-<p>実装中に常にドキュメント類をアップデートしていけばそういった問題は発生しないのだけど、どうしても後手になってしまって最後に差分が出る、という話になりがち。</p>
-<p>コードからドキュメント作るっていう方法もあるけど、それは少し別の話になるかな、、、という気もしつつ。<br>その場合は内容的にプログラムを解説する解説書に近いものが出来上がる気はしているので。<br>とはいえ、初めてコード見る人にはあってもいいとおもうので、それはそれとして自動生成できるようにしておくと強い気はする。</p>
-<p>バグは仕方ないにしても、仕様変更や修正などはドキュメントのアップデートを忘れないように、アップデート自体も1タスクくらいのつもりでいてもいいのかもしれないなー</p>
-<hr>
-<p>Adobe XDデザインスペックの使い方と、開発者と効率的に連携するヒント – Adobe Creative Station<br><a href="https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity" target="_blank" rel="external">https://blogs.adobe.com/creativestation/web-design-specifications-speeding-design-development-workflow-improving-productivity</a></p>
-<p>やりたいのは結局 XD が考えてる方向と近そうな気はするのだけど。<br>どこに重きをおくかと、 XD はワイヤ〜デザイン〜フロントエンド、くらいまでは良さそうな気がするのだけど、CMSを使うときにどの情報を使うかを持たせられないのが若干辛いかな、と。</p>
-<p>CMSのデータの持ち方自体はビジュアルとかあまり関係ないから別資料になるわけなので、そのデータをどこにどう見せるか？を必要になるのは、HTMLとCMS のテンプレートを作るタイミングになる訳なので、どちらかというとフロント側の設計書に寄せたいところではある。</p>
-<hr>
-<p>結局は Markdown じゃなくてもよくて、チーム内でストレスなくわかりやすい形で共有できる何かができてスムーズに開発できればOKってことで。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;設計や仕様を Markdown ファイルで書いてgitに入れるか、wikiに入れるか。&lt;br&gt;最近の webservice だと mdファイル自体はそこそこ読みやすくしてくれる気がしつつ。&lt;/p&gt;
-&lt;p&gt;mdファイルを開発側だけで触るのであればgit管理でもいいかもしれない
-    
-    </summary>
-    
-      <category term="Direction" scheme="https://note.mersy418.com/categories/Direction/"/>
-    
-    
-      <category term="Markdown" scheme="https://note.mersy418.com/tags/Markdown/"/>
     
   </entry>
   
