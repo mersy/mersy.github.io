@@ -62,9 +62,9 @@
       <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
     
     
-      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
-    
       <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+    
+      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
     
   </entry>
   
@@ -114,9 +114,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
-    
       <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+    
+      <category term="meeting" scheme="https://note.mersy418.com/tags/meeting/"/>
     
   </entry>
   
@@ -245,7 +245,7 @@
     <link href="https://note.mersy418.com/article/blog-tools.html"/>
     <id>https://note.mersy418.com/article/blog-tools.html</id>
     <published>2018-03-19T22:00:00.000Z</published>
-    <updated>2018-03-19T21:41:14.000Z</updated>
+    <updated>2018-03-25T11:31:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>ツールは便利で課題を解決してくれる可能性はあると思う。<br>が、必ず解決してくれるわけでもないだろうし、あくまで道しるべの可能性もある。</p>
 <p>またそのツールをどう使うか？でもぜんぜん変わる可能性もある。</p>
@@ -270,13 +270,13 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="team" scheme="https://note.mersy418.com/tags/team/"/>
+      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
+    
+      <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
     
       <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
     
-      <category term="task" scheme="https://note.mersy418.com/tags/task/"/>
-    
-      <category term="todo" scheme="https://note.mersy418.com/tags/todo/"/>
+      <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
     
   </entry>
   
