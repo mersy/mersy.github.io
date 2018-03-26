@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 8 | mersy note</title>
+  <title>Seite 8 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,97 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-28T19:28:15.000Z"><a href="/article/fastly.html">2017-09-29</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/fastly.html">Fastly memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
+<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
+<p>VCL（Varnish Configuration Language）というのに記載する。</p>
+<pre><code>sub vcl_recv {
+
+  /* unset state tracking header to avoid client sending it */
+  if (req.restarts == 0) {
+    unset req.http.X-Authed;
+  }
+
+  if (!req.http.X-Authed) {
+    /* stash the original URL and Host for later */
+    set req.http.X-Orig-URL = req.url;
+
+    /* set the URL to what the auth backend expects */
+    set req.url = &quot;/authenticate&quot;;
+
+    /* Auth requests won&#39;t be cached, so pass */
+    return(pass);
+  }
+
+  if (req.http.X-Authed == &quot;true&quot;) {
+    /* were authed, so proceed with the request */
+    /* reset the URL */
+    set req.url = req.http.X-Orig-URL;
+
+  } else {
+    /* the auth backend refused the request, so 403 the client */
+    error 403;
+  }
+</code></pre><blockquote>
+<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
+</blockquote>
+<pre><code># Pass through all requests for /login/* and /admin/*
+if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) {
+  return(pass);
+}
+</code></pre><p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
+<blockquote>
+<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
+</blockquote>
+<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
+<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
+<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
+<pre><code>X-Cache-Hits : 1
+X-Cache    : HIT
+</code></pre><blockquote>
+<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
+</blockquote>
+<p>そのほか Response headers</p>
+<pre><code>Cache-Control    : no-store, no-cache, must-revalidate
+Pragma : no-cache
+</code></pre><p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
+<hr>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
+<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
+<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -506,83 +597,27 @@ $ hexo server
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-07-11T07:15:32.000Z"><a href="/article/atom.html">2014-07-11</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/atom.html">Atom memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
-<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
-<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
-</blockquote>
-<p>Cmd + Shift + H でコマンド選択</p>
-<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
-<blockquote>
-<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
-</blockquote>
-<p>Snippetなのか、Packageなのか？？</p>
-<p>autocomplete-snippets にリストを追加する感じ？？</p>
-<blockquote>
-<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
-</blockquote>
-<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
-<blockquote>
-<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
-</blockquote>
-<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
-<p>このあたりの設定が影響してる様子。</p>
-<blockquote>
-<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
-</blockquote>
-<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/7/" class="alignleft prev">Prev</a>
+    <a href="/page/7/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/9/" class="alignright next">Next</a>
+    <a href="/page/9/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/Blog/">Blog</a><small>44</small></li>
@@ -623,7 +658,7 @@ $ hexo server
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>2</small></li>
+    <li><a href="/categories/Work/">Work</a><small>3</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>7</small></li>
   
@@ -794,7 +829,7 @@ $ hexo server
   
     <li><a href="/tags/project-management/">project management</a><small>1</small></li>
   
-    <li><a href="/tags/remote/">remote</a><small>0</small></li>
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
@@ -806,8 +841,12 @@ $ hexo server
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
+      </li>
     
       <li>
         <a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a>
@@ -825,10 +864,6 @@ $ hexo server
         <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
       </li>
     
-      <li>
-        <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -837,7 +872,7 @@ $ hexo server
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

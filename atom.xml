@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-25T23:20:09.000Z</updated>
+  <updated>2018-03-26T21:57:25.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</title>
+    <link href="https://note.mersy418.com/article/blog-team-kickoff-meeting.html"/>
+    <id>https://note.mersy418.com/article/blog-team-kickoff-meeting.html</id>
+    <published>2018-03-26T22:00:00.000Z</published>
+    <updated>2018-03-26T21:57:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>オンラインの音声会議をストレスなくやりたい | mersy note<br><a href="https://note.mersy418.com/article/blog-online-meeting-sound.html">https://note.mersy418.com/article/blog-online-meeting-sound.html</a></p>
+</blockquote>
+<p>を書いたら @tinybeans から「案件のスタートする前とかに、ビデオ会議とかすると良さそうと思うことがる」というフィードバックをもらった。</p>
+<p>なるほど、と。</p>
+<p>自分は打ち合わせに参加する側だから気づいてないところもありそうだけど、開発する側からだと一度そういう場を設けて、認識の統一をはかっておけると、あとあと進めやすいところはあるんだろうな。</p>
+<p>以前の案件では、開発入る前の MTG でリモートの開発メンバーにもオンラインで音声会議に入ってもらったりして、 MTG の状況を共有したりもしてた。</p>
+<p>そういった感じのことをやっておいたほうが、後々の進め方とか、判断が必要な時のジャッジがしやすくなるとかがあるのかもしれないなー。</p>
+<hr>
+<blockquote>
+<p>リモートワークは難しい / Developer Summit 2018 // Speaker Deck<br><a href="https://speakerdeck.com/daiksy/developer-summit-2018" target="_blank" rel="external">https://speakerdeck.com/daiksy/developer-summit-2018</a></p>
+</blockquote>
+<p>この辺に書かれてあるけど、コミュニケーション、情報や状況の共有をどうするか？というのがほんと大事で重要だと思う。</p>
+<p>ビデオ会議とかで一度やっておくことで解決できることは多いのかもしれない。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;オンラインの音声会議をストレスなくやりたい | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-online-meeting-sound.html&quot;&gt;https://not
+    
+    </summary>
+    
+      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
+    
+    
+      <category term="remote" scheme="https://note.mersy418.com/tags/remote/"/>
+    
+  </entry>
   
   <entry>
     <title>メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</title>
@@ -321,13 +358,13 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
-    
       <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
     
       <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
     
       <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
+    
+      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
     
   </entry>
   
@@ -374,9 +411,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
     
   </entry>
   
@@ -761,39 +798,6 @@ $ ./toggl2slack start
       <category term="Website" scheme="https://note.mersy418.com/tags/Website/"/>
     
       <category term="Business" scheme="https://note.mersy418.com/tags/Business/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pageprooferというフィードバックサービス</title>
-    <link href="https://note.mersy418.com/article/webservice-pageproofer.html"/>
-    <id>https://note.mersy418.com/article/webservice-pageproofer.html</id>
-    <published>2018-02-27T22:00:00.000Z</published>
-    <updated>2018-02-27T21:51:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>そうそう、こういうサービス作ってみたいなと思ってたんだよねー、というのをたまたま見つけた。</p>
-<blockquote>
-<p>【すべてのWeb制作者に伝えたい】Webサイトのフィードバック・チェックツール Pageproofer | GrowGroup株式会社 名古屋・東京を拠点とするDTP・Webサイト(ホームページ)の制作会社<br><a href="https://grow-group.jp/archives/2498/" target="_blank" rel="external">https://grow-group.jp/archives/2498/</a></p>
-<p>Pageproofer - Visual Bug Tracker &amp; Visual Feedback Tool<br><a href="https://pageproofer.com/" target="_blank" rel="external">https://pageproofer.com/</a></p>
-</blockquote>
-<p>どっちかというと製作者とお客さんで利用するのが主目的になっていそうではあるけど。</p>
-<p>サイトに埋め込んでおいて、データが溜まってサイトホルダーが見たければお金払う、みたいな流れを考えてた。<br>どうでもいいコメントとか、嫌がらせがたまりそうだけど。。。</p>
-<p>1ユーザとしてサイトを見ていて、これがあればなー、とかを簡単にFBしたり、要望を投げたり。<br>そういうことでいい感じでサイトが便利になってくれればいいなぁという思いで。<br>まぁ、そう簡単にはいかないんだろうけどね。</p>
-<p>いやー、普段の視野が狭かったなぁと反省。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;そうそう、こういうサービス作ってみたいなと思ってたんだよねー、というのをたまたま見つけた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【すべてのWeb制作者に伝えたい】Webサイトのフィードバック・チェックツール Pageproofer | GrowGroup株式会社 名古屋
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Webservice" scheme="https://note.mersy418.com/tags/Webservice/"/>
     
   </entry>
   

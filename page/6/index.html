@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 6 | mersy note</title>
+  <title>Seite 6 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,44 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-08T08:22:01.000Z"><a href="/article/book-the-way-of-the-web-tester.html">2018-01-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/book-the-way-of-the-web-tester.html">【読了】初めての自動テスト</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>初めての自動テスト ―Webシステムのための自動テスト基礎<br><a href="https://www.amazon.co.jp/exec/obidos/ASIN/4873118166/mersys-22/ref=nosim" target="_blank" rel="external">https://www.amazon.co.jp/exec/obidos/ASIN/4873118166/mersys-22/ref=nosim</a></p>
+<p>を読んだ。</p>
+<p>テストは自動テストというよりはシナリオテストを行うことが多い。<br>パフォーマンステスト、負荷テスト的なのは別だけど。</p>
+<p>テスト関係自体まだまだよくわかっていないところがあるなぁとは思うが、こういう自動テストも出来るようにしておく必要があるんだろうな。<br>安部さんに相談だ。</p>
+<p>んで、こういうテストするにあたってはテストエンジニアだけじゃなくて、プログラムを書くエンジニアもフロントエンドを担当するエンジニアも考えることがあるんだな、と。</p>
+<p>チームで開発していくのだからそういった所を意識していかないとなんだろうな。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -475,103 +513,27 @@ $ dig mail.mersy418.com
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-12-23T11:06:27.000Z"><a href="/article/drupal-lightsail.html">2017-12-23</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="lightsailでDrupalを立ち上げる"><a href="#lightsailでDrupalを立ち上げる" class="headerlink" title="lightsailでDrupalを立ち上げる"></a>lightsailでDrupalを立ち上げる</h2><p>Drupal の勉強をしてみようとおもっていたのと、Lightsail を使ってみたことがなかったのでこの機会に使ってみる。</p>
-<p><a href="https://amazonlightsail.com/ja/" target="_blank" rel="external">https://amazonlightsail.com/ja/</a></p>
-<p>Drupal が用意されているのでそれを使うだけで良さそうなので。</p>
-<p>Drupal を選択するとこんな感じになる。</p>
-<p><img src="../asset/20171216_lightsail_drupal.png" alt=""></p>
-<p>ここから開くと</p>
-<p><img src="../asset/20171216_lightsail2.png" alt=""></p>
-<p>みたいな感じに。</p>
-<p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
-<p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
-<pre><code>$ cat bitnami_application_password
-</code></pre><blockquote>
-<p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
-</blockquote>
-<p>ということで、調べたパスワードで</p>
-<p>ID : user<br>Password : xxxx</p>
-<p>でログインができる。</p>
-<p>ログインできたらID/Passを変更しておく。</p>
-<h2 id="テーマを適用する"><a href="#テーマを適用する" class="headerlink" title="テーマを適用する"></a>テーマを適用する</h2><p>Bootstrap 入ってた方がとりあえずは楽そうなきがしたので、</p>
-<blockquote>
-<p>Theme project | Drupal.org<br><a href="https://www.drupal.org/project/project_theme" target="_blank" rel="external">https://www.drupal.org/project/project_theme</a></p>
-</blockquote>
-<p>で、 bootstrap で検索。</p>
-<blockquote>
-<p>Bootstrap Business | Drupal.org<br><a href="https://www.drupal.org/project/bootstrap_business" target="_blank" rel="external">https://www.drupal.org/project/bootstrap_business</a></p>
-</blockquote>
-<p>以下も参考に読んでみた。</p>
-<blockquote>
-<p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
-</blockquote>
-<pre><code>$ drush
-</code></pre><p>で Drush が入っているのを確認。</p>
-<p>Drush については以下を参考にさせてもらった。</p>
-<blockquote>
-<p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
-</blockquote>
-<p>このテーマをダウンロード</p>
-<pre><code>$ drush dl bootstrap_business
-</code></pre><p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
-<p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
-<h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
-<li>ドメイン割り当て</li>
-<li>コンテンツタイプ作成</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/5/" class="alignleft prev">Prev</a>
+    <a href="/page/5/" class="alignleft prev">Vorherige Seite</a>
   
   
-    <a href="/page/7/" class="alignright next">Next</a>
+    <a href="/page/7/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
     <li><a href="/categories/Blog/">Blog</a><small>44</small></li>
@@ -612,7 +574,7 @@ $ dig mail.mersy418.com
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>2</small></li>
+    <li><a href="/categories/Work/">Work</a><small>3</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>7</small></li>
   
@@ -783,7 +745,7 @@ $ dig mail.mersy418.com
   
     <li><a href="/tags/project-management/">project management</a><small>1</small></li>
   
-    <li><a href="/tags/remote/">remote</a><small>0</small></li>
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
   
     <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
   
@@ -795,8 +757,12 @@ $ dig mail.mersy418.com
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
+      </li>
     
       <li>
         <a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a>
@@ -814,10 +780,6 @@ $ dig mail.mersy418.com
         <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
       </li>
     
-      <li>
-        <a href="/article/blog-operations.html">Webサイトを作ったなら保守・運用もセットで考えたいところ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -826,7 +788,7 @@ $ dig mail.mersy418.com
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 
