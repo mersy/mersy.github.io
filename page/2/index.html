@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 2 | mersy note</title>
+  <title>Página 2 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,62 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-03-18T21:00:00.000Z"><a href="/article/blog-alfred-random.html">2018-03-19</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/blog-alfred-random.html">Alfredで乱数を取得できるようにしてみた</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>時々乱数がチャチャッと欲しくなる時があって。<br>普段は 1password の password 生成を使ったりもしてるんですが、 1password をブラウザの拡張から開くときとかに若干時間がかかったりして、サクッといかなかったりしてた。</p>
+<p>Slack でちょっと聞いてみたけど特にこれというのがなさそうだったので、試しに Alfred で作ってみた。<br>作ってみた、といってもサンプルで用意されているものをカスタマイズしたり、 @tinybeans や @bun に作ってもらったものを参考にしたりした。</p>
+<p>デフォルトで入ってる Snippet Tiggers あたりを参考にして。</p>
+<p>コマンドは</p>
+<blockquote>
+<p>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></p>
+</blockquote>
+<p>を参考にして10文字でとりあえず作ってみた。</p>
+<pre><code>cat /dev/urandom | LC_CTYPE=C tr -dc &#39;[:alnum:]&#39; | head -c 10
+</code></pre><p>これで snippet とかで使える感じでいいかも。</p>
+<hr>
+<p>登録後はこんな感じ。</p>
+<p><img src="../asset/20180319-alfred.png" alt=""></p>
+<p>スニペットの設定</p>
+<p><img src="../asset/20180319-snippet.png" alt=""></p>
+<p>キーワードの設定</p>
+<p><img src="../asset/20180319-keyword.png" alt=""></p>
+<p>スクリプトの設定</p>
+<p><img src="../asset/20180319-script.png" alt=""></p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></li>
+<li>Random String Generator | Packal<br><a href="http://www.packal.org/workflow/random-string-generator" target="_blank" rel="external">http://www.packal.org/workflow/random-string-generator</a></li>
+<li>静的サイトジェネレータで重複しないURLを生成するにはハッシュ関数を使えばよかった | 豆腐メンタルは崩れない<br><a href="https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/" target="_blank" rel="external">https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -481,70 +537,30 @@ $ ./toggl2slack start
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-02-28T22:00:00.000Z"><a href="/article/website-operation.html">2018-03-01</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/website-operation.html">スモールスタートで運用しながら調整・成長していく</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>SAP推しだった親会社を説得し、kintoneで業務改善した会社の話 （アスキー） - Yahoo!ニュース<br><a href="https://headlines.yahoo.co.jp/hl?a=20180214-00000005-ascii-sci" target="_blank" rel="external">https://headlines.yahoo.co.jp/hl?a=20180214-00000005-ascii-sci</a></p>
-</blockquote>
-<p>運用しないと、触らないと、見えてこないこともあるわけで。<br>小さくスタートはスタートするからこそ整って来ることもあるし、判断材料も出て来るわけで。<br>100%完璧に全てを最初に洗い出すことは難しいわけだし、それができないという前提でどこまでやるかを決め、その上で運用しながら改善なり改修をしていく。</p>
-<p>そういったことの繰り返しで、Webサイトもビジネスの一翼を担うのであれば同じような位置付けで取り組んでいかないと意味のないものになってしまう。<br>作る側も依頼する側も作って終わりだとは思ってないだろうし、そこからがスタートと理解してるからこそ、どのように運用、保守をしてサイトを育てビジネスに繋げていくかを考えるという前提がないとまずいんじゃないだろうか？</p>
-<p>コンテンツを蓄えてそれをどのように見せていくか。<br>コンテンツが蓄えられたからこそ、それをどのように展開していくか？を考えられる。<br>コンテンツを蓄えるなかでこうしたいという要望や、ここが使いづらいという改善要望も上がって来る。<br>ユーザのFBやアクセス数から見えてくることもあるかもしれない。<br>そういったものを繰り返しながらより良いものになっていくんじゃないだろうか？</p>
-<p>そうなって来ると内部で人を抱えて作る方がいいのか？外部と連携して作るのがいいのか？という話にも繋がるんだろうな、とは思う。</p>
-<p>Webサイト使ってビジネスするならそのあたりを考えておかないとビジネスも成功しないんじゃないのかなぁ。<br>CMSを使ったWebサイトを提供する側としても最初の時点でしっかりとしたものを提供はしていくけど、そういった変化にも柔軟に対応する必要があることを忘れないようしないとなぁと思うわけです。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/" class="alignleft prev">Anterior</a>
   
   
-    <a href="/page/3/" class="alignright next">Nächste Seite</a>
+    <a href="/page/3/" class="alignright next">Siguiente</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Buscar">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>44</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>45</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -602,7 +618,7 @@ $ ./toggl2slack start
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
@@ -631,7 +647,7 @@ $ ./toggl2slack start
   
     <li><a href="/tags/Communication/">Communication</a><small>1</small></li>
   
-    <li><a href="/tags/Company/">Company</a><small>0</small></li>
+    <li><a href="/tags/Company/">Company</a><small>1</small></li>
   
     <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
   
@@ -681,7 +697,7 @@ $ ./toggl2slack start
   
     <li><a href="/tags/Pandoc/">Pandoc</a><small>1</small></li>
   
-    <li><a href="/tags/Personal/">Personal</a><small>0</small></li>
+    <li><a href="/tags/Personal/">Personal</a><small>1</small></li>
   
     <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
   
@@ -765,8 +781,12 @@ $ ./toggl2slack start
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Entradas Recientes</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-publish-person.html">会社も大事だけど個も立っていく必要があるのではないか、と思うこと</a>
+      </li>
     
       <li>
         <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
@@ -784,10 +804,6 @@ $ ./toggl2slack start
         <a href="/article/blog-online-meeting-sound.html">オンラインの音声会議をストレスなくやりたい</a>
       </li>
     
-      <li>
-        <a href="/article/blog-why-use-because-you-use.html">なぜそれを使うのか？みんなが使っているから</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -796,7 +812,7 @@ $ ./toggl2slack start
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

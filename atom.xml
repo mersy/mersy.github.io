@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-03-26T21:57:25.000Z</updated>
+  <updated>2018-03-27T21:58:03.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>会社も大事だけど個も立っていく必要があるのではないか、と思うこと</title>
+    <link href="https://note.mersy418.com/article/blog-publish-person.html"/>
+    <id>https://note.mersy418.com/article/blog-publish-person.html</id>
+    <published>2018-03-27T22:00:00.000Z</published>
+    <updated>2018-03-27T21:58:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>これらを読んでいて、ちょうど似たようなことを考えていたなー、と。</p>
+<blockquote>
+<p>オンラインとオフラインにおける「自分」の多面性を考える｜加藤 綾(あやにー)｜note<br><a href="https://note.mu/ayaniememo/n/nf06555988ed6" target="_blank" rel="external">https://note.mu/ayaniememo/n/nf06555988ed6</a><br>オンラインのコミュニケーションが上手くないと、負ける社会がやって来た | Books&amp;Apps<br><a href="https://blog.tinect.jp/?p=49499" target="_blank" rel="external">https://blog.tinect.jp/?p=49499</a></p>
+</blockquote>
+<p>bit part のブログは、メンバーのブログのハブのような感じにしようかな、と思っていた（絶賛調整中）。<br>その方が各自のモチベーションにも繋がるだろうし、そもそも会社の枠にとどめておく必要はないんじゃないのかな、と。</p>
+<p>営業目的だけではないにしてもイベントに参加するとか色々、個々人がやってることってのは巡り巡って会社につながってくることもあるし、個人にとってもメリットがあるわけだし。</p>
+<p>アイ・ペアーズだと皆川さんの YouTube Channel や林さんの個人ページ。</p>
+<blockquote>
+<p>Taichi Minagawa Channel<br><a href="https://www.youtube.com/channel/UC-6KPNfax0lguukdFBAJzkw" target="_blank" rel="external">https://www.youtube.com/channel/UC-6KPNfax0lguukdFBAJzkw</a><br>林みゆき オフィシャルサイト<br><a href="https://i-pairs.co.jp/miyuki-hayashi/" target="_blank" rel="external">https://i-pairs.co.jp/miyuki-hayashi/</a></p>
+</blockquote>
+<p>音楽事業としてはアイ・ペアーズでももちろんやってるわけだけど、こうやって顔が見えているのもいいことなんじゃないのかなぁ、と。</p>
+<p>言問だと開発チームの面々は外に出てる人もいればそうじゃない人もいるけど、大体がみんなすごい感じで。<br>藤田さんなんかは CMS といえば？な感じで動いていたりするし（すごいところはそれだけじゃないんだけど）。</p>
+<hr>
+<p>個人的な経験だと、xxxというお店のパスタが美味しかったのだけど、シェフが異動？退職？してしまった。<br>残念だけど、そのシェフはどこにいってしまったのだろう？？とか気になって仕方ない。</p>
+<p>さすがにお店で誰が料理してるかまでを把握するのは難しいかもしれないけど、ブログとかで探すことはできるかもしれないし。。。</p>
+<hr>
+<p>属人性が高いといえばそういう面もあるのかもしれないけど。<br>ファンっていうのが近い感じのイメージになるのかなー。</p>
+<p>会社名やサービス名を求めている場合や、信頼に繋がる場合ももちろんあるんだけど、こんな感じで個人ももっと目立っていけるような感じで進めていければいいなぁとなんとなく思っていたりします。</p>
+<p>こういうことをやってる人たちがいるってのも大事ですよね。<br>メンバーに恵まれて仕事をできているな、ということを改めて感じます。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;これらを読んでいて、ちょうど似たようなことを考えていたなー、と。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;オンラインとオフラインにおける「自分」の多面性を考える｜加藤 綾(あやにー)｜note&lt;br&gt;&lt;a href=&quot;https://note.mu/ayaniememo/n
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Company" scheme="https://note.mersy418.com/tags/Company/"/>
+    
+      <category term="Personal" scheme="https://note.mersy418.com/tags/Personal/"/>
+    
+  </entry>
   
   <entry>
     <title>案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</title>
@@ -95,11 +140,11 @@
     
       <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
     
+      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
+    
       <category term="browser" scheme="https://note.mersy418.com/tags/browser/"/>
     
       <category term="Safari" scheme="https://note.mersy418.com/tags/Safari/"/>
-    
-      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
     
   </entry>
   
@@ -358,13 +403,13 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
+      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
+    
       <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
     
       <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
     
       <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
-    
-      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
     
   </entry>
   
@@ -411,9 +456,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
       <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
@@ -525,9 +570,9 @@ $ ./toggl2slack start
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
-    
       <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
+    
+      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
     
   </entry>
   
@@ -765,39 +810,6 @@ $ ./toggl2slack start
     
     
       <category term="Movable Type" scheme="https://note.mersy418.com/tags/Movable-Type/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>スモールスタートで運用しながら調整・成長していく</title>
-    <link href="https://note.mersy418.com/article/website-operation.html"/>
-    <id>https://note.mersy418.com/article/website-operation.html</id>
-    <published>2018-02-28T22:00:00.000Z</published>
-    <updated>2018-02-28T23:39:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>SAP推しだった親会社を説得し、kintoneで業務改善した会社の話 （アスキー） - Yahoo!ニュース<br><a href="https://headlines.yahoo.co.jp/hl?a=20180214-00000005-ascii-sci" target="_blank" rel="external">https://headlines.yahoo.co.jp/hl?a=20180214-00000005-ascii-sci</a></p>
-</blockquote>
-<p>運用しないと、触らないと、見えてこないこともあるわけで。<br>小さくスタートはスタートするからこそ整って来ることもあるし、判断材料も出て来るわけで。<br>100%完璧に全てを最初に洗い出すことは難しいわけだし、それができないという前提でどこまでやるかを決め、その上で運用しながら改善なり改修をしていく。</p>
-<p>そういったことの繰り返しで、Webサイトもビジネスの一翼を担うのであれば同じような位置付けで取り組んでいかないと意味のないものになってしまう。<br>作る側も依頼する側も作って終わりだとは思ってないだろうし、そこからがスタートと理解してるからこそ、どのように運用、保守をしてサイトを育てビジネスに繋げていくかを考えるという前提がないとまずいんじゃないだろうか？</p>
-<p>コンテンツを蓄えてそれをどのように見せていくか。<br>コンテンツが蓄えられたからこそ、それをどのように展開していくか？を考えられる。<br>コンテンツを蓄えるなかでこうしたいという要望や、ここが使いづらいという改善要望も上がって来る。<br>ユーザのFBやアクセス数から見えてくることもあるかもしれない。<br>そういったものを繰り返しながらより良いものになっていくんじゃないだろうか？</p>
-<p>そうなって来ると内部で人を抱えて作る方がいいのか？外部と連携して作るのがいいのか？という話にも繋がるんだろうな、とは思う。</p>
-<p>Webサイト使ってビジネスするならそのあたりを考えておかないとビジネスも成功しないんじゃないのかなぁ。<br>CMSを使ったWebサイトを提供する側としても最初の時点でしっかりとしたものを提供はしていくけど、そういった変化にも柔軟に対応する必要があることを忘れないようしないとなぁと思うわけです。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;SAP推しだった親会社を説得し、kintoneで業務改善した会社の話 （アスキー） - Yahoo!ニュース&lt;br&gt;&lt;a href=&quot;https://headlines.yahoo.co.jp/hl?a=20180214-00000005-asci
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Website" scheme="https://note.mersy418.com/tags/Website/"/>
-    
-      <category term="Business" scheme="https://note.mersy418.com/tags/Business/"/>
     
   </entry>
   
