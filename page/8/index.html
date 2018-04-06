@@ -61,6 +61,46 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-11-04T23:30:19.000Z"><a href="/article/staticfiles-craftcms.html">2017-11-05</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/staticfiles-craftcms.html">Craft CMS で管理しているサイトに静的な HTML を設置する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><code>example.com/</code> を Craft で管理していて、 <code>/book/</code> など下層含めて出力している。</p>
+<p>このときに <code>/book/magazine/</code> のような Craft 管理内の階層で静的ファイルを置きたい場合。</p>
+<p>とりあえず、 <code>templates/book/magazine/</code> のような感じでおいてしまえば静的ファイルの内容がそのまま表示される。</p>
+<hr>
+<p>ドキュメントルートが <code>public</code> になるのでそちらでも良さそうなかんじではあるのだけれども。<br>以下はとりあえず調べず思いつきでやってみたことメモ。</p>
+<p>何も意識せず <code>/book/magazine/</code> をおくだけだと <code>/book/</code> は403になる。 <code>/book/magazine/</code> は見れる。</p>
+<p><code>index.php</code> を <code>/book/</code> 以下に置くと <code>/book/</code> がトップページと同じ挙動になる。ここはなんかrouteとか指定すればうまくいくのかも？</p>
+<p><code>.htaccess</code> を <code>/book/</code> においても特段変わらず。ま、そうかも。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-03T08:43:22.000Z"><a href="/article/remotework.html">2017-11-03</a></time>
       
       
@@ -541,51 +581,6 @@ $ hexo server
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-03-26T02:55:12.000Z"><a href="/article/hello-world.html">2017-03-26</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/hello-world.html">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -609,7 +604,7 @@ $ hexo server
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>47</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>48</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -726,7 +721,7 @@ $ hexo server
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>2</small></li>
   
@@ -764,7 +759,7 @@ $ hexo server
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
-    <li><a href="/tags/Safari/">Safari</a><small>1</small></li>
+    <li><a href="/tags/Safari/">Safari</a><small>2</small></li>
   
     <li><a href="/tags/Sketch/">Sketch</a><small>2</small></li>
   
@@ -791,6 +786,8 @@ $ hexo server
     <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
   
     <li><a href="/tags/Website/">Website</a><small>1</small></li>
+  
+    <li><a href="/tags/Work/">Work</a><small>0</small></li>
   
     <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
@@ -834,6 +831,10 @@ $ hexo server
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-macbook-keyboard-201804.html">Macbookキーボードの調子は相変わらず</a>
       </li>
     
@@ -849,10 +850,6 @@ $ hexo server
         <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
       </li>
     
-      <li>
-        <a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -861,7 +858,7 @@ $ hexo server
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

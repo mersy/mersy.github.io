@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-02T22:07:06.000Z</updated>
+  <updated>2018-04-06T23:00:15.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Safariメインにしたら少しは軽くなったような？気がする</title>
+    <link href="https://note.mersy418.com/article/blog-safari-main.html"/>
+    <id>https://note.mersy418.com/article/blog-safari-main.html</id>
+    <published>2018-04-06T22:00:00.000Z</published>
+    <updated>2018-04-06T23:00:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Safari に諸々寄せたから？かだいぶ軽くなった気がする。</p>
+<blockquote>
+<p>メインブラウザを Firefox Developer Editon から Safari に切り替えてみる | mersy note<br><a href="https://note.mersy418.com/article/blog-which-browser.html">https://note.mersy418.com/article/blog-which-browser.html</a></p>
+</blockquote>
+<p>1Password の起動が早くなったというか引っかからなくなった気がする。</p>
+<p>んじゃ、Firefox とか Chrome でもいいのかなー、という気がするけどどうだろうな。</p>
+<p>時々複数ウィンドウ開いてるときに Safari が落ちてしまうことがあってそれはそれで困るのだけれど、マシンが重くなるということは減ったような気がする。。。<br>今週仕事そんなにしてなかったってことかしら・・・</p>
+<hr>
+<p>というかそれが理由なのではなくて、 Karabiner が理由だったのかも？しれないけど？？</p>
+<blockquote>
+<p>Macbookキーボードの調子は相変わらず | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard-201804.html">https://note.mersy418.com/article/blog-macbook-keyboard-201804.html</a></p>
+</blockquote>
+<p>日英の切り替えが変わっただけなのだけどショートカットが変わると慣れるまでほんとタイピングが遅くなる、、、<br>切り替えに意識がいってしまってるのか普通の入力も引っ張られて遅くなってる気がする。<br>今週は全然ダメでしたね。</p>
+<p>あとはなんかライブ変換との相性が悪いのかいまいちスーッと入力できていない気がする。<br>この辺も慣れなのかな。。。<br>あまりになれなかったら一旦 ATOK にしてみるとかかな。</p>
+<hr>
+<p>日本語入力してる時でも半角スペースをサクッと入力できる方法はないものかな。<br>と調べてたら 半角スペースは Shift にスペースなのね。。。。今知った。。。</p>
+<blockquote>
+<p>macOS Sierra で日本語 (かな) 入力時もデフォルトでスペースを半角にする方法の備忘録 | R<br><a href="https://beadored.com/macos-sierra-japaneseim-half-width-space/" target="_blank" rel="external">https://beadored.com/macos-sierra-japaneseim-half-width-space/</a><br>macOS (High) Sierraで日本語入力時に常にスペースを半角に - Qiita<br><a href="https://qiita.com/on0z/items/a9b4033cc088627b1728" target="_blank" rel="external">https://qiita.com/on0z/items/a9b4033cc088627b1728</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Safari に諸々寄せたから？かだいぶ軽くなった気がする。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;メインブラウザを Firefox Developer Editon から Safari に切り替えてみる | mersy note&lt;br&gt;&lt;a href=&quot;https://
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Safari" scheme="https://note.mersy418.com/tags/Safari/"/>
+    
+  </entry>
   
   <entry>
     <title>Macbookキーボードの調子は相変わらず</title>
@@ -254,9 +299,9 @@
     
       <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
     
-      <category term="browser" scheme="https://note.mersy418.com/tags/browser/"/>
-    
       <category term="Safari" scheme="https://note.mersy418.com/tags/Safari/"/>
+    
+      <category term="browser" scheme="https://note.mersy418.com/tags/browser/"/>
     
       <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
     
@@ -828,35 +873,6 @@ $ ./toggl2slack start
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
       <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacBookのキーボードが調子悪め</title>
-    <link href="https://note.mersy418.com/article/blog-macbook-keyboard.html"/>
-    <id>https://note.mersy418.com/article/blog-macbook-keyboard.html</id>
-    <published>2018-03-05T23:00:00.000Z</published>
-    <updated>2018-03-05T23:22:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>MacBook のキーボードがなんか連打される感じになってて非常に辛い感じだったので、以下のを試してみた。</p>
-<blockquote>
-<p>MacBook Pro 2016のキーボードが不調だったけどAppleサポートに電話したら直りました！ - 理系男子のぐうの音<br><a href="http://www.gu-none.com/entry/MacbookPro/17/support" target="_blank" rel="external">http://www.gu-none.com/entry/MacbookPro/17/support</a><br>Mac の SMC (システム管理コントローラ) をリセットする方法 - Apple サポート<br><a href="https://support.apple.com/ja-jp/HT201295" target="_blank" rel="external">https://support.apple.com/ja-jp/HT201295</a></p>
-</blockquote>
-<p>これで快適になってくれるといいのだけど、、、、<br>あまり期待できないかなー。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MacBook のキーボードがなんか連打される感じになってて非常に辛い感じだったので、以下のを試してみた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MacBook Pro 2016のキーボードが不調だったけどAppleサポートに電話したら直りました！ - 理系男子のぐうの音
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   

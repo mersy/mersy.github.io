@@ -61,6 +61,107 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-12T09:30:00.000Z"><a href="/article/tocOnOmniMarkupPreviewer.html">2013-10-12</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/tocOnOmniMarkupPreviewer.html">OmniMarkupPreviewer で目次を表示する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Markdown の原稿で目次が出せたらいいなとおもって調べてたら以下の記事に出会った。</p>
+<blockquote>
+<p>SublimeText2でMarkdownにTOCを挿入する<br><a href="http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/" target="_blank" rel="external">http://bellonieta.net/2013/05/sublimetext2%E3%81%A7markdown%E3%81%ABtoc%E3%82%92%E6%8C%BF%E5%85%A5%E3%81%99%E3%82%8B/</a></p>
+</blockquote>
+<p>SublimeTextで使ってたのは OmniMarkupPreviewer だったからこれでも拡張できるのかも？？とおもったので設定ファイルを眺めてみた。</p>
+<p>Preferences &gt; Package Settings &gt; OmniMarkupPreviewer &gt; Setting - Default</p>
+<p>で開く設定ファイルのなかに</p>
+<pre><code>// MarkdownRenderer options
+&quot;renderer_options-MarkdownRenderer&quot;: {
+    // Valid extensions:
+    // - OFFICIAL (Python Markdown) -
+    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
+    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
+    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
+    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
+    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
+    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
+    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
+    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
+    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
+    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
+    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
+    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
+    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
+    // - 3RD PARTY -
+    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
+    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
+    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
+    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
+    //                   typographically nicer (&quot;curly&quot;) quotes, proper
+    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
+    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
+    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;]
+</code></pre><p>っていう部分があって</p>
+<pre><code>// MarkdownRenderer options
+&quot;renderer_options-MarkdownRenderer&quot;: {
+    // Valid extensions:
+    // - OFFICIAL (Python Markdown) -
+    //   &quot;extra&quot;: Combines [&quot;abbr&quot;, &quot;attr_list&quot;, &quot;def_list&quot;, &quot;fenced_code&quot;, &quot;footnotes&quot;, &quot;tables&quot;, &quot;smart_strong&quot;]
+    //            For PHP Markdown Extra(http://michelf.ca/projects/php-markdown/extra/)
+    //   &quot;abbr&quot;: http://packages.python.org/Markdown/extensions/abbreviations.html
+    //   &quot;attr_list&quot;: http://packages.python.org/Markdown/extensions/attr_list.html
+    //   &quot;def_list&quot;: http://packages.python.org/Markdown/extensions/definition_lists.html
+    //   &quot;fenced_code&quot;: http://packages.python.org/Markdown/extensions/fenced_code_blocks.html
+    //   &quot;footnotes&quot;: http://packages.python.org/Markdown/extensions/footnotes.html
+    //   &quot;tables&quot;: http://packages.python.org/Markdown/extensions/tables.html
+    //   &quot;smart_strong&quot;: http://packages.python.org/Markdown/extensions/smart_strong.html
+    //   &quot;codehilite&quot;: http://packages.python.org/Markdown/extensions/code_hilite.html
+    //   &quot;meta&quot;: http://packages.python.org/Markdown/extensions/meta_data.html
+    //   &quot;toc&quot;: http://packages.python.org/Markdown/extensions/toc.html
+    //   &quot;nl2br&quot;: http://packages.python.org/Markdown/extensions/nl2br.html
+    // - 3RD PARTY -
+    //   &quot;strikeout&quot;: Strikeout extension syntax - `This ~~is deleted text.~~`
+    //   &quot;subscript&quot;: Subscript extension syntax - `This is water: H~2~O`
+    //   &quot;superscript&quot;: Superscript extension syntax 0 `2^10^ = 1024`
+    //   &quot;smartypants&quot;: Python-Markdown extension using smartypants to emit
+    //                   typographically nicer (&quot;curly&quot;) quotes, proper
+    //                   (&quot;em&quot; and &quot;en&quot;) dashes, etc.
+    //                   See: https://bitbucket.org/jeunice/mdx_smartypants
+    &quot;extensions&quot;: [&quot;tables&quot;, &quot;strikeout&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;,&quot;toc&quot;]
+</code></pre><p>ってかんじで、「,”toc”」を追加してみた。</p>
+<blockquote>
+<p>Table of Contents Extension — Python Markdown<br><a href="http://pythonhosted.org/Markdown/extensions/toc.html" target="_blank" rel="external">http://pythonhosted.org/Markdown/extensions/toc.html</a></p>
+</blockquote>
+<p>をみてみると、</p>
+<pre><code>[TOC]
+</code></pre><p>と記述すると目次が出来るみたいなので、それを .md のファイルに入れてみたら目次が出た。<br>なんと便利なんでしょ。</p>
+<p>目次を出す階層を指定出来たりするといいんだろうけど、これでひとまず十分。</p>
+<p>仕様書とか、テキストだけだとキツイかもしれないけど、1箇所に集中してまとめとくとかするときはこれでもいいなぁ。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-12T03:10:00.000Z"><a href="/article/boxen.html">2013-10-12</a></time>
       
       
@@ -377,7 +478,7 @@ url: http://mersy.github.io/
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>47</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>48</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -494,7 +595,7 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>11</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>2</small></li>
   
@@ -532,7 +633,7 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
   
-    <li><a href="/tags/Safari/">Safari</a><small>1</small></li>
+    <li><a href="/tags/Safari/">Safari</a><small>2</small></li>
   
     <li><a href="/tags/Sketch/">Sketch</a><small>2</small></li>
   
@@ -559,6 +660,8 @@ url: http://mersy.github.io/
     <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
   
     <li><a href="/tags/Website/">Website</a><small>1</small></li>
+  
+    <li><a href="/tags/Work/">Work</a><small>0</small></li>
   
     <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
@@ -602,6 +705,10 @@ url: http://mersy.github.io/
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-macbook-keyboard-201804.html">Macbookキーボードの調子は相変わらず</a>
       </li>
     
@@ -617,10 +724,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
       </li>
     
-      <li>
-        <a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -629,7 +732,7 @@ url: http://mersy.github.io/
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 
