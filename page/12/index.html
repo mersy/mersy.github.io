@@ -61,6 +61,62 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-13T22:30:00.000Z"><a href="/article/pullrequestMtml.html">2013-10-14</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/pullrequestMtml.html">Pull Request でMTMLのレビュー？</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>MTMLのバージョン管理<br><a href="http://mersy.github.io/mtmlVersionControl.html" target="_blank" rel="external">http://mersy.github.io/mtmlVersionControl.html</a></p>
+<p>この話に通じるところがあるのかもしれないけれども、Pull Request ベースの開発とかのスライドを見ながら。</p>
+<script async class="speakerdeck-embed" data-id="bb1c0a10f1bc0130062a02c06ebb4dee" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<script async class="speakerdeck-embed" data-id="e259eab004af0131fe7d62fc9b040ffd" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+<blockquote>
+<p>「GitHubでつくる、たのしい開発現場」YAPC:ASIA Tokyo2013 | Act as Professional - hiroki.jp<br><a href="http://hiroki.jp/yapcasia-2013-github" target="_blank" rel="external">http://hiroki.jp/yapcasia-2013-github</a></p>
+</blockquote>
+<script async class="speakerdeck-embed" data-id="51b4379004a301319a7f5a401ba27687" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>プロジェクトに使うMTMLをGithubとかで管理はしてて、それのレビューとかをpull requestすることはできそうなきがする。</p>
+<p>できそうなきはするんだけど、一度MTに入れて動くかどうかを試さないといけないというのが難しいところなきもする。</p>
+<p>プログラム書かれてる方々はテストとかそういうのをまわしてるんだろうけど、MTMLを書くことをコードを書く、というのと大体同義に扱うと、テストと同じあたりの位置づけになるんだろうなぁ。<br>MTの環境がサーバーに1つしかないとかなると当ててテストなんて出来ないし。<br>んじゃ案件ごとにローカルに環境をおければいいんだろうか。。それが現実的なのかなぁ、、、、</p>
+<p>プログラムを書くか、テンプレートを書くかということで根本的に違う話で、そのまま当てはめることが出来ない、ってのもあるんだろうな。</p>
+<blockquote>
+<p>非開発者もGitHub Flowに巻き込んでみんなハッピーになった話 - Masatomo Nakano Blog<br><a href="http://blog.madoro.org/mn/93" target="_blank" rel="external">http://blog.madoro.org/mn/93</a></p>
+<p>具体的には、N個(N=アクティブな開発者の数くらいが良さそう)のfeature branchのテスト用のHeroku appを予め作っておいて、feature branchにpushされるたびに、Jenkinsからその中の一つへデプロイされる感じにした。</p>
+</blockquote>
+<p>こういう環境が用意できれば、branch on MT 的なイメージはだいぶ進められるんじゃないかなぁ。1つの検証環境に紐尽く複数の開発環境。開発環境でOKの物がどんどん検証環境にpushされていくイメージ。<br>開発も確認もダイナミックに進められれば問題はなさそう。</p>
+<blockquote>
+<p>また、開発者も、それまでは、merge後、非開発者に指摘されると「めんどくせーなー」という意識が生まれがちで、かつ、その場合mergeから時間が経っていることも多く、その変更に対するフレッシュさが減り、再度作業を始めるまでの心理的な負担(実際、実装を思い出すための脳のコストも高そう)も高かった。それが、pull-request中に非開発者からフィードバックが貰えることで、そのpull-requestにcommitを追加することだけでさくっと修正できて、全体のスピード感がとてもあがったし、開発者の負担も減った。</p>
+</blockquote>
+<p>2つも3つも進んだと思ったら、またスタートへ戻るというのはやっぱり負担が大きいよな。。。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-12T09:30:00.000Z"><a href="/article/tocOnOmniMarkupPreviewer.html">2013-10-12</a></time>
       
       
@@ -478,7 +534,7 @@ url: http://mersy.github.io/
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>48</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>49</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -575,6 +631,10 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
   
+    <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
+  
+    <li><a href="/tags/Dropbox-Paper/">Dropbox Paper</a><small>0</small></li>
+  
     <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
   
     <li><a href="/tags/Editor/">Editor</a><small>1</small></li>
@@ -620,6 +680,8 @@ url: http://mersy.github.io/
     <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
   
     <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
+  
+    <li><a href="/tags/Project-Management/">Project Management</a><small>0</small></li>
   
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
@@ -705,6 +767,10 @@ url: http://mersy.github.io/
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
       </li>
     
@@ -720,10 +786,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-publish-person.html">会社も大事だけど個も立っていく必要があるのではないか、と思うこと</a>
       </li>
     
-      <li>
-        <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -732,7 +794,7 @@ url: http://mersy.github.io/
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

@@ -61,6 +61,134 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-08T10:07:27.000Z"><a href="/article/mtmemo.html">2014-05-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtmemo.html">MTのメモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="タグの情報を調べる"><a href="#タグの情報を調べる" class="headerlink" title="タグの情報を調べる"></a>タグの情報を調べる</h2><p>movabletype/lib/MT/Template/ContextHandlers.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/ContextHandlers.pm</a></p>
+<h2 id="コールバック"><a href="#コールバック" class="headerlink" title="コールバック"></a>コールバック</h2><h3 id="ユーザー関係"><a href="#ユーザー関係" class="headerlink" title="ユーザー関係"></a>ユーザー関係</h3><ul>
+<li>cms_edit.author</li>
+<li>cms_view_permission_filter.author</li>
+<li>cms_save_permission_filter.author</li>
+<li>cms_delete_permission_filter.author</li>
+<li>cms_save_filter.author</li>
+<li>cms_pre_save.author</li>
+<li>cms_post_save.author</li>
+<li>cms_post_delete.author</li>
+</ul>
+<h3 id="ブログ関係"><a href="#ブログ関係" class="headerlink" title="ブログ関係"></a>ブログ関係</h3><ul>
+<li>cms_edit.blog</li>
+<li>cms_view_permission_filter.blog</li>
+<li>cms_save_permission_filter.blog</li>
+<li>cms_delete_permission_filter.blog</li>
+<li>cms_pre_save.blog</li>
+<li>cms_post_save.blog</li>
+<li>cms_save_filter.blog</li>
+<li>cms_post_delete.blog</li>
+</ul>
+<h3 id="フォルダ関係"><a href="#フォルダ関係" class="headerlink" title="フォルダ関係"></a>フォルダ関係</h3><ul>
+<li>cms_edit.folder</li>
+<li>cms_view_permission_filter.folder</li>
+<li>cms_save_permission_filter.folder</li>
+<li>cms_delete_permission_filter.folder</li>
+<li>cms_pre_save.folder</li>
+<li>cms_post_save.folder</li>
+<li>cms_save_filter.folder</li>
+<li>cms_post_delete.folder</li>
+</ul>
+<h3 id="カテゴリ関係"><a href="#カテゴリ関係" class="headerlink" title="カテゴリ関係"></a>カテゴリ関係</h3><ul>
+<li>cms_edit.category</li>
+<li>cms_view_permission_filter.category</li>
+<li>cms_save_permission_filter.category</li>
+<li>cms_delete_permission_filter.category</li>
+<li>cms_pre_save.category</li>
+<li>cms_post_save.category</li>
+<li>cms_save_filter.category</li>
+<li>cms_post_delete.category</li>
+</ul>
+<h3 id="コメント関係"><a href="#コメント関係" class="headerlink" title="コメント関係"></a>コメント関係</h3><ul>
+<li>cms_edit.comment</li>
+<li>cms_view_permission_filter.comment</li>
+<li>cms_save_permission_filter.comment</li>
+<li>cms_delete_permission_filter.comment</li>
+<li>cms_pre_save.comment</li>
+<li>cms_post_save.comment</li>
+<li>cms_post_delete.comment</li>
+</ul>
+<h3 id="コメント投稿者関係"><a href="#コメント投稿者関係" class="headerlink" title="コメント投稿者関係"></a>コメント投稿者関係</h3><ul>
+<li>cms_edit.commenter</li>
+<li>cms_view_permission_filter.commenter</li>
+<li>cms_delete_permission_filter.commenter</li>
+</ul>
+<h3 id="ブログ記事関係"><a href="#ブログ記事関係" class="headerlink" title="ブログ記事関係"></a>ブログ記事関係</h3><ul>
+<li>cms_edit.entry</li>
+<li>cms_view_permission_filter.entry</li>
+<li>cms_delete_permission_filter.entry</li>
+<li>cms_pre_save.entry</li>
+<li>cms_post_save.entry</li>
+<li>cms_post_delete.entry</li>
+</ul>
+<h3 id="ウェブページ関係"><a href="#ウェブページ関係" class="headerlink" title="ウェブページ関係"></a>ウェブページ関係</h3><ul>
+<li>cms_edit.page</li>
+<li>cms_view_permission_filter.page</li>
+<li>cms_delete_permission_filter.page</li>
+<li>cms_pre_save.page</li>
+<li>cms_post_save.page</li>
+<li>cms_post_delete.page</li>
+</ul>
+<h3 id="トラックバック関係"><a href="#トラックバック関係" class="headerlink" title="トラックバック関係"></a>トラックバック関係</h3><ul>
+<li>cms_edit.ping</li>
+<li>cms_view_permission_filter.ping</li>
+<li>cms_save_permission_filter.ping</li>
+<li>cms_delete_permission_filter.ping</li>
+<li>cms_pre_save.ping</li>
+<li>cms_post_save.ping</li>
+<li>cms_post_delete.ping</li>
+</ul>
+<h2 id="mt-staticを独立させる"><a href="#mt-staticを独立させる" class="headerlink" title="mt-staticを独立させる"></a>mt-staticを独立させる</h2><p>mt-staticディレクトリを新しく作成する</p>
+<pre><code>/var/www/html/mt/plugins/mt-static/
+</code></pre><p>.htaccessを作成して、mt-staticにおく</p>
+<pre><code>&lt;IfModule mod_rewite.c&gt;
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^mt-static/(.*)$ /var/www/html/mt/plugins/mt-static/$1 [L,QSA]
+&lt;/IfModule&gt;
+</code></pre><p>まだ理解不足。よくわかってない。</p>
+<p>mt-config</p>
+<pre><code>StaticWebPath /mt/plugins/mt-static/
+</code></pre><blockquote>
+<p>MovableTypeプラグインのコードを書く準備を40秒で済ませる - blog.aklaswad.com<br><a href="http://blog.aklaswad.com/2007/000191.html" target="_blank" rel="external">http://blog.aklaswad.com/2007/000191.html</a><br>Amazon.co.jp： Movable Type 5 プロフェッショナルガイド: 荒木勇次郎: 本<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4839934134/mersys-22/ref=nosim</a></p>
+</blockquote>
+<h1 id="MultiBlog"><a href="#MultiBlog" class="headerlink" title="MultiBlog"></a>MultiBlog</h1><p>MultiBlog経由の再構築はおもいところがあるので、RebuildTriggerとかで対応する様にする。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-05-08T09:21:03.000Z"><a href="/article/vagrant.html">2014-05-08</a></time>
       
       
@@ -665,67 +793,6 @@ $ npm -v
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-22T21:31:34.000Z"><a href="/article/mtfor.html">2014-04-23</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/mtfor.html">mtForであれこれ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>MTForで1ずつ減らす方法（from=”12” to=”1” の感じ） | かたつむりくんのWWW<br><a href="http://www.tinybeans.net/blog/2014/04/23-054120.html" target="_blank" rel="external">http://www.tinybeans.net/blog/2014/04/23-054120.html</a></p>
-</blockquote>
-<p>をみて、確かに1ずつ減ってるなーとおもいつつ、reverseがあるmt:loopだとできないのかしら？と言うことで試してみた</p>
-<pre><code>&lt;mt:SetVar name=&quot;from&quot; value=&quot;1&quot;&gt;
-&lt;mt:SetVar name=&quot;to&quot; value=&quot;12&quot;&gt;
-&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
-&lt;mt:SetVarBlock name=&quot;hoge&quot; function=&quot;push&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;&lt;/mt:SetVarBlock&gt;
-&lt;/mt:For&gt;
-&lt;mt:loop name=&quot;hoge&quot; glue=&quot; / &quot; sort_by=&quot;reverse&quot;&gt;
-&lt;mt:Var name=&quot;__value__&quot;&gt;月
-&lt;/mt:loop&gt;
-</code></pre><p>こんな感じでかけばいけますね。</p>
-<p>mt:For,mt:Loopはまだまだ使いこなせてる気がしないので、 @tinybeans を見習ってがんばりたいところです。</p>
-<h3 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h3><p>そもそも、reverse なんか使わずにいけますね。</p>
-<pre><code>&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
-&lt;mt:SetVarBlock name=&quot;fuga&quot; function=&quot;unshift&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;&lt;/mt:SetVarBlock&gt;
-&lt;/mt:For&gt;
-&lt;mt:loop name=&quot;fuga&quot; glue=&quot; / &quot;&gt;
-&lt;mt:Var name=&quot;__value__&quot;&gt;月
-&lt;/mt:loop&gt;
-</code></pre><h3 id="追記2"><a href="#追記2" class="headerlink" title="追記2"></a>追記2</h3><p>汎用性低そうだけど、prependでもいけますね。</p>
-<pre><code>&lt;mt:For var=&quot;x&quot; from=&quot;$from&quot; to=&quot;$to&quot;&gt;
-&lt;mt:SetVarBlock name=&quot;hogehoge&quot; prepend=&quot;1&quot;&gt;&lt;mt:Var name=&quot;x&quot;&gt;月&lt;mt:Unless name=&quot;__first__&quot;&gt; / &lt;/mt:Unless&gt;&lt;/mt:SetVarBlock&gt;
-&lt;/mt:For&gt;
-&lt;mt:Var name=&quot;hogehoge&quot;&gt;
-</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>MTSetVar | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/setvar.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/setvar.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -749,7 +816,7 @@ $ npm -v
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>48</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>49</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -846,6 +913,10 @@ $ npm -v
   
     <li><a href="/tags/Direction/">Direction</a><small>2</small></li>
   
+    <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
+  
+    <li><a href="/tags/Dropbox-Paper/">Dropbox Paper</a><small>0</small></li>
+  
     <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
   
     <li><a href="/tags/Editor/">Editor</a><small>1</small></li>
@@ -891,6 +962,8 @@ $ npm -v
     <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
   
     <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
+  
+    <li><a href="/tags/Project-Management/">Project Management</a><small>0</small></li>
   
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
@@ -976,6 +1049,10 @@ $ npm -v
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
       </li>
     
@@ -991,10 +1068,6 @@ $ npm -v
         <a href="/article/blog-publish-person.html">会社も大事だけど個も立っていく必要があるのではないか、と思うこと</a>
       </li>
     
-      <li>
-        <a href="/article/blog-team-kickoff-meeting.html">案件スタート時に開発メンバーでの音声会議をやってみてもいいのかもしれない</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -1003,7 +1076,7 @@ $ npm -v
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

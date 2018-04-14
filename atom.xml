@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-06T23:00:15.000Z</updated>
+  <updated>2018-04-14T22:04:50.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>橋本さんのトーク力がすごいなと思った</title>
+    <link href="https://note.mersy418.com/article/blog-talking.html"/>
+    <id>https://note.mersy418.com/article/blog-talking.html</id>
+    <published>2018-04-14T22:00:00.000Z</published>
+    <updated>2018-04-14T22:04:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>出張ではお客さんと MTG をしたり、今回は先方の会社の人たちに自分たちの仕事の仕方の話とかそういう話をする機会があった。</p>
+<p>機会があったといってもかなりの時間を橋本さんが話していて、僕もそれを聴く側に回っていたところもあったり（苦笑<br>いい感じに割り込むとかしてみてもよかったかもな、、、というのは若干の反省。</p>
+<p>かなりの時間（約二時間）を一人で話せるってのがすげーなー、とほんと思ってしまった。<br>食事の時も飲み会の時もちょっとした時も、いろんなネタがポンポン出てくるし。</p>
+<p>ネタがあるってのも大事だろうし、それを引き出せるってのも才能だろうな。<br>普段からブログを書くとかで訓練してるってのもあるのだろうけど。</p>
+<p>何もないところから会話をきりだせるっていうスキルが足りないとは思ってるだけに激しく尊敬。</p>
+<p>まずはアウトプットして自分の言葉で語れることを意識的に行なっていきたいところ。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;出張ではお客さんと MTG をしたり、今回は先方の会社の人たちに自分たちの仕事の仕方の話とかそういう話をする機会があった。&lt;/p&gt;
+&lt;p&gt;機会があったといってもかなりの時間を橋本さんが話していて、僕もそれを聴く側に回っていたところもあったり（苦笑&lt;br&gt;いい感じに割り込むと
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Safariメインにしたら少しは軽くなったような？気がする</title>
@@ -615,9 +642,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
     
   </entry>
   
@@ -834,45 +861,6 @@ $ ./toggl2slack start
       <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
       <category term="MacBook" scheme="https://note.mersy418.com/tags/MacBook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tab Suspender を使ってみる</title>
-    <link href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html"/>
-    <id>https://note.mersy418.com/article/blog-firefox-tabsuspend.html</id>
-    <published>2018-03-06T22:00:00.000Z</published>
-    <updated>2018-03-06T20:27:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Firefox Developer Edition をメインブラウザにしてみてます。</p>
-<blockquote>
-<p>Firefox Developer Edition<br><a href="https://www.mozilla.org/ja/firefox/developer/" target="_blank" rel="external">https://www.mozilla.org/ja/firefox/developer/</a></p>
-</blockquote>
-<p>ブラウザのせいというよりは使い方なのかもしれないけれども、そこまで早いと感じることはなかったりもしつつ、Addon とかのせいなのかなぁということも考えたりしつつ、使ってます。<br>チーム内はChromeが多いし、ブラウザ変えておけば勝手にブラウザチェック的にもなるかな、とか。。。</p>
-<p>さすがにタブ開きすぎたり、開いて放置してると重いなぁ、、、と。<br>Mac自体がかなり重くなるので、ちょっと検討してみるかということで、Slack に投げたら @tinybeans は Chrome で <code>Great Suspender</code> というのを使っているということで似たようなのを探してみたら <code>Tab Suspender</code> というのがあった。</p>
-<blockquote>
-<p>Tab Suspender<br><a href="https://addons.mozilla.org/ja/firefox/addon/tab-suspender-tab-unloader/" target="_blank" rel="external">https://addons.mozilla.org/ja/firefox/addon/tab-suspender-tab-unloader/</a></p>
-</blockquote>
-<p>ってことで、入れて本日で2日目。<br>昨日はあまり気にならなかったなー、、、という気がしてます。<br>あまり仕事をしなかったのか・・・？？もしれないので今日明日また様子見です。</p>
-<p>Suspend されるとこんな感じの画面になって、どこかクリックすればまた復旧します。</p>
-<p><img src="../asset/20180307_tabsuspendar.png" alt=""></p>
-<p>最初この画面が人の顔に見えてたんですが、よくみるとコーヒーとかそんな感じっぽいですね。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Firefox Developer Edition をメインブラウザにしてみてます。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Firefox Developer Edition&lt;br&gt;&lt;a href=&quot;https://www.mozilla.org/ja/firefox/d
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-      <category term="Firefox" scheme="https://note.mersy418.com/tags/Firefox/"/>
     
   </entry>
   
