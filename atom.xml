@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-14T22:04:50.000Z</updated>
+  <updated>2018-04-16T22:10:09.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>全部という言葉の曖昧さ</title>
+    <link href="https://note.mersy418.com/article/blog-whats-all.html"/>
+    <id>https://note.mersy418.com/article/blog-whats-all.html</id>
+    <published>2018-04-16T22:00:00.000Z</published>
+    <updated>2018-04-16T22:10:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>自分でも使ってしまって反省することがあるのだけれども。<br>「全部」とか「全て」、、、という言葉を使っての指示・連絡は大体にして伝わらないというか、認識ずれが起こる根源だと思う。</p>
+<p>使う側は「全て対応した」「全てが対象」という感じで言いやすいところはあるのだけれども。</p>
+<p>そこは頭の中で理解・イメージしてることが「全て」一致してれば問題ないとは思うのだけど。</p>
+<p>なかなかそういう状況になる場面って少ないんじゃないかな、と。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自分でも使ってしまって反省することがあるのだけれども。&lt;br&gt;「全部」とか「全て」、、、という言葉を使っての指示・連絡は大体にして伝わらないというか、認識ずれが起こる根源だと思う。&lt;/p&gt;
+&lt;p&gt;使う側は「全て対応した」「全てが対象」という感じで言いやすいところはあるのだけ
+    
+    </summary>
+    
+      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
+    
+    
+      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
+    
+  </entry>
   
   <entry>
     <title>橋本さんのトーク力がすごいなと思った</title>
@@ -642,9 +669,9 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
       <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
@@ -824,43 +851,6 @@ $ ./toggl2slack start
     
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>MacBookのキーボードが調子悪め〜その後20180308</title>
-    <link href="https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html"/>
-    <id>https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html</id>
-    <published>2018-03-07T22:00:00.000Z</published>
-    <updated>2018-03-07T22:12:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Macbook のキーボードの調子が悪いって話は先日かきまして。</p>
-<blockquote>
-<p>MacBookのキーボードが調子悪め | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard.html">https://note.mersy418.com/article/blog-macbook-keyboard.html</a></p>
-</blockquote>
-<p>この時試して調子良くなったかなー、と思ったりしてますが、さっきも少しダブったりしてた。<br>うむむ。。。</p>
-<p>とはいえ、頻度は減った気がする。</p>
-<blockquote>
-<p>Tab Suspender を使ってみる | mersy note<br><a href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html">https://note.mersy418.com/article/blog-firefox-tabsuspend.html</a></p>
-</blockquote>
-<p>のおかげで Mac がそこまで重くなってないからなのかな。。。</p>
-<p>そういうのに関係はあるんだろうか？？<br>また少し様子見してみるか。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Macbook のキーボードの調子が悪いって話は先日かきまして。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;MacBookのキーボードが調子悪め | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-m
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
-    
-      <category term="MacBook" scheme="https://note.mersy418.com/tags/MacBook/"/>
     
   </entry>
   
