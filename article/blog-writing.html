@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta charset="utf-8">
+  
+  <title>ブログ書く環境・公開するところをどうするかあれこれ検討中 | mersy note</title>
+  <meta name="author" content="mersy">
+  
+  <meta name="description" content="何となくブログを書く環境をどうにかしたい、と考えている。
+Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあってそこをどうにかしたいな、、、と。ファイル名を日">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="ブログ書く環境・公開するところをどうするかあれこれ検討中"/>
+  <meta property="og:site_name" content="mersy note"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="mersy note" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRMD4G');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">mersy note</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="//">Home</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/atom.xml">RSS</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-04-25T06:00:00.000Z"><a href="/article/blog-writing.html">2018-04-25</a></time>
+      
+      
+  
+    <h1 class="title">ブログ書く環境・公開するところをどうするかあれこれ検討中</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>何となくブログを書く環境をどうにかしたい、と考えている。</p>
+<p>Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。<br>ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあってそこをどうにかしたいな、、、と。<br>ファイル名を日本語にしとけばいいんだろうけど。</p>
+<p>何日もトライエラーして成果ゼロ・・・・</p>
+<h2 id="要件"><a href="#要件" class="headerlink" title="要件"></a>要件</h2><ul>
+<li>Markdown で書く</li>
+<li>mdファイルとして持っておける</li>
+<li>画像類も特定のフォルダにまとめて登録しておける</li>
+</ul>
+<p>ってのが最低限のラインで、コンテンツのデータは別物として管理しておきたい、というところがある。<br>後々の持ち運びしやすさを考えて。。。</p>
+<p>これに</p>
+<ul>
+<li>移行のことを考えると frontmatter の形式は維持しておきたい</li>
+<li>GUI っぽい画面で下書き一覧のタイトルが見れる<ul>
+<li>ファイル名だけだと何を書こうとしてたかがすぐわからない</li>
+</ul>
+</li>
+<li>そのGUIから編集・更新できたら良い</li>
+<li>編集更新したデータは手元のmdをアップデートしたい</li>
+<li>できればサーバ管理とかしたくない</li>
+</ul>
+<p>という感じで考えている。</p>
+<hr>
+<p>なんか開発すればいいんだろうなぁ、という気はするのだけれども。。。</p>
+<p>色々調べてて出てきた案とか諸々</p>
+<ul>
+<li>ulyssesなどのエディタとmedium, WPとか</li>
+<li>はてなブログとblogsync</li>
+<li>Gravのgitsyncプラグイン</li>
+<li>Static Site Generator のオンラインサービスっぽいもの<ul>
+<li>forestry（Hugo&amp;Jekyll） HUGOで試した</li>
+<li>siteleaf（Jekyll）</li>
+</ul>
+</li>
+<li>Netlify CMS</li>
+</ul>
+<hr>
+<h2 id="ulyssesなどのエディタとmediumとか"><a href="#ulyssesなどのエディタとmediumとか" class="headerlink" title="ulyssesなどのエディタとmediumとか"></a>ulyssesなどのエディタとmediumとか</h2><p>エディタからの一方通行でmedium上での編集を持ってこれなそう。</p>
+<hr>
+<h2 id="はてなブログとblogsync"><a href="#はてなブログとblogsync" class="headerlink" title="はてなブログとblogsync"></a>はてなブログとblogsync</h2><p>なんかこけた。<br>調べてたらAtomの拡張に似たようなのがあるっぽいので後で試してみる。<br>だいぶ書き方変わりそうだけど。</p>
+<hr>
+<h2 id="Gravのgitsyncプラグイン"><a href="#Gravのgitsyncプラグイン" class="headerlink" title="Gravのgitsyncプラグイン"></a>Gravのgitsyncプラグイン</h2><p>Gravのデータの持ち方がちょっと合わなかった。<br>てか先に調べとけばわかった話。</p>
+<hr>
+<h2 id="forestry"><a href="#forestry" class="headerlink" title="forestry"></a>forestry</h2><p>ローカルのhugoからgithub経由で同期はできてるっぽい。<br>が、なんかトップページとかのbuildがうまく動いていない。<br>feedのxmlは問題なさそうだからなぁ。。。<br>そこが解決できるとこれがなかなかいい線いってると思うんだけどな。。。</p>
+<hr>
+<h2 id="siteleaf"><a href="#siteleaf" class="headerlink" title="siteleaf"></a>siteleaf</h2><p>siteleaf 上でまずjekyllのサイトを作ってそれをgithub経由で引っ張ってくる、という感じでやったのだけど、ローカルでエラーが出てうまくいかない。。。</p>
+<p>次やるならまずローカルでjekyllのを立ち上げてsiteleafに取り込むというのがいいんだろうか。。。<br>jekyllとhexoのファイル名ルールが違うので移行するとなるとその辺直さないとなので少々面倒。。。</p>
+<hr>
+<h2 id="Netlify-CMS"><a href="#Netlify-CMS" class="headerlink" title="Netlify CMS"></a>Netlify CMS</h2><p>なんかローカルからあげる時とかの動作がちょっときになる。<br>やりたいことは大体やれてる気がしないでもない。<br>workflowっぽいのを入れれば下書き問題もクリアできてるみたいなところはある。</p>
+<hr>
+<h2 id="試してない"><a href="#試してない" class="headerlink" title="試してない"></a>試してない</h2><ul>
+<li>hexo admin<ul>
+<li>なんかscreenshotを見る限りはやりたいことができなさそう</li>
+<li>若干ダサい</li>
+</ul>
+</li>
+<li>hatena-blog-and-fotolife<ul>
+<li><a href="https://atom.io/packages/hatena-blog-and-fotolife" target="_blank" rel="external">https://atom.io/packages/hatena-blog-and-fotolife</a></li>
+<li>なんか良さそう。どうだろう。</li>
+<li>書き方が変わるのが少々気になる</li>
+</ul>
+</li>
+<li>WordPressのgitsyncっぽいプラグイン<ul>
+<li>WPを動かしとくのがちょっとな。</li>
+<li>staticにしてどうこうやれるのかな。調べてみる。</li>
+</ul>
+</li>
+<li>MarsEdit, するぷろZとかのブログ用エディタ<ul>
+<li>昔使ってたけど、、、</li>
+<li>mdファイルとしてデータを持っておけないか？連携先からダウンロードする、とかでもいいのかもしれない？？</li>
+</ul>
+</li>
+<li>mdとassetをgithub経由でMTとDataAPI連携する</li>
+<li>mdとassetをgithub経由にしつつflexibleSearchとmdのparserでサイトっぽくする</li>
+<li>contentfulとかと連携する<ul>
+<li>データはcontentfulに持たせておいて、そこからデータを取り出すだけのSPA的なものを作ればいける？</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="なんか他に見つけたものとか"><a href="#なんか他に見つけたものとか" class="headerlink" title="なんか他に見つけたものとか"></a>なんか他に見つけたものとか</h2><ul>
+<li>Prose<ul>
+<li><a href="http://prose.io/" target="_blank" rel="external">http://prose.io/</a></li>
+<li>github上のmdファイルをオンラインで編集できるっぽい</li>
+<li>タイトルとかはないみたい？だからかもう少し</li>
+<li>オンラインからpublishはできるかも</li>
+</ul>
+</li>
+<li>medium-upload<ul>
+<li><a href="https://atom.io/packages/medium-upload" target="_blank" rel="external">https://atom.io/packages/medium-upload</a></li>
+<li>良さそうだけど多分ファイル名をタイトルに使うっぽいのできついかもな。</li>
+<li>Mediumで編集したものは引っ張ってこれないんだろな。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="サーバ管理"><a href="#サーバ管理" class="headerlink" title="サーバ管理"></a>サーバ管理</h2><p>Grav とか試す時点でサーバ用意しないとなので、管理しない方法は諦める方向。。。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Blog/">Blog</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/blog/">blog</a>, <a href="/tags/editor/">editor</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:note.mersy418.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
+  
+    <li><a href="/categories/Book/">Book</a><small>9</small></li>
+  
+    <li><a href="/categories/CMS/">CMS</a><small>2</small></li>
+  
+    <li><a href="/categories/CasperJS/">CasperJS</a><small>1</small></li>
+  
+    <li><a href="/categories/Craft-CMS/">Craft CMS</a><small>4</small></li>
+  
+    <li><a href="/categories/Dash/">Dash</a><small>1</small></li>
+  
+    <li><a href="/categories/Direction/">Direction</a><small>3</small></li>
+  
+    <li><a href="/categories/Drupal/">Drupal</a><small>2</small></li>
+  
+    <li><a href="/categories/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/Homebrew/">Homebrew</a><small>1</small></li>
+  
+    <li><a href="/categories/Jekyll/">Jekyll</a><small>2</small></li>
+  
+    <li><a href="/categories/Jenkins/">Jenkins</a><small>1</small></li>
+  
+    <li><a href="/categories/MovableType/">MovableType</a><small>11</small></li>
+  
+    <li><a href="/categories/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/categories/SublimeText/">SublimeText</a><small>2</small></li>
+  
+    <li><a href="/categories/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/categories/VMWare/">VMWare</a><small>1</small></li>
+  
+    <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
+  
+    <li><a href="/categories/Work/">Work</a><small>5</small></li>
+  
+    <li><a href="/categories/blog/">blog</a><small>7</small></li>
+  
+    <li><a href="/categories/boxen/">boxen</a><small>1</small></li>
+  
+    <li><a href="/categories/chef/">chef</a><small>1</small></li>
+  
+    <li><a href="/categories/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/categories/memo/">memo</a><small>1</small></li>
+  
+    <li><a href="/categories/middleman/">middleman</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+  
+    <li><a href="/tags/AWS/">AWS</a><small>4</small></li>
+  
+    <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
+  
+    <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
+  
+    <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
+  
+    <li><a href="/tags/Business/">Business</a><small>1</small></li>
+  
+    <li><a href="/tags/CMS/">CMS</a><small>0</small></li>
+  
+    <li><a href="/tags/CSS/">CSS</a><small>1</small></li>
+  
+    <li><a href="/tags/Cache/">Cache</a><small>1</small></li>
+  
+    <li><a href="/tags/CentOS/">CentOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>2</small></li>
+  
+    <li><a href="/tags/CloudFront/">CloudFront</a><small>1</small></li>
+  
+    <li><a href="/tags/Communication/">Communication</a><small>1</small></li>
+  
+    <li><a href="/tags/Company/">Company</a><small>1</small></li>
+  
+    <li><a href="/tags/Craft-CMS/">Craft CMS</a><small>2</small></li>
+  
+    <li><a href="/tags/DataAPI/">DataAPI</a><small>4</small></li>
+  
+    <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/Direction/">Direction</a><small>4</small></li>
+  
+    <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
+  
+    <li><a href="/tags/Dropbox-Paper/">Dropbox Paper</a><small>0</small></li>
+  
+    <li><a href="/tags/Drupal/">Drupal</a><small>1</small></li>
+  
+    <li><a href="/tags/Editor/">Editor</a><small>1</small></li>
+  
+    <li><a href="/tags/Excel/">Excel</a><small>1</small></li>
+  
+    <li><a href="/tags/Firefox/">Firefox</a><small>2</small></li>
+  
+    <li><a href="/tags/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
+  
+    <li><a href="/tags/HTML/">HTML</a><small>1</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>0</small></li>
+  
+    <li><a href="/tags/Jekyll/">Jekyll</a><small>1</small></li>
+  
+    <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
+  
+    <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
+  
+    <li><a href="/tags/MacBook/">MacBook</a><small>2</small></li>
+  
+    <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>2</small></li>
+  
+    <li><a href="/tags/Meeting/">Meeting</a><small>2</small></li>
+  
+    <li><a href="/tags/Movable-Type/">Movable Type</a><small>1</small></li>
+  
+    <li><a href="/tags/MovableType/">MovableType</a><small>7</small></li>
+  
+    <li><a href="/tags/Netlify/">Netlify</a><small>1</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>0</small></li>
+  
+    <li><a href="/tags/Pandoc/">Pandoc</a><small>1</small></li>
+  
+    <li><a href="/tags/Personal/">Personal</a><small>1</small></li>
+  
+    <li><a href="/tags/Photo/">Photo</a><small>1</small></li>
+  
+    <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
+  
+    <li><a href="/tags/Project-Management/">Project Management</a><small>1</small></li>
+  
+    <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
+  
+    <li><a href="/tags/Redmine/">Redmine</a><small>2</small></li>
+  
+    <li><a href="/tags/Remote/">Remote</a><small>2</small></li>
+  
+    <li><a href="/tags/Route53/">Route53</a><small>2</small></li>
+  
+    <li><a href="/tags/S3/">S3</a><small>1</small></li>
+  
+    <li><a href="/tags/SSL/">SSL</a><small>1</small></li>
+  
+    <li><a href="/tags/Safari/">Safari</a><small>2</small></li>
+  
+    <li><a href="/tags/Sketch/">Sketch</a><small>2</small></li>
+  
+    <li><a href="/tags/Slack/">Slack</a><small>2</small></li>
+  
+    <li><a href="/tags/Styleguide/">Styleguide</a><small>1</small></li>
+  
+    <li><a href="/tags/Task/">Task</a><small>1</small></li>
+  
+    <li><a href="/tags/Team/">Team</a><small>3</small></li>
+  
+    <li><a href="/tags/TickTick/">TickTick</a><small>1</small></li>
+  
+    <li><a href="/tags/Todo/">Todo</a><small>2</small></li>
+  
+    <li><a href="/tags/Toggl/">Toggl</a><small>1</small></li>
+  
+    <li><a href="/tags/Twitter/">Twitter</a><small>0</small></li>
+  
+    <li><a href="/tags/Vagrant/">Vagrant</a><small>1</small></li>
+  
+    <li><a href="/tags/Vue-js/">Vue.js</a><small>0</small></li>
+  
+    <li><a href="/tags/Webservice/">Webservice</a><small>1</small></li>
+  
+    <li><a href="/tags/Website/">Website</a><small>1</small></li>
+  
+    <li><a href="/tags/Work/">Work</a><small>0</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/browser/">browser</a><small>1</small></li>
+  
+    <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
+  
+    <li><a href="/tags/ePub/">ePub</a><small>1</small></li>
+  
+    <li><a href="/tags/editor/">editor</a><small>1</small></li>
+  
+    <li><a href="/tags/flexibleSearch/">flexibleSearch</a><small>1</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/githubpages/">githubpages</a><small>1</small></li>
+  
+    <li><a href="/tags/iPad/">iPad</a><small>1</small></li>
+  
+    <li><a href="/tags/iPhone/">iPhone</a><small>1</small></li>
+  
+    <li><a href="/tags/ipad/">ipad</a><small>1</small></li>
+  
+    <li><a href="/tags/lifehack/">lifehack</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/meeting/">meeting</a><small>0</small></li>
+  
+    <li><a href="/tags/project-management/">project management</a><small>1</small></li>
+  
+    <li><a href="/tags/remote/">remote</a><small>1</small></li>
+  
+    <li><a href="/tags/scrapbox/">scrapbox</a><small>0</small></li>
+  
+    <li><a href="/tags/website/">website</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+    <div class="widget">
+        <h3 class="title">Monthly Archives</h3>
+        <ul class="entry">
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        </ul>
+    </div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 mersy
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'mersymemogithubpage';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

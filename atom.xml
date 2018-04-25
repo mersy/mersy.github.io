@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-16T22:10:09.000Z</updated>
+  <updated>2018-04-25T06:47:13.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,127 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ブログ書く環境・公開するところをどうするかあれこれ検討中</title>
+    <link href="https://note.mersy418.com/article/blog-writing.html"/>
+    <id>https://note.mersy418.com/article/blog-writing.html</id>
+    <published>2018-04-25T06:00:00.000Z</published>
+    <updated>2018-04-25T06:47:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>何となくブログを書く環境をどうにかしたい、と考えている。</p>
+<p>Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。<br>ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあってそこをどうにかしたいな、、、と。<br>ファイル名を日本語にしとけばいいんだろうけど。</p>
+<p>何日もトライエラーして成果ゼロ・・・・</p>
+<h2 id="要件"><a href="#要件" class="headerlink" title="要件"></a>要件</h2><ul>
+<li>Markdown で書く</li>
+<li>mdファイルとして持っておける</li>
+<li>画像類も特定のフォルダにまとめて登録しておける</li>
+</ul>
+<p>ってのが最低限のラインで、コンテンツのデータは別物として管理しておきたい、というところがある。<br>後々の持ち運びしやすさを考えて。。。</p>
+<p>これに</p>
+<ul>
+<li>移行のことを考えると frontmatter の形式は維持しておきたい</li>
+<li>GUI っぽい画面で下書き一覧のタイトルが見れる<ul>
+<li>ファイル名だけだと何を書こうとしてたかがすぐわからない</li>
+</ul>
+</li>
+<li>そのGUIから編集・更新できたら良い</li>
+<li>編集更新したデータは手元のmdをアップデートしたい</li>
+<li>できればサーバ管理とかしたくない</li>
+</ul>
+<p>という感じで考えている。</p>
+<hr>
+<p>なんか開発すればいいんだろうなぁ、という気はするのだけれども。。。</p>
+<p>色々調べてて出てきた案とか諸々</p>
+<ul>
+<li>ulyssesなどのエディタとmedium, WPとか</li>
+<li>はてなブログとblogsync</li>
+<li>Gravのgitsyncプラグイン</li>
+<li>Static Site Generator のオンラインサービスっぽいもの<ul>
+<li>forestry（Hugo&amp;Jekyll） HUGOで試した</li>
+<li>siteleaf（Jekyll）</li>
+</ul>
+</li>
+<li>Netlify CMS</li>
+</ul>
+<hr>
+<h2 id="ulyssesなどのエディタとmediumとか"><a href="#ulyssesなどのエディタとmediumとか" class="headerlink" title="ulyssesなどのエディタとmediumとか"></a>ulyssesなどのエディタとmediumとか</h2><p>エディタからの一方通行でmedium上での編集を持ってこれなそう。</p>
+<hr>
+<h2 id="はてなブログとblogsync"><a href="#はてなブログとblogsync" class="headerlink" title="はてなブログとblogsync"></a>はてなブログとblogsync</h2><p>なんかこけた。<br>調べてたらAtomの拡張に似たようなのがあるっぽいので後で試してみる。<br>だいぶ書き方変わりそうだけど。</p>
+<hr>
+<h2 id="Gravのgitsyncプラグイン"><a href="#Gravのgitsyncプラグイン" class="headerlink" title="Gravのgitsyncプラグイン"></a>Gravのgitsyncプラグイン</h2><p>Gravのデータの持ち方がちょっと合わなかった。<br>てか先に調べとけばわかった話。</p>
+<hr>
+<h2 id="forestry"><a href="#forestry" class="headerlink" title="forestry"></a>forestry</h2><p>ローカルのhugoからgithub経由で同期はできてるっぽい。<br>が、なんかトップページとかのbuildがうまく動いていない。<br>feedのxmlは問題なさそうだからなぁ。。。<br>そこが解決できるとこれがなかなかいい線いってると思うんだけどな。。。</p>
+<hr>
+<h2 id="siteleaf"><a href="#siteleaf" class="headerlink" title="siteleaf"></a>siteleaf</h2><p>siteleaf 上でまずjekyllのサイトを作ってそれをgithub経由で引っ張ってくる、という感じでやったのだけど、ローカルでエラーが出てうまくいかない。。。</p>
+<p>次やるならまずローカルでjekyllのを立ち上げてsiteleafに取り込むというのがいいんだろうか。。。<br>jekyllとhexoのファイル名ルールが違うので移行するとなるとその辺直さないとなので少々面倒。。。</p>
+<hr>
+<h2 id="Netlify-CMS"><a href="#Netlify-CMS" class="headerlink" title="Netlify CMS"></a>Netlify CMS</h2><p>なんかローカルからあげる時とかの動作がちょっときになる。<br>やりたいことは大体やれてる気がしないでもない。<br>workflowっぽいのを入れれば下書き問題もクリアできてるみたいなところはある。</p>
+<hr>
+<h2 id="試してない"><a href="#試してない" class="headerlink" title="試してない"></a>試してない</h2><ul>
+<li>hexo admin<ul>
+<li>なんかscreenshotを見る限りはやりたいことができなさそう</li>
+<li>若干ダサい</li>
+</ul>
+</li>
+<li>hatena-blog-and-fotolife<ul>
+<li><a href="https://atom.io/packages/hatena-blog-and-fotolife" target="_blank" rel="external">https://atom.io/packages/hatena-blog-and-fotolife</a></li>
+<li>なんか良さそう。どうだろう。</li>
+<li>書き方が変わるのが少々気になる</li>
+</ul>
+</li>
+<li>WordPressのgitsyncっぽいプラグイン<ul>
+<li>WPを動かしとくのがちょっとな。</li>
+<li>staticにしてどうこうやれるのかな。調べてみる。</li>
+</ul>
+</li>
+<li>MarsEdit, するぷろZとかのブログ用エディタ<ul>
+<li>昔使ってたけど、、、</li>
+<li>mdファイルとしてデータを持っておけないか？連携先からダウンロードする、とかでもいいのかもしれない？？</li>
+</ul>
+</li>
+<li>mdとassetをgithub経由でMTとDataAPI連携する</li>
+<li>mdとassetをgithub経由にしつつflexibleSearchとmdのparserでサイトっぽくする</li>
+<li>contentfulとかと連携する<ul>
+<li>データはcontentfulに持たせておいて、そこからデータを取り出すだけのSPA的なものを作ればいける？</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="なんか他に見つけたものとか"><a href="#なんか他に見つけたものとか" class="headerlink" title="なんか他に見つけたものとか"></a>なんか他に見つけたものとか</h2><ul>
+<li>Prose<ul>
+<li><a href="http://prose.io/" target="_blank" rel="external">http://prose.io/</a></li>
+<li>github上のmdファイルをオンラインで編集できるっぽい</li>
+<li>タイトルとかはないみたい？だからかもう少し</li>
+<li>オンラインからpublishはできるかも</li>
+</ul>
+</li>
+<li>medium-upload<ul>
+<li><a href="https://atom.io/packages/medium-upload" target="_blank" rel="external">https://atom.io/packages/medium-upload</a></li>
+<li>良さそうだけど多分ファイル名をタイトルに使うっぽいのできついかもな。</li>
+<li>Mediumで編集したものは引っ張ってこれないんだろな。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="サーバ管理"><a href="#サーバ管理" class="headerlink" title="サーバ管理"></a>サーバ管理</h2><p>Grav とか試す時点でサーバ用意しないとなので、管理しない方法は諦める方向。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;何となくブログを書く環境をどうにかしたい、と考えている。&lt;/p&gt;
+&lt;p&gt;Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。&lt;br&gt;ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあっ
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="blog" scheme="https://note.mersy418.com/tags/blog/"/>
+    
+      <category term="editor" scheme="https://note.mersy418.com/tags/editor/"/>
+    
+  </entry>
   
   <entry>
     <title>全部という言葉の曖昧さ</title>
@@ -39,6 +160,42 @@
     
     
       <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>チケット管理のルール、チケットの掃除屋さん</title>
+    <link href="https://note.mersy418.com/article/blog-issue-rule.html"/>
+    <id>https://note.mersy418.com/article/blog-issue-rule.html</id>
+    <published>2018-04-15T22:00:00.000Z</published>
+    <updated>2018-04-16T22:13:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>cremaさんがセミナー？で話されてたスライドを拝見した。</p>
+<blockquote>
+<p>フリーランスが出会う“現場のタスク管理法あれこれ”<br><a href="https://www.slideshare.net/cremacrema/ss-93090340" target="_blank" rel="external">https://www.slideshare.net/cremacrema/ss-93090340</a></p>
+</blockquote>
+<p>やっぱチケットのクローズルールとか整理とかしないとだよなー。<br>やろうやろうやろう。。。。</p>
+<p>お客さんもどういう風に使うのかある程度指針があったほうがいいんだろうしな。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;cremaさんがセミナー？で話されてたスライドを拝見した。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;フリーランスが出会う“現場のタスク管理法あれこれ”&lt;br&gt;&lt;a href=&quot;https://www.slideshare.net/cremacrema/ss-93090340
+    
+    </summary>
+    
+      <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
+    
+    
+      <category term="Backlog" scheme="https://note.mersy418.com/tags/Backlog/"/>
+    
+      <category term="Project Management" scheme="https://note.mersy418.com/tags/Project-Management/"/>
+    
+      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
+    
+      <category term="Redmine" scheme="https://note.mersy418.com/tags/Redmine/"/>
     
   </entry>
   
@@ -786,71 +943,6 @@ $ ./toggl2slack start
       <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
     
       <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>コンビニでスマホアプリからプリントしてみた</title>
-    <link href="https://note.mersy418.com/article/blog-print-at-convenience.html"/>
-    <id>https://note.mersy418.com/article/blog-print-at-convenience.html</id>
-    <published>2018-03-15T20:00:00.000Z</published>
-    <updated>2018-03-15T21:54:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>引っ越したらルータとプリンタが遠くなったせいか、プリンタがうまいこと繋がらないのでコンビニプリントを試してみた。<br>以前も一度オンライン経由のを試したことがある気がするけど。今回はスマホアプリ経由で試してみた。</p>
-<p>うちの近所は ファミマなので、それ用のアプリをインストール。</p>
-<blockquote>
-<p>コンビニでPrintSmash(プリントスマッシュ)/SHARP<br><a href="http://www.sharp.co.jp/multicopy/prsm/" target="_blank" rel="external">http://www.sharp.co.jp/multicopy/prsm/</a></p>
-</blockquote>
-<p>メールに添付されていたPDFをアプリに送る。請求書は忘れる前に払わないと。。。</p>
-<p>コンビニに着いたらコピー機が指定しているwifiに接続する。<br>ここが一番時間かかったくらいで。</p>
-<p>GmailのアプリからPDFファイルを PrintSmash へ送る。</p>
-<p><img src="../asset/20180315-2100.png" alt=""></p>
-<p>プリント。<br>終了。白黒で10円。</p>
-<p>こりゃ楽だな。。。</p>
-<p>あとは家から外へ出るめんどくささを乗り越えられれば、、、プリンタは捨ててもいいのかも？？しれない。今日はたまたま外出からの帰りだったし。<br>というか繋がらないなら、一旦はプリンタはお別れかな。。。<br>いやー、でも月末処理がめんどいんだよなー。。。悩ましい。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;引っ越したらルータとプリンタが遠くなったせいか、プリンタがうまいこと繋がらないのでコンビニプリントを試してみた。&lt;br&gt;以前も一度オンライン経由のを試したことがある気がするけど。今回はスマホアプリ経由で試してみた。&lt;/p&gt;
-&lt;p&gt;うちの近所は ファミマなので、それ用のアプリ
-    
-    </summary>
-    
-      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>お持ち帰りで一枚無料になるドミノピザ</title>
-    <link href="https://note.mersy418.com/article/blog-domino-pizza.html"/>
-    <id>https://note.mersy418.com/article/blog-domino-pizza.html</id>
-    <published>2018-03-11T20:00:00.000Z</published>
-    <updated>2018-03-11T21:34:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ドミノピザの店舗受け取り、もう一枚半額というのを使ってみた。</p>
-<blockquote>
-<p>知らないアナタは損してるかも？ お持ち帰りで２つのスペシャルオファー！｜ドミノ・ピザ<br><a href="https://pizza.dominos.jp/ja/takeout/" target="_blank" rel="external">https://pizza.dominos.jp/ja/takeout/</a></p>
-</blockquote>
-<p>近所にドミノピザがあるのは知ってたけど、初めて使ってみた。</p>
-<blockquote>
-<p>ご来店日時　2018年03月10日 19時17分<br>受付日時　　2018年03月10日 19時05分</p>
-</blockquote>
-<p>ネットで注文して、準備して、取りに行くとできてる、くらいの勢い。<br>最初何時に取りに行ったらいいのかわからず家を出たんだけど、メール見たら受け取り時間も書いてあってこれは安心。</p>
-<p>これで、1枚はただとか大丈夫なのか心配にはなるけど。<br>ピザには限定されるけど、外食しにいくより全然いいかも。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ドミノピザの店舗受け取り、もう一枚半額というのを使ってみた。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;知らないアナタは損してるかも？ お持ち帰りで２つのスペシャルオファー！｜ドミノ・ピザ&lt;br&gt;&lt;a href=&quot;https://pizza.dominos.jp/ja/tak
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
     
   </entry>
   

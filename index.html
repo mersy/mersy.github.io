@@ -61,6 +61,134 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-04-25T06:00:00.000Z"><a href="/article/blog-writing.html">2018-04-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>何となくブログを書く環境をどうにかしたい、と考えている。</p>
+<p>Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。<br>ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあってそこをどうにかしたいな、、、と。<br>ファイル名を日本語にしとけばいいんだろうけど。</p>
+<p>何日もトライエラーして成果ゼロ・・・・</p>
+<h2 id="要件"><a href="#要件" class="headerlink" title="要件"></a>要件</h2><ul>
+<li>Markdown で書く</li>
+<li>mdファイルとして持っておける</li>
+<li>画像類も特定のフォルダにまとめて登録しておける</li>
+</ul>
+<p>ってのが最低限のラインで、コンテンツのデータは別物として管理しておきたい、というところがある。<br>後々の持ち運びしやすさを考えて。。。</p>
+<p>これに</p>
+<ul>
+<li>移行のことを考えると frontmatter の形式は維持しておきたい</li>
+<li>GUI っぽい画面で下書き一覧のタイトルが見れる<ul>
+<li>ファイル名だけだと何を書こうとしてたかがすぐわからない</li>
+</ul>
+</li>
+<li>そのGUIから編集・更新できたら良い</li>
+<li>編集更新したデータは手元のmdをアップデートしたい</li>
+<li>できればサーバ管理とかしたくない</li>
+</ul>
+<p>という感じで考えている。</p>
+<hr>
+<p>なんか開発すればいいんだろうなぁ、という気はするのだけれども。。。</p>
+<p>色々調べてて出てきた案とか諸々</p>
+<ul>
+<li>ulyssesなどのエディタとmedium, WPとか</li>
+<li>はてなブログとblogsync</li>
+<li>Gravのgitsyncプラグイン</li>
+<li>Static Site Generator のオンラインサービスっぽいもの<ul>
+<li>forestry（Hugo&amp;Jekyll） HUGOで試した</li>
+<li>siteleaf（Jekyll）</li>
+</ul>
+</li>
+<li>Netlify CMS</li>
+</ul>
+<hr>
+<h2 id="ulyssesなどのエディタとmediumとか"><a href="#ulyssesなどのエディタとmediumとか" class="headerlink" title="ulyssesなどのエディタとmediumとか"></a>ulyssesなどのエディタとmediumとか</h2><p>エディタからの一方通行でmedium上での編集を持ってこれなそう。</p>
+<hr>
+<h2 id="はてなブログとblogsync"><a href="#はてなブログとblogsync" class="headerlink" title="はてなブログとblogsync"></a>はてなブログとblogsync</h2><p>なんかこけた。<br>調べてたらAtomの拡張に似たようなのがあるっぽいので後で試してみる。<br>だいぶ書き方変わりそうだけど。</p>
+<hr>
+<h2 id="Gravのgitsyncプラグイン"><a href="#Gravのgitsyncプラグイン" class="headerlink" title="Gravのgitsyncプラグイン"></a>Gravのgitsyncプラグイン</h2><p>Gravのデータの持ち方がちょっと合わなかった。<br>てか先に調べとけばわかった話。</p>
+<hr>
+<h2 id="forestry"><a href="#forestry" class="headerlink" title="forestry"></a>forestry</h2><p>ローカルのhugoからgithub経由で同期はできてるっぽい。<br>が、なんかトップページとかのbuildがうまく動いていない。<br>feedのxmlは問題なさそうだからなぁ。。。<br>そこが解決できるとこれがなかなかいい線いってると思うんだけどな。。。</p>
+<hr>
+<h2 id="siteleaf"><a href="#siteleaf" class="headerlink" title="siteleaf"></a>siteleaf</h2><p>siteleaf 上でまずjekyllのサイトを作ってそれをgithub経由で引っ張ってくる、という感じでやったのだけど、ローカルでエラーが出てうまくいかない。。。</p>
+<p>次やるならまずローカルでjekyllのを立ち上げてsiteleafに取り込むというのがいいんだろうか。。。<br>jekyllとhexoのファイル名ルールが違うので移行するとなるとその辺直さないとなので少々面倒。。。</p>
+<hr>
+<h2 id="Netlify-CMS"><a href="#Netlify-CMS" class="headerlink" title="Netlify CMS"></a>Netlify CMS</h2><p>なんかローカルからあげる時とかの動作がちょっときになる。<br>やりたいことは大体やれてる気がしないでもない。<br>workflowっぽいのを入れれば下書き問題もクリアできてるみたいなところはある。</p>
+<hr>
+<h2 id="試してない"><a href="#試してない" class="headerlink" title="試してない"></a>試してない</h2><ul>
+<li>hexo admin<ul>
+<li>なんかscreenshotを見る限りはやりたいことができなさそう</li>
+<li>若干ダサい</li>
+</ul>
+</li>
+<li>hatena-blog-and-fotolife<ul>
+<li><a href="https://atom.io/packages/hatena-blog-and-fotolife" target="_blank" rel="external">https://atom.io/packages/hatena-blog-and-fotolife</a></li>
+<li>なんか良さそう。どうだろう。</li>
+<li>書き方が変わるのが少々気になる</li>
+</ul>
+</li>
+<li>WordPressのgitsyncっぽいプラグイン<ul>
+<li>WPを動かしとくのがちょっとな。</li>
+<li>staticにしてどうこうやれるのかな。調べてみる。</li>
+</ul>
+</li>
+<li>MarsEdit, するぷろZとかのブログ用エディタ<ul>
+<li>昔使ってたけど、、、</li>
+<li>mdファイルとしてデータを持っておけないか？連携先からダウンロードする、とかでもいいのかもしれない？？</li>
+</ul>
+</li>
+<li>mdとassetをgithub経由でMTとDataAPI連携する</li>
+<li>mdとassetをgithub経由にしつつflexibleSearchとmdのparserでサイトっぽくする</li>
+<li>contentfulとかと連携する<ul>
+<li>データはcontentfulに持たせておいて、そこからデータを取り出すだけのSPA的なものを作ればいける？</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="なんか他に見つけたものとか"><a href="#なんか他に見つけたものとか" class="headerlink" title="なんか他に見つけたものとか"></a>なんか他に見つけたものとか</h2><ul>
+<li>Prose<ul>
+<li><a href="http://prose.io/" target="_blank" rel="external">http://prose.io/</a></li>
+<li>github上のmdファイルをオンラインで編集できるっぽい</li>
+<li>タイトルとかはないみたい？だからかもう少し</li>
+<li>オンラインからpublishはできるかも</li>
+</ul>
+</li>
+<li>medium-upload<ul>
+<li><a href="https://atom.io/packages/medium-upload" target="_blank" rel="external">https://atom.io/packages/medium-upload</a></li>
+<li>良さそうだけど多分ファイル名をタイトルに使うっぽいのできついかもな。</li>
+<li>Mediumで編集したものは引っ張ってこれないんだろな。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="サーバ管理"><a href="#サーバ管理" class="headerlink" title="サーバ管理"></a>サーバ管理</h2><p>Grav とか試す時点でサーバ用意しないとなので、管理しない方法は諦める方向。。。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-04-16T22:00:00.000Z"><a href="/article/blog-whats-all.html">2018-04-17</a></time>
       
       
@@ -75,6 +203,44 @@
 <p>使う側は「全て対応した」「全てが対象」という感じで言いやすいところはあるのだけれども。</p>
 <p>そこは頭の中で理解・イメージしてることが「全て」一致してれば問題ないとは思うのだけど。</p>
 <p>なかなかそういう状況になる場面って少ないんじゃないかな、と。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-04-15T22:00:00.000Z"><a href="/article/blog-issue-rule.html">2018-04-16</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>cremaさんがセミナー？で話されてたスライドを拝見した。</p>
+<blockquote>
+<p>フリーランスが出会う“現場のタスク管理法あれこれ”<br><a href="https://www.slideshare.net/cremacrema/ss-93090340" target="_blank" rel="external">https://www.slideshare.net/cremacrema/ss-93090340</a></p>
+</blockquote>
+<p>やっぱチケットのクローズルールとか整理とかしないとだよなー。<br>やろうやろうやろう。。。。</p>
+<p>お客さんもどういう風に使うのかある程度指針があったほうがいいんだろうしな。</p>
 
       
     </div>
@@ -459,124 +625,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-03-24T22:00:00.000Z"><a href="/article/blog-tips-online-tvmeeting.html">2018-03-25</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/blog-tips-online-tvmeeting.html">テレビ会議に有効なTipsについての記事を読んだ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>オンラインの音声会議をストレスなくやりたい | mersy note<br><a href="https://note.mersy418.com/article/blog-online-meeting-sound.html">https://note.mersy418.com/article/blog-online-meeting-sound.html</a></p>
-</blockquote>
-<p>昨日こんなことを書いてたら、参考になるテレビ会議のブログ記事を見つけた。</p>
-<blockquote>
-<p>テレビ会議を劇的に円滑にする簡単なノウハウ | Social Change!<br><a href="https://kuranuki.sonicgarden.jp/2018/03/tv-meeting.html" target="_blank" rel="external">https://kuranuki.sonicgarden.jp/2018/03/tv-meeting.html</a></p>
-</blockquote>
-<p>普段やるときはあまり映像まで繋いでやってないんだけど、顔が見えてる方が伝わることもあるわけだしなぁ。</p>
-<p>んで、</p>
-<blockquote>
-<p>マイク付きイヤホンを使うこと</p>
-</blockquote>
-<p>これは確かにそうだなと思うから、できる限りそういうのを各自用意してやるようにしてもいいんだろうな。<br>自分自身も直接 Mac のマイクとスピーカーだけだったので、今後は使うようにしてみようかな。</p>
-<hr>
-<blockquote>
-<p>声に出して相槌をうつこと</p>
-</blockquote>
-<p>これなんかも確かにそうで、気をつけてないと自分も相槌打つの忘れるので、意識していかないとだなー。</p>
-<p>オンラインドキュメントを共有しながらっていうのはやれてないから、そこは少しずつやるようにしていきたい気はする。<br>これはオンラインMTGだけじゃなくて、実際のMTGとかでも当てはまる話だろうから、当たり前にやれるようにトライしていきたいなぁ。</p>
-<hr>
-<blockquote>
-<p>ラジオ参加するときはフェイスをオフに</p>
-</blockquote>
-<p>耳だけ参加してる時なんかは時々あったりするな。<br>実際のMTGは全員が集まってやってるんだけど、リモートで耳だけ参加させてもらうような感じで。</p>
-<p>MTGのあとで、全部共有してもらうよりも早い場合があったりするので、参考程度に耳だけ聞いてる、みたいな。</p>
-<p>まぁ、このときは MTG してる側がそういったオンラインでの参加を想定していないので、マイクがなかったりとかでよく聞こえないことが多くてあまり参考にならなかったりすることもあるんだけどね。</p>
-<hr>
-<p>オンライン会議、ビデオの方がいいかどうかとか今度みんなに聞いてみよう。<br>テザリングとかだときついかなー？？</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-03-23T22:00:00.000Z"><a href="/article/blog-online-meeting-sound.html">2018-03-24</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/blog-online-meeting-sound.html">オンラインの音声会議をストレスなくやりたい</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>オンラインで会議をする時の音声が聞こえにくかったり、途切れたりする問題。<br>ビデオ繋ぐと重くなるだろうから、基本は音声に誰かの画面共有を共有するくらいでとりあえずはいいんだけど。</p>
-<p>顔が見えた方が色々伝わるものもあったりはしそう。</p>
-<p>マイクやスピーカーを置くことで解消することもありそう。<br>ネットの回線だったり、社内ネットワークだったり。<br>人数が複数対複数であればさらに難しさが増しそう。</p>
-<p>自分とこのネットワーク、PCとか環境がよくないのかなー、と思うこともあるくらいストレスに思うこともあったり。<br>Macが重くなってると回線とか以前にマシンが反応悪くなるからそれはそれで別な問題だろうけど。</p>
-<p>そもそも、お互いにどのようなクオリティで聞こえているか？というのがわからないだけに難しい問題な気もする。</p>
-<p>リモートでやる以上は最低限の設備は整えておかないとだなー。</p>
-<hr>
-<h2 id="使うツール"><a href="#使うツール" class="headerlink" title="使うツール"></a>使うツール</h2><p>ツールとしてはSkypeがまぁまぁいいのかな、という気はする。<br>appear.in とか slack call でもまぁいいのだけど。</p>
-<blockquote>
-<p>appear.in – one click video conversations<br><a href="https://appear.in/" target="_blank" rel="external">https://appear.in/</a></p>
-</blockquote>
-<p>slackはアプリが重いのが個人的にはきついところ。<br>appear.in は20分で一度画面共有が切れるところかな。</p>
-<hr>
-<h2 id="意外と電話がいいのか？"><a href="#意外と電話がいいのか？" class="headerlink" title="意外と電話がいいのか？"></a>意外と電話がいいのか？</h2><p>そういう意味では電話の質って高いね。嫌いだけど。。。<br>意外と音声だけなら、スマホで電話繋いでスピーカーにするとかでもいいのかもな？？電話つなぎっぱだと電話代怖いけど、カケホーダイ的なのとかでなんとか？</p>
-<blockquote>
-<p>カケホーダイプラン（スマホ／タブ） | 料金・割引 | NTTドコモ<br><a href="https://www.nttdocomo.co.jp/charge/new_plan/bill_plan/plan/kakeho/index.html" target="_blank" rel="external">https://www.nttdocomo.co.jp/charge/new_plan/bill_plan/plan/kakeho/index.html</a></p>
-</blockquote>
-<p>なんかそれもいい考えのような気もしてきたり？？</p>
-<p>電話代がきになるなら、050の番号取ってやる感じのとかで繋ぐとか？？</p>
-<blockquote>
-<p>SMARTalk（公式アプリ） | FUSION IP-Phone SMART<br><a href="https://ip-phone-smart.jp/smart/smartalk/" target="_blank" rel="external">https://ip-phone-smart.jp/smart/smartalk/</a></p>
-</blockquote>
-<p>前、NZと電話した時はそんなに問題なかった見たい。<br>こっちが外でイヤホンとマイクで話してた感じでは、ちゃんと聞こえてたらしい。</p>
-<p>なんか若干遅れてるかな、と思わなくもなかったけど。</p>
-<hr>
-<p>テキストチャットが盛り上がってはいるけど、音声会議は無くせないし、この辺はいつでも対応できるようにしておきたい。<br>お客さんともオンラインでやっても問題ないクオリティの構成とかを用意できればリモートでも安心してもらえそうな気がするなー。<br>案件だと半年とかはあるわけなので、お客さんのところに機器を貸し出して置いておくとかもできるだろうし。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -598,7 +646,7 @@
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>49</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -636,7 +684,7 @@
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>4</small></li>
+    <li><a href="/categories/Work/">Work</a><small>5</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>7</small></li>
   
@@ -667,7 +715,7 @@
   
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
-    <li><a href="/tags/Backlog/">Backlog</a><small>4</small></li>
+    <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
@@ -693,7 +741,7 @@
   
     <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
   
-    <li><a href="/tags/Direction/">Direction</a><small>3</small></li>
+    <li><a href="/tags/Direction/">Direction</a><small>4</small></li>
   
     <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
   
@@ -745,11 +793,11 @@
   
     <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
   
-    <li><a href="/tags/Project-Management/">Project Management</a><small>0</small></li>
+    <li><a href="/tags/Project-Management/">Project Management</a><small>1</small></li>
   
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
-    <li><a href="/tags/Redmine/">Redmine</a><small>1</small></li>
+    <li><a href="/tags/Redmine/">Redmine</a><small>2</small></li>
   
     <li><a href="/tags/Remote/">Remote</a><small>2</small></li>
   
@@ -789,11 +837,15 @@
   
     <li><a href="/tags/Work/">Work</a><small>0</small></li>
   
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
     <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
     <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
   
     <li><a href="/tags/ePub/">ePub</a><small>1</small></li>
+  
+    <li><a href="/tags/editor/">editor</a><small>1</small></li>
   
     <li><a href="/tags/flexibleSearch/">flexibleSearch</a><small>1</small></li>
   
@@ -831,7 +883,15 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
       </li>
     
       <li>
@@ -842,14 +902,6 @@
         <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
       </li>
     
-      <li>
-        <a href="/article/blog-macbook-keyboard-201804.html">Macbookキーボードの調子は相変わらず</a>
-      </li>
-    
-      <li>
-        <a href="/article/blog-gtd-ticktick.html">個人的なタスク管理にTickTickを使い始めた。</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -858,7 +910,7 @@
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

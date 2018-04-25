@@ -61,6 +61,100 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-12-09T11:44:20.000Z"><a href="/article/styleguide.html">2017-12-09</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/styleguide.html">スタイルガイドの汎用化</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>田村さんがスタイルガイドのベース？を公開されていた。すばらしい。</p>
+<blockquote>
+<p>Japan Web Production Standards<br><a href="http://standards.masizime.com/" target="_blank" rel="external">http://standards.masizime.com/</a></p>
+</blockquote>
+<p>各作業者によって違いはあるにせよ、この辺って関係各所はそれをベースにすすめた方が長い目で見るとメリットがおおきいんじゃなかろうか、というきがする。</p>
+<p>とりあえず乗っかっておきつつ、気になるところをコメントなりしあっていいものにするのがよさそうな流れなきがするのだけれども。</p>
+<p>それは、最近CSSとか書いてない側からの戯れ言かもしれない。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-26T07:06:41.000Z"><a href="/article/change-dns-email.html">2017-11-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/change-dns-email.html">DNSを変更するにあたり独自ドメイン宛てのメールに対して自動で変更通知する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ドメイン管理を valueドメインから Route53 に変更する。<br>それにあたってのひとまずメモメモ。</p>
+<p>変更にあたり、valueドメインの設定で独自ドメイン宛てのメール（アドレス1つだけ）をgmailに転送していたので、これをどうにかする。</p>
+<p>今後この独自ドメインのメールアドレスは使わずGmailのアドレスに一本化する。<br>なので、独自ドメインにきたメールに対してはGmailのアドレスを通知する感じで自動返信を行いたい。</p>
+<h1 id="Amazon-WorkMail"><a href="#Amazon-WorkMail" class="headerlink" title="Amazon WorkMail"></a>Amazon WorkMail</h1><p>Amazon WorkMail の Auto Responseがつかえそうな、、、気がする。</p>
+<blockquote>
+<p>Amazon WorkMail （セキュリティに優れたマネージド型の企業向けE メールおよびカレンダーサービス） | AWS<br><a href="https://aws.amazon.com/jp/workmail/" target="_blank" rel="external">https://aws.amazon.com/jp/workmail/</a></p>
+</blockquote>
+<p>SES でもメールの受信を出来るようになったみたいなのだが、そこから色々やるのはちょっと手間そう。<br>Amazon WorkMail でうまくできなかったらその方向。</p>
+<p>とりあえず、$4らしいので、1年か2年くらい運用したら止める。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>AWS WorkMail試用レビュー - 株式会社ネディア<br><a href="https://www.nedia.ne.jp/blog/tech/2015/10/01/5925" target="_blank" rel="external">https://www.nedia.ne.jp/blog/tech/2015/10/01/5925</a></li>
+<li>AWS初心者がやってみた。同じドメインで手動・自動の両方からメールを送信する方法。 - Qiita<br><a href="https://qiita.com/tng527/items/7a6dc5a9c43025d70966" target="_blank" rel="external">https://qiita.com/tng527/items/7a6dc5a9c43025d70966</a></li>
+<li>AWS WorkMailを使ってみたら想像以上に便利だった - Qiita<br><a href="https://qiita.com/ysKey2/items/2b019337772f8499beec" target="_blank" rel="external">https://qiita.com/ysKey2/items/2b019337772f8499beec</a></li>
+</ul>
+<h2 id="参考リンク（Route53）"><a href="#参考リンク（Route53）" class="headerlink" title="参考リンク（Route53）"></a>参考リンク（Route53）</h2><ul>
+<li>Amazon Route53 にMXレコード登録する | あぱーブログ<br><a href="https://blog.apar.jp/web/656/" target="_blank" rel="external">https://blog.apar.jp/web/656/</a></li>
+</ul>
+<h2 id="参考リンク（SES）"><a href="#参考リンク（SES）" class="headerlink" title="参考リンク（SES）"></a>参考リンク（SES）</h2><ul>
+<li>独自ドメインのメール送受信をAWSで。メールサーバーレスアーキテクチャーを構成 - メンチカツには醤油でしょ!!<br><a href="http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017" target="_blank" rel="external">http://ryoichi0102.hatenablog.com/entry/2016/12/29/015017</a></li>
+<li>[新機能]Amazon SES でメール受信が出来るようになりました！ ｜ Developers.IO<br><a href="https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/" target="_blank" rel="external">https://dev.classmethod.jp/cloud/receiving-email-with-amazon-ses/</a></li>
+<li>メールサーバーを捨てて、問い合わせ受付をサーバーレスで実現する - Qiita<br><a href="https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a" target="_blank" rel="external">https://qiita.com/d-yamanaka/items/1991e9abaace2e9b9c9a</a></li>
+<li>Route53 + SES + S3 + Lambda で 独自ドメイン宛のメールをGmailに転送する - イノベーション　エンジニアブログ<br><a href="http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html" target="_blank" rel="external">http://tech.innovation.co.jp/2017/06/04/Route53-S-E-S-S3-Lambda-Gmail.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-11-16T23:36:28.000Z"><a href="/article/dashboard-devto.html">2017-11-17</a></time>
       
       
@@ -418,76 +512,6 @@ Pragma : no-cache
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-22T23:22:19.000Z"><a href="/article/writeblog.html">2017-09-23</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/writeblog.html">ブログかいてみる</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>とりあえず、ブログとしてサクッといけるかテスト。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-01T12:30:00.000Z"><a href="/article/craft-systememail.html">2017-09-01</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/craft-systememail.html">Craft CMS のシステムEmailの設定</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>知ってしまえば簡単なことなのですが。</p>
-<p>パスワードリマインダなどのメールアドレスの設定はどこでするのだろう、、、と設定の全般ばかりをみていたのですが、メールの所に <code>システムのメールアドレス</code> があります。</p>
-<p><img src="../asset/craft-systemaddress.png" alt=""></p>
-<p>こちらにセットしましょう。</p>
-<p>デフォルトは初期ユーザーのシステム管理者のアドレスが入る？みたいです。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -511,7 +535,7 @@ Pragma : no-cache
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>49</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -549,7 +573,7 @@ Pragma : no-cache
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>4</small></li>
+    <li><a href="/categories/Work/">Work</a><small>5</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>7</small></li>
   
@@ -580,7 +604,7 @@ Pragma : no-cache
   
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
-    <li><a href="/tags/Backlog/">Backlog</a><small>4</small></li>
+    <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
@@ -606,7 +630,7 @@ Pragma : no-cache
   
     <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
   
-    <li><a href="/tags/Direction/">Direction</a><small>3</small></li>
+    <li><a href="/tags/Direction/">Direction</a><small>4</small></li>
   
     <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
   
@@ -658,11 +682,11 @@ Pragma : no-cache
   
     <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
   
-    <li><a href="/tags/Project-Management/">Project Management</a><small>0</small></li>
+    <li><a href="/tags/Project-Management/">Project Management</a><small>1</small></li>
   
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
-    <li><a href="/tags/Redmine/">Redmine</a><small>1</small></li>
+    <li><a href="/tags/Redmine/">Redmine</a><small>2</small></li>
   
     <li><a href="/tags/Remote/">Remote</a><small>2</small></li>
   
@@ -702,11 +726,15 @@ Pragma : no-cache
   
     <li><a href="/tags/Work/">Work</a><small>0</small></li>
   
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
     <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
     <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
   
     <li><a href="/tags/ePub/">ePub</a><small>1</small></li>
+  
+    <li><a href="/tags/editor/">editor</a><small>1</small></li>
   
     <li><a href="/tags/flexibleSearch/">flexibleSearch</a><small>1</small></li>
   
@@ -744,7 +772,15 @@ Pragma : no-cache
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
       </li>
     
       <li>
@@ -755,14 +791,6 @@ Pragma : no-cache
         <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
       </li>
     
-      <li>
-        <a href="/article/blog-macbook-keyboard-201804.html">Macbookキーボードの調子は相変わらず</a>
-      </li>
-    
-      <li>
-        <a href="/article/blog-gtd-ticktick.html">個人的なタスク管理にTickTickを使い始めた。</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -771,7 +799,7 @@ Pragma : no-cache
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

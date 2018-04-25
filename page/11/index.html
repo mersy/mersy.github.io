@@ -61,6 +61,111 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-05-02T02:06:33.000Z"><a href="/article/mtmakdownoptions.html">2014-05-02</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/mtmakdownoptions.html">MTMarkdownOptions</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>MTの出力をMarkdown形式にできないものか、とおもって考えてたら普通にテンプレートタグがあった。</p>
+<blockquote>
+<p>MTMarkdownOptions | テンプレートタグリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/tags/markdownoptions.html</a></p>
+</blockquote>
+<p>知らなかった！</p>
+<pre><code>&lt;MTMarkdownOptions output=&quot;raw&quot;&gt;
+# &lt;mt:EntryTitle&gt;
+---
+&lt;mt:EntryBody&gt;
+&lt;/MTMarkdownOptions&gt;
+</code></pre><p>さすがに、普通にHTMLタグで入力してあるものはそのまま出ちゃうけど。</p>
+<p>グローバルモディファイアの「filters」では何が指定できるんだろうな。使ったこと無し。</p>
+<blockquote>
+<p>filters | グローバル・モディファイアリファレンス<br><a href="http://www.movabletype.jp/documentation/appendices/modifiers/filters.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/appendices/modifiers/filters.html</a></p>
+</blockquote>
+<p>とりあえず、指定の仕方がよくわからん。</p>
+<p>filtersについてのコードはこの辺。</p>
+<blockquote>
+<p>movabletype/lib/MT/Template/Tags/Filters.pm at master · movabletype/movabletype<br><a href="https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm" target="_blank" rel="external">https://github.com/movabletype/movabletype/blob/master/lib/MT/Template/Tags/Filters.pm</a></p>
+</blockquote>
+<p>AllowedTextFiltersでの指定とどう違うんだろうな。。。</p>
+<blockquote>
+<p>MovableType.org – Documentation: AllowedTextFilters<br><a href="http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html" target="_blank" rel="external">http://movabletype.org/documentation/appendices/config-directives/allowedtextfilters.html</a></p>
+</blockquote>
+<p>ドキュメントではwiki とか指定できるみたいなことは書いてあるけど。。。</p>
+<hr>
+<p>HTMLタグとかを、Markdown形式に変換してくれるようなプラグインとかあるのかな、それは探してみよう。</p>
+<p>使えそうなモジュールはこの辺？</p>
+<blockquote>
+<p>HTML::WikiConverter::Markdown - search.cpan.org<br><a href="http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm" target="_blank" rel="external">http://search.cpan.org/~diberri/HTML-WikiConverter-Markdown-0.05/lib/HTML/WikiConverter/Markdown.pm</a></p>
+</blockquote>
+<p>そもそも記事のフォーマットを取得することってできるんだっけな？</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-04-28T05:07:31.000Z"><a href="/article/StaticPress.html">2014-04-28</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/StaticPress.html">StaticPressのメモ</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>更新しないWordPressのサイトはStaticファイルにしてしまってS3においておこうということで。</p>
+<blockquote>
+<p>StaticPress<br><a href="http://ja.staticpress.net/" target="_blank" rel="external">http://ja.staticpress.net/</a></p>
+</blockquote>
+<p>とりあえず、StaticPressを使うためには、Permalinkをそれに対応出来る様に .html 的な感じになるようにしておかないとNG。<br>考えたらあたりまえだけど、 hogehoge?p=xxx みたいなのだと、スタティックにできるわけないです。</p>
+<p>スマホの切り替えとかは不要になるから、関係なさそうなプラグインは削除した。</p>
+<p>テーマも拘ってないから、デフォルトのに変更した。</p>
+<h2 id="空ファイル"><a href="#空ファイル" class="headerlink" title="空ファイル"></a>空ファイル</h2><p>ファイルが生成されてるんだけど、空っぽというのがちらほらあるので色々調整してみた。</p>
+<p>テーマをデフォルト系のものにしても変化無し。<br>プラグインをほとんど無効にして作成し直したら解決。<br>多分、テーマではなくてプラグインだと思う。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-04-24T06:30:39.000Z"><a href="/article/s3.html">2014-04-24</a></time>
       
       
@@ -621,89 +726,6 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-16T19:00:00.000Z"><a href="/article/sitemapByjekyll.html">2013-10-17</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/sitemapByjekyll.html">Jekyll でGoogle Sitemap</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Jekyll でGoogle Sitemap を作るにはどうするんだろう？？と。</p>
-<blockquote>
-<p>Generating a Sitemap in Jekyll without a Plugin – Development, design, and more by David Ensinger<br><a href="http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/" target="_blank" rel="external">http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/</a></p>
-</blockquote>
-<p>を参考にして。</p>
-<p>こんな感じのをsitemap.xmlとして追加した。</p>
-<script src="//gist.github.com/7013158.js"></script>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-15T08:00:00.000Z"><a href="/article/pullrequestbybranch.html">2013-10-15</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/pullrequestbybranch.html">リポジトリ共有式のPull Request をBitbucketで</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>以下のエントリで紹介されてた方法（リポジトリ共有式）がBitbucketでもできるか試した。</p>
-<blockquote>
-<p>GitHub初心者はForkしない方のPull Requestから入門しよう - QNYP Blog<br><a href="http://blog.qnyp.com/2013/05/28/pull-request-for-github-beginners/" target="_blank" rel="external">http://blog.qnyp.com/2013/05/28/pull-request-for-github-beginners/</a></p>
-</blockquote>
-<p>ローカルでbranch増やして、修正してremoteにpush。</p>
-<p>BitBucketの管理画面上でcompareというメニューがあるからそこでmasterとかとcompareしてみると差分が表示される。表示されると、pull request送るか？的なメニューがあるからそこから送れる。</p>
-<p>ひとまずここまで。</p>
-<p>承認、マージはこれから。</p>
-<p>以下は、先のエントリでいうところのfork式の話。</p>
-<ul>
-<li>Bitbucket、プルリクエストを新しく強力に | Atlassian Japan<br><a href="http://japan.blogs.atlassian.com/2011/06/powerful_new_pull_request_on_bitbucket/" target="_blank" rel="external">http://japan.blogs.atlassian.com/2011/06/powerful_new_pull_request_on_bitbucket/</a></li>
-<li>駄猫の備忘録: bitbucketで一人pullrequestとかしてた<br><a href="http://3a3k.blogspot.jp/2012/05/bitbucketpullrequest.html" target="_blank" rel="external">http://3a3k.blogspot.jp/2012/05/bitbucketpullrequest.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -727,7 +749,7 @@ $ knife solo prepare test_vagrant5
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>49</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -765,7 +787,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/categories/WordPress/">WordPress</a><small>1</small></li>
   
-    <li><a href="/categories/Work/">Work</a><small>4</small></li>
+    <li><a href="/categories/Work/">Work</a><small>5</small></li>
   
     <li><a href="/categories/blog/">blog</a><small>7</small></li>
   
@@ -796,7 +818,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
-    <li><a href="/tags/Backlog/">Backlog</a><small>4</small></li>
+    <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
@@ -822,7 +844,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
   
-    <li><a href="/tags/Direction/">Direction</a><small>3</small></li>
+    <li><a href="/tags/Direction/">Direction</a><small>4</small></li>
   
     <li><a href="/tags/Docbase/">Docbase</a><small>0</small></li>
   
@@ -874,11 +896,11 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/PowerCMS/">PowerCMS</a><small>1</small></li>
   
-    <li><a href="/tags/Project-Management/">Project Management</a><small>0</small></li>
+    <li><a href="/tags/Project-Management/">Project Management</a><small>1</small></li>
   
     <li><a href="/tags/RSS/">RSS</a><small>1</small></li>
   
-    <li><a href="/tags/Redmine/">Redmine</a><small>1</small></li>
+    <li><a href="/tags/Redmine/">Redmine</a><small>2</small></li>
   
     <li><a href="/tags/Remote/">Remote</a><small>2</small></li>
   
@@ -918,11 +940,15 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Work/">Work</a><small>0</small></li>
   
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
     <li><a href="/tags/browser/">browser</a><small>1</small></li>
   
     <li><a href="/tags/dashboard/">dashboard</a><small>1</small></li>
   
     <li><a href="/tags/ePub/">ePub</a><small>1</small></li>
+  
+    <li><a href="/tags/editor/">editor</a><small>1</small></li>
   
     <li><a href="/tags/flexibleSearch/">flexibleSearch</a><small>1</small></li>
   
@@ -960,7 +986,15 @@ $ knife solo prepare test_vagrant5
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
+      </li>
+    
+      <li>
+        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
       </li>
     
       <li>
@@ -971,14 +1005,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
       </li>
     
-      <li>
-        <a href="/article/blog-macbook-keyboard-201804.html">Macbookキーボードの調子は相変わらず</a>
-      </li>
-    
-      <li>
-        <a href="/article/blog-gtd-ticktick.html">個人的なタスク管理にTickTickを使い始めた。</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -987,7 +1013,7 @@ $ knife solo prepare test_vagrant5
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 
