@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-25T06:47:13.000Z</updated>
+  <updated>2018-04-29T00:53:33.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>blogの下書きは日本語タイトルにする運用で一旦回避</title>
+    <link href="https://note.mersy418.com/article/blog-draft-japanese.html"/>
+    <id>https://note.mersy418.com/article/blog-draft-japanese.html</id>
+    <published>2018-04-28T22:00:00.000Z</published>
+    <updated>2018-04-29T00:53:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>ブログ書く環境・公開するところをどうするかあれこれ検討中 | mersy note<br><a href="https://note.mersy418.com/article/blog-writing.html">https://note.mersy418.com/article/blog-writing.html</a></p>
+</blockquote>
+<p>色々調べたり考えたりしているが、これといったものがなく。。。</p>
+<p>ATOMのtree-viewを拡張するような感じで、front-matterのタイトルを表示されるとかできれば良さそうな気もしたけどそういうのをすぐ見つけられなかったので、であればとりあえずファイル名を日本語で書いておくのが早そうな気がしてきた。</p>
+<p>いずれまたいいものがあればそれに変えればいいとして、とりあえずの運用スタイルとしては、下書き時点では日本語ファイル名にしておいて、公開する前にファイル名を変えるってのがいいんだろうな。</p>
+<p>要するに運用で対応。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;ブログ書く環境・公開するところをどうするかあれこれ検討中 | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-writing.html&quot;&gt;https://note.mers
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Blog" scheme="https://note.mersy418.com/tags/Blog/"/>
+    
+      <category term="ATOM" scheme="https://note.mersy418.com/tags/ATOM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ブログ書く環境・公開するところをどうするかあれこれ検討中</title>
     <link href="https://note.mersy418.com/article/blog-writing.html"/>
     <id>https://note.mersy418.com/article/blog-writing.html</id>
     <published>2018-04-25T06:00:00.000Z</published>
-    <updated>2018-04-25T06:47:13.000Z</updated>
+    <updated>2018-04-28T09:17:50.000Z</updated>
     
     <content type="html"><![CDATA[<p>何となくブログを書く環境をどうにかしたい、と考えている。</p>
 <p>Hexo を使うようになって、Atom （というかエディタ）で書くことがすごく楽なのでこれはいいな、と思っているところがある。<br>ただ、下書きがたまりすぎてくるとどうにもわかりづらい、というのがあってそこをどうにかしたいな、、、と。<br>ファイル名を日本語にしとけばいいんだろうけど。</p>
@@ -118,6 +150,14 @@
 </ul>
 <hr>
 <h2 id="サーバ管理"><a href="#サーバ管理" class="headerlink" title="サーバ管理"></a>サーバ管理</h2><p>Grav とか試す時点でサーバ用意しないとなので、管理しない方法は諦める方向。。。</p>
+<hr>
+<h2 id="sync-sync"><a href="#sync-sync" class="headerlink" title="sync-sync"></a>sync-sync</h2><p>sync-sync<br><a href="https://atom.io/packages/sync-sync" target="_blank" rel="external">https://atom.io/packages/sync-sync</a></p>
+<p>動かず。</p>
+<hr>
+<h2 id="MWeb"><a href="#MWeb" class="headerlink" title="MWeb"></a>MWeb</h2><p>MWeb - Pro Markdown writing, note taking and static blog generator App - MWeb<br><a href="http://www.mweb.im/" target="_blank" rel="external">http://www.mweb.im/</a></p>
+<p>なんか違う</p>
+<hr>
+<h2 id="esa"><a href="#esa" class="headerlink" title="esa"></a>esa</h2><p>esaの記事を気軽かつ柔軟に外部公開するためのWebアプリ「esaba」 | QUARTETCOM TECH BLOG<br><a href="http://tech.quartetcom.co.jp/2017/11/02/lets-share-markdown-docs-via-esaba/" target="_blank" rel="external">http://tech.quartetcom.co.jp/2017/11/02/lets-share-markdown-docs-via-esaba/</a><br>esaba/README.ja.md at master · ttskch/esaba<br><a href="https://github.com/ttskch/esaba/blob/master/README.ja.md" target="_blank" rel="external">https://github.com/ttskch/esaba/blob/master/README.ja.md</a></p>
 ]]></content>
     
     <summary type="html">
@@ -773,13 +813,13 @@
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
     
-      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
-    
       <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
     
       <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
     
       <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
+    
+      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
     
   </entry>
   
@@ -871,78 +911,6 @@
     
     
       <category term="iPhone" scheme="https://note.mersy418.com/tags/iPhone/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Togglの計測をSlackに通知してやってることを共有してみる</title>
-    <link href="https://note.mersy418.com/article/toggl2slack.html"/>
-    <id>https://note.mersy418.com/article/toggl2slack.html</id>
-    <published>2018-03-16T20:00:00.000Z</published>
-    <updated>2018-03-16T20:39:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。<br>ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。</p>
-<blockquote>
-<p>Toggl - Time Tracker &amp; Employee Timesheet Software<br><a href="https://toggl.com/" target="_blank" rel="external">https://toggl.com/</a></p>
-</blockquote>
-<p>連絡とか確認が多いと対応する issue も多いからその辺は Toggl で計測してる方がひとまとめになっていいかな、、、と。</p>
-<h2 id="toggl2slack-を使ってみる"><a href="#toggl2slack-を使ってみる" class="headerlink" title="toggl2slack を使ってみる"></a>toggl2slack を使ってみる</h2><p>ってことで調べてて、こちらを参考にさせてもらって動かしてみた。</p>
-<blockquote>
-<p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
-</blockquote>
-<p>やることは書かれてる通りっちゃ通りなのだけど</p>
-<pre><code class="bash">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz
-$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz
-$ ./toggl2slack init
-$ vi config.json
-$ ./toggl2slack start
-</code></pre>
-<p>config.json に設定する値とかはこんな感じで。</p>
-<p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
-<pre><code class="javascript">&quot;users&quot;: {
-    &quot;xxxxxx&quot;: {
-        &quot;channel&quot;: &quot;#times_mersy&quot;,
-        &quot;username&quot;: &quot;mersy&quot;
-    }
-},
-</code></pre>
-<p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
-<p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
-<p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
-<p>Terminal 閉じちゃうと終了しちゃうから</p>
-<blockquote>
-<p>ターミナルを閉じてもプロセスを終了させないnohupコマンド | 三度の飯とエレクトロン<br><a href="http://blog.katty.in/1434" target="_blank" rel="external">http://blog.katty.in/1434</a></p>
-</blockquote>
-<p>を読んで</p>
-<p><code>$ nohup ./toggl2slack start</code></p>
-<p>こんな感じで動かしてみた。</p>
-<p>Slack にも通知が来てるみたいで、これで晴れて仕事してるアピールができるようになりました。<br>Toggl に WorkSpace が複数あると情報が別っぽいので、そこは別物とする必要がありそう。</p>
-<p>サーバで動かせるようになるまでに @tinybeans と @bun に色々教えてもらいつつ、、、<br>別の WorkSpace のを動かしてみたら今回はサクッといけました。感謝感謝。</p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><h3 id="Toggl"><a href="#Toggl" class="headerlink" title="Toggl"></a>Toggl</h3><ul>
-<li>toggl_api_docs/toggl_api.md at master · toggl/toggl_api_docs<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md</a></li>
-<li>toririn/toggl_slacker<br><a href="https://github.com/toririn/toggl_slacker" target="_blank" rel="external">https://github.com/toririn/toggl_slacker</a></li>
-<li>Togglを使って時間を意識した仕事をしようぜ！ - 大阪・兵庫・加古川 ホームページ制作のAWESOME | WEB・ホームページ制作、WEBマーケティング・SEO対策<br><a href="https://awe-some.net/2016/10/how-to-use-toggl/" target="_blank" rel="external">https://awe-some.net/2016/10/how-to-use-toggl/</a></li>
-<li>時間管理にTogglを使ってみたら想像以上によかった - dackdive’s blog<br><a href="http://dackdive.hateblo.jp/entry/2015/01/22/100000" target="_blank" rel="external">http://dackdive.hateblo.jp/entry/2015/01/22/100000</a></li>
-</ul>
-<h3 id="Alfred-to-slack"><a href="#Alfred-to-slack" class="headerlink" title="Alfred to slack"></a>Alfred to slack</h3><ul>
-<li>Alfred で作業時間を記録する workflow を作ってみた - たまに書くかも<br><a href="http://mame-neko.hatenablog.com/entry/2015/12/07/063407" target="_blank" rel="external">http://mame-neko.hatenablog.com/entry/2015/12/07/063407</a></li>
-<li>fspinillo/slackfred: Interact with Slack via Alfred<br><a href="https://github.com/fspinillo/slackfred" target="_blank" rel="external">https://github.com/fspinillo/slackfred</a></li>
-<li>jason0x43/alfred-toggl: Alfred Workflow for interacting with the Toggl time tracking service<br><a href="https://github.com/jason0x43/alfred-toggl" target="_blank" rel="external">https://github.com/jason0x43/alfred-toggl</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。&lt;br&gt;ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。&lt;
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Slack" scheme="https://note.mersy418.com/tags/Slack/"/>
-    
-      <category term="Toggl" scheme="https://note.mersy418.com/tags/Toggl/"/>
     
   </entry>
   

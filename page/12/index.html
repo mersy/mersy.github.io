@@ -61,6 +61,70 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-17T23:00:00.000Z"><a href="/article/flexibleSearchOnJekyll.html">2013-10-18</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/flexibleSearchOnJekyll.html">flexibleSearchをJekyll（Github Pages）で使う</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Github Pagesだと動的なことができないから、flexibleSearchをJekyllで使ってみる方法で検索部分を実装してみた</p>
+<blockquote>
+<p>tinybeans/jq-plugin-flexibleSearch<br><a href="https://github.com/tinybeans/jq-plugin-flexibleSearch" target="_blank" rel="external">https://github.com/tinybeans/jq-plugin-flexibleSearch</a></p>
+</blockquote>
+<p>flexibleSearchはJSONベースの検索システム。</p>
+<h2 id="JSONの生成"><a href="#JSONの生成" class="headerlink" title="JSONの生成"></a>JSONの生成</h2><p>JSONをどうやってだすんだろう？？というところでかなり時間がかかった。</p>
+<script src="//gist.github.com/7033839.js"></script>
+<p>こんなかんじで、一応エラーが出ないJSONを生成することが出来た。<br>flexibleSearchの次期バージョンからitemではなくitemsになってるので要注意。</p>
+<p>最新版はGithubのdevelopブランチに入っている。</p>
+<h2 id="flexibleSearch"><a href="#flexibleSearch" class="headerlink" title="flexibleSearch"></a>flexibleSearch</h2><p>js部分はこんな感じで。</p>
+<script src="//gist.github.com/7035259.js"></script>
+<p>最新版ではjQueryの他に mustache.jsも必須になってます。</p>
+<blockquote>
+<p>mustache<br><a href="http://mustache.github.io/" target="_blank" rel="external">http://mustache.github.io/</a></p>
+</blockquote>
+<p>JavaScriptのをおとしておきます。</p>
+<blockquote>
+<p>janl/mustache.js<br><a href="https://github.com/janl/mustache.js" target="_blank" rel="external">https://github.com/janl/mustache.js</a></p>
+</blockquote>
+<h3 id="検索結果ページ"><a href="#検索結果ページ" class="headerlink" title="検索結果ページ"></a>検索結果ページ</h3><p>検索結果のページは</p>
+<pre><code>&lt;div id=&quot;fs-result&quot;&gt;&lt;/div&gt;
+</code></pre><p>を埋め込むだけ。</p>
+<script src="//gist.github.com/7049726.js"></script>
+<p>結果表示部分はこんな感じでflexibleSearch.jsを書き換えておいた。</p>
+<script src="//gist.github.com/7049773.js"></script>
+<p>ここは近いうちにオプション側で指定出来るようになるとのこと。</p>
+<h3 id="検索フォーム"><a href="#検索フォーム" class="headerlink" title="検索フォーム"></a>検索フォーム</h3><p>検索フォーム部分も同様にflexibleSearch.jsを書き換え。</p>
+<script src="//gist.github.com/7049781.js"></script>
+<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブをflexibleSearchで作成した</p>
+<p>JSONにcategoriesとしてcategoryを出すように修正。</p>
+<script src="//gist.github.com/7056249.js"></script>
+<p>サイドバーのカテゴリリスト部分は以下の様な感じで修正。</p>
+<script src="//gist.github.com/7056240.js"></script>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-16T19:00:00.000Z"><a href="/article/sitemapByjekyll.html">2013-10-17</a></time>
       
       
@@ -581,68 +645,13 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-10T05:30:00.000Z"><a href="/article/jekyllmemo.html">2013-10-10</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/jekyllmemo.html">Jekyll memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="ドキュメント"><a href="#ドキュメント" class="headerlink" title="ドキュメント"></a>ドキュメント</h2><p><a href="http://jekyllrb.com/docs/home/" target="_blank" rel="external">http://jekyllrb.com/docs/home/</a></p>
-<h2 id="たちあげ"><a href="#たちあげ" class="headerlink" title="たちあげ"></a>たちあげ</h2><pre><code>$ jekyll serve --watch
-</code></pre><h2 id="確認URL"><a href="#確認URL" class="headerlink" title="確認URL"></a>確認URL</h2><blockquote>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-</blockquote>
-<h2 id="Permalink"><a href="#Permalink" class="headerlink" title="Permalink"></a>Permalink</h2><p>_config.yml に</p>
-<pre><code>permalink: /:title.html
-</code></pre><p>なかんじで記載</p>
-<p><a href="http://jekyllrb.com/docs/permalinks/" target="_blank" rel="external">http://jekyllrb.com/docs/permalinks/</a></p>
-<h2 id="下書き"><a href="#下書き" class="headerlink" title="下書き"></a>下書き</h2><p>_draft フォルダにいれる</p>
-<h2 id="カテゴリアーカイブ"><a href="#カテゴリアーカイブ" class="headerlink" title="カテゴリアーカイブ"></a>カテゴリアーカイブ</h2><p>カテゴリアーカイブはflexibleSearchをつかって実装</p>
-<blockquote>
-<p><a href="/flexibleSearchOnJekyll.html">flexibleSearchをJekyllで使う</a></p>
-</blockquote>
-<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><p>以下のテンプレートをatom.xmlやfeed.xmlとかで追加する。</p>
-<script src="https://gist.github.com/mersy/6933219.js"></script>
-
-<p>_config.ymlに以下の項目がなければ入れておく。</p>
-<pre><code>name: mersy memo
-description: いろいろメモ
-url: http://mersy.github.io/
-</code></pre><p>head にrssへのリンクも入れておく</p>
-<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;{{ site.name }}&quot; href=&quot;/atom.xml&quot; /&gt;
-</code></pre><h2 id="デザイン"><a href="#デザイン" class="headerlink" title="デザイン"></a>デザイン</h2><p>Start Bootstrap - Free HTML Templates for Bootstrap 3<br><a href="http://startbootstrap.com/" target="_blank" rel="external">http://startbootstrap.com/</a></p>
-<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>Gistも直接埋め込めるらしい</p>
-<script src="//gist.github.com/mersy/59bf604a8929a8f7acf6.js"></script>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
     <a href="/page/11/" class="alignleft prev">Vorherige Seite</a>
   
+  
+    <a href="/page/13/" class="alignright next">Nächste Seite</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -659,7 +668,7 @@ url: http://mersy.github.io/
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>51</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -722,6 +731,8 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
   
+    <li><a href="/tags/ATOM/">ATOM</a><small>1</small></li>
+  
     <li><a href="/tags/AWS/">AWS</a><small>4</small></li>
   
     <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
@@ -729,6 +740,8 @@ url: http://mersy.github.io/
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
     <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
+  
+    <li><a href="/tags/Blog/">Blog</a><small>1</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
@@ -896,6 +909,10 @@ url: http://mersy.github.io/
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-draft-japanese.html">blogの下書きは日本語タイトルにする運用で一旦回避</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
       </li>
     
@@ -911,10 +928,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
       </li>
     
-      <li>
-        <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -923,7 +936,7 @@ url: http://mersy.github.io/
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

@@ -61,6 +61,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-03-25T22:00:00.000Z"><a href="/article/blog-which-browser.html">2018-03-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/blog-which-browser.html">メインブラウザを Firefox Developer Editon から Safari に切り替えてみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ここ最近の取り組みとして、起動するアプリを減らして、なるべくブラウザに寄せるようにして PC が重くならないように、、、というのを試してみたりしてる。</p>
+<p>使い方が悪いのかもしれないけど、すぐ Mac が重くなってしまうんだよなぁ。。。</p>
+<p>メール周りは諸般の事情で、 Google アカウント以外も管理する必要があったので、 MailPlane から Rambox に変更して使ってきていた。</p>
+<blockquote>
+<p>Ramboxを使い始めてみた<br><a href="https://note.mersy418.com/article/use-rambox.html">https://note.mersy418.com/article/use-rambox.html</a></p>
+</blockquote>
+<hr>
+<p>ただ、若干メモリ食ってる感があったので、メインブラウザ（Firefox Developer Edition）に Gmail とかを開くようにしてピン留して試したりしていた。<br>Firefox が軽くて早いと思っていたけど、タブを開きすぎたり、開いたタブをずっと放置してるとそれはそれで重くなるので、その辺は拡張入れて対応したりしていた。</p>
+<blockquote>
+<p>Tab Suspender を使ってみる<br><a href="https://note.mersy418.com/article/blog-firefox-tabsuspend.html">https://note.mersy418.com/article/blog-firefox-tabsuspend.html</a></p>
+</blockquote>
+<hr>
+<p>とはいえ Firefox だけにしててもなんか重いなー、という感じなので、ちょっとブラウザを Safari にしてみることにする。</p>
+<p>Firefox にする前も Chrome から Safari に乗り換えたりしてたんだけど、なんでだったっけな。。。</p>
+<p>週末触ってる感じだと、タブとかそこまで開いていないのも関係あるかもしれないけど、メモリ使ってる割にはサクサク開いてる気がする。</p>
+<p>Safari もタブのピン留できるから Gmail, Google Calendar を複数アカウント開いてピン留しておいた。<br>Safari はウィンドウ共通でピン留したタブが出るのね、なるほど。これは個人的にはちょっと余計かな。。。</p>
+<p>Slack のアプリも重めだからこの辺もブラウザに持ってっても良いのかもなー。<br>検索のショートカットがバッティングするところだけをどうにかしたい。</p>
+<hr>
+<p>少し触った感じだとこれまでのことは問題なくできてるけど、できなさそうなことがあったりしてるので、その辺は調べつつなところもありそう。</p>
+<p>とりあえず今週触ってみながらどうなるかを様子見かな。</p>
+<p>普段全然気にしてなかったのだけど、自分の道具をメンテしてるような気が今更だけどしてきた（遅</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-03-24T22:00:00.000Z"><a href="/article/blog-tips-online-tvmeeting.html">2018-03-25</a></time>
       
       
@@ -479,86 +532,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-03-16T20:00:00.000Z"><a href="/article/toggl2slack.html">2018-03-17</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/toggl2slack.html">Togglの計測をSlackに通知してやってることを共有してみる</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>普段、各自が作業してる時とか今やってる backlog の issue の情報とかが Slack に投げられてて。<br>ボタンつくったり、 Alfred から投げたりと、それぞれやりやすいようにカスタマイズしてやってるのだけど、個人的には Toggl でやりたいな、と。</p>
-<blockquote>
-<p>Toggl - Time Tracker &amp; Employee Timesheet Software<br><a href="https://toggl.com/" target="_blank" rel="external">https://toggl.com/</a></p>
-</blockquote>
-<p>連絡とか確認が多いと対応する issue も多いからその辺は Toggl で計測してる方がひとまとめになっていいかな、、、と。</p>
-<h2 id="toggl2slack-を使ってみる"><a href="#toggl2slack-を使ってみる" class="headerlink" title="toggl2slack を使ってみる"></a>toggl2slack を使ってみる</h2><p>ってことで調べてて、こちらを参考にさせてもらって動かしてみた。</p>
-<blockquote>
-<p>Slackとtogglで頑張らない情報共有 - Diver Down技術ブログ<br><a href="http://webken-tech.hatenablog.com/entry/2017/09/12/201647" target="_blank" rel="external">http://webken-tech.hatenablog.com/entry/2017/09/12/201647</a><br>diverdown/toggl2slack<br><a href="https://github.com/diverdown/toggl2slack" target="_blank" rel="external">https://github.com/diverdown/toggl2slack</a></p>
-</blockquote>
-<p>やることは書かれてる通りっちゃ通りなのだけど</p>
-<pre><code class="bash">$ wget https://github.com/diverdown/toggl2slack/releases/download/v0.1.1/toggl2slack_0.1.1_linux_amd64.tar.gz
-$ tar zxfv toggl2slack_0.1.1_linux_amd64.tar.gz
-$ ./toggl2slack init
-$ vi config.json
-$ ./toggl2slack start
-</code></pre>
-<p>config.json に設定する値とかはこんな感じで。</p>
-<p><code>toggl_token</code> : Toggl の Profile にある API token<br><code>dashboard_id</code> : <code>https://toggl.com/app/dashboard/me/AAAAAAAA/period/thisWeek</code> みたいなURLの <code>AAAAAAAA</code> に当たるところ<br><code>webhook_url</code> : Slack の Webhook の URL<br><code>TOGGL_USER1_ID</code> : Toggl の userID</p>
-<pre><code class="javascript">&quot;users&quot;: {
-    &quot;xxxxxx&quot;: {
-        &quot;channel&quot;: &quot;#times_mersy&quot;,
-        &quot;username&quot;: &quot;mersy&quot;
-    }
-},
-</code></pre>
-<p>Toggl の userID がどこでわかるのかわからずだったので<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/chapters/workspace_users.md</a><br>を見て</p>
-<p><code>$ curl -v -u &lt;$toggl_token$&gt;:api_token -X GET https://www.toggl.com/api/v8/me</code></p>
-<p>こんな感じで投げて帰ってくるレスポンスにある id を使うことでいけた。</p>
-<p>Terminal 閉じちゃうと終了しちゃうから</p>
-<blockquote>
-<p>ターミナルを閉じてもプロセスを終了させないnohupコマンド | 三度の飯とエレクトロン<br><a href="http://blog.katty.in/1434" target="_blank" rel="external">http://blog.katty.in/1434</a></p>
-</blockquote>
-<p>を読んで</p>
-<p><code>$ nohup ./toggl2slack start</code></p>
-<p>こんな感じで動かしてみた。</p>
-<p>Slack にも通知が来てるみたいで、これで晴れて仕事してるアピールができるようになりました。<br>Toggl に WorkSpace が複数あると情報が別っぽいので、そこは別物とする必要がありそう。</p>
-<p>サーバで動かせるようになるまでに @tinybeans と @bun に色々教えてもらいつつ、、、<br>別の WorkSpace のを動かしてみたら今回はサクッといけました。感謝感謝。</p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><h3 id="Toggl"><a href="#Toggl" class="headerlink" title="Toggl"></a>Toggl</h3><ul>
-<li>toggl_api_docs/toggl_api.md at master · toggl/toggl_api_docs<br><a href="https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md" target="_blank" rel="external">https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md</a></li>
-<li>toririn/toggl_slacker<br><a href="https://github.com/toririn/toggl_slacker" target="_blank" rel="external">https://github.com/toririn/toggl_slacker</a></li>
-<li>Togglを使って時間を意識した仕事をしようぜ！ - 大阪・兵庫・加古川 ホームページ制作のAWESOME | WEB・ホームページ制作、WEBマーケティング・SEO対策<br><a href="https://awe-some.net/2016/10/how-to-use-toggl/" target="_blank" rel="external">https://awe-some.net/2016/10/how-to-use-toggl/</a></li>
-<li>時間管理にTogglを使ってみたら想像以上によかった - dackdive’s blog<br><a href="http://dackdive.hateblo.jp/entry/2015/01/22/100000" target="_blank" rel="external">http://dackdive.hateblo.jp/entry/2015/01/22/100000</a></li>
-</ul>
-<h3 id="Alfred-to-slack"><a href="#Alfred-to-slack" class="headerlink" title="Alfred to slack"></a>Alfred to slack</h3><ul>
-<li>Alfred で作業時間を記録する workflow を作ってみた - たまに書くかも<br><a href="http://mame-neko.hatenablog.com/entry/2015/12/07/063407" target="_blank" rel="external">http://mame-neko.hatenablog.com/entry/2015/12/07/063407</a></li>
-<li>fspinillo/slackfred: Interact with Slack via Alfred<br><a href="https://github.com/fspinillo/slackfred" target="_blank" rel="external">https://github.com/fspinillo/slackfred</a></li>
-<li>jason0x43/alfred-toggl: Alfred Workflow for interacting with the Toggl time tracking service<br><a href="https://github.com/jason0x43/alfred-toggl" target="_blank" rel="external">https://github.com/jason0x43/alfred-toggl</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -582,7 +555,7 @@ $ ./toggl2slack start
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>50</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>51</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -645,6 +618,8 @@ $ ./toggl2slack start
   
     <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
   
+    <li><a href="/tags/ATOM/">ATOM</a><small>1</small></li>
+  
     <li><a href="/tags/AWS/">AWS</a><small>4</small></li>
   
     <li><a href="/tags/Alfred/">Alfred</a><small>2</small></li>
@@ -652,6 +627,8 @@ $ ./toggl2slack start
     <li><a href="/tags/Atom/">Atom</a><small>1</small></li>
   
     <li><a href="/tags/Backlog/">Backlog</a><small>5</small></li>
+  
+    <li><a href="/tags/Blog/">Blog</a><small>1</small></li>
   
     <li><a href="/tags/Business/">Business</a><small>1</small></li>
   
@@ -819,6 +796,10 @@ $ ./toggl2slack start
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-draft-japanese.html">blogの下書きは日本語タイトルにする運用で一旦回避</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
       </li>
     
@@ -834,10 +815,6 @@ $ ./toggl2slack start
         <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
       </li>
     
-      <li>
-        <a href="/article/blog-safari-main.html">Safariメインにしたら少しは軽くなったような？気がする</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -846,7 +823,7 @@ $ ./toggl2slack start
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 
