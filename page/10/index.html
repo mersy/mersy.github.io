@@ -61,6 +61,62 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-07-11T07:15:32.000Z"><a href="/article/atom.html">2014-07-11</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/atom.html">Atom memo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>原稿的なモノを書くエディタとしてAtomをつかってみてるのでそれようのメモとか。</p>
+<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><blockquote>
+<p>git-plus<br><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">https://atom.io/packages/git-plus</a></p>
+</blockquote>
+<p>Cmd + Shift + H でコマンド選択</p>
+<h2 id="入力補完の追加"><a href="#入力補完の追加" class="headerlink" title="入力補完の追加"></a>入力補完の追加</h2><p>MTML Completions　のAtom版をつくるとしたらどうするか？</p>
+<blockquote>
+<p>bit-part/MTML-ST2<br><a href="https://github.com/bit-part/MTML-ST2" target="_blank" rel="external">https://github.com/bit-part/MTML-ST2</a></p>
+</blockquote>
+<p>Snippetなのか、Packageなのか？？</p>
+<p>autocomplete-snippets にリストを追加する感じ？？</p>
+<blockquote>
+<p>autocomplete-snippets<br><a href="https://atom.io/packages/autocomplete-snippets" target="_blank" rel="external">https://atom.io/packages/autocomplete-snippets</a></p>
+</blockquote>
+<p>autocomplete-plusに候補として追加する場合はこの辺が参考になりそう。</p>
+<blockquote>
+<p>Tutorial: Registering and creating a suggestion provider · saschagehlich/autocomplete-plus Wiki<br><a href="https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider" target="_blank" rel="external">https://github.com/saschagehlich/autocomplete-plus/wiki/Tutorial:-Registering-and-creating-a-suggestion-provider</a></p>
+</blockquote>
+<h2 id="カーソルがずれる"><a href="#カーソルがずれる" class="headerlink" title="カーソルがずれる"></a>カーソルがずれる</h2><p>いつからか半角／全角が交じるとカーソル位置がずれるようになった。<br>半角位置で計算しているような感じ。</p>
+<p>このあたりの設定が影響してる様子。</p>
+<blockquote>
+<p>React Editor Enabled by Default<br><a href="http://blog.atom.io/2014/07/22/default-to-react-editor.html" target="_blank" rel="external">http://blog.atom.io/2014/07/22/default-to-react-editor.html</a><br>Moving Atom To React<br><a href="http://blog.atom.io/2014/07/02/moving-atom-to-react.html" target="_blank" rel="external">http://blog.atom.io/2014/07/02/moving-atom-to-react.html</a></p>
+</blockquote>
+<p>この設定をoffにするとずれることはない。フォントの指定の問題？<br>→フォントの指定は空になってる。<br>sans-serifを指定しても特に変わらず。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-07-11T07:11:50.000Z"><a href="/article/chromeapp.html">2014-07-11</a></time>
       
       
@@ -631,91 +687,6 @@ $ mv README.md README.md.org
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-05T01:53:31.000Z"><a href="/article/casperjs.html">2014-05-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/casperjs.html">CasperJSメモ</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>CasperJS</p>
-<p>CasperJS, a navigation scripting and testing utility for PhantomJS and SlimerJS<br><a href="http://casperjs.org/" target="_blank" rel="external">http://casperjs.org/</a></p>
-<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>Homebrewでインストールしてみる</p>
-<pre><code>$ brew update
-$ brew install casperjs --devel
-$ casperjs --version
-1.1.0-beta3
-</code></pre><p>インストールできた</p>
-<h3 id="Homebrewのアップデートエラー"><a href="#Homebrewのアップデートエラー" class="headerlink" title="Homebrewのアップデートエラー"></a>Homebrewのアップデートエラー</h3><p>update したときにエラーになったので、それは別にまとめた。</p>
-<blockquote>
-<p>Homebrewメモ | mersy note<br><a href="http://mersy.github.io/homebrew.html" target="_blank" rel="external">http://mersy.github.io/homebrew.html</a></p>
-</blockquote>
-<h2 id="http-bit-part-netのタイトルを表示"><a href="#http-bit-part-netのタイトルを表示" class="headerlink" title="http://bit-part.netのタイトルを表示"></a><a href="http://bit-part.netのタイトルを表示" target="_blank" rel="external">http://bit-part.netのタイトルを表示</a></h2><p><a href="http://bit-part.netのタイトルを表示させてみる" target="_blank" rel="external">http://bit-part.netのタイトルを表示させてみる</a></p>
-<pre><code>// sample01.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net/&#39;,function(){
-  this.echo(this.getTitle());
-});
-
-casper.run();
-</code></pre><p>sample01.jsを作成</p>
-<pre><code>$ casperjs sample01.js
-bit part 合同会社
-</code></pre><h2 id="http-bit-part-netのキャプチャを取得してみる"><a href="#http-bit-part-netのキャプチャを取得してみる" class="headerlink" title="http://bit-part.netのキャプチャを取得してみる"></a><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></h2><p><a href="http://bit-part.netのキャプチャを取得してみる" target="_blank" rel="external">http://bit-part.netのキャプチャを取得してみる</a></p>
-<pre><code>// sample2.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net&#39;,function(){
-  this.capture(&#39;sample02.png&#39;);
-});
-
-casper.run();
-</code></pre><p>UAというか幅が<a href="/asset/20140505_sample02.png">すごく細いcapture</a>が撮れた</p>
-<h3 id="幅を広げて撮ってみる"><a href="#幅を広げて撮ってみる" class="headerlink" title="幅を広げて撮ってみる"></a>幅を広げて撮ってみる</h3><pre><code>// sample3.js
-var casper = require(&#39;casper&#39;).create();
-
-casper.start(&#39;http://bit-part.net&#39;);
-
-casper.viewport(1024, 768).then(function() {
-    this.capture(&#39;sample03.png&#39;);
-});
-
-casper.run();
-</code></pre><p>一応<a href="/asset/20140505_sample03.png">こんな感じ</a>で幅広めので撮れた。</p>
-<h3 id="APIの使い方"><a href="#APIの使い方" class="headerlink" title="APIの使い方"></a>APIの使い方</h3><p>captureのところのAPI</p>
-<blockquote>
-<p>The casper module — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/casper.html#capture" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/casper.html#capture</a></p>
-</blockquote>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>API Documentation — CasperJS 1.1.0-DEV documentation<br><a href="http://docs.casperjs.org/en/latest/modules/index.html" target="_blank" rel="external">http://docs.casperjs.org/en/latest/modules/index.html</a></li>
-<li>Amazon.co.jp： WEB+DB PRESS Vol.80<br><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim" target="_blank" rel="external">http://www.amazon.co.jp/exec/obidos/ASIN/4774163988/mersys-22/ref=nosim</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -739,7 +710,7 @@ casper.run();
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>51</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>52</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -866,7 +837,7 @@ casper.run();
   
     <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
   
-    <li><a href="/tags/MacBook/">MacBook</a><small>2</small></li>
+    <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
@@ -980,6 +951,10 @@ casper.run();
   <ul class="entry">
     
       <li>
+        <a href="/article/apple-superdrive.html">SuperDrive対応デバイス</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-draft-japanese.html">blogの下書きは日本語タイトルにする運用で一旦回避</a>
       </li>
     
@@ -995,10 +970,6 @@ casper.run();
         <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
       </li>
     
-      <li>
-        <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -1007,7 +978,7 @@ casper.run();
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

@@ -61,6 +61,82 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2017-12-23T11:06:27.000Z"><a href="/article/drupal-lightsail.html">2017-12-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/drupal-lightsail.html">LightsailでDrupalを立ち上げる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="lightsailでDrupalを立ち上げる"><a href="#lightsailでDrupalを立ち上げる" class="headerlink" title="lightsailでDrupalを立ち上げる"></a>lightsailでDrupalを立ち上げる</h2><p>Drupal の勉強をしてみようとおもっていたのと、Lightsail を使ってみたことがなかったのでこの機会に使ってみる。</p>
+<p><a href="https://amazonlightsail.com/ja/" target="_blank" rel="external">https://amazonlightsail.com/ja/</a></p>
+<p>Drupal が用意されているのでそれを使うだけで良さそうなので。</p>
+<p>Drupal を選択するとこんな感じになる。</p>
+<p><img src="../asset/20171216_lightsail_drupal.png" alt=""></p>
+<p>ここから開くと</p>
+<p><img src="../asset/20171216_lightsail2.png" alt=""></p>
+<p>みたいな感じに。</p>
+<p>Public IP にアクセスすれば Drupal のデフォルト画面が見れる。</p>
+<p>ログイン情報がわかりにくいのだけれど、 Connecting using SSH でつないで、以下で確認できた。</p>
+<pre><code>$ cat bitnami_application_password
+</code></pre><blockquote>
+<p>How to find application credentials?<br><a href="https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/" target="_blank" rel="external">https://docs.bitnami.com/aws/faq/starting-bitnami-aws/find_credentials/</a><br>Amazon LightsailでRadmineインスタンスを作成する。 - Qiita<br><a href="https://qiita.com/DAHARA/items/b86353fac9ca751f8af3" target="_blank" rel="external">https://qiita.com/DAHARA/items/b86353fac9ca751f8af3</a></p>
+</blockquote>
+<p>ということで、調べたパスワードで</p>
+<p>ID : user<br>Password : xxxx</p>
+<p>でログインができる。</p>
+<p>ログインできたらID/Passを変更しておく。</p>
+<h2 id="テーマを適用する"><a href="#テーマを適用する" class="headerlink" title="テーマを適用する"></a>テーマを適用する</h2><p>Bootstrap 入ってた方がとりあえずは楽そうなきがしたので、</p>
+<blockquote>
+<p>Theme project | Drupal.org<br><a href="https://www.drupal.org/project/project_theme" target="_blank" rel="external">https://www.drupal.org/project/project_theme</a></p>
+</blockquote>
+<p>で、 bootstrap で検索。</p>
+<blockquote>
+<p>Bootstrap Business | Drupal.org<br><a href="https://www.drupal.org/project/bootstrap_business" target="_blank" rel="external">https://www.drupal.org/project/bootstrap_business</a></p>
+</blockquote>
+<p>以下も参考に読んでみた。</p>
+<blockquote>
+<p>Drupal ですぐに使える人気の無料テーマ トップ 10選 +α | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-7-10-popular-themes-ready-to-use</a></p>
+</blockquote>
+<pre><code>$ drush
+</code></pre><p>で Drush が入っているのを確認。</p>
+<p>Drush については以下を参考にさせてもらった。</p>
+<blockquote>
+<p>非エンジニアの方のための Drush コマンド入門 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drupal-Drush-command-introduction</a><br>Drush コマンドリファレンス 日本語訳 | Drupal専門の開発会社 Studio Umi<br><a href="https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese" target="_blank" rel="external">https://drupal.studio-umi.jp/blog/Drush-command-reference-Japanese</a></p>
+</blockquote>
+<p>このテーマをダウンロード</p>
+<pre><code>$ drush dl bootstrap_business
+</code></pre><p>したけどここから Drush でうまく入れる方法がわからなかったので、themeをダウンロード。</p>
+<p><code>Install new theme</code> で落としたテーマをuploadしてインストール＆デフォルト、に設定。</p>
+<h2 id="タスクとかメモ"><a href="#タスクとかメモ" class="headerlink" title="タスクとかメモ"></a>タスクとかメモ</h2><ul>
+<li>ドメイン割り当て</li>
+<li>コンテンツタイプ作成</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2017-12-14T22:00:00.000Z"><a href="/article/craft3.html">2017-12-15</a></time>
       
       
@@ -479,97 +555,6 @@ ga(&#39;send&#39;, &#39;pageview&#39;);
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-09-28T19:28:15.000Z"><a href="/article/fastly.html">2017-09-29</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/fastly.html">Fastly memo</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Fastly<br><a href="https://www.fastly.com/" target="_blank" rel="external">https://www.fastly.com/</a></p>
-<p>キャッシュの設定がそれぞれ変更される都度version管理されている</p>
-<p>VCL（Varnish Configuration Language）というのに記載する。</p>
-<pre><code>sub vcl_recv {
-
-  /* unset state tracking header to avoid client sending it */
-  if (req.restarts == 0) {
-    unset req.http.X-Authed;
-  }
-
-  if (!req.http.X-Authed) {
-    /* stash the original URL and Host for later */
-    set req.http.X-Orig-URL = req.url;
-
-    /* set the URL to what the auth backend expects */
-    set req.url = &quot;/authenticate&quot;;
-
-    /* Auth requests won&#39;t be cached, so pass */
-    return(pass);
-  }
-
-  if (req.http.X-Authed == &quot;true&quot;) {
-    /* were authed, so proceed with the request */
-    /* reset the URL */
-    set req.url = req.http.X-Orig-URL;
-
-  } else {
-    /* the auth backend refused the request, so 403 the client */
-    error 403;
-  }
-</code></pre><blockquote>
-<p>Authenticating before returning a request - VCL | Fastly Help Guides<br><a href="https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request" target="_blank" rel="external">https://docs.fastly.com/guides/vcl/authenticating-before-returning-a-request</a></p>
-</blockquote>
-<pre><code># Pass through all requests for /login/* and /admin/*
-if (req.url ~ &quot;^/(hoge|fuga|login)/&quot;) {
-  return(pass);
-}
-</code></pre><p>こんなかんじでかけばキャッシュさせないURLの設定とかできる様子。</p>
-<blockquote>
-<p>特定のリクエストをキャッシュ対象外に設定する - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/topic/875" target="_blank" rel="external">https://community.fastly.com/t/topic/875</a></p>
-</blockquote>
-<h2 id="Cache-を返しているかどうかの確認"><a href="#Cache-を返しているかどうかの確認" class="headerlink" title="Cache を返しているかどうかの確認"></a>Cache を返しているかどうかの確認</h2><p>キャッシュ関係のヘッダは「Cache-Control」「Expires」「Pragma」。</p>
-<p>ブラウザのdeveloper tools とかで Network で該当ページのHTMLなりを選択して、Response headers を確認する。</p>
-<p>キャッシュヒットしてるとこの辺で返ってくる。</p>
-<pre><code>X-Cache-Hits : 1
-X-Cache    : HIT
-</code></pre><blockquote>
-<p>FastlyにキャッシュされたオブジェクトのTTL確認方法 - Japanese - Fastly’s Community<br><a href="https://community.fastly.com/t/fastly-ttl/867" target="_blank" rel="external">https://community.fastly.com/t/fastly-ttl/867</a></p>
-</blockquote>
-<p>そのほか Response headers</p>
-<pre><code>Cache-Control    : no-store, no-cache, must-revalidate
-Pragma : no-cache
-</code></pre><p>Cache-Control ヘッダ<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648#arrow_right-cache-control-%E3%83%98%E3%83%83%E3%83%80</a></p>
-<hr>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>話題の次世代CDN Fastlyを触ってみた〜VCLカスタマイズまで - Qiita<br><a href="https://qiita.com/yamato/items/0782b5c7c370daa1ddda" target="_blank" rel="external">https://qiita.com/yamato/items/0782b5c7c370daa1ddda</a></li>
-<li>キャッシュについて整理してみた - Qiita<br><a href="https://qiita.com/karore/items/2dc6ab8347c940ea4648" target="_blank" rel="external">https://qiita.com/karore/items/2dc6ab8347c940ea4648</a></li>
-<li>『Webを支える技術』 第9章 HTTPヘッダ まとめメモ - MogLog<br><a href="http://sandragon.hatenablog.com/entry/2013/08/11/154006" target="_blank" rel="external">http://sandragon.hatenablog.com/entry/2013/08/11/154006</a><br>*</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -593,7 +578,7 @@ Pragma : no-cache
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>51</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>52</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -720,7 +705,7 @@ Pragma : no-cache
   
     <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
   
-    <li><a href="/tags/MacBook/">MacBook</a><small>2</small></li>
+    <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
     <li><a href="/tags/Mail/">Mail</a><small>1</small></li>
   
@@ -834,6 +819,10 @@ Pragma : no-cache
   <ul class="entry">
     
       <li>
+        <a href="/article/apple-superdrive.html">SuperDrive対応デバイス</a>
+      </li>
+    
+      <li>
         <a href="/article/blog-draft-japanese.html">blogの下書きは日本語タイトルにする運用で一旦回避</a>
       </li>
     
@@ -849,10 +838,6 @@ Pragma : no-cache
         <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
       </li>
     
-      <li>
-        <a href="/article/blog-talking.html">橋本さんのトーク力がすごいなと思った</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -861,7 +846,7 @@ Pragma : no-cache
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 
