@@ -61,6 +61,47 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-02-16T22:00:00.000Z"><a href="/article/alfred-workflow-regex.html">2018-02-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/alfred-workflow-regex.html">AlfredのWorkflowでコピペ時に引用形式に置換して貼り付け</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>メールとかチャットとかでテキストをコピペして引用する時に行頭に <code>&gt;</code> とかつけて貼り付けたりすることがあるんですが。</p>
+<p>これまではテキストコピーしたら CotEditor 開いて貼り付けて置換して、コピペという流れでやっていたのだけれど。。。</p>
+<p>ちょっと面倒だし、貼り付けるときにそういう形式にできないかなぁ、、、 Alfred あたりでできそうな気もしそうだけど、どうかなぁ、、と Slack に書いてたら早速 BUN さんが作ってくれた。</p>
+<pre><code>$query = &quot;{query}&quot;;
+
+echo preg_replace(&#39;/^/m&#39;, &#39;&gt; &#39;, $query);
+</code></pre><p><img src="../asset/20180217_alfred.png" alt=""></p>
+<p>とりあえずこれにHotkeyわりあてたら希望通りになって最高！！</p>
+<p>もっと早く呟けばよかったと思いました（笑</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-02-15T15:00:00.000Z"><a href="/article/blog-ecobuy.html">2018-02-16</a></time>
       
       
@@ -450,53 +491,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-02-04T22:00:00.000Z"><a href="/article/blog-task-management-tool.html">2018-02-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/blog-task-management-tool.html">ツールを使ったから進捗が滞りなく進む訳ではないという話</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>以前、妻とタスクの消化、締切の話をしたことがあって、妻のところではExcelで管理してるという話をしていて。<br>そのExcel自体は共有のフォルダっぽいところで管理してるから、そこで進捗がわかるから問題ない、んだけど、終わらないことがあったり漏れてることがある、みたいな話をしていた。<br>（妻はWEB系ではないです）</p>
-<p>そもそも、一覧系のツールで管理してるのは一覧で見たい管理者のような人向けにはいいだろうけど、実際にやる人たちからしたらやりにくいんじゃない？という思いがあるので、そういう話を聞くと Backlog とか Redmine とかそういったツールでやるのがいいんじゃないの？と思ってしまう自分がいる。</p>
-<p>が、んじゃBacklogを入れてるから自分のところが問題ないか？というとそんなことはなくて、オンスケで問題なく動くことの方が稀な気がしている。</p>
-<p>期日より前倒しで終わらせてくれることもあるし、時には終わらないこともあるし。<br>その辺は人による場合もあれば外部要因だったりもするだろうし、依頼する側の問題だったりもする訳で。</p>
-<p>目安がないといけないので、何かしら日時的な管理をしやすいツールを使うのは必要だと思うのだけど、それを使った上でオンスケで進ませるためには何かまた別なものが必要なんだろうな、と。</p>
-<blockquote>
-<p>Web制作会社の危機感から模索する新しいプロジェクト管理の方法とは〜独自のプロジェクト開発スタイル | TeamHackers<br><a href="https://teamhackers.io/h2o-space-web" target="_blank" rel="external">https://teamhackers.io/h2o-space-web</a></p>
-</blockquote>
-<p>で、たにぐちさんが書いてたけど、</p>
-<blockquote>
-<p>Backlogの場合だと、タスクの整理や分類にどうしても使いづらさやわかりにくさが目立つなと感じます。期限を過ぎて、アラートが出ててもそれを無視し続けることになっていく、なんのためかわからないアラートって、Backlogのあるあるじゃないかな。</p>
-<p>当社でも、自分を含め２名のディレクターがBacklogの「そうじ」をきめ細かく行なうことでその解決を図るようにしています。ツールによる自動化とはまだまだ距離がある話です。もちろん、タスク登録のルールや管理上の約束事は決めていますし、新規タスク登録もそれぞれの担当者に任せられるようにしていますが、ディレクターが管理してないと、ツールだけではうまく回っていかないことは何度も実証済みですね。うまく回らないということは、そもそもツールを使う意味が無いという逆転現象も発生します。</p>
-</blockquote>
-<p>この辺の話にも繋がってくるんだよなぁ、、、という気がしている。</p>
-<p>このあるあるに陥る原因は、チームにより原因もそれぞれだと思うのでその辺は少し立ち止まって考えて見ないといけないんだろうな、と思っているところ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -520,7 +514,7 @@
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>52</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>53</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -581,7 +575,7 @@
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+    <li><a href="/tags/ATOK/">ATOK</a><small>2</small></li>
   
     <li><a href="/tags/ATOM/">ATOM</a><small>1</small></li>
   
@@ -635,6 +629,8 @@
   
     <li><a href="/tags/Git/">Git</a><small>1</small></li>
   
+    <li><a href="/tags/Google-IME/">Google IME</a><small>1</small></li>
+  
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
     <li><a href="/tags/HTML/">HTML</a><small>1</small></li>
@@ -645,7 +641,7 @@
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>13</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
@@ -761,6 +757,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-googleime.html">Google日本語入力をためしてみる</a>
+      </li>
+    
+      <li>
         <a href="/article/apple-superdrive.html">SuperDrive対応デバイス</a>
       </li>
     
@@ -776,10 +776,6 @@
         <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
       </li>
     
-      <li>
-        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -788,7 +784,7 @@
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

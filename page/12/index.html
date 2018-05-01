@@ -61,6 +61,146 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-12-15T05:30:00.000Z"><a href="/article/chef.html">2013-12-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/chef.html">chefを使ってみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="環境の下準備"><a href="#環境の下準備" class="headerlink" title="環境の下準備"></a>環境の下準備</h2><p>Macに入っているRubyのバージョンがberkshelfをインストールする際に古いと怒られる。<br>その辺までのRbenvのインストールなどは</p>
+<blockquote>
+<p>AWS EC2サーバに対するknife solo実行環境構築手順 on Mac OS Xを一から整理してみる ｜ Developers.IO<br><a href="http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/" target="_blank" rel="external">http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/</a></p>
+</blockquote>
+<p>を参考にした。</p>
+<h2 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h2><p>ssh出来るようにする</p>
+<pre><code>vagrant ssh-config --host hostname &gt;&gt; ~/.ssh/config
+</code></pre><p>cpanmのインストールでこけるときは</p>
+<pre><code>yum -y install perl-core
+</code></pre><p>あたりを試してみる</p>
+<h2 id="cookbookを使ってみる"><a href="#cookbookを使ってみる" class="headerlink" title="cookbookを使ってみる"></a>cookbookを使ってみる</h2><p>cookbook色々</p>
+<blockquote>
+<p>Opscode Community<br><a href="http://community.opscode.com/cookbooks/" target="_blank" rel="external">http://community.opscode.com/cookbooks/</a></p>
+<p>hjfuji/mtos-cookbook<br><a href="https://github.com/hjfuji/mtos-cookbook" target="_blank" rel="external">https://github.com/hjfuji/mtos-cookbook</a></p>
+</blockquote>
+<h2 id="ChefでApache、PHP、MySQLをインストール"><a href="#ChefでApache、PHP、MySQLをインストール" class="headerlink" title="ChefでApache、PHP、MySQLをインストール"></a>ChefでApache、PHP、MySQLをインストール</h2><p>Vagrantの使い方 - Qiita [キータ]<br><a href="http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d" target="_blank" rel="external">http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d</a></p>
+<p>test_vagrant5 でSSHできる様にする</p>
+<pre><code>$ vagrant ssh-config --host test_vagrant5 &gt;&gt; ~/.ssh/config
+</code></pre><p>作業環境</p>
+<pre><code>$ cd ~/test_vagrant/
+$ knife solo init chef-repo &amp;&amp; cd chef-repo
+
+-repo
+Creating kitchen...
+Creating knife.rb in kitchen...
+Creating cupboards...
+Setting up Berkshelf...
+</code></pre><p>test_vagrant5 で操作出来るようにする</p>
+<pre><code>$ knife solo prepare test_vagrant5
+</code></pre><p>色々ずらずらとインストールされる。</p>
+<p>cookbookを作る</p>
+<pre><code>$ knife cookbook create lamp -o site-cookbooks
+</code></pre><p>cookbook を修正</p>
+<pre><code>$ vi site-cookbooks/lamp/recipes/default.rb
+</code></pre><p>以下を追記</p>
+<pre><code># stop iptables
+service &quot;iptables&quot; do
+  action [:stop, :disable]
+end
+
+# install apache
+%w{httpd httpd-devel}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+# install php
+%w{php php-common php-devel php-mbstring php-xml php-pear php-mysql}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+# install mysql
+%w{mysql-server mysql-devel}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+# service configuration
+
+service &quot;httpd&quot; do
+  supports :status =&gt; true, :restart =&gt; true, :reload =&gt; true
+  action [:enable, :start]
+end
+
+service &quot;mysqld&quot; do
+  action [:enable, :start]
+end
+</code></pre><p>json修正</p>
+<pre><code>$ vi nodes/test_vagrant5.json
+</code></pre><p>以下の様に修正。</p>
+<pre><code>{
+    &quot;run_list&quot;:[
+        &quot;lamp&quot;
+    ]
+}
+</code></pre><p>vagrantファイルの修正</p>
+<pre><code>config.vm.provision :chef_solo do |chef|
+  chef.cookbooks_path = &quot;chef-repo/site-cookbooks&quot;
+  chef.roles_path = &quot;chef-repo/roles&quot;
+  chef.data_bags_path = &quot;chef-repo/data_bags&quot;
+  chef.add_recipe = &quot;lamp&quot;
+
+  # You may also specify custom JSON attributes:
+  chef.json = {}
+end
+</code></pre><p>仮想マシンを再起動</p>
+<pre><code>$ vagrant provision
+
+
+
+$ knife solo prepare test_vagrant5
+</code></pre><p>みたいなコマンドうつけど、　test_vagrant5 のところは、</p>
+<pre><code>$ vagrant ssh-config --host test_vagrant5 &gt;&gt; ~/.ssh/config
+</code></pre><p>で追加したホストだとおもうんだけど、ここの名前が違うとかはとりあえず意識しなくてもいいのかな？？<br>できあがった作業フォルダ内の　Vagrantfile と cookbook だけを共有しておくとかでいいのか。コピペして立ち上がったみたいだし。</p>
+<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
+<li>AWS EC2サーバに対するknife solo実行環境構築手順 on Mac OS Xを一から整理してみる ｜ Developers.IO<br><a href="http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/" target="_blank" rel="external">http://dev.classmethod.jp/cloud/knife-solo-env-prepare-memo/</a></li>
+<li>今っぽい Vagrant + Chef Solo チュートリアル - Qiita [キータ]<br><a href="http://qiita.com/taiki45/items/b46a2f32248720ec2bae" target="_blank" rel="external">http://qiita.com/taiki45/items/b46a2f32248720ec2bae</a></li>
+<li>Opscode Community<br><a href="http://community.opscode.com/cookbooks/" target="_blank" rel="external">http://community.opscode.com/cookbooks/</a></li>
+<li>Vagrantで作るChefの簡単レシピ<br><a href="http://yungsang.com/vagrant/" target="_blank" rel="external">http://yungsang.com/vagrant/</a></li>
+<li>Vagrantの使い方 - Qiita [キータ]<br><a href="http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d" target="_blank" rel="external">http://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d</a></li>
+</ul>
+<ul>
+<li>morafabio/vagrant-php-development-box<br><a href="https://github.com/morafabio/vagrant-php-development-box" target="_blank" rel="external">https://github.com/morafabio/vagrant-php-development-box</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-22T19:00:00.000Z"><a href="/article/labelOnTask.html">2013-10-23</a></time>
       
       
@@ -536,108 +676,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-11T08:00:00.000Z"><a href="/article/mtmlVersionControl.html">2013-10-11</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/mtmlVersionControl.html">MTMLのバージョン管理</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>MTMLをローカルで編集して、MTに当てる作業を出来るだけ自動化する方法を考える。<br>アップする先が開発環境以外もある場合があるだろうから、それらにも対応出来る仕組みを検討。<br>管理画面から直接編集する場合もあるからそれにも対応出来るようにする。</p>
-<h2 id="ローカルと開発サーバーで同期させる"><a href="#ローカルと開発サーバーで同期させる" class="headerlink" title="ローカルと開発サーバーで同期させる"></a>ローカルと開発サーバーで同期させる</h2><p>MTMLを結びつける方法</p>
-<ul>
-<li>ファイルリンク</li>
-<li>テーマ</li>
-</ul>
-<h2 id="theme-と-filelink"><a href="#theme-と-filelink" class="headerlink" title="theme と filelink"></a>theme と filelink</h2><h3 id="theme-のメリット"><a href="#theme-のメリット" class="headerlink" title="theme のメリット"></a>theme のメリット</h3><ul>
-<li>テンプレートの追加／削除を気にせず反映させられる</li>
-</ul>
-<h3 id="theme-のデメリット"><a href="#theme-のデメリット" class="headerlink" title="theme のデメリット"></a>theme のデメリット</h3><ul>
-<li>再適用をする際にテンプレートIDが変わる</li>
-</ul>
-<h3 id="theme"><a href="#theme" class="headerlink" title="theme ?"></a>theme ?</h3><ul>
-<li>templateにつけられたカスタムフィールドがある場合、その内容はどうなるか？</li>
-</ul>
-<h3 id="filelink-のメリット"><a href="#filelink-のメリット" class="headerlink" title="filelink のメリット"></a>filelink のメリット</h3><ul>
-<li>管理画面での編集内容も反映される</li>
-</ul>
-<h3 id="filelink-のデメリット"><a href="#filelink-のデメリット" class="headerlink" title="filelink のデメリット"></a>filelink のデメリット</h3><ul>
-<li>各テンプレートでfilelinkを設定しないと使えない。</li>
-<li>テンプレートが追加／削除された場合に対応しにくい。</li>
-</ul>
-<h3 id="filelink"><a href="#filelink" class="headerlink" title="filelink ?"></a>filelink ?</h3><ul>
-<li>identifierって重複するとエラーになる？</li>
-</ul>
-<p>テーマを再適用するとtemplateのIDが変わってしまう。<br>templateのIDがかわってしまうので、idが変わるのがまずい場合は再適用を出来ないようにした方がよさそう？<br>→ 同じ名前？のテーマを当て直すときに、idが変わらないようにプラグインを作成できるか？</p>
-<p>ファイルリンクをした場合、管理画面から変更があっても、ファイルリンクされているファイルの内容も書き換えられる。  </p>
-<blockquote>
-<p>ファイルへのリンク : Movable Type 5 ドキュメント<br><a href="http://www.movabletype.jp/documentation/mt5/design/templates/linktofile.html" target="_blank" rel="external">http://www.movabletype.jp/documentation/mt5/design/templates/linktofile.html</a></p>
-</blockquote>
-<p>どれが変更されたかはタイムスタンプくらいしか知る術がなさそう。<br>また、そこから自動、もしくはまとめてダウンロードするとなるとFTP的な物でやるしかない？<br>ローカルに落として、ローカルのファイルに上書きするということになるか？</p>
-<p>最初はMT側でテンプレートを作成、ファイルリンクをセットする？</p>
-<ul>
-<li>ファイルリンクだけ設定して、ファイルがない場合にファイルが作成されるか？</li>
-</ul>
-<h2 id="開発サーバーとそれ以外の環境で同期させる"><a href="#開発サーバーとそれ以外の環境で同期させる" class="headerlink" title="開発サーバーとそれ以外の環境で同期させる"></a>開発サーバーとそれ以外の環境で同期させる</h2><ul>
-<li>それぞれの環境でもファイルリンクを有効にしておく？</li>
-<li>テンプレートが追加になる場合は手作業</li>
-</ul>
-<p>管理画面でテーマとしてthemeフォルダにエクスポートしておく。各テンプレートにファイルリンクをセットする。セットする先はtheme内のファイルにすれば内容が常に同期される。<br>themeの内容を外部から編集して差し替えても管理画面に反映される</p>
-<p>Themeをローカルに落としてGit管理する。</p>
-<p>ローカルからリモートにPushした際に、Webhookでthemesの内容を差し替えられれば、管理画面でリロード、再構築とするだけで修正は反映させることが可能になりそう。</p>
-<ul>
-<li>MTは１つしかないため、いくつかの機能を複数人で開発してる際にbranchという発想が出来ない</li>
-</ul>
-<p>ローカルでbranchとかtagでなにかやるしかないか？？</p>
-<p>開発サーバーに当てた修正でOKの物を本番なり検証環境へ当てる方法が難しい。<br>どのように切り出すか？</p>
-<p>管理画面でテンプレートを追加した場合は、テーマのエクスポートでよさそう</p>
-<p>ローカルでテンプレートを追加した場合はconfig.yamlにも追記が必要だと思われる。pushして再適用？というながれになるか？<br>再適用したらtemplate idが変わってしまうが。</p>
-<p>テーマとして書き出す際に、identifierを指定出来ないと、ファイル名がわかりにくくなるので、identifierの編集も必要そう。<br>MTAppjQueryの拡張プラグインかなにかでidentifier周りも出来るようにした方がいいか？</p>
-<h2 id="課題"><a href="#課題" class="headerlink" title="課題"></a>課題</h2><ul>
-<li>いくつかの開発項目が同じ開発環境で動いているときに、確認が取れた物だけを抜き出す方法があるか？</li>
-<li>検証／本番など開発環境とは別環境がある場合、そちらで更新されていた内容を反映させる（更新時に知る）方法は？</li>
-<li>いくつかのWebsite / Blog にまたがって修正を反映させる場合、システム一括でthemeを書き出せるか？</li>
-<li>identifierを指定しておかないとthemeのファイル名がわかりにくい。template名をidentifierに使うことはできないか？</li>
-<li>ローカルからPushしたものを開発環境で受け取るのはwebhookかPull/Pushか？<ul>
-<li>webhook：管理画面からの変更を拾いにくい</li>
-<li>pull/push：Gitをインストールできるか？</li>
-</ul>
-</li>
-</ul>
-<h2 id="プラグイン関係"><a href="#プラグイン関係" class="headerlink" title="プラグイン関係"></a>プラグイン関係</h2><h3 id="ファイルリンク"><a href="#ファイルリンク" class="headerlink" title="ファイルリンク"></a>ファイルリンク</h3><ul>
-<li>MovableType プラグイン SetTemplateLink テンプレートファイルリンク一括設定 - WEBデザイン　BLOG<br><a href="http://weblibrary.s224.xrea.com/weblog/mt/templatetag/movabletype_set.html" target="_blank" rel="external">http://weblibrary.s224.xrea.com/weblog/mt/templatetag/movabletype_set.html</a></li>
-<li>Movable Type：MTテンプレートの「ファイルへのリンク」のパスを一括設定するプラグイン - TemplateLinedFileManager : アークウェブのブログ<br><a href="http://www.ark-web.jp/blog/archives/2009/07/movable_type-template_lined_file_manager.html" target="_blank" rel="external">http://www.ark-web.jp/blog/archives/2009/07/movable_type-template_lined_file_manager.html</a></li>
-<li>テンプレートのリンクファイル欄でテンプレートタグを使えるようにするプラグイン:TemplateTagInLinkedFile - エンジニアブログ - スカイアーク<br><a href="http://www.skyarc.co.jp/engineerblog/entry/templatetaginlinkedfile.html" target="_blank" rel="external">http://www.skyarc.co.jp/engineerblog/entry/templatetaginlinkedfile.html</a></li>
-</ul>
-<h3 id="identifier"><a href="#identifier" class="headerlink" title="identifier"></a>identifier</h3><ul>
-<li>Movable Typeで作成したインデックステンプレートに識別子を設定できる「IndexTemplateIdentifierプラグイン」: 小粋空間<br><a href="http://www.koikikukan.com/archives/2012/03/22-000300.php" target="_blank" rel="external">http://www.koikikukan.com/archives/2012/03/22-000300.php</a></li>
-<li>identifierをどうにかしたい訳だが - WolaWola<br><a href="http://www.zelazny.mydns.jp/archives/001058.php" target="_blank" rel="external">http://www.zelazny.mydns.jp/archives/001058.php</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -661,7 +699,7 @@
   <h3 class="title">Kategorien</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>52</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>53</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -722,7 +760,7 @@
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/ATOK/">ATOK</a><small>1</small></li>
+    <li><a href="/tags/ATOK/">ATOK</a><small>2</small></li>
   
     <li><a href="/tags/ATOM/">ATOM</a><small>1</small></li>
   
@@ -776,6 +814,8 @@
   
     <li><a href="/tags/Git/">Git</a><small>1</small></li>
   
+    <li><a href="/tags/Google-IME/">Google IME</a><small>1</small></li>
+  
     <li><a href="/tags/GoogleAnalytics/">GoogleAnalytics</a><small>1</small></li>
   
     <li><a href="/tags/HTML/">HTML</a><small>1</small></li>
@@ -786,7 +826,7 @@
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>12</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>13</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
@@ -902,6 +942,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/article/blog-googleime.html">Google日本語入力をためしてみる</a>
+      </li>
+    
+      <li>
         <a href="/article/apple-superdrive.html">SuperDrive対応デバイス</a>
       </li>
     
@@ -917,10 +961,6 @@
         <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
       </li>
     
-      <li>
-        <a href="/article/blog-issue-rule.html">チケット管理のルール、チケットの掃除屋さん</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -929,7 +969,7 @@
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

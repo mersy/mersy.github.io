@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-04-29T22:56:35.000Z</updated>
+  <updated>2018-05-01T23:48:58.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google日本語入力をためしてみる</title>
+    <link href="https://note.mersy418.com/article/blog-googleime.html"/>
+    <id>https://note.mersy418.com/article/blog-googleime.html</id>
+    <published>2018-05-01T22:00:00.000Z</published>
+    <updated>2018-05-01T23:48:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>今更だけどMacのライブ変換に戻してみる | mersy note<br><a href="https://note.mersy418.com/article/mac-live-input.html">https://note.mersy418.com/article/mac-live-input.html</a><br>ライブ変換に変えてみてから一ヶ月たった | mersy note<br><a href="https://note.mersy418.com/article/blog-live-input-1month.html">https://note.mersy418.com/article/blog-live-input-1month.html</a></p>
+</blockquote>
+<p>ライブ変換はいいかんじだとおもうのだけど、入れてる途中で消えちゃうことがあってなんだこれ、と。<br>とはいえ、ライブ変換で変換を押すことがへってたので入力するときの変換がなれるかどうかがきになるところ、、、</p>
+<p>やはり入力は音声の方がいいのか？</p>
+<h2 id="Google日本語入力にしてみる"><a href="#Google日本語入力にしてみる" class="headerlink" title="Google日本語入力にしてみる"></a>Google日本語入力にしてみる</h2><p>ATOKにもどしてみるかとおもったのだけど、この際だしということで Google 日本語入力をためしてみることに。</p>
+<blockquote>
+<p>Google 日本語入力 – Google<br><a href="https://www.google.co.jp/ime/" target="_blank" rel="external">https://www.google.co.jp/ime/</a><br>【アプリ】Mac標準の日本語入力がしっくりこなかったのでGoogle日本語入力に浮気してみたら良さそうだと思った件<br><a href="https://cyocopen.com/ime-google/" target="_blank" rel="external">https://cyocopen.com/ime-google/</a></p>
+</blockquote>
+<p>Ctrl + Shift + j =&gt; ひらがな<br>Ctrl + Shift + ; =&gt; 英字</p>
+<p>となってるみたいなので、Cmd 1つよりはおおいけど、前後で入力をきりかえるよりはいいのかな、と。</p>
+<p>Alfred の初期入力も英字にしておいてこれで少し試してみる。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;今更だけどMacのライブ変換に戻してみる | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/mac-live-input.html&quot;&gt;https://note.mersy418.c
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="ATOK" scheme="https://note.mersy418.com/tags/ATOK/"/>
+    
+      <category term="Google IME" scheme="https://note.mersy418.com/tags/Google-IME/"/>
+    
+  </entry>
   
   <entry>
     <title>SuperDrive対応デバイス</title>
@@ -850,55 +889,6 @@
       <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
     
       <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Alfredで乱数を取得できるようにしてみた</title>
-    <link href="https://note.mersy418.com/article/blog-alfred-random.html"/>
-    <id>https://note.mersy418.com/article/blog-alfred-random.html</id>
-    <published>2018-03-18T21:00:00.000Z</published>
-    <updated>2018-03-18T21:39:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>時々乱数がチャチャッと欲しくなる時があって。<br>普段は 1password の password 生成を使ったりもしてるんですが、 1password をブラウザの拡張から開くときとかに若干時間がかかったりして、サクッといかなかったりしてた。</p>
-<p>Slack でちょっと聞いてみたけど特にこれというのがなさそうだったので、試しに Alfred で作ってみた。<br>作ってみた、といってもサンプルで用意されているものをカスタマイズしたり、 @tinybeans や @bun に作ってもらったものを参考にしたりした。</p>
-<p>デフォルトで入ってる Snippet Tiggers あたりを参考にして。</p>
-<p>コマンドは</p>
-<blockquote>
-<p>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></p>
-</blockquote>
-<p>を参考にして10文字でとりあえず作ってみた。</p>
-<pre><code>cat /dev/urandom | LC_CTYPE=C tr -dc &#39;[:alnum:]&#39; | head -c 10
-</code></pre><p>これで snippet とかで使える感じでいいかも。</p>
-<hr>
-<p>登録後はこんな感じ。</p>
-<p><img src="../asset/20180319-alfred.png" alt=""></p>
-<p>スニペットの設定</p>
-<p><img src="../asset/20180319-snippet.png" alt=""></p>
-<p>キーワードの設定</p>
-<p><img src="../asset/20180319-keyword.png" alt=""></p>
-<p>スクリプトの設定</p>
-<p><img src="../asset/20180319-script.png" alt=""></p>
-<h2 id="参考リンク"><a href="#参考リンク" class="headerlink" title="参考リンク"></a>参考リンク</h2><ul>
-<li>Alfreadのスニペットに乱数生成のコードを登録しておくと便利 - カメニッキ<br><a href="http://tapira.hatenablog.com/entry/2015/12/12/194610" target="_blank" rel="external">http://tapira.hatenablog.com/entry/2015/12/12/194610</a></li>
-<li>Random String Generator | Packal<br><a href="http://www.packal.org/workflow/random-string-generator" target="_blank" rel="external">http://www.packal.org/workflow/random-string-generator</a></li>
-<li>静的サイトジェネレータで重複しないURLを生成するにはハッシュ関数を使えばよかった | 豆腐メンタルは崩れない<br><a href="https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/" target="_blank" rel="external">https://wbtmiu.herokuapp.com/2014/10/20/25ac09b9aa7be35d476d17c9bff73a89/</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;時々乱数がチャチャッと欲しくなる時があって。&lt;br&gt;普段は 1password の password 生成を使ったりもしてるんですが、 1password をブラウザの拡張から開くときとかに若干時間がかかったりして、サクッといかなかったりしてた。&lt;/p&gt;
-&lt;p&gt;Slack 
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Alfred" scheme="https://note.mersy418.com/tags/Alfred/"/>
-    
-      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
     
   </entry>
   
