@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 12 | mersy note</title>
+  <title>Página 12 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,80 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-03-13T12:44:31.000Z"><a href="/article/getuser.html">2014-03-13</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/getuser.html">Data API で認証後にユーザー情報を取得する</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>DataAPI で記事投稿のときとかは認証をはさみます。<br>認証が通った後にユーザーの情報を使いたい場合があるでしょう。</p>
+<p>ライブラリでユーザー情報を使う部分は getUser ぽいのはなんとなく分かります。</p>
+<blockquote>
+<p>getUser<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Endpoint-method-getUser</a></p>
+</blockquote>
+<p>これをみるとこんな感じのようなので、userIdのところにidを渡してあげます。</p>
+<pre><code>api.getUser(userId, function(response) {
+  if (response.error) {
+    // Handle error
+    return;
+  }
+
+  // Do stuff
+});
+</code></pre><p>さて、idってどこに保存されてるんだろう？？とおもうわけですが。</p>
+<pre><code>api.getToken(function(response) {
+  if (response.error) {
+    // Handle error
+    return;
+  }
+  console.log(response);
+  // Do stuff
+});
+</code></pre><p>ってやってもそんな情報返ってきてないです。</p>
+<p>ということでさっきのライブラリの方のドキュメントから Endpoint Users の get のドキュメントを見てみます。</p>
+<blockquote>
+<p>Data api users get<br><a href="https://github.com/movabletype/Documentation/wiki/data-api-users-get" target="_blank" rel="external">https://github.com/movabletype/Documentation/wiki/data-api-users-get</a></p>
+</blockquote>
+<p>さっきのと大してかわらないことしかかいてないですが、よくよくみてみるとパラメータの項目に以下の様なことが書いてありますね。</p>
+<blockquote>
+<p>user_id  unsigned integer  The user ID or the word ‘me’.</p>
+</blockquote>
+<p>‘me’でもいけるんだそうです。</p>
+<pre><code>api.getUser(&#39;me&#39;, function(response) {
+  console.log(response);
+});
+</code></pre><p>こんなかんじでかくとユーザー情報が返ってきてるのが確認できますね。</p>
+<p>このことはDocumentの基本的な使い方の所にもバッチリ書いてありますね。</p>
+<blockquote>
+<p>DataAPI SDK english MT.DataAPI Basic usage · movabletype/mt-data-api-sdk-js Wiki<br><a href="https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage" target="_blank" rel="external">https://github.com/movabletype/mt-data-api-sdk-js/wiki/DataAPI-SDK-english-MT.DataAPI-Basic-usage</a></p>
+</blockquote>
+<p>基本的なところはちゃんと読まないといけませんね。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -625,81 +699,30 @@ $ knife solo prepare test_vagrant5
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-12T03:00:00.000Z"><a href="/article/openTerminalonST2Sidebar.html">2013-10-12</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/article/openTerminalonST2Sidebar.html">Sublime Text のsidebarからTerminalを開く</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Sublime Text のサイドバーを使いやすくするパッケージの SideBarEnhancements。</p>
-<p>サイドバーからrenameとかできて便利。Jekyllとか使っててプロジェクトのフォルダはサイドバーに開いてるんだけど、該当のフォルダをTerminalで開いてコマンド書くのがてまだったのでとりあえずTerminalが開くようにだけした。</p>
-<p>サイドバーで</p>
-<p>Open With &gt; Edit Applications</p>
-<p>と行くと設定ファイルが出てくるから</p>
-<pre><code>  //Terminal
-  {
-    &quot;caption&quot;: &quot;Terminal&quot;,
-    &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
-
-    &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-    &quot;args&quot;: {
-              &quot;paths&quot;: [],
-              &quot;application&quot;: &quot;Terminal&quot;, // OSX
-              &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
-            }
-  },
-</code></pre><p>こんな感じで追加してあげればOKだった。</p>
-<p>Jekyllを立ち上げるとかもありそうな気がするなぁ。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
-    <a href="/page/11/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/11/" class="alignleft prev">Anterior</a>
   
   
-    <a href="/page/13/" class="alignright next">Nächste Seite</a>
+    <a href="/page/13/" class="alignright next">Siguiente</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Buscar">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>53</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>54</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -757,7 +780,7 @@ $ knife solo prepare test_vagrant5
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/ATOK/">ATOK</a><small>2</small></li>
@@ -826,7 +849,7 @@ $ knife solo prepare test_vagrant5
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>13</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>14</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
@@ -938,8 +961,12 @@ $ knife solo prepare test_vagrant5
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Entradas Recientes</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/mac-keybind.html">Emacsキーバインドを試してみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-googleime.html">Google日本語入力をためしてみる</a>
@@ -957,10 +984,6 @@ $ knife solo prepare test_vagrant5
         <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
       </li>
     
-      <li>
-        <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -969,7 +992,7 @@ $ knife solo prepare test_vagrant5
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Seite 13 | mersy note</title>
+  <title>Página 13 | mersy note</title>
   <meta name="author" content="mersy">
   
   
@@ -55,6 +55,57 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-10-12T03:00:00.000Z"><a href="/article/openTerminalonST2Sidebar.html">2013-10-12</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/article/openTerminalonST2Sidebar.html">Sublime Text のsidebarからTerminalを開く</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Sublime Text のサイドバーを使いやすくするパッケージの SideBarEnhancements。</p>
+<p>サイドバーからrenameとかできて便利。Jekyllとか使っててプロジェクトのフォルダはサイドバーに開いてるんだけど、該当のフォルダをTerminalで開いてコマンド書くのがてまだったのでとりあえずTerminalが開くようにだけした。</p>
+<p>サイドバーで</p>
+<p>Open With &gt; Edit Applications</p>
+<p>と行くと設定ファイルが出てくるから</p>
+<pre><code>  //Terminal
+  {
+    &quot;caption&quot;: &quot;Terminal&quot;,
+    &quot;id&quot;: &quot;side-bar-files-open-with-Terminal&quot;,
+
+    &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
+    &quot;args&quot;: {
+              &quot;paths&quot;: [],
+              &quot;application&quot;: &quot;Terminal&quot;, // OSX
+              &quot;extensions&quot;:&quot;&quot;  //any file with these extensions
+            }
+  },
+</code></pre><p>こんな感じで追加してあげればOKだった。</p>
+<p>Jekyllを立ち上げるとかもありそうな気がするなぁ。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -263,7 +314,7 @@ url: http://mersy.github.io/
 
 <nav id="pagination">
   
-    <a href="/page/12/" class="alignleft prev">Vorherige Seite</a>
+    <a href="/page/12/" class="alignleft prev">Anterior</a>
   
   
   <div class="clearfix"></div>
@@ -271,17 +322,17 @@ url: http://mersy.github.io/
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Buscar">
     <input type="hidden" name="q" value="site:note.mersy418.com">
   </form>
 </div>
 
   
 <div class="widget tag">
-  <h3 class="title">Kategorien</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Blog/">Blog</a><small>53</small></li>
+    <li><a href="/categories/Blog/">Blog</a><small>54</small></li>
   
     <li><a href="/categories/Book/">Book</a><small>9</small></li>
   
@@ -339,7 +390,7 @@ url: http://mersy.github.io/
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/ATOK/">ATOK</a><small>2</small></li>
@@ -408,7 +459,7 @@ url: http://mersy.github.io/
   
     <li><a href="/tags/Jira/">Jira</a><small>1</small></li>
   
-    <li><a href="/tags/Mac/">Mac</a><small>13</small></li>
+    <li><a href="/tags/Mac/">Mac</a><small>14</small></li>
   
     <li><a href="/tags/MacBook/">MacBook</a><small>3</small></li>
   
@@ -520,8 +571,12 @@ url: http://mersy.github.io/
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Entradas Recientes</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/article/mac-keybind.html">Emacsキーバインドを試してみる</a>
+      </li>
     
       <li>
         <a href="/article/blog-googleime.html">Google日本語入力をためしてみる</a>
@@ -539,10 +594,6 @@ url: http://mersy.github.io/
         <a href="/article/blog-writing.html">ブログ書く環境・公開するところをどうするかあれこれ検討中</a>
       </li>
     
-      <li>
-        <a href="/article/blog-whats-all.html">全部という言葉の曖昧さ</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -551,7 +602,7 @@ url: http://mersy.github.io/
     <div class="widget">
         <h3 class="title">Monthly Archives</h3>
         <ul class="entry">
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">12</span></li></ul>
         </ul>
     </div>
 

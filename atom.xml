@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-05-01T23:48:58.000Z</updated>
+  <updated>2018-05-02T23:34:02.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Emacsキーバインドを試してみる</title>
+    <link href="https://note.mersy418.com/article/mac-keybind.html"/>
+    <id>https://note.mersy418.com/article/mac-keybind.html</id>
+    <published>2018-05-02T22:00:00.000Z</published>
+    <updated>2018-05-02T23:34:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Google日本語入力をためしてみる | mersy note<br><a href="https://note.mersy418.com/article/blog-googleime.html">https://note.mersy418.com/article/blog-googleime.html</a></p>
+<p>日本語入力を変えたことで、切り替えのショートカットも変わった。<br>そのついでにEmacsキーバインドをなるべく使うようにしてみようかな、と。</p>
+<p>ショートカットが変わると手が慣れるまで苦痛でしかないのだけれども、だったらその際に他のも取り入れてみてもいいのかなぁと。<br>（ライブ変換がなくなるとそれはそれでなれるのに一苦労するけど）</p>
+<p>矢印キーが小さくて上下間違える、とか些細な事もあったりしつつ。</p>
+<p>この辺の記事をとりあえず参考に。</p>
+<blockquote>
+<p>MacユーザーならEmacsキーバインドをマスターしよう – 株式会社キャパ CAPA,Inc.<br><a href="https://www.capa.co.jp/archives/6078" target="_blank" rel="external">https://www.capa.co.jp/archives/6078</a><br>テキスト入力が死ぬほどはかどるMacショートカットキー15個 | Find Job! Startup<br><a href="https://www.find-job.net/startup/mac-shortcut" target="_blank" rel="external">https://www.find-job.net/startup/mac-shortcut</a></p>
+<p>Keyboard MaestroでMacでのEmacsキーバインドを補完する - DTP Transit<br><a href="http://www.dtp-transit.jp/apple/mac-os-x/post_2217.html" target="_blank" rel="external">http://www.dtp-transit.jp/apple/mac-os-x/post_2217.html</a><br>文字編集を行う際に覚えておきたいcontrolキーを使ったキーボードショートカット - DTP Transit<br><a href="http://www.dtp-transit.jp/apple/mac-os-x/post_1279.html" target="_blank" rel="external">http://www.dtp-transit.jp/apple/mac-os-x/post_1279.html</a></p>
+<p>Mac のキーボードショートカット - Apple サポート<br><a href="https://support.apple.com/ja-jp/HT201236" target="_blank" rel="external">https://support.apple.com/ja-jp/HT201236</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>ショートカット</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + f</td>
+<td>カーソル右</td>
+</tr>
+<tr>
+<td>Ctrl + b</td>
+<td>カーソル左</td>
+</tr>
+<tr>
+<td>Ctrl + n</td>
+<td>カーソル下</td>
+</tr>
+<tr>
+<td>Ctrl + p</td>
+<td>カーソル上</td>
+</tr>
+<tr>
+<td>Ctrl + a</td>
+<td>カーソル行頭</td>
+</tr>
+<tr>
+<td>Ctrl + e</td>
+<td>カーソル行末</td>
+</tr>
+<tr>
+<td>Ctrl + h</td>
+<td>カーソルの左文字を削除。BackSpace</td>
+</tr>
+<tr>
+<td>Ctrl + d</td>
+<td>カーソルの右文字を削除</td>
+</tr>
+<tr>
+<td>Ctrl + k</td>
+<td>カーソルから右すべて切り取り</td>
+</tr>
+</tbody>
+</table>
+<p>うまく動いてなかったもの<br>|ショートカット|内容|<br>|—-|—-|<br>|Ctrl + o|カーソルのあとに1行挿入|</p>
+<p>Keyboard Maestro はよさそうなんだけどアプリ入れることに若干抵抗があるからこれらに慣れたらまた検討、ってかんじかなぁ。</p>
+<p>選択してコピーするときとかにショートカットおしながら、Shiftも押すってのが若干なれるまで時間かかりそうな気配がする。<br>あとは使いながら手が慣れて覚えるようにしていくのみ。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Google日本語入力をためしてみる | mersy note&lt;br&gt;&lt;a href=&quot;https://note.mersy418.com/article/blog-googleime.html&quot;&gt;https://note.mersy418.com/article/blog
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Google日本語入力をためしてみる</title>
@@ -849,46 +930,6 @@
     
       <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>ツールを使ったら解決すると思うのが間違い</title>
-    <link href="https://note.mersy418.com/article/blog-tools.html"/>
-    <id>https://note.mersy418.com/article/blog-tools.html</id>
-    <published>2018-03-19T22:00:00.000Z</published>
-    <updated>2018-03-25T11:31:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ツールは便利で課題を解決してくれる可能性はあると思う。<br>が、必ず解決してくれるわけでもないだろうし、あくまで道しるべの可能性もある。</p>
-<p>またそのツールをどう使うか？でもぜんぜん変わる可能性もある。</p>
-<p>ツールを使ったら万事解決といった思考停止状態で使っていては元々の課題解決も目的も達成できないんじゃないかな？</p>
-<blockquote>
-<p>もう納期遅れからおさらば！プロジェクト管理ツールを厳選して10個紹介します | creive<br><a href="https://creive.me/archives/11931/" target="_blank" rel="external">https://creive.me/archives/11931/</a></p>
-</blockquote>
-<p>Backlog 使っているけど、xxxがきになるとかどうにかならないか？とか。<br>そもそも期日に終わらなかったとか、仕様が変わった時に update をしにくくてどうする？とか全体が見通せない、とか。<br>そこってツールが悪いんじゃなくて、使う人、運用する人の問題であるわけであって。</p>
-<p>と言いつつ、他のツールとかなんかいいのないかなー、とかうろうろしつつ、Jira とか Wrike とかを使ったら解決するんじゃないか？ディレクターも楽になりつつ、メンバーもやりやすくなるんじゃないか？とかを考えることが多いこのごろ。<br>単に、xxx を解決できてそうなツールという感じで見てるところはあるのだけど。<br>そもそもツールじゃなくて、漏れなく共有できたり、わかりやすい方が重要だとは思うし。</p>
-<p>あとは、依頼タスクをまとめるとかしたりも色々してみたり。<br>試行錯誤でこの辺はチームの文化にもよるところがあると思うので、あったものを見つけられて、チームとして使っていけることをいとわないのが一番なのかなぁという気がしている。</p>
-<p>と、なんだかんだ言って、ここのところなんとなく自分自身の管理方法とか進め方が上手いこといってない感があってどうしたものか？と悶々としてるわけです。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ツールは便利で課題を解決してくれる可能性はあると思う。&lt;br&gt;が、必ず解決してくれるわけでもないだろうし、あくまで道しるべの可能性もある。&lt;/p&gt;
-&lt;p&gt;またそのツールをどう使うか？でもぜんぜん変わる可能性もある。&lt;/p&gt;
-&lt;p&gt;ツールを使ったら万事解決といった思考停止状態
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-      <category term="Todo" scheme="https://note.mersy418.com/tags/Todo/"/>
-    
-      <category term="Team" scheme="https://note.mersy418.com/tags/Team/"/>
-    
-      <category term="project management" scheme="https://note.mersy418.com/tags/project-management/"/>
-    
-      <category term="Task" scheme="https://note.mersy418.com/tags/Task/"/>
     
   </entry>
   
