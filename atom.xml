@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-05-02T23:42:08.000Z</updated>
+  <updated>2018-05-08T23:43:14.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>結局SafariとRamboxに戻ってきた</title>
+    <link href="https://note.mersy418.com/article/blog-safari-rambox.html"/>
+    <id>https://note.mersy418.com/article/blog-safari-rambox.html</id>
+    <published>2018-05-08T22:00:00.000Z</published>
+    <updated>2018-05-08T23:43:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Firefox のタブをサスペンドしててもなんだかんだで重くて大変なので、結局 Safari と Rambox に戻すことにした。<br>これで再度様子見する。</p>
+<blockquote>
+<p>Ramboxを使い始めてみた | mersy note<br><a href="https://note.mersy418.com/article/use-rambox.html">https://note.mersy418.com/article/use-rambox.html</a></p>
+</blockquote>
+<p>メールとかも Safari でピン留めして開いてたんだけど、そうするとウィンドウふえてもピン留めしたタブがついてくるので、それはちょっと邪魔かな、、、と。<br>ありがたいときもあるんだけどねぇ。。。。</p>
+<p>別のアプリから Safari で開く時にどのウィンドウでひらかれるのか？がよくわからないな。<br>Firefox だと直前に開いてたウィンドウに開かれるような気がするけど。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Firefox のタブをサスペンドしててもなんだかんだで重くて大変なので、結局 Safari と Rambox に戻すことにした。&lt;br&gt;これで再度様子見する。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ramboxを使い始めてみた | mersy note&lt;br&gt;&lt;a hr
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
+    
+    
+      <category term="Mac" scheme="https://note.mersy418.com/tags/Mac/"/>
+    
+      <category term="Safari" scheme="https://note.mersy418.com/tags/Safari/"/>
+    
+      <category term="Rambox" scheme="https://note.mersy418.com/tags/Rambox/"/>
+    
+  </entry>
   
   <entry>
     <title>Emacsキーバインドを試してみる</title>
@@ -906,39 +940,6 @@
       &lt;p&gt;先日、同じマンション内で引越しをした。&lt;br&gt;ちょっとだけ広い部屋に。&lt;/p&gt;
 &lt;p&gt;仕事用のテーブルが、仕事用テーブルからダイニングテーブルに格上げ？になった。&lt;br&gt;これに伴い、食事のたびにちゃんと片付ける必要が出てきた。&lt;/p&gt;
 &lt;p&gt;はてさて。&lt;br&gt;慣れるまでが大
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>特定のクレジットカードしか使えなかった近所のスーパー＞＞結局使えるようになりました</title>
-    <link href="https://note.mersy418.com/article/blog-cant-use-credit.html"/>
-    <id>https://note.mersy418.com/article/blog-cant-use-credit.html</id>
-    <published>2018-03-20T21:00:00.000Z</published>
-    <updated>2018-03-20T21:10:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>近所にスーパーができた。<br>早速行ってきた。近所にある他のスーパーの中では広い方でいい感じ。</p>
-<p>レジで判明。<br>Tポイントのクレジットカードしか使えない。<br>うちは持ってない。</p>
-<p>VISAは使えるけどJCBは使えない、みたいなもんだと思えば納得するところもあるけど。</p>
-<p>少々面倒だなー。</p>
-<hr>
-<p>【Apple Pay】JALカード「Visa/Mastercard/TOKYU POINT ClubQ」が対応<br><a href="http://netafull.net/apple-pay/057070.html" target="_blank" rel="external">http://netafull.net/apple-pay/057070.html</a><br>LINE Payを使って請求書支払ができる! わざわざコンビニ行かなくてもOKになるよ | [M] mbdb (モバデビ)<br><a href="https://mbdb.jp/it-news/linepay-bill-payment.html" target="_blank" rel="external">https://mbdb.jp/it-news/linepay-bill-payment.html</a></p>
-<p>全然興味がなかったのだけど、カードに縛られてるのもどうなんだろう？とか。</p>
-<p>SEだと使えるの？レベルでわかってないけど、こういうのも少しずつ慣れていかないとなんだろうな。<br>（使えないはずだから最新のにしてもいいけど、携帯も小さいのがいいなぁと思う派です。）</p>
-<p>財布も携帯も無くす可能性があるだけに、なんとも不安だったりする。<br>酒飲み過ぎなきゃいい話なんだけど。</p>
-<hr>
-<p>とか書いていたら、オープン一週間で他のカードも使えるようになっていた。<br>万歳。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;近所にスーパーができた。&lt;br&gt;早速行ってきた。近所にある他のスーパーの中では広い方でいい感じ。&lt;/p&gt;
-&lt;p&gt;レジで判明。&lt;br&gt;Tポイントのクレジットカードしか使えない。&lt;br&gt;うちは持ってない。&lt;/p&gt;
-&lt;p&gt;VISAは使えるけどJCBは使えない、みたいなもんだと思え
     
     </summary>
     
