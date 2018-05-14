@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://note.mersy418.com/"/>
-  <updated>2018-05-08T23:43:14.000Z</updated>
+  <updated>2018-05-14T22:04:36.000Z</updated>
   <id>https://note.mersy418.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacBookのリターンキーが使えなくなったのでキーバインドを調整してみた</title>
+    <link href="https://note.mersy418.com/article/blog-keyboard-return.html"/>
+    <id>https://note.mersy418.com/article/blog-keyboard-return.html</id>
+    <published>2018-05-14T22:00:00.000Z</published>
+    <updated>2018-05-14T22:04:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>またリターンキーがつかえなくなった。。。<br>前は外付けのキーボードを使っていてどうにかしのいだのだけど。</p>
+<blockquote>
+<p>Macbookキーボードの調子は相変わらず | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard-201804.html">https://note.mersy418.com/article/blog-macbook-keyboard-201804.html</a><br>MacBookのキーボードが調子悪め〜その後20180308 | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html">https://note.mersy418.com/article/blog-macbook-keyboard-20180308.html</a><br>MacBookのキーボードが調子悪め | mersy note<br><a href="https://note.mersy418.com/article/blog-macbook-keyboard.html">https://note.mersy418.com/article/blog-macbook-keyboard.html</a><br>MacBook のキーボードを掃除してみる | mersy note<br><a href="https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html">https://note.mersy418.com/article/blog-mac-keyboard-cleaning.html</a></p>
+</blockquote>
+<p>さすがにこれが続くとめんどくさいというかなんというか。</p>
+<blockquote>
+<p>アップル、「MacBook」のキーボード不具合で集団訴訟に直面 - CNET Japan<br><a href="https://japan.cnet.com/article/35119080/" target="_blank" rel="external">https://japan.cnet.com/article/35119080/</a></p>
+</blockquote>
+<p>そもそもキーボードがあれ、という可能性もあるわけなのだけど。。。</p>
+<hr>
+<p>トラックパッドなり、ポイントついてるキーボードを探したりしてたけど、、、</p>
+<blockquote>
+<p>Turn iPhone, iPad and Android into wireless mobile mouse / trackpad / keyboard with Remote Mouse.<br><a href="http://www.remotemouse.net/" target="_blank" rel="external">http://www.remotemouse.net/</a></p>
+</blockquote>
+<p>iPhone のキーボードを使える方法を見つけた。</p>
+<p><img src="../asset/20180515_remotemouse.JPG" alt=""></p>
+<p>とりあえずはこれでしのげるかなぁ、、、、と。</p>
+<p>家にいるときは外付けのキーボードつかえるけど、外だとどうなるんだろうな？<br>Wifiのネットワークを見てるっぽいから同じWifiでテザリングしてたら使えるのかも。</p>
+<hr>
+<p>何やら調べてると、Ctrl + m が確定っぽい挙動をしてる様子。<br>が、改行ではない様子。。。。</p>
+<p>たしかに、 Terminal だと問題ない。</p>
+<blockquote>
+<p>Emacsのキーバインドを自分流に変更しようとしたら少しだけハマった話。 - Qiita<br><a href="https://qiita.com/pinokions009/items/4b5cd2b2deae3d42b6de" target="_blank" rel="external">https://qiita.com/pinokions009/items/4b5cd2b2deae3d42b6de</a></p>
+<p>macOS Sierra: キーバインドのカスタマイズ(Karabinerからの移行) - Qiita<br><a href="https://qiita.com/hshimo/items/99fe5aa4b6feb916b77d" target="_blank" rel="external">https://qiita.com/hshimo/items/99fe5aa4b6feb916b77d</a></p>
+</blockquote>
+<p>これ試してみたけどうまくいかない。</p>
+<p>Karabinerとか入れれば解決するかもしれないんだけど、もともとMacが重くなるというのがあって消しただけに入れにくい。</p>
+<hr>
+<blockquote>
+<p>Hammerspoon<br><a href="http://www.hammerspoon.org/" target="_blank" rel="external">http://www.hammerspoon.org/</a></p>
+</blockquote>
+<p>これは重いのかどうか。。。と、気になりつつ入れてみる。</p>
+<blockquote>
+<p>macOS Sierra で キーバインドをカスタマイズ - Qiita<br><a href="https://qiita.com/ganmacs/items/ca3c38d451552915d1ef" target="_blank" rel="external">https://qiita.com/ganmacs/items/ca3c38d451552915d1ef</a></p>
+</blockquote>
+<p>を参考にして、 Ctrl + m に return を割り当てた。<br>問題なく動作してそう。</p>
+<p>これで、 remote mouse は不要になるかも。<br>数時間の命でした。。。</p>
+<p>本日の仕事が問題なくこなせるかどうか、そこが重要ですね。<br>（と、下書きを昨晩書いて、今朝触っていると、今日はリターンキーの調子はいいみたい。。。。）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;またリターンキーがつかえなくなった。。。&lt;br&gt;前は外付けのキーボードを使っていてどうにかしのいだのだけど。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Macbookキーボードの調子は相変わらず | mersy note&lt;br&gt;&lt;a href=&quot;https://note.me
+    
+    </summary>
+    
+      <category term="blog" scheme="https://note.mersy418.com/categories/blog/"/>
+    
+    
+      <category term="Blog" scheme="https://note.mersy418.com/tags/Blog/"/>
+    
+      <category term="MacBook" scheme="https://note.mersy418.com/tags/MacBook/"/>
+    
+  </entry>
   
   <entry>
     <title>結局SafariとRamboxに戻ってきた</title>
@@ -427,11 +491,11 @@
       <category term="Work" scheme="https://note.mersy418.com/categories/Work/"/>
     
     
+      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
+    
       <category term="Backlog" scheme="https://note.mersy418.com/tags/Backlog/"/>
     
       <category term="Project Management" scheme="https://note.mersy418.com/tags/Project-Management/"/>
-    
-      <category term="Direction" scheme="https://note.mersy418.com/tags/Direction/"/>
     
       <category term="Redmine" scheme="https://note.mersy418.com/tags/Redmine/"/>
     
@@ -919,32 +983,6 @@
     
     
       <category term="website" scheme="https://note.mersy418.com/tags/website/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小さなことでも変化を楽しむ</title>
-    <link href="https://note.mersy418.com/article/blog-change-workspace.html"/>
-    <id>https://note.mersy418.com/article/blog-change-workspace.html</id>
-    <published>2018-03-20T22:00:00.000Z</published>
-    <updated>2018-03-20T13:03:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>先日、同じマンション内で引越しをした。<br>ちょっとだけ広い部屋に。</p>
-<p>仕事用のテーブルが、仕事用テーブルからダイニングテーブルに格上げ？になった。<br>これに伴い、食事のたびにちゃんと片付ける必要が出てきた。</p>
-<p>はてさて。<br>慣れるまでが大変だけどどうなることやら。</p>
-<p>とはいえ、些細なことでも変化は楽しむべきですね。<br>ちょっとしたことでも習慣化できると色々変えていけますしね。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先日、同じマンション内で引越しをした。&lt;br&gt;ちょっとだけ広い部屋に。&lt;/p&gt;
-&lt;p&gt;仕事用のテーブルが、仕事用テーブルからダイニングテーブルに格上げ？になった。&lt;br&gt;これに伴い、食事のたびにちゃんと片付ける必要が出てきた。&lt;/p&gt;
-&lt;p&gt;はてさて。&lt;br&gt;慣れるまでが大
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://note.mersy418.com/categories/Blog/"/>
-    
     
   </entry>
   
